@@ -136,3 +136,56 @@ class TestGenerateMultipleDomains:
         assert len(data["relationships"]) > 0
         assert len(data["documents"]) > 0
         assert len(data["traces"]) > 0
+
+
+def _all_fixture_domain_ids():
+    """List all domain IDs that have shipped fixture files."""
+    from importlib.resources import files
+    fixtures_dir = Path(str(files("create_context_graph") / "fixtures"))
+    return [p.stem for p in sorted(fixtures_dir.glob("*.json"))]
+
+
+class TestShippedFixtureQuality:
+    """Validate that shipped fixture files meet demo quality standards."""
+
+    @pytest.fixture
+    def fixture_data(self, request):
+        from importlib.resources import files
+        fixtures_dir = Path(str(files("create_context_graph") / "fixtures"))
+        path = fixtures_dir / f"{request.param}.json"
+        return json.loads(path.read_text())
+
+    @pytest.mark.parametrize("fixture_data", _all_fixture_domain_ids(), indirect=True)
+    def test_no_placeholder_entity_names(self, fixture_data):
+        """No entity should have the 'Label N' placeholder pattern."""
+        import re
+        for label, items in fixture_data.get("entities", {}).items():
+            for item in items:
+                name = item.get("name")
+                assert name is not None, f"{label} entity has name=None"
+                assert not re.match(
+                    r"^(Person|Organization|Location|Event|Object)\s+\d+$", str(name)
+                ), f"Placeholder entity name found: {name}"
+
+    @pytest.mark.parametrize("fixture_data", _all_fixture_domain_ids(), indirect=True)
+    def test_documents_have_substantial_content(self, fixture_data):
+        """Every document should have at least 100 characters of content."""
+        for doc in fixture_data.get("documents", []):
+            content = doc.get("content", "")
+            assert len(content) >= 100, (
+                f"Document '{doc.get('title', '?')}' too short: {len(content)} chars"
+            )
+
+    @pytest.mark.parametrize("fixture_data", _all_fixture_domain_ids(), indirect=True)
+    def test_traces_no_template_variables(self, fixture_data):
+        """No decision trace should have uninterpolated {{variable}} patterns."""
+        for trace in fixture_data.get("traces", []):
+            outcome = trace.get("outcome", "")
+            assert "{{" not in outcome, (
+                f"Trace '{trace.get('id', '?')}' has uninterpolated outcome: {outcome[:80]}"
+            )
+            for step in trace.get("steps", []):
+                obs = step.get("observation", "")
+                assert not obs.startswith("Results retrieved for:"), (
+                    f"Trace '{trace.get('id', '?')}' has placeholder observation"
+                )
