@@ -1,0 +1,411 @@
+inherits: _base
+
+domain:
+  id: healthcare
+  name: Healthcare
+  description: Patient care, clinical encounters, diagnoses, treatments, and provider networks
+  tagline: "AI-powered Clinical Intelligence"
+  emoji: "\U0001F3E5"
+
+entity_types:
+  - label: Patient
+    pole_type: PERSON
+    subtype: PATIENT
+    color: "#06b6d4"
+    icon: user
+    properties:
+      - name: patient_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: date_of_birth
+        type: date
+      - name: blood_type
+        type: string
+        enum: [A+, A-, B+, B-, AB+, AB-, O+, O-]
+      - name: allergies
+        type: string
+
+  - label: Provider
+    pole_type: PERSON
+    subtype: PROVIDER
+    color: "#22c55e"
+    icon: stethoscope
+    properties:
+      - name: provider_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: specialty
+        type: string
+        enum: [general_practice, cardiology, oncology, neurology, orthopedics, pediatrics, radiology, surgery, emergency, psychiatry]
+      - name: license_number
+        type: string
+
+  - label: Diagnosis
+    pole_type: OBJECT
+    subtype: DIAGNOSIS
+    color: "#ef4444"
+    icon: heart-pulse
+    properties:
+      - name: icd_code
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: category
+        type: string
+        enum: [chronic, acute, infectious, autoimmune, genetic, mental_health]
+      - name: severity
+        type: string
+        enum: [mild, moderate, severe, critical]
+
+  - label: Treatment
+    pole_type: EVENT
+    subtype: TREATMENT
+    color: "#10b981"
+    icon: pill
+    properties:
+      - name: treatment_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: treatment_type
+        type: string
+        enum: [medication, surgery, therapy, procedure, imaging, lab_test]
+      - name: status
+        type: string
+        enum: [planned, in_progress, completed, cancelled]
+      - name: start_date
+        type: datetime
+      - name: end_date
+        type: datetime
+
+  - label: Encounter
+    pole_type: EVENT
+    subtype: CLINICAL_ENCOUNTER
+    color: "#f59e0b"
+    icon: calendar
+    properties:
+      - name: encounter_id
+        type: string
+        required: true
+        unique: true
+      - name: encounter_type
+        type: string
+        enum: [inpatient, outpatient, emergency, telehealth]
+      - name: date
+        type: datetime
+        required: true
+      - name: chief_complaint
+        type: string
+      - name: disposition
+        type: string
+
+  - label: Facility
+    pole_type: LOCATION
+    subtype: HEALTHCARE_FACILITY
+    color: "#a855f7"
+    icon: building
+    properties:
+      - name: facility_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: facility_type
+        type: string
+        enum: [hospital, clinic, urgent_care, lab, pharmacy, rehab_center]
+      - name: bed_count
+        type: integer
+
+  - label: Medication
+    pole_type: OBJECT
+    subtype: MEDICATION
+    color: "#8b5cf6"
+    icon: pill
+    properties:
+      - name: ndc_code
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: drug_class
+        type: string
+      - name: dosage_form
+        type: string
+      - name: contraindications
+        type: string
+
+relationships:
+  - type: DIAGNOSED_WITH
+    source: Patient
+    target: Diagnosis
+  - type: TREATED_BY
+    source: Patient
+    target: Provider
+  - type: PRESCRIBED
+    source: Provider
+    target: Medication
+  - type: REFERRED_TO
+    source: Provider
+    target: Provider
+  - type: HAD_ENCOUNTER
+    source: Patient
+    target: Encounter
+  - type: ATTENDED
+    source: Provider
+    target: Encounter
+  - type: OCCURRED_AT
+    source: Encounter
+    target: Facility
+  - type: RESULTED_IN
+    source: Encounter
+    target: Diagnosis
+  - type: INCLUDES
+    source: Encounter
+    target: Treatment
+  - type: TREATS
+    source: Treatment
+    target: Diagnosis
+  - type: USES
+    source: Treatment
+    target: Medication
+  - type: CONTRAINDICATED_WITH
+    source: Medication
+    target: Medication
+  - type: AFFILIATED_WITH
+    source: Provider
+    target: Facility
+
+document_templates:
+  - id: discharge_summary
+    name: Discharge Summary
+    description: Patient discharge summaries after hospital stays
+    count: 8
+    prompt_template: |
+      Write a discharge summary for patient {{patient.name}} (ID: {{patient.patient_id}})
+      discharged from {{facility.name}} on {{date}}.
+      Attending physician: Dr. {{provider.name}} ({{provider.specialty}}).
+      Diagnoses: {{diagnosis_list}}. Treatments received: {{treatment_list}}.
+      Include discharge instructions and follow-up plans.
+    required_entities: [Patient, Provider, Facility, Diagnosis, Treatment]
+
+  - id: referral_letter
+    name: Referral Letter
+    description: Provider-to-provider referral communications
+    count: 6
+    prompt_template: |
+      Write a referral letter from Dr. {{referring.name}} ({{referring.specialty}})
+      to Dr. {{specialist.name}} ({{specialist.specialty}}) at {{facility.name}}
+      for patient {{patient.name}}.
+      Reason for referral: {{diagnosis.name}}. Include relevant history and findings.
+    required_entities: [Provider, Patient, Diagnosis, Facility]
+
+  - id: lab_report
+    name: Laboratory Report
+    description: Lab test results and interpretations
+    count: 8
+    prompt_template: |
+      Write a laboratory report for patient {{patient.name}} ordered by
+      Dr. {{provider.name}} at {{facility.name}} on {{date}}.
+      Tests performed: {{test_list}}. Include results and clinical interpretation.
+    required_entities: [Patient, Provider, Facility]
+
+  - id: progress_note
+    name: Clinical Progress Note
+    description: Provider notes from patient encounters
+    count: 10
+    prompt_template: |
+      Write a SOAP-format progress note for {{encounter.encounter_type}} encounter
+      with patient {{patient.name}} by Dr. {{provider.name}} at {{facility.name}}
+      on {{date}}. Chief complaint: {{encounter.chief_complaint}}.
+    required_entities: [Patient, Provider, Encounter, Facility]
+
+  - id: meeting_notes
+    name: Case Conference Notes
+    description: Multi-disciplinary team case discussions
+    count: 5
+    prompt_template: |
+      Write case conference notes for patient {{patient.name}} discussed at
+      {{facility.name}} on {{date}}. Participating providers: {{provider_list}}.
+      Include discussion points, treatment plan decisions, and action items.
+    required_entities: [Patient, Provider, Facility, Diagnosis]
+
+decision_traces:
+  - id: treatment_selection
+    task: "Select appropriate treatment plan for {{patient.name}} diagnosed with {{diagnosis.name}}"
+    steps:
+      - thought: "Review patient history and current diagnoses"
+        action: "Query patient entity graph including past encounters, diagnoses, and medications"
+      - thought: "Check for medication contraindications and allergies"
+        action: "Cross-reference proposed medications with patient allergies and current prescriptions"
+      - thought: "Evaluate treatment options based on clinical evidence"
+        action: "Find similar past cases and their treatment outcomes"
+      - thought: "Consider patient preferences and facility capabilities"
+        action: "Review available treatments at the patient's facility"
+    outcome_template: "Treatment plan: {{plan}}. Rationale: {{rationale}}"
+
+  - id: referral_decision
+    task: "Determine if patient {{patient.name}} should be referred to a specialist for {{diagnosis.name}}"
+    steps:
+      - thought: "Assess the complexity and progression of the condition"
+        action: "Query diagnosis history and treatment response"
+      - thought: "Identify appropriate specialists in the network"
+        action: "Search providers by specialty and facility affiliation"
+      - thought: "Check specialist availability and patient coverage"
+        action: "Query provider schedules and patient insurance compatibility"
+    outcome_template: "Referral decision: {{decision}}. Specialist: {{provider.name}}"
+
+  - id: readmission_risk
+    task: "Assess readmission risk for {{patient.name}} being discharged after {{diagnosis.name}} treatment"
+    steps:
+      - thought: "Review patient's hospitalization and readmission history"
+        action: "Query past encounters and discharge outcomes"
+      - thought: "Evaluate completeness of discharge plan"
+        action: "Check for scheduled follow-ups, medication reconciliation, and support services"
+      - thought: "Identify risk factors from similar patients"
+        action: "Find patients with similar diagnoses and demographics, check their readmission rates"
+    outcome_template: "Risk level: {{risk_level}}. Mitigation: {{actions}}"
+
+demo_scenarios:
+  - name: Patient Lookup
+    prompts:
+      - "Show me all patients currently diagnosed with Type 2 Diabetes"
+      - "What medications is patient Johnson currently taking?"
+      - "Find all encounters for patient Smith in the last 6 months"
+
+  - name: Clinical Decision Support
+    prompts:
+      - "Are there any contraindicated medications in patient Chen's current prescriptions?"
+      - "What treatments have been most effective for similar patients with heart failure?"
+      - "Show the decision trace for the treatment plan selected for patient Williams"
+
+  - name: Provider Network
+    prompts:
+      - "Which cardiologists are affiliated with Memorial Hospital?"
+      - "Show the referral network for Dr. Johnson"
+      - "Which providers have the most patient encounters this quarter?"
+
+agent_tools:
+  - name: search_patient
+    description: Search for patients by name or ID
+    cypher: |
+      MATCH (p:Patient)
+      WHERE toLower(p.name) CONTAINS toLower($query)
+         OR p.patient_id = $query
+      OPTIONAL MATCH (p)-[r]-(related)
+      RETURN p, type(r) AS rel_type, related
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Patient name or ID
+
+  - name: get_patient_history
+    description: Get comprehensive history for a patient
+    cypher: |
+      MATCH (p:Patient {patient_id: $patient_id})
+      OPTIONAL MATCH (p)-[:HAD_ENCOUNTER]->(e:Encounter)-[:OCCURRED_AT]->(f:Facility)
+      OPTIONAL MATCH (p)-[:DIAGNOSED_WITH]->(d:Diagnosis)
+      OPTIONAL MATCH (e)-[:INCLUDES]->(t:Treatment)
+      RETURN p, collect(DISTINCT e) AS encounters,
+             collect(DISTINCT d) AS diagnoses,
+             collect(DISTINCT t) AS treatments,
+             collect(DISTINCT f) AS facilities
+    parameters:
+      - name: patient_id
+        type: string
+        description: Patient ID
+
+  - name: check_contraindications
+    description: Check for medication contraindications for a patient
+    cypher: |
+      MATCH (p:Patient {patient_id: $patient_id})-[:DIAGNOSED_WITH]->(d:Diagnosis)
+      MATCH (t:Treatment)-[:TREATS]->(d)
+      MATCH (t)-[:USES]->(m:Medication)
+      OPTIONAL MATCH (m)-[:CONTRAINDICATED_WITH]->(contra:Medication)
+      RETURN p, d, m, collect(contra) AS contraindications
+    parameters:
+      - name: patient_id
+        type: string
+        description: Patient ID
+
+  - name: find_similar_cases
+    description: Find patients with similar diagnoses and demographics
+    cypher: |
+      MATCH (p:Patient {patient_id: $patient_id})-[:DIAGNOSED_WITH]->(d:Diagnosis)
+      MATCH (similar:Patient)-[:DIAGNOSED_WITH]->(d)
+      WHERE similar.patient_id <> $patient_id
+      OPTIONAL MATCH (similar)-[:HAD_ENCOUNTER]->(e:Encounter)-[:INCLUDES]->(t:Treatment)
+      RETURN similar, d, collect(DISTINCT t) AS treatments
+      LIMIT 10
+    parameters:
+      - name: patient_id
+        type: string
+        description: Patient ID to find similar cases for
+
+  - name: get_referral_network
+    description: Get the referral network for a provider
+    cypher: |
+      MATCH (p:Provider {provider_id: $provider_id})
+      OPTIONAL MATCH (p)-[:REFERRED_TO]->(referred:Provider)
+      OPTIONAL MATCH (referrer:Provider)-[:REFERRED_TO]->(p)
+      OPTIONAL MATCH (p)-[:AFFILIATED_WITH]->(f:Facility)
+      RETURN p, collect(DISTINCT referred) AS referred_to,
+             collect(DISTINCT referrer) AS referred_by,
+             collect(DISTINCT f) AS facilities
+    parameters:
+      - name: provider_id
+        type: string
+        description: Provider ID
+
+system_prompt: |
+  You are an AI clinical intelligence assistant with access to a comprehensive
+  knowledge graph of healthcare data. You help clinicians, care coordinators,
+  and medical staff analyze patient records, diagnoses, treatments, and
+  provider networks.
+
+  Your capabilities include:
+  - Searching patient records and clinical history
+  - Checking medication contraindications and interactions
+  - Finding similar past cases for clinical decision support
+  - Analyzing provider referral networks
+  - Tracing treatment decisions and outcomes
+
+  Always prioritize patient safety. Flag potential contraindications immediately.
+  Provide evidence-based insights grounded in the clinical data available.
+
+visualization:
+  node_colors:
+    Patient: "#06b6d4"
+    Provider: "#22c55e"
+    Diagnosis: "#ef4444"
+    Treatment: "#10b981"
+    Encounter: "#f59e0b"
+    Facility: "#a855f7"
+    Medication: "#8b5cf6"
+  node_sizes:
+    Patient: 25
+    Provider: 25
+    Diagnosis: 20
+    Treatment: 15
+    Encounter: 15
+    Facility: 30
+    Medication: 15
+  default_cypher: "MATCH (p:Patient)-[r]-(n) RETURN p, r, n LIMIT 100"

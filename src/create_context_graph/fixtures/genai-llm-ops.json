@@ -1,0 +1,1128 @@
+{
+  "domain": "genai-llm-ops",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Model": [
+      {
+        "name": "Model 1",
+        "model_id": "Sample model_id for Model 1",
+        "architecture": "diffusion",
+        "parameter_count": 10.5,
+        "version": "Sample version for Model 1",
+        "status": "evaluating"
+      },
+      {
+        "name": "Model 2",
+        "model_id": "Sample model_id for Model 2",
+        "architecture": "cnn",
+        "parameter_count": 21.0,
+        "version": "Sample version for Model 2",
+        "status": "staging"
+      },
+      {
+        "name": "Model 3",
+        "model_id": "Sample model_id for Model 3",
+        "architecture": "rnn",
+        "parameter_count": 31.5,
+        "version": "Sample version for Model 3",
+        "status": "production"
+      },
+      {
+        "name": "Model 4",
+        "model_id": "Sample model_id for Model 4",
+        "architecture": "moe",
+        "parameter_count": 42.0,
+        "version": "Sample version for Model 4",
+        "status": "deprecated"
+      },
+      {
+        "name": "Model 5",
+        "model_id": "Sample model_id for Model 5",
+        "architecture": "rl_agent",
+        "parameter_count": 52.5,
+        "version": "Sample version for Model 5",
+        "status": "training"
+      }
+    ],
+    "Experiment": [
+      {
+        "name": "Experiment 1",
+        "experiment_id": "Sample experiment_id for Experiment 1",
+        "hypothesis": "Sample hypothesis for Experiment 1",
+        "status": "completed"
+      },
+      {
+        "name": "Experiment 2",
+        "experiment_id": "Sample experiment_id for Experiment 2",
+        "hypothesis": "Sample hypothesis for Experiment 2",
+        "status": "failed"
+      },
+      {
+        "name": "Experiment 3",
+        "experiment_id": "Sample experiment_id for Experiment 3",
+        "hypothesis": "Sample hypothesis for Experiment 3",
+        "status": "cancelled"
+      },
+      {
+        "name": "Experiment 4",
+        "experiment_id": "Sample experiment_id for Experiment 4",
+        "hypothesis": "Sample hypothesis for Experiment 4",
+        "status": "running"
+      },
+      {
+        "name": "Experiment 5",
+        "experiment_id": "Sample experiment_id for Experiment 5",
+        "hypothesis": "Sample hypothesis for Experiment 5",
+        "status": "completed"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Dataset 1",
+        "dataset_id": "Sample dataset_id for Dataset 1",
+        "size_gb": 10.5,
+        "record_count": 100,
+        "format": "jsonl",
+        "domain": "Sample domain for Dataset 1"
+      },
+      {
+        "name": "Dataset 2",
+        "dataset_id": "Sample dataset_id for Dataset 2",
+        "size_gb": 21.0,
+        "record_count": 200,
+        "format": "csv",
+        "domain": "Sample domain for Dataset 2"
+      },
+      {
+        "name": "Dataset 3",
+        "dataset_id": "Sample dataset_id for Dataset 3",
+        "size_gb": 31.5,
+        "record_count": 300,
+        "format": "tfrecord",
+        "domain": "Sample domain for Dataset 3"
+      },
+      {
+        "name": "Dataset 4",
+        "dataset_id": "Sample dataset_id for Dataset 4",
+        "size_gb": 42.0,
+        "record_count": 400,
+        "format": "arrow",
+        "domain": "Sample domain for Dataset 4"
+      },
+      {
+        "name": "Dataset 5",
+        "dataset_id": "Sample dataset_id for Dataset 5",
+        "size_gb": 52.5,
+        "record_count": 500,
+        "format": "parquet",
+        "domain": "Sample domain for Dataset 5"
+      }
+    ],
+    "Prompt": [
+      {
+        "name": "Prompt 1",
+        "prompt_id": "Sample prompt_id for Prompt 1",
+        "template": "Sample template for Prompt 1",
+        "version": "Sample version for Prompt 1",
+        "category": "user"
+      },
+      {
+        "name": "Prompt 2",
+        "prompt_id": "Sample prompt_id for Prompt 2",
+        "template": "Sample template for Prompt 2",
+        "version": "Sample version for Prompt 2",
+        "category": "few_shot"
+      },
+      {
+        "name": "Prompt 3",
+        "prompt_id": "Sample prompt_id for Prompt 3",
+        "template": "Sample template for Prompt 3",
+        "version": "Sample version for Prompt 3",
+        "category": "chain_of_thought"
+      },
+      {
+        "name": "Prompt 4",
+        "prompt_id": "Sample prompt_id for Prompt 4",
+        "template": "Sample template for Prompt 4",
+        "version": "Sample version for Prompt 4",
+        "category": "tool_use"
+      },
+      {
+        "name": "Prompt 5",
+        "prompt_id": "Sample prompt_id for Prompt 5",
+        "template": "Sample template for Prompt 5",
+        "version": "Sample version for Prompt 5",
+        "category": "system"
+      }
+    ],
+    "Evaluation": [
+      {
+        "name": "Evaluation 1",
+        "eval_id": "Sample eval_id for Evaluation 1",
+        "metric": "f1",
+        "score": 10.5
+      },
+      {
+        "name": "Evaluation 2",
+        "eval_id": "Sample eval_id for Evaluation 2",
+        "metric": "bleu",
+        "score": 21.0
+      },
+      {
+        "name": "Evaluation 3",
+        "eval_id": "Sample eval_id for Evaluation 3",
+        "metric": "rouge",
+        "score": 31.5
+      },
+      {
+        "name": "Evaluation 4",
+        "eval_id": "Sample eval_id for Evaluation 4",
+        "metric": "perplexity",
+        "score": 42.0
+      },
+      {
+        "name": "Evaluation 5",
+        "eval_id": "Sample eval_id for Evaluation 5",
+        "metric": "human_preference",
+        "score": 52.5
+      }
+    ],
+    "Deployment": [
+      {
+        "name": "Deployment 1",
+        "deployment_id": "Sample deployment_id for Deployment 1",
+        "environment": "staging",
+        "endpoint_url": "Sample endpoint_url for Deployment 1",
+        "status": "draining"
+      },
+      {
+        "name": "Deployment 2",
+        "deployment_id": "Sample deployment_id for Deployment 2",
+        "environment": "canary",
+        "endpoint_url": "Sample endpoint_url for Deployment 2",
+        "status": "rolled_back"
+      },
+      {
+        "name": "Deployment 3",
+        "deployment_id": "Sample deployment_id for Deployment 3",
+        "environment": "production",
+        "endpoint_url": "Sample endpoint_url for Deployment 3",
+        "status": "terminated"
+      },
+      {
+        "name": "Deployment 4",
+        "deployment_id": "Sample deployment_id for Deployment 4",
+        "environment": "development",
+        "endpoint_url": "Sample endpoint_url for Deployment 4",
+        "status": "active"
+      },
+      {
+        "name": "Deployment 5",
+        "deployment_id": "Sample deployment_id for Deployment 5",
+        "environment": "staging",
+        "endpoint_url": "Sample endpoint_url for Deployment 5",
+        "status": "draining"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "FINE_TUNED_FROM",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Model",
+      "target_name": "Model 4"
+    },
+    {
+      "type": "FINE_TUNED_FROM",
+      "source_label": "Model",
+      "source_name": "Model 2",
+      "target_label": "Model",
+      "target_name": "Model 4"
+    },
+    {
+      "type": "FINE_TUNED_FROM",
+      "source_label": "Model",
+      "source_name": "Model 3",
+      "target_label": "Model",
+      "target_name": "Model 4"
+    },
+    {
+      "type": "FINE_TUNED_FROM",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Model",
+      "target_name": "Model 1"
+    },
+    {
+      "type": "FINE_TUNED_FROM",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Model",
+      "target_name": "Model 3"
+    },
+    {
+      "type": "FINE_TUNED_FROM",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Model",
+      "target_name": "Model 3"
+    },
+    {
+      "type": "EVALUATED_ON",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Dataset",
+      "target_name": "Dataset 1"
+    },
+    {
+      "type": "EVALUATED_ON",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Dataset",
+      "target_name": "Dataset 3"
+    },
+    {
+      "type": "EVALUATED_ON",
+      "source_label": "Model",
+      "source_name": "Model 2",
+      "target_label": "Dataset",
+      "target_name": "Dataset 1"
+    },
+    {
+      "type": "EVALUATED_ON",
+      "source_label": "Model",
+      "source_name": "Model 2",
+      "target_label": "Dataset",
+      "target_name": "Dataset 4"
+    },
+    {
+      "type": "EVALUATED_ON",
+      "source_label": "Model",
+      "source_name": "Model 3",
+      "target_label": "Dataset",
+      "target_name": "Dataset 5"
+    },
+    {
+      "type": "EVALUATED_ON",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Dataset",
+      "target_name": "Dataset 2"
+    },
+    {
+      "type": "EVALUATED_ON",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Dataset",
+      "target_name": "Dataset 2"
+    },
+    {
+      "type": "DEPLOYED_TO",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Deployment",
+      "target_name": "Deployment 3"
+    },
+    {
+      "type": "DEPLOYED_TO",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Deployment",
+      "target_name": "Deployment 1"
+    },
+    {
+      "type": "DEPLOYED_TO",
+      "source_label": "Model",
+      "source_name": "Model 2",
+      "target_label": "Deployment",
+      "target_name": "Deployment 5"
+    },
+    {
+      "type": "DEPLOYED_TO",
+      "source_label": "Model",
+      "source_name": "Model 3",
+      "target_label": "Deployment",
+      "target_name": "Deployment 3"
+    },
+    {
+      "type": "DEPLOYED_TO",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Deployment",
+      "target_name": "Deployment 2"
+    },
+    {
+      "type": "DEPLOYED_TO",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Deployment",
+      "target_name": "Deployment 3"
+    },
+    {
+      "type": "DEPLOYED_TO",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Deployment",
+      "target_name": "Deployment 2"
+    },
+    {
+      "type": "DEPLOYED_TO",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Deployment",
+      "target_name": "Deployment 1"
+    },
+    {
+      "type": "USED_PROMPT",
+      "source_label": "Experiment",
+      "source_name": "Experiment 1",
+      "target_label": "Prompt",
+      "target_name": "Prompt 3"
+    },
+    {
+      "type": "USED_PROMPT",
+      "source_label": "Experiment",
+      "source_name": "Experiment 2",
+      "target_label": "Prompt",
+      "target_name": "Prompt 1"
+    },
+    {
+      "type": "USED_PROMPT",
+      "source_label": "Experiment",
+      "source_name": "Experiment 2",
+      "target_label": "Prompt",
+      "target_name": "Prompt 4"
+    },
+    {
+      "type": "USED_PROMPT",
+      "source_label": "Experiment",
+      "source_name": "Experiment 3",
+      "target_label": "Prompt",
+      "target_name": "Prompt 4"
+    },
+    {
+      "type": "USED_PROMPT",
+      "source_label": "Experiment",
+      "source_name": "Experiment 4",
+      "target_label": "Prompt",
+      "target_name": "Prompt 5"
+    },
+    {
+      "type": "USED_PROMPT",
+      "source_label": "Experiment",
+      "source_name": "Experiment 4",
+      "target_label": "Prompt",
+      "target_name": "Prompt 2"
+    },
+    {
+      "type": "USED_PROMPT",
+      "source_label": "Experiment",
+      "source_name": "Experiment 5",
+      "target_label": "Prompt",
+      "target_name": "Prompt 1"
+    },
+    {
+      "type": "TRAINED_ON",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Dataset",
+      "target_name": "Dataset 4"
+    },
+    {
+      "type": "TRAINED_ON",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Dataset",
+      "target_name": "Dataset 3"
+    },
+    {
+      "type": "TRAINED_ON",
+      "source_label": "Model",
+      "source_name": "Model 2",
+      "target_label": "Dataset",
+      "target_name": "Dataset 1"
+    },
+    {
+      "type": "TRAINED_ON",
+      "source_label": "Model",
+      "source_name": "Model 3",
+      "target_label": "Dataset",
+      "target_name": "Dataset 4"
+    },
+    {
+      "type": "TRAINED_ON",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Dataset",
+      "target_name": "Dataset 4"
+    },
+    {
+      "type": "TRAINED_ON",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Dataset",
+      "target_name": "Dataset 3"
+    },
+    {
+      "type": "TRAINED_ON",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Dataset",
+      "target_name": "Dataset 1"
+    },
+    {
+      "type": "COMPARED_WITH",
+      "source_label": "Evaluation",
+      "source_name": "Evaluation 1",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 3"
+    },
+    {
+      "type": "COMPARED_WITH",
+      "source_label": "Evaluation",
+      "source_name": "Evaluation 2",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 4"
+    },
+    {
+      "type": "COMPARED_WITH",
+      "source_label": "Evaluation",
+      "source_name": "Evaluation 5",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 3"
+    },
+    {
+      "type": "COMPARED_WITH",
+      "source_label": "Evaluation",
+      "source_name": "Evaluation 5",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 1"
+    },
+    {
+      "type": "PRODUCED_BY",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Experiment",
+      "target_name": "Experiment 4"
+    },
+    {
+      "type": "PRODUCED_BY",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Experiment",
+      "target_name": "Experiment 5"
+    },
+    {
+      "type": "PRODUCED_BY",
+      "source_label": "Model",
+      "source_name": "Model 2",
+      "target_label": "Experiment",
+      "target_name": "Experiment 3"
+    },
+    {
+      "type": "PRODUCED_BY",
+      "source_label": "Model",
+      "source_name": "Model 3",
+      "target_label": "Experiment",
+      "target_name": "Experiment 1"
+    },
+    {
+      "type": "PRODUCED_BY",
+      "source_label": "Model",
+      "source_name": "Model 3",
+      "target_label": "Experiment",
+      "target_name": "Experiment 3"
+    },
+    {
+      "type": "PRODUCED_BY",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Experiment",
+      "target_name": "Experiment 4"
+    },
+    {
+      "type": "PRODUCED_BY",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Experiment",
+      "target_name": "Experiment 1"
+    },
+    {
+      "type": "PRODUCED_BY",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Experiment",
+      "target_name": "Experiment 1"
+    },
+    {
+      "type": "PRODUCED_BY",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Experiment",
+      "target_name": "Experiment 4"
+    },
+    {
+      "type": "SCORED_IN",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 1"
+    },
+    {
+      "type": "SCORED_IN",
+      "source_label": "Model",
+      "source_name": "Model 1",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 4"
+    },
+    {
+      "type": "SCORED_IN",
+      "source_label": "Model",
+      "source_name": "Model 2",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 3"
+    },
+    {
+      "type": "SCORED_IN",
+      "source_label": "Model",
+      "source_name": "Model 2",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 2"
+    },
+    {
+      "type": "SCORED_IN",
+      "source_label": "Model",
+      "source_name": "Model 3",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 3"
+    },
+    {
+      "type": "SCORED_IN",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 4"
+    },
+    {
+      "type": "SCORED_IN",
+      "source_label": "Model",
+      "source_name": "Model 4",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 2"
+    },
+    {
+      "type": "SCORED_IN",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 1"
+    },
+    {
+      "type": "SCORED_IN",
+      "source_label": "Model",
+      "source_name": "Model 5",
+      "target_label": "Evaluation",
+      "target_name": "Evaluation 4"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #1",
+      "content": "Sample Experiment Log #1\n\nThis is a sample detailed log of ml experiment runs and observations for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #2",
+      "content": "Sample Experiment Log #2\n\nThis is a sample detailed log of ml experiment runs and observations for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #3",
+      "content": "Sample Experiment Log #3\n\nThis is a sample detailed log of ml experiment runs and observations for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #4",
+      "content": "Sample Experiment Log #4\n\nThis is a sample detailed log of ml experiment runs and observations for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #5",
+      "content": "Sample Experiment Log #5\n\nThis is a sample detailed log of ml experiment runs and observations for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "eval_report",
+      "template_name": "Evaluation Report",
+      "title": "Evaluation Report #1",
+      "content": "Sample Evaluation Report #1\n\nThis is a sample comprehensive model evaluation and benchmark results for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "eval_report",
+      "template_name": "Evaluation Report",
+      "title": "Evaluation Report #2",
+      "content": "Sample Evaluation Report #2\n\nThis is a sample comprehensive model evaluation and benchmark results for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "eval_report",
+      "template_name": "Evaluation Report",
+      "title": "Evaluation Report #3",
+      "content": "Sample Evaluation Report #3\n\nThis is a sample comprehensive model evaluation and benchmark results for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "eval_report",
+      "template_name": "Evaluation Report",
+      "title": "Evaluation Report #4",
+      "content": "Sample Evaluation Report #4\n\nThis is a sample comprehensive model evaluation and benchmark results for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "eval_report",
+      "template_name": "Evaluation Report",
+      "title": "Evaluation Report #5",
+      "content": "Sample Evaluation Report #5\n\nThis is a sample comprehensive model evaluation and benchmark results for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "deployment_runbook",
+      "template_name": "Deployment Runbook",
+      "title": "Deployment Runbook #1",
+      "content": "Sample Deployment Runbook #1\n\nThis is a sample step-by-step deployment procedures and rollback plans for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "deployment_runbook",
+      "template_name": "Deployment Runbook",
+      "title": "Deployment Runbook #2",
+      "content": "Sample Deployment Runbook #2\n\nThis is a sample step-by-step deployment procedures and rollback plans for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "deployment_runbook",
+      "template_name": "Deployment Runbook",
+      "title": "Deployment Runbook #3",
+      "content": "Sample Deployment Runbook #3\n\nThis is a sample step-by-step deployment procedures and rollback plans for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "deployment_runbook",
+      "template_name": "Deployment Runbook",
+      "title": "Deployment Runbook #4",
+      "content": "Sample Deployment Runbook #4\n\nThis is a sample step-by-step deployment procedures and rollback plans for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "deployment_runbook",
+      "template_name": "Deployment Runbook",
+      "title": "Deployment Runbook #5",
+      "content": "Sample Deployment Runbook #5\n\nThis is a sample step-by-step deployment procedures and rollback plans for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "model_card",
+      "template_name": "Model Card",
+      "title": "Model Card #1",
+      "content": "Sample Model Card #1\n\nThis is a sample documentation of model capabilities, limitations, and intended use for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "model_card",
+      "template_name": "Model Card",
+      "title": "Model Card #2",
+      "content": "Sample Model Card #2\n\nThis is a sample documentation of model capabilities, limitations, and intended use for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "model_card",
+      "template_name": "Model Card",
+      "title": "Model Card #3",
+      "content": "Sample Model Card #3\n\nThis is a sample documentation of model capabilities, limitations, and intended use for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "model_card",
+      "template_name": "Model Card",
+      "title": "Model Card #4",
+      "content": "Sample Model Card #4\n\nThis is a sample documentation of model capabilities, limitations, and intended use for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "model_card",
+      "template_name": "Model Card",
+      "title": "Model Card #5",
+      "content": "Sample Model Card #5\n\nThis is a sample documentation of model capabilities, limitations, and intended use for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "prompt_engineering_notes",
+      "template_name": "Prompt Engineering Notes",
+      "title": "Prompt Engineering Notes #1",
+      "content": "Sample Prompt Engineering Notes #1\n\nThis is a sample notes on prompt design, iteration, and performance for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "prompt_engineering_notes",
+      "template_name": "Prompt Engineering Notes",
+      "title": "Prompt Engineering Notes #2",
+      "content": "Sample Prompt Engineering Notes #2\n\nThis is a sample notes on prompt design, iteration, and performance for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "prompt_engineering_notes",
+      "template_name": "Prompt Engineering Notes",
+      "title": "Prompt Engineering Notes #3",
+      "content": "Sample Prompt Engineering Notes #3\n\nThis is a sample notes on prompt design, iteration, and performance for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "prompt_engineering_notes",
+      "template_name": "Prompt Engineering Notes",
+      "title": "Prompt Engineering Notes #4",
+      "content": "Sample Prompt Engineering Notes #4\n\nThis is a sample notes on prompt design, iteration, and performance for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "prompt_engineering_notes",
+      "template_name": "Prompt Engineering Notes",
+      "title": "Prompt Engineering Notes #5",
+      "content": "Sample Prompt Engineering Notes #5\n\nThis is a sample notes on prompt design, iteration, and performance for the GenAI & LLM Ops domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "model_promotion",
+      "task": "Decide whether to promote model Model 1 from staging to production",
+      "steps": [
+        {
+          "thought": "Review evaluation metrics across all benchmarks",
+          "action": "Query all evaluations for this model and compare against production baseline",
+          "observation": "Results retrieved for: Query all evaluations for this model and compare against production baseline"
+        },
+        {
+          "thought": "Check for regression on critical safety and fairness metrics",
+          "action": "Compare safety evaluation scores with minimum thresholds",
+          "observation": "Results retrieved for: Compare safety evaluation scores with minimum thresholds"
+        },
+        {
+          "thought": "Assess infrastructure readiness and cost implications",
+          "action": "Review deployment resource requirements and latency benchmarks",
+          "observation": "Results retrieved for: Review deployment resource requirements and latency benchmarks"
+        },
+        {
+          "thought": "Evaluate rollback plan and monitoring coverage",
+          "action": "Verify rollback procedures and alerting are in place",
+          "observation": "Results retrieved for: Verify rollback procedures and alerting are in place"
+        }
+      ],
+      "outcome": "Decision: {{decision}} promotion based on {{rationale}}"
+    },
+    {
+      "id": "experiment_direction",
+      "task": "Determine next experiment direction after Experiment 5 results",
+      "steps": [
+        {
+          "thought": "Analyze which hyperparameters had the most impact",
+          "action": "Query experiment results and correlate with configuration changes",
+          "observation": "Results retrieved for: Query experiment results and correlate with configuration changes"
+        },
+        {
+          "thought": "Identify gaps in current evaluation coverage",
+          "action": "Review which benchmarks and datasets have not been tested",
+          "observation": "Results retrieved for: Review which benchmarks and datasets have not been tested"
+        },
+        {
+          "thought": "Compare with state-of-the-art approaches",
+          "action": "Search for similar experiments and their outcomes",
+          "observation": "Results retrieved for: Search for similar experiments and their outcomes"
+        }
+      ],
+      "outcome": "Next experiment: {{plan}} targeting {{metric}} improvement"
+    },
+    {
+      "id": "prompt_optimization",
+      "task": "Optimize prompt Prompt 2 for improved {{metric}} on Model 2",
+      "steps": [
+        {
+          "thought": "Analyze current prompt failure modes",
+          "action": "Query evaluation results filtered by error categories",
+          "observation": "Results retrieved for: Query evaluation results filtered by error categories"
+        },
+        {
+          "thought": "Review successful prompt patterns from similar tasks",
+          "action": "Search prompt library for high-performing templates in same category",
+          "observation": "Results retrieved for: Search prompt library for high-performing templates in same category"
+        },
+        {
+          "thought": "Design A/B test for prompt variants",
+          "action": "Create experiment comparing top prompt candidates",
+          "observation": "Results retrieved for: Create experiment comparing top prompt candidates"
+        }
+      ],
+      "outcome": "Optimized prompt: {{result}} with {{improvement}}% gain"
+    }
+  ]
+}

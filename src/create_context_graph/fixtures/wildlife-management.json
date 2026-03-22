@@ -1,0 +1,1189 @@
+{
+  "domain": "wildlife-management",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Species": [
+      {
+        "name": "Species 1",
+        "species_id": "Sample species_id for Species 1",
+        "common_name": "Sample common_name for Species 1",
+        "scientific_name": "Sample scientific_name for Species 1",
+        "conservation_status": "near_threatened",
+        "population_estimate": 100,
+        "diet_type": "carnivore"
+      },
+      {
+        "name": "Species 2",
+        "species_id": "Sample species_id for Species 2",
+        "common_name": "Sample common_name for Species 2",
+        "scientific_name": "Sample scientific_name for Species 2",
+        "conservation_status": "vulnerable",
+        "population_estimate": 200,
+        "diet_type": "omnivore"
+      },
+      {
+        "name": "Species 3",
+        "species_id": "Sample species_id for Species 3",
+        "common_name": "Sample common_name for Species 3",
+        "scientific_name": "Sample scientific_name for Species 3",
+        "conservation_status": "endangered",
+        "population_estimate": 300,
+        "diet_type": "insectivore"
+      },
+      {
+        "name": "Species 4",
+        "species_id": "Sample species_id for Species 4",
+        "common_name": "Sample common_name for Species 4",
+        "scientific_name": "Sample scientific_name for Species 4",
+        "conservation_status": "critically_endangered",
+        "population_estimate": 400,
+        "diet_type": "herbivore"
+      },
+      {
+        "name": "Species 5",
+        "species_id": "Sample species_id for Species 5",
+        "common_name": "Sample common_name for Species 5",
+        "scientific_name": "Sample scientific_name for Species 5",
+        "conservation_status": "extinct_in_wild",
+        "population_estimate": 500,
+        "diet_type": "carnivore"
+      }
+    ],
+    "Individual": [
+      {
+        "name": "Individual 1",
+        "tag_id": "Sample tag_id for Individual 1",
+        "sex": "female",
+        "age_class": "subadult",
+        "weight_kg": 10.5,
+        "status": "deceased"
+      },
+      {
+        "name": "Individual 2",
+        "tag_id": "Sample tag_id for Individual 2",
+        "sex": "unknown",
+        "age_class": "adult",
+        "weight_kg": 21.0,
+        "status": "missing"
+      },
+      {
+        "name": "Individual 3",
+        "tag_id": "Sample tag_id for Individual 3",
+        "sex": "male",
+        "age_class": "senior",
+        "weight_kg": 31.5,
+        "status": "relocated"
+      },
+      {
+        "name": "Individual 4",
+        "tag_id": "Sample tag_id for Individual 4",
+        "sex": "female",
+        "age_class": "juvenile",
+        "weight_kg": 42.0,
+        "status": "active"
+      },
+      {
+        "name": "Individual 5",
+        "tag_id": "Sample tag_id for Individual 5",
+        "sex": "unknown",
+        "age_class": "subadult",
+        "weight_kg": 52.5,
+        "status": "deceased"
+      }
+    ],
+    "Sighting": [
+      {
+        "name": "Sighting 1",
+        "sighting_id": "Sample sighting_id for Sighting 1",
+        "latitude": 10.5,
+        "longitude": 10.5,
+        "observation_method": "camera_trap",
+        "count": 100,
+        "behavior": "Sample behavior for Sighting 1"
+      },
+      {
+        "name": "Sighting 2",
+        "sighting_id": "Sample sighting_id for Sighting 2",
+        "latitude": 21.0,
+        "longitude": 21.0,
+        "observation_method": "telemetry",
+        "count": 200,
+        "behavior": "Sample behavior for Sighting 2"
+      },
+      {
+        "name": "Sighting 3",
+        "sighting_id": "Sample sighting_id for Sighting 3",
+        "latitude": 31.5,
+        "longitude": 31.5,
+        "observation_method": "acoustic",
+        "count": 300,
+        "behavior": "Sample behavior for Sighting 3"
+      },
+      {
+        "name": "Sighting 4",
+        "sighting_id": "Sample sighting_id for Sighting 4",
+        "latitude": 42.0,
+        "longitude": 42.0,
+        "observation_method": "aerial_survey",
+        "count": 400,
+        "behavior": "Sample behavior for Sighting 4"
+      },
+      {
+        "name": "Sighting 5",
+        "sighting_id": "Sample sighting_id for Sighting 5",
+        "latitude": 52.5,
+        "longitude": 52.5,
+        "observation_method": "visual",
+        "count": 500,
+        "behavior": "Sample behavior for Sighting 5"
+      }
+    ],
+    "Habitat": [
+      {
+        "name": "Habitat 1",
+        "habitat_id": "Sample habitat_id for Habitat 1",
+        "habitat_type": "grassland",
+        "area_hectares": 10.5,
+        "protection_level": "partial",
+        "health_status": "good"
+      },
+      {
+        "name": "Habitat 2",
+        "habitat_id": "Sample habitat_id for Habitat 2",
+        "habitat_type": "wetland",
+        "area_hectares": 21.0,
+        "protection_level": "national_park",
+        "health_status": "degraded"
+      },
+      {
+        "name": "Habitat 3",
+        "habitat_id": "Sample habitat_id for Habitat 3",
+        "habitat_type": "desert",
+        "area_hectares": 31.5,
+        "protection_level": "wildlife_reserve",
+        "health_status": "critical"
+      },
+      {
+        "name": "Habitat 4",
+        "habitat_id": "Sample habitat_id for Habitat 4",
+        "habitat_type": "marine",
+        "area_hectares": 42.0,
+        "protection_level": "world_heritage",
+        "health_status": "pristine"
+      },
+      {
+        "name": "Habitat 5",
+        "habitat_id": "Sample habitat_id for Habitat 5",
+        "habitat_type": "alpine",
+        "area_hectares": 52.5,
+        "protection_level": "unprotected",
+        "health_status": "good"
+      }
+    ],
+    "Camera": [
+      {
+        "name": "Camera 1",
+        "camera_id": "Sample camera_id for Camera 1",
+        "model": "Sample model for Camera 1",
+        "latitude": 10.5,
+        "longitude": 10.5,
+        "status": "inactive",
+        "battery_level": 10.5
+      },
+      {
+        "name": "Camera 2",
+        "camera_id": "Sample camera_id for Camera 2",
+        "model": "Sample model for Camera 2",
+        "latitude": 21.0,
+        "longitude": 21.0,
+        "status": "maintenance",
+        "battery_level": 21.0
+      },
+      {
+        "name": "Camera 3",
+        "camera_id": "Sample camera_id for Camera 3",
+        "model": "Sample model for Camera 3",
+        "latitude": 31.5,
+        "longitude": 31.5,
+        "status": "lost",
+        "battery_level": 31.5
+      },
+      {
+        "name": "Camera 4",
+        "camera_id": "Sample camera_id for Camera 4",
+        "model": "Sample model for Camera 4",
+        "latitude": 42.0,
+        "longitude": 42.0,
+        "status": "active",
+        "battery_level": 42.0
+      },
+      {
+        "name": "Camera 5",
+        "camera_id": "Sample camera_id for Camera 5",
+        "model": "Sample model for Camera 5",
+        "latitude": 52.5,
+        "longitude": 52.5,
+        "status": "inactive",
+        "battery_level": 52.5
+      }
+    ],
+    "Threat": [
+      {
+        "name": "Threat 1",
+        "threat_id": "Sample threat_id for Threat 1",
+        "threat_type": "habitat_loss",
+        "severity": "moderate",
+        "description": "Sample description for Threat 1"
+      },
+      {
+        "name": "Threat 2",
+        "threat_id": "Sample threat_id for Threat 2",
+        "threat_type": "climate_change",
+        "severity": "high",
+        "description": "Sample description for Threat 2"
+      },
+      {
+        "name": "Threat 3",
+        "threat_id": "Sample threat_id for Threat 3",
+        "threat_type": "disease",
+        "severity": "critical",
+        "description": "Sample description for Threat 3"
+      },
+      {
+        "name": "Threat 4",
+        "threat_id": "Sample threat_id for Threat 4",
+        "threat_type": "invasive_species",
+        "severity": "low",
+        "description": "Sample description for Threat 4"
+      },
+      {
+        "name": "Threat 5",
+        "threat_id": "Sample threat_id for Threat 5",
+        "threat_type": "pollution",
+        "severity": "moderate",
+        "description": "Sample description for Threat 5"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "BELONGS_TO_SPECIES",
+      "source_label": "Individual",
+      "source_name": "Individual 1",
+      "target_label": "Species",
+      "target_name": "Species 1"
+    },
+    {
+      "type": "BELONGS_TO_SPECIES",
+      "source_label": "Individual",
+      "source_name": "Individual 1",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "BELONGS_TO_SPECIES",
+      "source_label": "Individual",
+      "source_name": "Individual 2",
+      "target_label": "Species",
+      "target_name": "Species 3"
+    },
+    {
+      "type": "BELONGS_TO_SPECIES",
+      "source_label": "Individual",
+      "source_name": "Individual 2",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "BELONGS_TO_SPECIES",
+      "source_label": "Individual",
+      "source_name": "Individual 3",
+      "target_label": "Species",
+      "target_name": "Species 2"
+    },
+    {
+      "type": "BELONGS_TO_SPECIES",
+      "source_label": "Individual",
+      "source_name": "Individual 4",
+      "target_label": "Species",
+      "target_name": "Species 2"
+    },
+    {
+      "type": "BELONGS_TO_SPECIES",
+      "source_label": "Individual",
+      "source_name": "Individual 5",
+      "target_label": "Species",
+      "target_name": "Species 5"
+    },
+    {
+      "type": "SIGHTED_AT",
+      "source_label": "Individual",
+      "source_name": "Individual 1",
+      "target_label": "Sighting",
+      "target_name": "Sighting 3"
+    },
+    {
+      "type": "SIGHTED_AT",
+      "source_label": "Individual",
+      "source_name": "Individual 1",
+      "target_label": "Sighting",
+      "target_name": "Sighting 1"
+    },
+    {
+      "type": "SIGHTED_AT",
+      "source_label": "Individual",
+      "source_name": "Individual 2",
+      "target_label": "Sighting",
+      "target_name": "Sighting 4"
+    },
+    {
+      "type": "SIGHTED_AT",
+      "source_label": "Individual",
+      "source_name": "Individual 2",
+      "target_label": "Sighting",
+      "target_name": "Sighting 1"
+    },
+    {
+      "type": "SIGHTED_AT",
+      "source_label": "Individual",
+      "source_name": "Individual 3",
+      "target_label": "Sighting",
+      "target_name": "Sighting 1"
+    },
+    {
+      "type": "SIGHTED_AT",
+      "source_label": "Individual",
+      "source_name": "Individual 3",
+      "target_label": "Sighting",
+      "target_name": "Sighting 2"
+    },
+    {
+      "type": "SIGHTED_AT",
+      "source_label": "Individual",
+      "source_name": "Individual 4",
+      "target_label": "Sighting",
+      "target_name": "Sighting 4"
+    },
+    {
+      "type": "SIGHTED_AT",
+      "source_label": "Individual",
+      "source_name": "Individual 5",
+      "target_label": "Sighting",
+      "target_name": "Sighting 2"
+    },
+    {
+      "type": "SIGHTED_AT",
+      "source_label": "Individual",
+      "source_name": "Individual 5",
+      "target_label": "Sighting",
+      "target_name": "Sighting 1"
+    },
+    {
+      "type": "CAPTURED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 1",
+      "target_label": "Camera",
+      "target_name": "Camera 4"
+    },
+    {
+      "type": "CAPTURED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 2",
+      "target_label": "Camera",
+      "target_name": "Camera 3"
+    },
+    {
+      "type": "CAPTURED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 2",
+      "target_label": "Camera",
+      "target_name": "Camera 2"
+    },
+    {
+      "type": "CAPTURED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 3",
+      "target_label": "Camera",
+      "target_name": "Camera 5"
+    },
+    {
+      "type": "CAPTURED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 4",
+      "target_label": "Camera",
+      "target_name": "Camera 2"
+    },
+    {
+      "type": "CAPTURED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 4",
+      "target_label": "Camera",
+      "target_name": "Camera 3"
+    },
+    {
+      "type": "CAPTURED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 5",
+      "target_label": "Camera",
+      "target_name": "Camera 2"
+    },
+    {
+      "type": "CAPTURED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 5",
+      "target_label": "Camera",
+      "target_name": "Camera 5"
+    },
+    {
+      "type": "INHABITS",
+      "source_label": "Species",
+      "source_name": "Species 1",
+      "target_label": "Habitat",
+      "target_name": "Habitat 5"
+    },
+    {
+      "type": "INHABITS",
+      "source_label": "Species",
+      "source_name": "Species 1",
+      "target_label": "Habitat",
+      "target_name": "Habitat 1"
+    },
+    {
+      "type": "INHABITS",
+      "source_label": "Species",
+      "source_name": "Species 2",
+      "target_label": "Habitat",
+      "target_name": "Habitat 3"
+    },
+    {
+      "type": "INHABITS",
+      "source_label": "Species",
+      "source_name": "Species 3",
+      "target_label": "Habitat",
+      "target_name": "Habitat 2"
+    },
+    {
+      "type": "INHABITS",
+      "source_label": "Species",
+      "source_name": "Species 3",
+      "target_label": "Habitat",
+      "target_name": "Habitat 3"
+    },
+    {
+      "type": "INHABITS",
+      "source_label": "Species",
+      "source_name": "Species 4",
+      "target_label": "Habitat",
+      "target_name": "Habitat 5"
+    },
+    {
+      "type": "INHABITS",
+      "source_label": "Species",
+      "source_name": "Species 5",
+      "target_label": "Habitat",
+      "target_name": "Habitat 4"
+    },
+    {
+      "type": "INHABITS",
+      "source_label": "Species",
+      "source_name": "Species 5",
+      "target_label": "Habitat",
+      "target_name": "Habitat 5"
+    },
+    {
+      "type": "PREYS_ON",
+      "source_label": "Species",
+      "source_name": "Species 1",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "PREYS_ON",
+      "source_label": "Species",
+      "source_name": "Species 2",
+      "target_label": "Species",
+      "target_name": "Species 5"
+    },
+    {
+      "type": "PREYS_ON",
+      "source_label": "Species",
+      "source_name": "Species 3",
+      "target_label": "Species",
+      "target_name": "Species 5"
+    },
+    {
+      "type": "PREYS_ON",
+      "source_label": "Species",
+      "source_name": "Species 4",
+      "target_label": "Species",
+      "target_name": "Species 5"
+    },
+    {
+      "type": "PREYS_ON",
+      "source_label": "Species",
+      "source_name": "Species 4",
+      "target_label": "Species",
+      "target_name": "Species 3"
+    },
+    {
+      "type": "PREYS_ON",
+      "source_label": "Species",
+      "source_name": "Species 5",
+      "target_label": "Species",
+      "target_name": "Species 1"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Camera",
+      "source_name": "Camera 1",
+      "target_label": "Habitat",
+      "target_name": "Habitat 3"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Camera",
+      "source_name": "Camera 2",
+      "target_label": "Habitat",
+      "target_name": "Habitat 4"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Camera",
+      "source_name": "Camera 2",
+      "target_label": "Habitat",
+      "target_name": "Habitat 1"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Camera",
+      "source_name": "Camera 3",
+      "target_label": "Habitat",
+      "target_name": "Habitat 4"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Camera",
+      "source_name": "Camera 3",
+      "target_label": "Habitat",
+      "target_name": "Habitat 5"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Camera",
+      "source_name": "Camera 4",
+      "target_label": "Habitat",
+      "target_name": "Habitat 5"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Camera",
+      "source_name": "Camera 4",
+      "target_label": "Habitat",
+      "target_name": "Habitat 1"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Camera",
+      "source_name": "Camera 5",
+      "target_label": "Habitat",
+      "target_name": "Habitat 1"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Threat",
+      "source_name": "Threat 1",
+      "target_label": "Species",
+      "target_name": "Species 1"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Threat",
+      "source_name": "Threat 2",
+      "target_label": "Species",
+      "target_name": "Species 1"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Threat",
+      "source_name": "Threat 3",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Threat",
+      "source_name": "Threat 4",
+      "target_label": "Species",
+      "target_name": "Species 5"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Threat",
+      "source_name": "Threat 5",
+      "target_label": "Species",
+      "target_name": "Species 1"
+    },
+    {
+      "type": "OBSERVED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 1",
+      "target_label": "Person",
+      "target_name": "Person 4"
+    },
+    {
+      "type": "OBSERVED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 2",
+      "target_label": "Person",
+      "target_name": "Person 5"
+    },
+    {
+      "type": "OBSERVED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 2",
+      "target_label": "Person",
+      "target_name": "Person 1"
+    },
+    {
+      "type": "OBSERVED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 3",
+      "target_label": "Person",
+      "target_name": "Person 2"
+    },
+    {
+      "type": "OBSERVED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 3",
+      "target_label": "Person",
+      "target_name": "Person 1"
+    },
+    {
+      "type": "OBSERVED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 4",
+      "target_label": "Person",
+      "target_name": "Person 5"
+    },
+    {
+      "type": "OBSERVED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 5",
+      "target_label": "Person",
+      "target_name": "Person 3"
+    },
+    {
+      "type": "OBSERVED_BY",
+      "source_label": "Sighting",
+      "source_name": "Sighting 5",
+      "target_label": "Person",
+      "target_name": "Person 2"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "field_report",
+      "template_name": "Field Report",
+      "title": "Field Report #1",
+      "content": "Sample Field Report #1\n\nThis is a sample daily field observation reports from rangers and researchers for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "field_report",
+      "template_name": "Field Report",
+      "title": "Field Report #2",
+      "content": "Sample Field Report #2\n\nThis is a sample daily field observation reports from rangers and researchers for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "field_report",
+      "template_name": "Field Report",
+      "title": "Field Report #3",
+      "content": "Sample Field Report #3\n\nThis is a sample daily field observation reports from rangers and researchers for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "field_report",
+      "template_name": "Field Report",
+      "title": "Field Report #4",
+      "content": "Sample Field Report #4\n\nThis is a sample daily field observation reports from rangers and researchers for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "field_report",
+      "template_name": "Field Report",
+      "title": "Field Report #5",
+      "content": "Sample Field Report #5\n\nThis is a sample daily field observation reports from rangers and researchers for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "camera_trap_summary",
+      "template_name": "Camera Trap Summary",
+      "title": "Camera Trap Summary #1",
+      "content": "Sample Camera Trap Summary #1\n\nThis is a sample monthly summaries of camera trap captures and findings for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "camera_trap_summary",
+      "template_name": "Camera Trap Summary",
+      "title": "Camera Trap Summary #2",
+      "content": "Sample Camera Trap Summary #2\n\nThis is a sample monthly summaries of camera trap captures and findings for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "camera_trap_summary",
+      "template_name": "Camera Trap Summary",
+      "title": "Camera Trap Summary #3",
+      "content": "Sample Camera Trap Summary #3\n\nThis is a sample monthly summaries of camera trap captures and findings for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "camera_trap_summary",
+      "template_name": "Camera Trap Summary",
+      "title": "Camera Trap Summary #4",
+      "content": "Sample Camera Trap Summary #4\n\nThis is a sample monthly summaries of camera trap captures and findings for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "camera_trap_summary",
+      "template_name": "Camera Trap Summary",
+      "title": "Camera Trap Summary #5",
+      "content": "Sample Camera Trap Summary #5\n\nThis is a sample monthly summaries of camera trap captures and findings for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conservation_assessment",
+      "template_name": "Conservation Assessment",
+      "title": "Conservation Assessment #1",
+      "content": "Sample Conservation Assessment #1\n\nThis is a sample species and habitat conservation status assessments for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conservation_assessment",
+      "template_name": "Conservation Assessment",
+      "title": "Conservation Assessment #2",
+      "content": "Sample Conservation Assessment #2\n\nThis is a sample species and habitat conservation status assessments for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conservation_assessment",
+      "template_name": "Conservation Assessment",
+      "title": "Conservation Assessment #3",
+      "content": "Sample Conservation Assessment #3\n\nThis is a sample species and habitat conservation status assessments for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conservation_assessment",
+      "template_name": "Conservation Assessment",
+      "title": "Conservation Assessment #4",
+      "content": "Sample Conservation Assessment #4\n\nThis is a sample species and habitat conservation status assessments for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conservation_assessment",
+      "template_name": "Conservation Assessment",
+      "title": "Conservation Assessment #5",
+      "content": "Sample Conservation Assessment #5\n\nThis is a sample species and habitat conservation status assessments for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "incident_report",
+      "template_name": "Incident Report",
+      "title": "Incident Report #1",
+      "content": "Sample Incident Report #1\n\nThis is a sample reports on poaching, human-wildlife conflict, or other incidents for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "incident_report",
+      "template_name": "Incident Report",
+      "title": "Incident Report #2",
+      "content": "Sample Incident Report #2\n\nThis is a sample reports on poaching, human-wildlife conflict, or other incidents for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "incident_report",
+      "template_name": "Incident Report",
+      "title": "Incident Report #3",
+      "content": "Sample Incident Report #3\n\nThis is a sample reports on poaching, human-wildlife conflict, or other incidents for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "incident_report",
+      "template_name": "Incident Report",
+      "title": "Incident Report #4",
+      "content": "Sample Incident Report #4\n\nThis is a sample reports on poaching, human-wildlife conflict, or other incidents for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "incident_report",
+      "template_name": "Incident Report",
+      "title": "Incident Report #5",
+      "content": "Sample Incident Report #5\n\nThis is a sample reports on poaching, human-wildlife conflict, or other incidents for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #1",
+      "content": "Sample Meeting Notes #1\n\nThis is a sample notes from conservation team meetings and stakeholder sessions for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #2",
+      "content": "Sample Meeting Notes #2\n\nThis is a sample notes from conservation team meetings and stakeholder sessions for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #3",
+      "content": "Sample Meeting Notes #3\n\nThis is a sample notes from conservation team meetings and stakeholder sessions for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #4",
+      "content": "Sample Meeting Notes #4\n\nThis is a sample notes from conservation team meetings and stakeholder sessions for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #5",
+      "content": "Sample Meeting Notes #5\n\nThis is a sample notes from conservation team meetings and stakeholder sessions for the Wildlife Management domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "species_intervention",
+      "task": "Evaluate whether to intervene for declining {{species.common_name}} population in Habitat 5",
+      "steps": [
+        {
+          "thought": "Assess current population trends and recent sighting data",
+          "action": "Query sighting records and population counts over the last 12 months",
+          "observation": "Results retrieved for: Query sighting records and population counts over the last 12 months"
+        },
+        {
+          "thought": "Identify primary threats affecting the species in this habitat",
+          "action": "Review threat records and incident reports for the area",
+          "observation": "Results retrieved for: Review threat records and incident reports for the area"
+        },
+        {
+          "thought": "Evaluate available resources and intervention options",
+          "action": "Check camera coverage, ranger capacity, and budget constraints",
+          "observation": "Results retrieved for: Check camera coverage, ranger capacity, and budget constraints"
+        },
+        {
+          "thought": "Consider ecological impact of proposed intervention",
+          "action": "Analyze predator-prey relationships and habitat carrying capacity",
+          "observation": "Results retrieved for: Analyze predator-prey relationships and habitat carrying capacity"
+        }
+      ],
+      "outcome": "Decision: {{decision}} intervention based on {{rationale}}"
+    },
+    {
+      "id": "habitat_protection",
+      "task": "Determine protection priority level for Habitat 5",
+      "steps": [
+        {
+          "thought": "Assess biodiversity richness and species of concern in the area",
+          "action": "Query species diversity and conservation status of inhabitants",
+          "observation": "Results retrieved for: Query species diversity and conservation status of inhabitants"
+        },
+        {
+          "thought": "Evaluate current threat levels and trajectory",
+          "action": "Review threats, incident history, and degradation trends",
+          "observation": "Results retrieved for: Review threats, incident history, and degradation trends"
+        },
+        {
+          "thought": "Compare with other habitats competing for protection resources",
+          "action": "Rank habitats by biodiversity value and threat urgency",
+          "observation": "Results retrieved for: Rank habitats by biodiversity value and threat urgency"
+        }
+      ],
+      "outcome": "Protection priority: {{priority}} \u2014 {{rationale}}"
+    },
+    {
+      "id": "camera_deployment",
+      "task": "Optimize camera trap placement in Habitat 5 for monitoring {{species.common_name}}",
+      "steps": [
+        {
+          "thought": "Analyze historical sighting locations and movement corridors",
+          "action": "Map sighting coordinates and identify high-activity zones",
+          "observation": "Results retrieved for: Map sighting coordinates and identify high-activity zones"
+        },
+        {
+          "thought": "Review current camera coverage and gaps",
+          "action": "Query active cameras and their coverage areas",
+          "observation": "Results retrieved for: Query active cameras and their coverage areas"
+        },
+        {
+          "thought": "Consider terrain, accessibility, and equipment security",
+          "action": "Evaluate candidate locations for feasibility",
+          "observation": "Results retrieved for: Evaluate candidate locations for feasibility"
+        }
+      ],
+      "outcome": "Deployment plan: {{plan}} with expected coverage improvement of {{improvement}}"
+    }
+  ]
+}

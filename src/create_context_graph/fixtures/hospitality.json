@@ -1,0 +1,1250 @@
+{
+  "domain": "hospitality",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Hotel": [
+      {
+        "name": "Hotel 1",
+        "hotel_id": "Sample hotel_id for Hotel 1",
+        "brand": "Sample brand for Hotel 1",
+        "hotel_class": "midscale",
+        "star_rating": 10.5,
+        "total_rooms": 100,
+        "address": "Sample address for Hotel 1",
+        "city": "Sample city for Hotel 1",
+        "country": "Sample country for Hotel 1"
+      },
+      {
+        "name": "Hotel 2",
+        "hotel_id": "Sample hotel_id for Hotel 2",
+        "brand": "Sample brand for Hotel 2",
+        "hotel_class": "upscale",
+        "star_rating": 21.0,
+        "total_rooms": 200,
+        "address": "Sample address for Hotel 2",
+        "city": "Sample city for Hotel 2",
+        "country": "Sample country for Hotel 2"
+      },
+      {
+        "name": "Hotel 3",
+        "hotel_id": "Sample hotel_id for Hotel 3",
+        "brand": "Sample brand for Hotel 3",
+        "hotel_class": "upper_upscale",
+        "star_rating": 31.5,
+        "total_rooms": 300,
+        "address": "Sample address for Hotel 3",
+        "city": "Sample city for Hotel 3",
+        "country": "Sample country for Hotel 3"
+      },
+      {
+        "name": "Hotel 4",
+        "hotel_id": "Sample hotel_id for Hotel 4",
+        "brand": "Sample brand for Hotel 4",
+        "hotel_class": "luxury",
+        "star_rating": 42.0,
+        "total_rooms": 400,
+        "address": "Sample address for Hotel 4",
+        "city": "Sample city for Hotel 4",
+        "country": "Sample country for Hotel 4"
+      },
+      {
+        "name": "Hotel 5",
+        "hotel_id": "Sample hotel_id for Hotel 5",
+        "brand": "Sample brand for Hotel 5",
+        "hotel_class": "economy",
+        "star_rating": 52.5,
+        "total_rooms": 500,
+        "address": "Sample address for Hotel 5",
+        "city": "Sample city for Hotel 5",
+        "country": "Sample country for Hotel 5"
+      }
+    ],
+    "Room": [
+      {
+        "name": "Room 1",
+        "room_id": "Sample room_id for Room 1",
+        "room_number": "Sample room_number for Room 1",
+        "room_type": "deluxe",
+        "floor": 100,
+        "max_occupancy": 100,
+        "base_rate": 10.5,
+        "status": "occupied",
+        "view": "ocean"
+      },
+      {
+        "name": "Room 2",
+        "room_id": "Sample room_id for Room 2",
+        "room_number": "Sample room_number for Room 2",
+        "room_type": "suite",
+        "floor": 200,
+        "max_occupancy": 200,
+        "base_rate": 21.0,
+        "status": "maintenance",
+        "view": "garden"
+      },
+      {
+        "name": "Room 3",
+        "room_id": "Sample room_id for Room 3",
+        "room_number": "Sample room_number for Room 3",
+        "room_type": "penthouse",
+        "floor": 300,
+        "max_occupancy": 300,
+        "base_rate": 31.5,
+        "status": "out_of_order",
+        "view": "pool"
+      },
+      {
+        "name": "Room 4",
+        "room_id": "Sample room_id for Room 4",
+        "room_number": "Sample room_number for Room 4",
+        "room_type": "executive",
+        "floor": 400,
+        "max_occupancy": 400,
+        "base_rate": 42.0,
+        "status": "cleaning",
+        "view": "mountain"
+      },
+      {
+        "name": "Room 5",
+        "room_id": "Sample room_id for Room 5",
+        "room_number": "Sample room_number for Room 5",
+        "room_type": "accessible",
+        "floor": 500,
+        "max_occupancy": 500,
+        "base_rate": 52.5,
+        "status": "available",
+        "view": "interior"
+      }
+    ],
+    "Reservation": [
+      {
+        "name": "Reservation 1",
+        "reservation_id": "Sample reservation_id for Reservation 1",
+        "total_amount": 10.5,
+        "reservation_status": "checked_in",
+        "channel": "ota",
+        "special_requests": "Sample special_requests for Reservation 1",
+        "num_guests": 100
+      },
+      {
+        "name": "Reservation 2",
+        "reservation_id": "Sample reservation_id for Reservation 2",
+        "total_amount": 21.0,
+        "reservation_status": "checked_out",
+        "channel": "corporate",
+        "special_requests": "Sample special_requests for Reservation 2",
+        "num_guests": 200
+      },
+      {
+        "name": "Reservation 3",
+        "reservation_id": "Sample reservation_id for Reservation 3",
+        "total_amount": 31.5,
+        "reservation_status": "cancelled",
+        "channel": "group",
+        "special_requests": "Sample special_requests for Reservation 3",
+        "num_guests": 300
+      },
+      {
+        "name": "Reservation 4",
+        "reservation_id": "Sample reservation_id for Reservation 4",
+        "total_amount": 42.0,
+        "reservation_status": "no_show",
+        "channel": "walk_in",
+        "special_requests": "Sample special_requests for Reservation 4",
+        "num_guests": 400
+      },
+      {
+        "name": "Reservation 5",
+        "reservation_id": "Sample reservation_id for Reservation 5",
+        "total_amount": 52.5,
+        "reservation_status": "confirmed",
+        "channel": "loyalty",
+        "special_requests": "Sample special_requests for Reservation 5",
+        "num_guests": 500
+      }
+    ],
+    "Guest": [
+      {
+        "name": "Guest 1",
+        "guest_id": "Sample guest_id for Guest 1",
+        "email": "Sample email for Guest 1",
+        "phone": "Sample phone for Guest 1",
+        "loyalty_tier": "silver",
+        "guest_type": "business",
+        "total_stays": 100,
+        "lifetime_value": 10.5
+      },
+      {
+        "name": "Guest 2",
+        "guest_id": "Sample guest_id for Guest 2",
+        "email": "Sample email for Guest 2",
+        "phone": "Sample phone for Guest 2",
+        "loyalty_tier": "gold",
+        "guest_type": "group",
+        "total_stays": 200,
+        "lifetime_value": 21.0
+      },
+      {
+        "name": "Guest 3",
+        "guest_id": "Sample guest_id for Guest 3",
+        "email": "Sample email for Guest 3",
+        "phone": "Sample phone for Guest 3",
+        "loyalty_tier": "platinum",
+        "guest_type": "vip",
+        "total_stays": 300,
+        "lifetime_value": 31.5
+      },
+      {
+        "name": "Guest 4",
+        "guest_id": "Sample guest_id for Guest 4",
+        "email": "Sample email for Guest 4",
+        "phone": "Sample phone for Guest 4",
+        "loyalty_tier": "ambassador",
+        "guest_type": "long_stay",
+        "total_stays": 400,
+        "lifetime_value": 42.0
+      },
+      {
+        "name": "Guest 5",
+        "guest_id": "Sample guest_id for Guest 5",
+        "email": "Sample email for Guest 5",
+        "phone": "Sample phone for Guest 5",
+        "loyalty_tier": "member",
+        "guest_type": "leisure",
+        "total_stays": 500,
+        "lifetime_value": 52.5
+      }
+    ],
+    "Service": [
+      {
+        "name": "Service 1",
+        "service_id": "Sample service_id for Service 1",
+        "service_type": "housekeeping",
+        "price": 10.5,
+        "department": "Sample department for Service 1",
+        "available_hours": "Sample available_hours for Service 1",
+        "satisfaction_score": 10.5
+      },
+      {
+        "name": "Service 2",
+        "service_id": "Sample service_id for Service 2",
+        "service_type": "concierge",
+        "price": 21.0,
+        "department": "Sample department for Service 2",
+        "available_hours": "Sample available_hours for Service 2",
+        "satisfaction_score": 21.0
+      },
+      {
+        "name": "Service 3",
+        "service_id": "Sample service_id for Service 3",
+        "service_type": "spa",
+        "price": 31.5,
+        "department": "Sample department for Service 3",
+        "available_hours": "Sample available_hours for Service 3",
+        "satisfaction_score": 31.5
+      },
+      {
+        "name": "Service 4",
+        "service_id": "Sample service_id for Service 4",
+        "service_type": "dining",
+        "price": 42.0,
+        "department": "Sample department for Service 4",
+        "available_hours": "Sample available_hours for Service 4",
+        "satisfaction_score": 42.0
+      },
+      {
+        "name": "Service 5",
+        "service_id": "Sample service_id for Service 5",
+        "service_type": "laundry",
+        "price": 52.5,
+        "department": "Sample department for Service 5",
+        "available_hours": "Sample available_hours for Service 5",
+        "satisfaction_score": 52.5
+      }
+    ],
+    "Staff": [
+      {
+        "name": "Staff 1",
+        "staff_id": "Sample staff_id for Staff 1",
+        "role": "front_desk",
+        "department": "housekeeping",
+        "shift": "afternoon",
+        "performance_rating": 10.5
+      },
+      {
+        "name": "Staff 2",
+        "staff_id": "Sample staff_id for Staff 2",
+        "role": "housekeeping",
+        "department": "food_beverage",
+        "shift": "night",
+        "performance_rating": 21.0
+      },
+      {
+        "name": "Staff 3",
+        "staff_id": "Sample staff_id for Staff 3",
+        "role": "concierge",
+        "department": "spa",
+        "shift": "rotating",
+        "performance_rating": 31.5
+      },
+      {
+        "name": "Staff 4",
+        "staff_id": "Sample staff_id for Staff 4",
+        "role": "chef",
+        "department": "engineering",
+        "shift": "morning",
+        "performance_rating": 42.0
+      },
+      {
+        "name": "Staff 5",
+        "staff_id": "Sample staff_id for Staff 5",
+        "role": "server",
+        "department": "management",
+        "shift": "afternoon",
+        "performance_rating": 52.5
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "STAYED_AT",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "STAYED_AT",
+      "source_label": "Guest",
+      "source_name": "Guest 2",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "STAYED_AT",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "STAYED_AT",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Hotel",
+      "target_name": "Hotel 5"
+    },
+    {
+      "type": "STAYED_AT",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "STAYED_AT",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Hotel",
+      "target_name": "Hotel 1"
+    },
+    {
+      "type": "STAYED_AT",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "RESERVED",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Reservation",
+      "target_name": "Reservation 3"
+    },
+    {
+      "type": "RESERVED",
+      "source_label": "Guest",
+      "source_name": "Guest 2",
+      "target_label": "Reservation",
+      "target_name": "Reservation 1"
+    },
+    {
+      "type": "RESERVED",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Reservation",
+      "target_name": "Reservation 5"
+    },
+    {
+      "type": "RESERVED",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Reservation",
+      "target_name": "Reservation 2"
+    },
+    {
+      "type": "RESERVED",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Reservation",
+      "target_name": "Reservation 3"
+    },
+    {
+      "type": "RESERVED",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Reservation",
+      "target_name": "Reservation 4"
+    },
+    {
+      "type": "RESERVED",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Reservation",
+      "target_name": "Reservation 5"
+    },
+    {
+      "type": "SERVED_BY",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Service",
+      "target_name": "Service 3"
+    },
+    {
+      "type": "SERVED_BY",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Service",
+      "target_name": "Service 1"
+    },
+    {
+      "type": "SERVED_BY",
+      "source_label": "Guest",
+      "source_name": "Guest 2",
+      "target_label": "Service",
+      "target_name": "Service 5"
+    },
+    {
+      "type": "SERVED_BY",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Service",
+      "target_name": "Service 1"
+    },
+    {
+      "type": "SERVED_BY",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Service",
+      "target_name": "Service 5"
+    },
+    {
+      "type": "SERVED_BY",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Service",
+      "target_name": "Service 4"
+    },
+    {
+      "type": "RATED",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Hotel",
+      "target_name": "Hotel 4"
+    },
+    {
+      "type": "RATED",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "RATED",
+      "source_label": "Guest",
+      "source_name": "Guest 2",
+      "target_label": "Hotel",
+      "target_name": "Hotel 5"
+    },
+    {
+      "type": "RATED",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Hotel",
+      "target_name": "Hotel 1"
+    },
+    {
+      "type": "RATED",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Hotel",
+      "target_name": "Hotel 5"
+    },
+    {
+      "type": "RATED",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Hotel",
+      "target_name": "Hotel 5"
+    },
+    {
+      "type": "RATED",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Hotel",
+      "target_name": "Hotel 4"
+    },
+    {
+      "type": "RATED",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "Reservation",
+      "source_name": "Reservation 1",
+      "target_label": "Room",
+      "target_name": "Room 5"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "Reservation",
+      "source_name": "Reservation 1",
+      "target_label": "Room",
+      "target_name": "Room 4"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "Reservation",
+      "source_name": "Reservation 2",
+      "target_label": "Room",
+      "target_name": "Room 1"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "Reservation",
+      "source_name": "Reservation 2",
+      "target_label": "Room",
+      "target_name": "Room 3"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "Reservation",
+      "source_name": "Reservation 3",
+      "target_label": "Room",
+      "target_name": "Room 4"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "Reservation",
+      "source_name": "Reservation 4",
+      "target_label": "Room",
+      "target_name": "Room 4"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "Reservation",
+      "source_name": "Reservation 5",
+      "target_label": "Room",
+      "target_name": "Room 5"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "Reservation",
+      "source_name": "Reservation 5",
+      "target_label": "Room",
+      "target_name": "Room 4"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 1",
+      "target_label": "Staff",
+      "target_name": "Staff 2"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 1",
+      "target_label": "Staff",
+      "target_name": "Staff 3"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 2",
+      "target_label": "Staff",
+      "target_name": "Staff 4"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 2",
+      "target_label": "Staff",
+      "target_name": "Staff 3"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 3",
+      "target_label": "Staff",
+      "target_name": "Staff 5"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 4",
+      "target_label": "Staff",
+      "target_name": "Staff 5"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 5",
+      "target_label": "Staff",
+      "target_name": "Staff 5"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 5",
+      "target_label": "Staff",
+      "target_name": "Staff 4"
+    },
+    {
+      "type": "DELIVERED_BY",
+      "source_label": "Service",
+      "source_name": "Service 1",
+      "target_label": "Staff",
+      "target_name": "Staff 3"
+    },
+    {
+      "type": "DELIVERED_BY",
+      "source_label": "Service",
+      "source_name": "Service 2",
+      "target_label": "Staff",
+      "target_name": "Staff 2"
+    },
+    {
+      "type": "DELIVERED_BY",
+      "source_label": "Service",
+      "source_name": "Service 3",
+      "target_label": "Staff",
+      "target_name": "Staff 5"
+    },
+    {
+      "type": "DELIVERED_BY",
+      "source_label": "Service",
+      "source_name": "Service 3",
+      "target_label": "Staff",
+      "target_name": "Staff 4"
+    },
+    {
+      "type": "DELIVERED_BY",
+      "source_label": "Service",
+      "source_name": "Service 4",
+      "target_label": "Staff",
+      "target_name": "Staff 5"
+    },
+    {
+      "type": "DELIVERED_BY",
+      "source_label": "Service",
+      "source_name": "Service 5",
+      "target_label": "Staff",
+      "target_name": "Staff 2"
+    },
+    {
+      "type": "DELIVERED_BY",
+      "source_label": "Service",
+      "source_name": "Service 5",
+      "target_label": "Staff",
+      "target_name": "Staff 4"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Room",
+      "source_name": "Room 1",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Room",
+      "source_name": "Room 1",
+      "target_label": "Hotel",
+      "target_name": "Hotel 1"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Room",
+      "source_name": "Room 2",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Room",
+      "source_name": "Room 2",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Room",
+      "source_name": "Room 3",
+      "target_label": "Hotel",
+      "target_name": "Hotel 1"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Room",
+      "source_name": "Room 3",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Room",
+      "source_name": "Room 4",
+      "target_label": "Hotel",
+      "target_name": "Hotel 5"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Room",
+      "source_name": "Room 5",
+      "target_label": "Hotel",
+      "target_name": "Hotel 5"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "reservation_confirmation",
+      "template_name": "Reservation Confirmation",
+      "title": "Reservation Confirmation #1",
+      "content": "Sample Reservation Confirmation #1\n\nThis is a sample guest reservation confirmation with stay details for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "reservation_confirmation",
+      "template_name": "Reservation Confirmation",
+      "title": "Reservation Confirmation #2",
+      "content": "Sample Reservation Confirmation #2\n\nThis is a sample guest reservation confirmation with stay details for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "reservation_confirmation",
+      "template_name": "Reservation Confirmation",
+      "title": "Reservation Confirmation #3",
+      "content": "Sample Reservation Confirmation #3\n\nThis is a sample guest reservation confirmation with stay details for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "reservation_confirmation",
+      "template_name": "Reservation Confirmation",
+      "title": "Reservation Confirmation #4",
+      "content": "Sample Reservation Confirmation #4\n\nThis is a sample guest reservation confirmation with stay details for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "reservation_confirmation",
+      "template_name": "Reservation Confirmation",
+      "title": "Reservation Confirmation #5",
+      "content": "Sample Reservation Confirmation #5\n\nThis is a sample guest reservation confirmation with stay details for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_review",
+      "template_name": "Guest Review Summary",
+      "title": "Guest Review Summary #1",
+      "content": "Sample Guest Review Summary #1\n\nThis is a sample aggregated guest reviews and satisfaction analysis for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_review",
+      "template_name": "Guest Review Summary",
+      "title": "Guest Review Summary #2",
+      "content": "Sample Guest Review Summary #2\n\nThis is a sample aggregated guest reviews and satisfaction analysis for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_review",
+      "template_name": "Guest Review Summary",
+      "title": "Guest Review Summary #3",
+      "content": "Sample Guest Review Summary #3\n\nThis is a sample aggregated guest reviews and satisfaction analysis for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_review",
+      "template_name": "Guest Review Summary",
+      "title": "Guest Review Summary #4",
+      "content": "Sample Guest Review Summary #4\n\nThis is a sample aggregated guest reviews and satisfaction analysis for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_review",
+      "template_name": "Guest Review Summary",
+      "title": "Guest Review Summary #5",
+      "content": "Sample Guest Review Summary #5\n\nThis is a sample aggregated guest reviews and satisfaction analysis for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "service_request",
+      "template_name": "Service Request Log",
+      "title": "Service Request Log #1",
+      "content": "Sample Service Request Log #1\n\nThis is a sample service request documentation and resolution tracking for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "service_request",
+      "template_name": "Service Request Log",
+      "title": "Service Request Log #2",
+      "content": "Sample Service Request Log #2\n\nThis is a sample service request documentation and resolution tracking for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "service_request",
+      "template_name": "Service Request Log",
+      "title": "Service Request Log #3",
+      "content": "Sample Service Request Log #3\n\nThis is a sample service request documentation and resolution tracking for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "service_request",
+      "template_name": "Service Request Log",
+      "title": "Service Request Log #4",
+      "content": "Sample Service Request Log #4\n\nThis is a sample service request documentation and resolution tracking for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "service_request",
+      "template_name": "Service Request Log",
+      "title": "Service Request Log #5",
+      "content": "Sample Service Request Log #5\n\nThis is a sample service request documentation and resolution tracking for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "staff_schedule",
+      "template_name": "Staff Schedule",
+      "title": "Staff Schedule #1",
+      "content": "Sample Staff Schedule #1\n\nThis is a sample department staff schedule and shift assignments for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "staff_schedule",
+      "template_name": "Staff Schedule",
+      "title": "Staff Schedule #2",
+      "content": "Sample Staff Schedule #2\n\nThis is a sample department staff schedule and shift assignments for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "staff_schedule",
+      "template_name": "Staff Schedule",
+      "title": "Staff Schedule #3",
+      "content": "Sample Staff Schedule #3\n\nThis is a sample department staff schedule and shift assignments for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "staff_schedule",
+      "template_name": "Staff Schedule",
+      "title": "Staff Schedule #4",
+      "content": "Sample Staff Schedule #4\n\nThis is a sample department staff schedule and shift assignments for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "staff_schedule",
+      "template_name": "Staff Schedule",
+      "title": "Staff Schedule #5",
+      "content": "Sample Staff Schedule #5\n\nThis is a sample department staff schedule and shift assignments for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "revenue_report",
+      "template_name": "Revenue Report",
+      "title": "Revenue Report #1",
+      "content": "Sample Revenue Report #1\n\nThis is a sample hotel revenue and performance report for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "revenue_report",
+      "template_name": "Revenue Report",
+      "title": "Revenue Report #2",
+      "content": "Sample Revenue Report #2\n\nThis is a sample hotel revenue and performance report for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "revenue_report",
+      "template_name": "Revenue Report",
+      "title": "Revenue Report #3",
+      "content": "Sample Revenue Report #3\n\nThis is a sample hotel revenue and performance report for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "revenue_report",
+      "template_name": "Revenue Report",
+      "title": "Revenue Report #4",
+      "content": "Sample Revenue Report #4\n\nThis is a sample hotel revenue and performance report for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "revenue_report",
+      "template_name": "Revenue Report",
+      "title": "Revenue Report #5",
+      "content": "Sample Revenue Report #5\n\nThis is a sample hotel revenue and performance report for the Hospitality domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "room_upgrade",
+      "task": "Decide whether to upgrade Guest 2 to a {{room.room_type}} room",
+      "steps": [
+        {
+          "thought": "Check guest loyalty status and stay history",
+          "action": "Query guest profile, loyalty tier, total stays, and lifetime value",
+          "observation": "Results retrieved for: Query guest profile, loyalty tier, total stays, and lifetime value"
+        },
+        {
+          "thought": "Assess room availability and upgrade cost",
+          "action": "Check availability of upgrade room types and revenue displacement",
+          "observation": "Results retrieved for: Check availability of upgrade room types and revenue displacement"
+        },
+        {
+          "thought": "Evaluate potential guest satisfaction and loyalty impact",
+          "action": "Review guest preferences and past feedback",
+          "observation": "Results retrieved for: Review guest preferences and past feedback"
+        }
+      ],
+      "outcome": "Decision: {{decision}} upgrade based on {{rationale}}"
+    },
+    {
+      "id": "rate_optimization",
+      "task": "Optimize room rates for Hotel 4 for the upcoming week",
+      "steps": [
+        {
+          "thought": "Analyze current occupancy and booking pace",
+          "action": "Query reservations and room availability for the period",
+          "observation": "Results retrieved for: Query reservations and room availability for the period"
+        },
+        {
+          "thought": "Review historical performance for comparable periods",
+          "action": "Compare with same week in previous years and recent trends",
+          "observation": "Results retrieved for: Compare with same week in previous years and recent trends"
+        },
+        {
+          "thought": "Consider channel mix and segment demand",
+          "action": "Analyze booking channel distribution and guest type mix",
+          "observation": "Results retrieved for: Analyze booking channel distribution and guest type mix"
+        },
+        {
+          "thought": "Calculate optimal rate by room type",
+          "action": "Model revenue at different rate points and occupancy levels",
+          "observation": "Results retrieved for: Model revenue at different rate points and occupancy levels"
+        }
+      ],
+      "outcome": "Rate plan: {{rates}} with projected RevPAR of ${{revpar}}"
+    },
+    {
+      "id": "service_recovery",
+      "task": "Address service failure for Guest 3 at Hotel 4",
+      "steps": [
+        {
+          "thought": "Understand the service issue and its impact on the guest",
+          "action": "Review service request log and guest complaint details",
+          "observation": "Results retrieved for: Review service request log and guest complaint details"
+        },
+        {
+          "thought": "Assess guest value and relationship history",
+          "action": "Query loyalty tier, lifetime value, and past interactions",
+          "observation": "Results retrieved for: Query loyalty tier, lifetime value, and past interactions"
+        },
+        {
+          "thought": "Determine appropriate recovery action",
+          "action": "Match recovery option to issue severity and guest profile",
+          "observation": "Results retrieved for: Match recovery option to issue severity and guest profile"
+        }
+      ],
+      "outcome": "Recovery: {{action}} with estimated retention impact {{impact}}"
+    }
+  ]
+}

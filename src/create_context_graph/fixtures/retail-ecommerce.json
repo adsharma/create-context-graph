@@ -1,0 +1,1172 @@
+{
+  "domain": "retail-ecommerce",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Customer": [
+      {
+        "name": "Customer 1",
+        "customer_id": "Sample customer_id for Customer 1",
+        "email": "Sample email for Customer 1",
+        "segment": "returning",
+        "lifetime_value": 10.5,
+        "preferred_channel": "mobile"
+      },
+      {
+        "name": "Customer 2",
+        "customer_id": "Sample customer_id for Customer 2",
+        "email": "Sample email for Customer 2",
+        "segment": "vip",
+        "lifetime_value": 21.0,
+        "preferred_channel": "in_store"
+      },
+      {
+        "name": "Customer 3",
+        "customer_id": "Sample customer_id for Customer 3",
+        "email": "Sample email for Customer 3",
+        "segment": "at_risk",
+        "lifetime_value": 31.5,
+        "preferred_channel": "social"
+      },
+      {
+        "name": "Customer 4",
+        "customer_id": "Sample customer_id for Customer 4",
+        "email": "Sample email for Customer 4",
+        "segment": "churned",
+        "lifetime_value": 42.0,
+        "preferred_channel": "web"
+      },
+      {
+        "name": "Customer 5",
+        "customer_id": "Sample customer_id for Customer 5",
+        "email": "Sample email for Customer 5",
+        "segment": "new",
+        "lifetime_value": 52.5,
+        "preferred_channel": "mobile"
+      }
+    ],
+    "Product": [
+      {
+        "name": "Product 1",
+        "product_id": "Sample product_id for Product 1",
+        "price": 10.5,
+        "sku": "Sample sku for Product 1",
+        "brand": "Sample brand for Product 1",
+        "stock_quantity": 100,
+        "rating": 10.5
+      },
+      {
+        "name": "Product 2",
+        "product_id": "Sample product_id for Product 2",
+        "price": 21.0,
+        "sku": "Sample sku for Product 2",
+        "brand": "Sample brand for Product 2",
+        "stock_quantity": 200,
+        "rating": 21.0
+      },
+      {
+        "name": "Product 3",
+        "product_id": "Sample product_id for Product 3",
+        "price": 31.5,
+        "sku": "Sample sku for Product 3",
+        "brand": "Sample brand for Product 3",
+        "stock_quantity": 300,
+        "rating": 31.5
+      },
+      {
+        "name": "Product 4",
+        "product_id": "Sample product_id for Product 4",
+        "price": 42.0,
+        "sku": "Sample sku for Product 4",
+        "brand": "Sample brand for Product 4",
+        "stock_quantity": 400,
+        "rating": 42.0
+      },
+      {
+        "name": "Product 5",
+        "product_id": "Sample product_id for Product 5",
+        "price": 52.5,
+        "sku": "Sample sku for Product 5",
+        "brand": "Sample brand for Product 5",
+        "stock_quantity": 500,
+        "rating": 52.5
+      }
+    ],
+    "Order": [
+      {
+        "name": "Order 1",
+        "order_id": "Sample order_id for Order 1",
+        "total_amount": 10.5,
+        "status": "processing",
+        "payment_method": "debit_card",
+        "shipping_method": "express"
+      },
+      {
+        "name": "Order 2",
+        "order_id": "Sample order_id for Order 2",
+        "total_amount": 21.0,
+        "status": "shipped",
+        "payment_method": "paypal",
+        "shipping_method": "overnight"
+      },
+      {
+        "name": "Order 3",
+        "order_id": "Sample order_id for Order 3",
+        "total_amount": 31.5,
+        "status": "delivered",
+        "payment_method": "apple_pay",
+        "shipping_method": "pickup"
+      },
+      {
+        "name": "Order 4",
+        "order_id": "Sample order_id for Order 4",
+        "total_amount": 42.0,
+        "status": "returned",
+        "payment_method": "gift_card",
+        "shipping_method": "standard"
+      },
+      {
+        "name": "Order 5",
+        "order_id": "Sample order_id for Order 5",
+        "total_amount": 52.5,
+        "status": "cancelled",
+        "payment_method": "credit_card",
+        "shipping_method": "express"
+      }
+    ],
+    "Review": [
+      {
+        "name": "Review 1",
+        "review_id": "Sample review_id for Review 1",
+        "rating": 100,
+        "title": "Sample title for Review 1",
+        "body": "Sample body for Review 1",
+        "verified_purchase": false,
+        "helpful_votes": 100
+      },
+      {
+        "name": "Review 2",
+        "review_id": "Sample review_id for Review 2",
+        "rating": 200,
+        "title": "Sample title for Review 2",
+        "body": "Sample body for Review 2",
+        "verified_purchase": true,
+        "helpful_votes": 200
+      },
+      {
+        "name": "Review 3",
+        "review_id": "Sample review_id for Review 3",
+        "rating": 300,
+        "title": "Sample title for Review 3",
+        "body": "Sample body for Review 3",
+        "verified_purchase": false,
+        "helpful_votes": 300
+      },
+      {
+        "name": "Review 4",
+        "review_id": "Sample review_id for Review 4",
+        "rating": 400,
+        "title": "Sample title for Review 4",
+        "body": "Sample body for Review 4",
+        "verified_purchase": true,
+        "helpful_votes": 400
+      },
+      {
+        "name": "Review 5",
+        "review_id": "Sample review_id for Review 5",
+        "rating": 500,
+        "title": "Sample title for Review 5",
+        "body": "Sample body for Review 5",
+        "verified_purchase": false,
+        "helpful_votes": 500
+      }
+    ],
+    "Campaign": [
+      {
+        "name": "Campaign 1",
+        "campaign_id": "Sample campaign_id for Campaign 1",
+        "campaign_type": "social",
+        "budget": 10.5,
+        "status": "active"
+      },
+      {
+        "name": "Campaign 2",
+        "campaign_id": "Sample campaign_id for Campaign 2",
+        "campaign_type": "search",
+        "budget": 21.0,
+        "status": "paused"
+      },
+      {
+        "name": "Campaign 3",
+        "campaign_id": "Sample campaign_id for Campaign 3",
+        "campaign_type": "display",
+        "budget": 31.5,
+        "status": "completed"
+      },
+      {
+        "name": "Campaign 4",
+        "campaign_id": "Sample campaign_id for Campaign 4",
+        "campaign_type": "influencer",
+        "budget": 42.0,
+        "status": "draft"
+      },
+      {
+        "name": "Campaign 5",
+        "campaign_id": "Sample campaign_id for Campaign 5",
+        "campaign_type": "loyalty",
+        "budget": 52.5,
+        "status": "active"
+      }
+    ],
+    "Category": [
+      {
+        "name": "Category 1",
+        "category_id": "Sample category_id for Category 1",
+        "parent_category": "Sample parent_category for Category 1",
+        "product_count": 100,
+        "description": "Sample description for Category 1"
+      },
+      {
+        "name": "Category 2",
+        "category_id": "Sample category_id for Category 2",
+        "parent_category": "Sample parent_category for Category 2",
+        "product_count": 200,
+        "description": "Sample description for Category 2"
+      },
+      {
+        "name": "Category 3",
+        "category_id": "Sample category_id for Category 3",
+        "parent_category": "Sample parent_category for Category 3",
+        "product_count": 300,
+        "description": "Sample description for Category 3"
+      },
+      {
+        "name": "Category 4",
+        "category_id": "Sample category_id for Category 4",
+        "parent_category": "Sample parent_category for Category 4",
+        "product_count": 400,
+        "description": "Sample description for Category 4"
+      },
+      {
+        "name": "Category 5",
+        "category_id": "Sample category_id for Category 5",
+        "parent_category": "Sample parent_category for Category 5",
+        "product_count": 500,
+        "description": "Sample description for Category 5"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PURCHASED",
+      "source_label": "Customer",
+      "source_name": "Customer 1",
+      "target_label": "Order",
+      "target_name": "Order 2"
+    },
+    {
+      "type": "PURCHASED",
+      "source_label": "Customer",
+      "source_name": "Customer 2",
+      "target_label": "Order",
+      "target_name": "Order 1"
+    },
+    {
+      "type": "PURCHASED",
+      "source_label": "Customer",
+      "source_name": "Customer 2",
+      "target_label": "Order",
+      "target_name": "Order 4"
+    },
+    {
+      "type": "PURCHASED",
+      "source_label": "Customer",
+      "source_name": "Customer 3",
+      "target_label": "Order",
+      "target_name": "Order 2"
+    },
+    {
+      "type": "PURCHASED",
+      "source_label": "Customer",
+      "source_name": "Customer 4",
+      "target_label": "Order",
+      "target_name": "Order 5"
+    },
+    {
+      "type": "PURCHASED",
+      "source_label": "Customer",
+      "source_name": "Customer 4",
+      "target_label": "Order",
+      "target_name": "Order 2"
+    },
+    {
+      "type": "PURCHASED",
+      "source_label": "Customer",
+      "source_name": "Customer 5",
+      "target_label": "Order",
+      "target_name": "Order 4"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Order",
+      "source_name": "Order 1",
+      "target_label": "Product",
+      "target_name": "Product 3"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Order",
+      "source_name": "Order 2",
+      "target_label": "Product",
+      "target_name": "Product 2"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Order",
+      "source_name": "Order 3",
+      "target_label": "Product",
+      "target_name": "Product 5"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Order",
+      "source_name": "Order 3",
+      "target_label": "Product",
+      "target_name": "Product 2"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Order",
+      "source_name": "Order 4",
+      "target_label": "Product",
+      "target_name": "Product 5"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Order",
+      "source_name": "Order 5",
+      "target_label": "Product",
+      "target_name": "Product 5"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Customer",
+      "source_name": "Customer 1",
+      "target_label": "Review",
+      "target_name": "Review 1"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Customer",
+      "source_name": "Customer 1",
+      "target_label": "Review",
+      "target_name": "Review 3"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Customer",
+      "source_name": "Customer 2",
+      "target_label": "Review",
+      "target_name": "Review 4"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Customer",
+      "source_name": "Customer 3",
+      "target_label": "Review",
+      "target_name": "Review 3"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Customer",
+      "source_name": "Customer 4",
+      "target_label": "Review",
+      "target_name": "Review 5"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Customer",
+      "source_name": "Customer 4",
+      "target_label": "Review",
+      "target_name": "Review 4"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Customer",
+      "source_name": "Customer 5",
+      "target_label": "Review",
+      "target_name": "Review 5"
+    },
+    {
+      "type": "REVIEW_OF",
+      "source_label": "Review",
+      "source_name": "Review 1",
+      "target_label": "Product",
+      "target_name": "Product 3"
+    },
+    {
+      "type": "REVIEW_OF",
+      "source_label": "Review",
+      "source_name": "Review 1",
+      "target_label": "Product",
+      "target_name": "Product 5"
+    },
+    {
+      "type": "REVIEW_OF",
+      "source_label": "Review",
+      "source_name": "Review 2",
+      "target_label": "Product",
+      "target_name": "Product 1"
+    },
+    {
+      "type": "REVIEW_OF",
+      "source_label": "Review",
+      "source_name": "Review 2",
+      "target_label": "Product",
+      "target_name": "Product 2"
+    },
+    {
+      "type": "REVIEW_OF",
+      "source_label": "Review",
+      "source_name": "Review 3",
+      "target_label": "Product",
+      "target_name": "Product 3"
+    },
+    {
+      "type": "REVIEW_OF",
+      "source_label": "Review",
+      "source_name": "Review 4",
+      "target_label": "Product",
+      "target_name": "Product 5"
+    },
+    {
+      "type": "REVIEW_OF",
+      "source_label": "Review",
+      "source_name": "Review 4",
+      "target_label": "Product",
+      "target_name": "Product 3"
+    },
+    {
+      "type": "REVIEW_OF",
+      "source_label": "Review",
+      "source_name": "Review 5",
+      "target_label": "Product",
+      "target_name": "Product 1"
+    },
+    {
+      "type": "REVIEW_OF",
+      "source_label": "Review",
+      "source_name": "Review 5",
+      "target_label": "Product",
+      "target_name": "Product 5"
+    },
+    {
+      "type": "RECOMMENDED",
+      "source_label": "Product",
+      "source_name": "Product 1",
+      "target_label": "Product",
+      "target_name": "Product 3"
+    },
+    {
+      "type": "RECOMMENDED",
+      "source_label": "Product",
+      "source_name": "Product 2",
+      "target_label": "Product",
+      "target_name": "Product 5"
+    },
+    {
+      "type": "RECOMMENDED",
+      "source_label": "Product",
+      "source_name": "Product 2",
+      "target_label": "Product",
+      "target_name": "Product 3"
+    },
+    {
+      "type": "RECOMMENDED",
+      "source_label": "Product",
+      "source_name": "Product 3",
+      "target_label": "Product",
+      "target_name": "Product 1"
+    },
+    {
+      "type": "RECOMMENDED",
+      "source_label": "Product",
+      "source_name": "Product 4",
+      "target_label": "Product",
+      "target_name": "Product 2"
+    },
+    {
+      "type": "RECOMMENDED",
+      "source_label": "Product",
+      "source_name": "Product 4",
+      "target_label": "Product",
+      "target_name": "Product 5"
+    },
+    {
+      "type": "RECOMMENDED",
+      "source_label": "Product",
+      "source_name": "Product 5",
+      "target_label": "Product",
+      "target_name": "Product 2"
+    },
+    {
+      "type": "BROWSED",
+      "source_label": "Customer",
+      "source_name": "Customer 1",
+      "target_label": "Product",
+      "target_name": "Product 1"
+    },
+    {
+      "type": "BROWSED",
+      "source_label": "Customer",
+      "source_name": "Customer 2",
+      "target_label": "Product",
+      "target_name": "Product 2"
+    },
+    {
+      "type": "BROWSED",
+      "source_label": "Customer",
+      "source_name": "Customer 3",
+      "target_label": "Product",
+      "target_name": "Product 5"
+    },
+    {
+      "type": "BROWSED",
+      "source_label": "Customer",
+      "source_name": "Customer 3",
+      "target_label": "Product",
+      "target_name": "Product 1"
+    },
+    {
+      "type": "BROWSED",
+      "source_label": "Customer",
+      "source_name": "Customer 4",
+      "target_label": "Product",
+      "target_name": "Product 4"
+    },
+    {
+      "type": "BROWSED",
+      "source_label": "Customer",
+      "source_name": "Customer 5",
+      "target_label": "Product",
+      "target_name": "Product 2"
+    },
+    {
+      "type": "BROWSED",
+      "source_label": "Customer",
+      "source_name": "Customer 5",
+      "target_label": "Product",
+      "target_name": "Product 3"
+    },
+    {
+      "type": "BELONGS_TO_CATEGORY",
+      "source_label": "Product",
+      "source_name": "Product 1",
+      "target_label": "Category",
+      "target_name": "Category 3"
+    },
+    {
+      "type": "BELONGS_TO_CATEGORY",
+      "source_label": "Product",
+      "source_name": "Product 2",
+      "target_label": "Category",
+      "target_name": "Category 5"
+    },
+    {
+      "type": "BELONGS_TO_CATEGORY",
+      "source_label": "Product",
+      "source_name": "Product 3",
+      "target_label": "Category",
+      "target_name": "Category 4"
+    },
+    {
+      "type": "BELONGS_TO_CATEGORY",
+      "source_label": "Product",
+      "source_name": "Product 4",
+      "target_label": "Category",
+      "target_name": "Category 3"
+    },
+    {
+      "type": "BELONGS_TO_CATEGORY",
+      "source_label": "Product",
+      "source_name": "Product 4",
+      "target_label": "Category",
+      "target_name": "Category 2"
+    },
+    {
+      "type": "BELONGS_TO_CATEGORY",
+      "source_label": "Product",
+      "source_name": "Product 5",
+      "target_label": "Category",
+      "target_name": "Category 5"
+    },
+    {
+      "type": "BELONGS_TO_CATEGORY",
+      "source_label": "Product",
+      "source_name": "Product 5",
+      "target_label": "Category",
+      "target_name": "Category 3"
+    },
+    {
+      "type": "TARGETED_BY",
+      "source_label": "Customer",
+      "source_name": "Customer 1",
+      "target_label": "Campaign",
+      "target_name": "Campaign 3"
+    },
+    {
+      "type": "TARGETED_BY",
+      "source_label": "Customer",
+      "source_name": "Customer 2",
+      "target_label": "Campaign",
+      "target_name": "Campaign 3"
+    },
+    {
+      "type": "TARGETED_BY",
+      "source_label": "Customer",
+      "source_name": "Customer 3",
+      "target_label": "Campaign",
+      "target_name": "Campaign 1"
+    },
+    {
+      "type": "TARGETED_BY",
+      "source_label": "Customer",
+      "source_name": "Customer 3",
+      "target_label": "Campaign",
+      "target_name": "Campaign 3"
+    },
+    {
+      "type": "TARGETED_BY",
+      "source_label": "Customer",
+      "source_name": "Customer 4",
+      "target_label": "Campaign",
+      "target_name": "Campaign 1"
+    },
+    {
+      "type": "TARGETED_BY",
+      "source_label": "Customer",
+      "source_name": "Customer 5",
+      "target_label": "Campaign",
+      "target_name": "Campaign 5"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "order_confirmation",
+      "template_name": "Order Confirmation",
+      "title": "Order Confirmation #1",
+      "content": "Sample Order Confirmation #1\n\nThis is a sample customer order confirmation emails for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "order_confirmation",
+      "template_name": "Order Confirmation",
+      "title": "Order Confirmation #2",
+      "content": "Sample Order Confirmation #2\n\nThis is a sample customer order confirmation emails for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "order_confirmation",
+      "template_name": "Order Confirmation",
+      "title": "Order Confirmation #3",
+      "content": "Sample Order Confirmation #3\n\nThis is a sample customer order confirmation emails for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "order_confirmation",
+      "template_name": "Order Confirmation",
+      "title": "Order Confirmation #4",
+      "content": "Sample Order Confirmation #4\n\nThis is a sample customer order confirmation emails for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "order_confirmation",
+      "template_name": "Order Confirmation",
+      "title": "Order Confirmation #5",
+      "content": "Sample Order Confirmation #5\n\nThis is a sample customer order confirmation emails for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "support_ticket",
+      "template_name": "Support Ticket",
+      "title": "Support Ticket #1",
+      "content": "Sample Support Ticket #1\n\nThis is a sample customer support tickets and resolution notes for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "support_ticket",
+      "template_name": "Support Ticket",
+      "title": "Support Ticket #2",
+      "content": "Sample Support Ticket #2\n\nThis is a sample customer support tickets and resolution notes for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "support_ticket",
+      "template_name": "Support Ticket",
+      "title": "Support Ticket #3",
+      "content": "Sample Support Ticket #3\n\nThis is a sample customer support tickets and resolution notes for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "support_ticket",
+      "template_name": "Support Ticket",
+      "title": "Support Ticket #4",
+      "content": "Sample Support Ticket #4\n\nThis is a sample customer support tickets and resolution notes for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "support_ticket",
+      "template_name": "Support Ticket",
+      "title": "Support Ticket #5",
+      "content": "Sample Support Ticket #5\n\nThis is a sample customer support tickets and resolution notes for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "campaign_brief",
+      "template_name": "Campaign Brief",
+      "title": "Campaign Brief #1",
+      "content": "Sample Campaign Brief #1\n\nThis is a sample marketing campaign planning and execution briefs for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "campaign_brief",
+      "template_name": "Campaign Brief",
+      "title": "Campaign Brief #2",
+      "content": "Sample Campaign Brief #2\n\nThis is a sample marketing campaign planning and execution briefs for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "campaign_brief",
+      "template_name": "Campaign Brief",
+      "title": "Campaign Brief #3",
+      "content": "Sample Campaign Brief #3\n\nThis is a sample marketing campaign planning and execution briefs for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "campaign_brief",
+      "template_name": "Campaign Brief",
+      "title": "Campaign Brief #4",
+      "content": "Sample Campaign Brief #4\n\nThis is a sample marketing campaign planning and execution briefs for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "campaign_brief",
+      "template_name": "Campaign Brief",
+      "title": "Campaign Brief #5",
+      "content": "Sample Campaign Brief #5\n\nThis is a sample marketing campaign planning and execution briefs for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "product_review_summary",
+      "template_name": "Product Review Summary",
+      "title": "Product Review Summary #1",
+      "content": "Sample Product Review Summary #1\n\nThis is a sample aggregated product review analysis reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "product_review_summary",
+      "template_name": "Product Review Summary",
+      "title": "Product Review Summary #2",
+      "content": "Sample Product Review Summary #2\n\nThis is a sample aggregated product review analysis reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "product_review_summary",
+      "template_name": "Product Review Summary",
+      "title": "Product Review Summary #3",
+      "content": "Sample Product Review Summary #3\n\nThis is a sample aggregated product review analysis reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "product_review_summary",
+      "template_name": "Product Review Summary",
+      "title": "Product Review Summary #4",
+      "content": "Sample Product Review Summary #4\n\nThis is a sample aggregated product review analysis reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "product_review_summary",
+      "template_name": "Product Review Summary",
+      "title": "Product Review Summary #5",
+      "content": "Sample Product Review Summary #5\n\nThis is a sample aggregated product review analysis reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inventory_report",
+      "template_name": "Inventory Report",
+      "title": "Inventory Report #1",
+      "content": "Sample Inventory Report #1\n\nThis is a sample stock level and inventory management reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inventory_report",
+      "template_name": "Inventory Report",
+      "title": "Inventory Report #2",
+      "content": "Sample Inventory Report #2\n\nThis is a sample stock level and inventory management reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inventory_report",
+      "template_name": "Inventory Report",
+      "title": "Inventory Report #3",
+      "content": "Sample Inventory Report #3\n\nThis is a sample stock level and inventory management reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inventory_report",
+      "template_name": "Inventory Report",
+      "title": "Inventory Report #4",
+      "content": "Sample Inventory Report #4\n\nThis is a sample stock level and inventory management reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inventory_report",
+      "template_name": "Inventory Report",
+      "title": "Inventory Report #5",
+      "content": "Sample Inventory Report #5\n\nThis is a sample stock level and inventory management reports for the Retail & E-Commerce domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "pricing_strategy",
+      "task": "Determine optimal pricing for Product 2 based on market data and customer behavior",
+      "steps": [
+        {
+          "thought": "Analyze current sales velocity and price sensitivity",
+          "action": "Query order history and revenue trends for this product",
+          "observation": "Results retrieved for: Query order history and revenue trends for this product"
+        },
+        {
+          "thought": "Review competitor pricing and market positioning",
+          "action": "Compare with recommended/similar products in the same category",
+          "observation": "Results retrieved for: Compare with recommended/similar products in the same category"
+        },
+        {
+          "thought": "Evaluate customer segment willingness to pay",
+          "action": "Analyze purchase patterns across customer segments",
+          "observation": "Results retrieved for: Analyze purchase patterns across customer segments"
+        },
+        {
+          "thought": "Consider inventory levels and margin requirements",
+          "action": "Check stock levels and calculate margin at various price points",
+          "observation": "Results retrieved for: Check stock levels and calculate margin at various price points"
+        }
+      ],
+      "outcome": "Recommended price: ${{price}} based on {{rationale}}"
+    },
+    {
+      "id": "campaign_targeting",
+      "task": "Select optimal customer segments for Campaign 1 campaign",
+      "steps": [
+        {
+          "thought": "Identify target audience based on campaign objectives",
+          "action": "Query customer segments and their purchase history",
+          "observation": "Results retrieved for: Query customer segments and their purchase history"
+        },
+        {
+          "thought": "Analyze past campaign performance by segment",
+          "action": "Review conversion rates from similar past campaigns",
+          "observation": "Results retrieved for: Review conversion rates from similar past campaigns"
+        },
+        {
+          "thought": "Estimate ROI for each segment combination",
+          "action": "Calculate expected revenue vs. campaign cost per segment",
+          "observation": "Results retrieved for: Calculate expected revenue vs. campaign cost per segment"
+        }
+      ],
+      "outcome": "Target segments: {{segments}} with projected ROI of {{roi}}"
+    },
+    {
+      "id": "product_recommendation",
+      "task": "Generate personalized product recommendations for customer Customer 2",
+      "steps": [
+        {
+          "thought": "Review customer purchase history and browsing behavior",
+          "action": "Query customer's order history and browsed products",
+          "observation": "Results retrieved for: Query customer's order history and browsed products"
+        },
+        {
+          "thought": "Identify patterns in category and brand preferences",
+          "action": "Analyze product categories and attributes of past purchases",
+          "observation": "Results retrieved for: Analyze product categories and attributes of past purchases"
+        },
+        {
+          "thought": "Find similar customers and their top purchases",
+          "action": "Use collaborative filtering to find products liked by similar customers",
+          "observation": "Results retrieved for: Use collaborative filtering to find products liked by similar customers"
+        }
+      ],
+      "outcome": "Top recommendations: {{products}} based on {{rationale}}"
+    }
+  ]
+}

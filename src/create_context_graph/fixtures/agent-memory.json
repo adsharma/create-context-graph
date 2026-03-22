@@ -1,0 +1,1133 @@
+{
+  "domain": "agent-memory",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Agent": [
+      {
+        "name": "Agent 1",
+        "agent_id": "Sample agent_id for Agent 1",
+        "model": "Sample model for Agent 1",
+        "version": "Sample version for Agent 1",
+        "capabilities": "Sample capabilities for Agent 1",
+        "status": "idle"
+      },
+      {
+        "name": "Agent 2",
+        "agent_id": "Sample agent_id for Agent 2",
+        "model": "Sample model for Agent 2",
+        "version": "Sample version for Agent 2",
+        "capabilities": "Sample capabilities for Agent 2",
+        "status": "suspended"
+      },
+      {
+        "name": "Agent 3",
+        "agent_id": "Sample agent_id for Agent 3",
+        "model": "Sample model for Agent 3",
+        "version": "Sample version for Agent 3",
+        "capabilities": "Sample capabilities for Agent 3",
+        "status": "retired"
+      },
+      {
+        "name": "Agent 4",
+        "agent_id": "Sample agent_id for Agent 4",
+        "model": "Sample model for Agent 4",
+        "version": "Sample version for Agent 4",
+        "capabilities": "Sample capabilities for Agent 4",
+        "status": "active"
+      },
+      {
+        "name": "Agent 5",
+        "agent_id": "Sample agent_id for Agent 5",
+        "model": "Sample model for Agent 5",
+        "version": "Sample version for Agent 5",
+        "capabilities": "Sample capabilities for Agent 5",
+        "status": "idle"
+      }
+    ],
+    "Conversation": [
+      {
+        "name": "Conversation 1",
+        "conversation_id": "Sample conversation_id for Conversation 1",
+        "topic": "Sample topic for Conversation 1",
+        "message_count": 100,
+        "status": "completed"
+      },
+      {
+        "name": "Conversation 2",
+        "conversation_id": "Sample conversation_id for Conversation 2",
+        "topic": "Sample topic for Conversation 2",
+        "message_count": 200,
+        "status": "abandoned"
+      },
+      {
+        "name": "Conversation 3",
+        "conversation_id": "Sample conversation_id for Conversation 3",
+        "topic": "Sample topic for Conversation 3",
+        "message_count": 300,
+        "status": "escalated"
+      },
+      {
+        "name": "Conversation 4",
+        "conversation_id": "Sample conversation_id for Conversation 4",
+        "topic": "Sample topic for Conversation 4",
+        "message_count": 400,
+        "status": "active"
+      },
+      {
+        "name": "Conversation 5",
+        "conversation_id": "Sample conversation_id for Conversation 5",
+        "topic": "Sample topic for Conversation 5",
+        "message_count": 500,
+        "status": "completed"
+      }
+    ],
+    "Entity": [
+      {
+        "name": "Entity 1",
+        "entity_id": "Sample entity_id for Entity 1",
+        "entity_type": "place",
+        "confidence": 10.5,
+        "source_text": "Sample source_text for Entity 1"
+      },
+      {
+        "name": "Entity 2",
+        "entity_id": "Sample entity_id for Entity 2",
+        "entity_type": "concept",
+        "confidence": 21.0,
+        "source_text": "Sample source_text for Entity 2"
+      },
+      {
+        "name": "Entity 3",
+        "entity_id": "Sample entity_id for Entity 3",
+        "entity_type": "event",
+        "confidence": 31.5,
+        "source_text": "Sample source_text for Entity 3"
+      },
+      {
+        "name": "Entity 4",
+        "entity_id": "Sample entity_id for Entity 4",
+        "entity_type": "product",
+        "confidence": 42.0,
+        "source_text": "Sample source_text for Entity 4"
+      },
+      {
+        "name": "Entity 5",
+        "entity_id": "Sample entity_id for Entity 5",
+        "entity_type": "organization",
+        "confidence": 52.5,
+        "source_text": "Sample source_text for Entity 5"
+      }
+    ],
+    "Memory": [
+      {
+        "name": "Memory 1",
+        "memory_id": "Sample memory_id for Memory 1",
+        "content": "Sample content for Memory 1",
+        "memory_type": "semantic",
+        "importance": 10.5
+      },
+      {
+        "name": "Memory 2",
+        "memory_id": "Sample memory_id for Memory 2",
+        "content": "Sample content for Memory 2",
+        "memory_type": "procedural",
+        "importance": 21.0
+      },
+      {
+        "name": "Memory 3",
+        "memory_id": "Sample memory_id for Memory 3",
+        "content": "Sample content for Memory 3",
+        "memory_type": "working",
+        "importance": 31.5
+      },
+      {
+        "name": "Memory 4",
+        "memory_id": "Sample memory_id for Memory 4",
+        "content": "Sample content for Memory 4",
+        "memory_type": "episodic",
+        "importance": 42.0
+      },
+      {
+        "name": "Memory 5",
+        "memory_id": "Sample memory_id for Memory 5",
+        "content": "Sample content for Memory 5",
+        "memory_type": "semantic",
+        "importance": 52.5
+      }
+    ],
+    "ToolCall": [
+      {
+        "name": "ToolCall 1",
+        "call_id": "Sample call_id for ToolCall 1",
+        "tool_name": "Sample tool_name for ToolCall 1",
+        "input_params": "Sample input_params for ToolCall 1",
+        "output_summary": "Sample output_summary for ToolCall 1",
+        "duration_ms": 100,
+        "status": "failure"
+      },
+      {
+        "name": "ToolCall 2",
+        "call_id": "Sample call_id for ToolCall 2",
+        "tool_name": "Sample tool_name for ToolCall 2",
+        "input_params": "Sample input_params for ToolCall 2",
+        "output_summary": "Sample output_summary for ToolCall 2",
+        "duration_ms": 200,
+        "status": "timeout"
+      },
+      {
+        "name": "ToolCall 3",
+        "call_id": "Sample call_id for ToolCall 3",
+        "tool_name": "Sample tool_name for ToolCall 3",
+        "input_params": "Sample input_params for ToolCall 3",
+        "output_summary": "Sample output_summary for ToolCall 3",
+        "duration_ms": 300,
+        "status": "cancelled"
+      },
+      {
+        "name": "ToolCall 4",
+        "call_id": "Sample call_id for ToolCall 4",
+        "tool_name": "Sample tool_name for ToolCall 4",
+        "input_params": "Sample input_params for ToolCall 4",
+        "output_summary": "Sample output_summary for ToolCall 4",
+        "duration_ms": 400,
+        "status": "success"
+      },
+      {
+        "name": "ToolCall 5",
+        "call_id": "Sample call_id for ToolCall 5",
+        "tool_name": "Sample tool_name for ToolCall 5",
+        "input_params": "Sample input_params for ToolCall 5",
+        "output_summary": "Sample output_summary for ToolCall 5",
+        "duration_ms": 500,
+        "status": "failure"
+      }
+    ],
+    "Session": [
+      {
+        "name": "Session 1",
+        "session_id": "Sample session_id for Session 1",
+        "goal": "Sample goal for Session 1",
+        "outcome": "partial"
+      },
+      {
+        "name": "Session 2",
+        "session_id": "Sample session_id for Session 2",
+        "goal": "Sample goal for Session 2",
+        "outcome": "failed"
+      },
+      {
+        "name": "Session 3",
+        "session_id": "Sample session_id for Session 3",
+        "goal": "Sample goal for Session 3",
+        "outcome": "ongoing"
+      },
+      {
+        "name": "Session 4",
+        "session_id": "Sample session_id for Session 4",
+        "goal": "Sample goal for Session 4",
+        "outcome": "achieved"
+      },
+      {
+        "name": "Session 5",
+        "session_id": "Sample session_id for Session 5",
+        "goal": "Sample goal for Session 5",
+        "outcome": "partial"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Agent 1",
+      "target_label": "Memory",
+      "target_name": "Memory 4"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Agent 1",
+      "target_label": "Memory",
+      "target_name": "Memory 3"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Agent 2",
+      "target_label": "Memory",
+      "target_name": "Memory 5"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Agent 3",
+      "target_label": "Memory",
+      "target_name": "Memory 2"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Agent 3",
+      "target_label": "Memory",
+      "target_name": "Memory 1"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Agent 4",
+      "target_label": "Memory",
+      "target_name": "Memory 5"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Agent 5",
+      "target_label": "Memory",
+      "target_name": "Memory 2"
+    },
+    {
+      "type": "REMEMBERED",
+      "source_label": "Agent",
+      "source_name": "Agent 5",
+      "target_label": "Memory",
+      "target_name": "Memory 4"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Conversation 1",
+      "target_label": "Entity",
+      "target_name": "Entity 5"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Conversation 2",
+      "target_label": "Entity",
+      "target_name": "Entity 4"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Conversation 3",
+      "target_label": "Entity",
+      "target_name": "Entity 4"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Conversation 4",
+      "target_label": "Entity",
+      "target_name": "Entity 1"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Conversation 4",
+      "target_label": "Entity",
+      "target_name": "Entity 3"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Conversation 5",
+      "target_label": "Entity",
+      "target_name": "Entity 1"
+    },
+    {
+      "type": "EXTRACTED",
+      "source_label": "Conversation",
+      "source_name": "Conversation 5",
+      "target_label": "Entity",
+      "target_name": "Entity 4"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Agent 1",
+      "target_label": "Entity",
+      "target_name": "Entity 2"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Agent 2",
+      "target_label": "Entity",
+      "target_name": "Entity 4"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Agent 2",
+      "target_label": "Entity",
+      "target_name": "Entity 3"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Agent 3",
+      "target_label": "Entity",
+      "target_name": "Entity 1"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Agent 3",
+      "target_label": "Entity",
+      "target_name": "Entity 3"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Agent 4",
+      "target_label": "Entity",
+      "target_name": "Entity 4"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Agent 4",
+      "target_label": "Entity",
+      "target_name": "Entity 1"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Agent 5",
+      "target_label": "Entity",
+      "target_name": "Entity 5"
+    },
+    {
+      "type": "REASONED_ABOUT",
+      "source_label": "Agent",
+      "source_name": "Agent 5",
+      "target_label": "Entity",
+      "target_name": "Entity 2"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Agent 1",
+      "target_label": "ToolCall",
+      "target_name": "ToolCall 5"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Agent 2",
+      "target_label": "ToolCall",
+      "target_name": "ToolCall 5"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Agent 3",
+      "target_label": "ToolCall",
+      "target_name": "ToolCall 2"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Agent 3",
+      "target_label": "ToolCall",
+      "target_name": "ToolCall 4"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Agent 4",
+      "target_label": "ToolCall",
+      "target_name": "ToolCall 4"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Agent 4",
+      "target_label": "ToolCall",
+      "target_name": "ToolCall 1"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Agent 5",
+      "target_label": "ToolCall",
+      "target_name": "ToolCall 4"
+    },
+    {
+      "type": "INVOKED",
+      "source_label": "Agent",
+      "source_name": "Agent 5",
+      "target_label": "ToolCall",
+      "target_name": "ToolCall 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Agent 1",
+      "target_label": "Conversation",
+      "target_name": "Conversation 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Agent 1",
+      "target_label": "Conversation",
+      "target_name": "Conversation 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Agent 2",
+      "target_label": "Conversation",
+      "target_name": "Conversation 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Agent 3",
+      "target_label": "Conversation",
+      "target_name": "Conversation 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Agent 4",
+      "target_label": "Conversation",
+      "target_name": "Conversation 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Agent 4",
+      "target_label": "Conversation",
+      "target_name": "Conversation 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Agent 5",
+      "target_label": "Conversation",
+      "target_name": "Conversation 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Agent",
+      "source_name": "Agent 5",
+      "target_label": "Conversation",
+      "target_name": "Conversation 2"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Memory 1",
+      "target_label": "Entity",
+      "target_name": "Entity 3"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Memory 2",
+      "target_label": "Entity",
+      "target_name": "Entity 5"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Memory 3",
+      "target_label": "Entity",
+      "target_name": "Entity 4"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Memory 3",
+      "target_label": "Entity",
+      "target_name": "Entity 5"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Memory 4",
+      "target_label": "Entity",
+      "target_name": "Entity 4"
+    },
+    {
+      "type": "REFERENCED",
+      "source_label": "Memory",
+      "source_name": "Memory 5",
+      "target_label": "Entity",
+      "target_name": "Entity 3"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Conversation 1",
+      "target_label": "Session",
+      "target_name": "Session 4"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Conversation 2",
+      "target_label": "Session",
+      "target_name": "Session 1"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Conversation 3",
+      "target_label": "Session",
+      "target_name": "Session 2"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Conversation 4",
+      "target_label": "Session",
+      "target_name": "Session 2"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Conversation 4",
+      "target_label": "Session",
+      "target_name": "Session 4"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Conversation 5",
+      "target_label": "Session",
+      "target_name": "Session 5"
+    },
+    {
+      "type": "PART_OF_SESSION",
+      "source_label": "Conversation",
+      "source_name": "Conversation 5",
+      "target_label": "Session",
+      "target_name": "Session 2"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "ToolCall 1",
+      "target_label": "Conversation",
+      "target_name": "Conversation 2"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "ToolCall 1",
+      "target_label": "Conversation",
+      "target_name": "Conversation 1"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "ToolCall 2",
+      "target_label": "Conversation",
+      "target_name": "Conversation 1"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "ToolCall 2",
+      "target_label": "Conversation",
+      "target_name": "Conversation 2"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "ToolCall 3",
+      "target_label": "Conversation",
+      "target_name": "Conversation 2"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "ToolCall 3",
+      "target_label": "Conversation",
+      "target_name": "Conversation 4"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "ToolCall 4",
+      "target_label": "Conversation",
+      "target_name": "Conversation 1"
+    },
+    {
+      "type": "TRIGGERED_BY",
+      "source_label": "ToolCall",
+      "source_name": "ToolCall 5",
+      "target_label": "Conversation",
+      "target_name": "Conversation 5"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log #1",
+      "content": "Sample Agent Session Log #1\n\nThis is a sample detailed log of an agent's reasoning and actions during a session for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log #2",
+      "content": "Sample Agent Session Log #2\n\nThis is a sample detailed log of an agent's reasoning and actions during a session for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log #3",
+      "content": "Sample Agent Session Log #3\n\nThis is a sample detailed log of an agent's reasoning and actions during a session for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log #4",
+      "content": "Sample Agent Session Log #4\n\nThis is a sample detailed log of an agent's reasoning and actions during a session for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "agent_session_log",
+      "template_name": "Agent Session Log",
+      "title": "Agent Session Log #5",
+      "content": "Sample Agent Session Log #5\n\nThis is a sample detailed log of an agent's reasoning and actions during a session for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot #1",
+      "content": "Sample Memory Snapshot #1\n\nThis is a sample point-in-time snapshot of an agent's memory state for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot #2",
+      "content": "Sample Memory Snapshot #2\n\nThis is a sample point-in-time snapshot of an agent's memory state for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot #3",
+      "content": "Sample Memory Snapshot #3\n\nThis is a sample point-in-time snapshot of an agent's memory state for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot #4",
+      "content": "Sample Memory Snapshot #4\n\nThis is a sample point-in-time snapshot of an agent's memory state for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "memory_snapshot",
+      "template_name": "Memory Snapshot",
+      "title": "Memory Snapshot #5",
+      "content": "Sample Memory Snapshot #5\n\nThis is a sample point-in-time snapshot of an agent's memory state for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace #1",
+      "content": "Sample Tool Execution Trace #1\n\nThis is a sample detailed trace of tool calls and their results for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace #2",
+      "content": "Sample Tool Execution Trace #2\n\nThis is a sample detailed trace of tool calls and their results for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace #3",
+      "content": "Sample Tool Execution Trace #3\n\nThis is a sample detailed trace of tool calls and their results for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace #4",
+      "content": "Sample Tool Execution Trace #4\n\nThis is a sample detailed trace of tool calls and their results for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tool_trace",
+      "template_name": "Tool Execution Trace",
+      "title": "Tool Execution Trace #5",
+      "content": "Sample Tool Execution Trace #5\n\nThis is a sample detailed trace of tool calls and their results for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary #1",
+      "content": "Sample Conversation Summary #1\n\nThis is a sample summary of a conversation with key points and entities for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary #2",
+      "content": "Sample Conversation Summary #2\n\nThis is a sample summary of a conversation with key points and entities for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary #3",
+      "content": "Sample Conversation Summary #3\n\nThis is a sample summary of a conversation with key points and entities for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary #4",
+      "content": "Sample Conversation Summary #4\n\nThis is a sample summary of a conversation with key points and entities for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conversation_summary",
+      "template_name": "Conversation Summary",
+      "title": "Conversation Summary #5",
+      "content": "Sample Conversation Summary #5\n\nThis is a sample summary of a conversation with key points and entities for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log #1",
+      "content": "Sample Entity Extraction Log #1\n\nThis is a sample log of entities extracted from conversations and their relationships for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log #2",
+      "content": "Sample Entity Extraction Log #2\n\nThis is a sample log of entities extracted from conversations and their relationships for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log #3",
+      "content": "Sample Entity Extraction Log #3\n\nThis is a sample log of entities extracted from conversations and their relationships for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log #4",
+      "content": "Sample Entity Extraction Log #4\n\nThis is a sample log of entities extracted from conversations and their relationships for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "entity_extraction_log",
+      "template_name": "Entity Extraction Log",
+      "title": "Entity Extraction Log #5",
+      "content": "Sample Entity Extraction Log #5\n\nThis is a sample log of entities extracted from conversations and their relationships for the Agent Memory domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "memory_consolidation",
+      "task": "Decide which memories to consolidate or prune for agent Agent 1",
+      "steps": [
+        {
+          "thought": "Assess memory usage and identify low-importance or redundant memories",
+          "action": "Query all memories sorted by importance and last access time",
+          "observation": "Results retrieved for: Query all memories sorted by importance and last access time"
+        },
+        {
+          "thought": "Identify memories that can be merged into higher-level summaries",
+          "action": "Find clusters of related episodic memories referencing the same entities",
+          "observation": "Results retrieved for: Find clusters of related episodic memories referencing the same entities"
+        },
+        {
+          "thought": "Evaluate impact of pruning on agent's task performance",
+          "action": "Check which memories are referenced in recent successful sessions",
+          "observation": "Results retrieved for: Check which memories are referenced in recent successful sessions"
+        }
+      ],
+      "outcome": "Consolidation plan: {{plan}} affecting {{count}} memories"
+    },
+    {
+      "id": "tool_selection",
+      "task": "Determine which tool to invoke for user request in conversation {{conversation.conversation_id}}",
+      "steps": [
+        {
+          "thought": "Parse user intent and identify required information",
+          "action": "Analyze conversation context and extract key parameters",
+          "observation": "Results retrieved for: Analyze conversation context and extract key parameters"
+        },
+        {
+          "thought": "Match intent against available tool capabilities",
+          "action": "Query tool registry and rank by relevance to the request",
+          "observation": "Results retrieved for: Query tool registry and rank by relevance to the request"
+        },
+        {
+          "thought": "Consider past tool usage patterns for similar requests",
+          "action": "Search memory for similar past conversations and their tool calls",
+          "observation": "Results retrieved for: Search memory for similar past conversations and their tool calls"
+        }
+      ],
+      "outcome": "Selected tool: {{tool}} with parameters {{params}}"
+    },
+    {
+      "id": "entity_resolution",
+      "task": "Resolve ambiguous entity reference 'Entity 3' across conversations",
+      "steps": [
+        {
+          "thought": "Search for all entities matching or similar to the reference",
+          "action": "Query entity graph for name matches and fuzzy similarities",
+          "observation": "Results retrieved for: Query entity graph for name matches and fuzzy similarities"
+        },
+        {
+          "thought": "Use conversation context to disambiguate",
+          "action": "Review surrounding conversation context and co-occurring entities",
+          "observation": "Results retrieved for: Review surrounding conversation context and co-occurring entities"
+        },
+        {
+          "thought": "Check memory for prior resolutions of this entity",
+          "action": "Search agent memories for previous references to this entity",
+          "observation": "Results retrieved for: Search agent memories for previous references to this entity"
+        }
+      ],
+      "outcome": "Resolved to: {{resolved_entity}} with confidence {{confidence}}"
+    }
+  ]
+}

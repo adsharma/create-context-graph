@@ -1,0 +1,1139 @@
+{
+  "domain": "personal-knowledge",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Note": [
+      {
+        "name": "Note 1",
+        "note_id": "Sample note_id for Note 1",
+        "title": "Sample title for Note 1",
+        "content": "Sample content for Note 1",
+        "note_type": "literature"
+      },
+      {
+        "name": "Note 2",
+        "note_id": "Sample note_id for Note 2",
+        "title": "Sample title for Note 2",
+        "content": "Sample content for Note 2",
+        "note_type": "permanent"
+      },
+      {
+        "name": "Note 3",
+        "note_id": "Sample note_id for Note 3",
+        "title": "Sample title for Note 3",
+        "content": "Sample content for Note 3",
+        "note_type": "reference"
+      },
+      {
+        "name": "Note 4",
+        "note_id": "Sample note_id for Note 4",
+        "title": "Sample title for Note 4",
+        "content": "Sample content for Note 4",
+        "note_type": "meeting"
+      },
+      {
+        "name": "Note 5",
+        "note_id": "Sample note_id for Note 5",
+        "title": "Sample title for Note 5",
+        "content": "Sample content for Note 5",
+        "note_type": "fleeting"
+      }
+    ],
+    "Contact": [
+      {
+        "name": "Contact 1",
+        "contact_id": "Sample contact_id for Contact 1",
+        "email": "Sample email for Contact 1",
+        "relationship": "colleague",
+        "organization": "Sample organization for Contact 1"
+      },
+      {
+        "name": "Contact 2",
+        "contact_id": "Sample contact_id for Contact 2",
+        "email": "Sample email for Contact 2",
+        "relationship": "family",
+        "organization": "Sample organization for Contact 2"
+      },
+      {
+        "name": "Contact 3",
+        "contact_id": "Sample contact_id for Contact 3",
+        "email": "Sample email for Contact 3",
+        "relationship": "mentor",
+        "organization": "Sample organization for Contact 3"
+      },
+      {
+        "name": "Contact 4",
+        "contact_id": "Sample contact_id for Contact 4",
+        "email": "Sample email for Contact 4",
+        "relationship": "acquaintance",
+        "organization": "Sample organization for Contact 4"
+      },
+      {
+        "name": "Contact 5",
+        "contact_id": "Sample contact_id for Contact 5",
+        "email": "Sample email for Contact 5",
+        "relationship": "client",
+        "organization": "Sample organization for Contact 5"
+      }
+    ],
+    "Project": [
+      {
+        "name": "Project 1",
+        "project_id": "Sample project_id for Project 1",
+        "description": "Sample description for Project 1",
+        "status": "active"
+      },
+      {
+        "name": "Project 2",
+        "project_id": "Sample project_id for Project 2",
+        "description": "Sample description for Project 2",
+        "status": "paused"
+      },
+      {
+        "name": "Project 3",
+        "project_id": "Sample project_id for Project 3",
+        "description": "Sample description for Project 3",
+        "status": "completed"
+      },
+      {
+        "name": "Project 4",
+        "project_id": "Sample project_id for Project 4",
+        "description": "Sample description for Project 4",
+        "status": "archived"
+      },
+      {
+        "name": "Project 5",
+        "project_id": "Sample project_id for Project 5",
+        "description": "Sample description for Project 5",
+        "status": "planning"
+      }
+    ],
+    "Topic": [
+      {
+        "name": "Topic 1",
+        "topic_id": "Sample topic_id for Topic 1",
+        "category": "science",
+        "description": "Sample description for Topic 1"
+      },
+      {
+        "name": "Topic 2",
+        "topic_id": "Sample topic_id for Topic 2",
+        "category": "philosophy",
+        "description": "Sample description for Topic 2"
+      },
+      {
+        "name": "Topic 3",
+        "topic_id": "Sample topic_id for Topic 3",
+        "category": "business",
+        "description": "Sample description for Topic 3"
+      },
+      {
+        "name": "Topic 4",
+        "topic_id": "Sample topic_id for Topic 4",
+        "category": "health",
+        "description": "Sample description for Topic 4"
+      },
+      {
+        "name": "Topic 5",
+        "topic_id": "Sample topic_id for Topic 5",
+        "category": "art",
+        "description": "Sample description for Topic 5"
+      }
+    ],
+    "Bookmark": [
+      {
+        "name": "Bookmark 1",
+        "bookmark_id": "Sample bookmark_id for Bookmark 1",
+        "title": "Sample title for Bookmark 1",
+        "url": "Sample url for Bookmark 1",
+        "source": "Sample source for Bookmark 1",
+        "read_status": "reading"
+      },
+      {
+        "name": "Bookmark 2",
+        "bookmark_id": "Sample bookmark_id for Bookmark 2",
+        "title": "Sample title for Bookmark 2",
+        "url": "Sample url for Bookmark 2",
+        "source": "Sample source for Bookmark 2",
+        "read_status": "read"
+      },
+      {
+        "name": "Bookmark 3",
+        "bookmark_id": "Sample bookmark_id for Bookmark 3",
+        "title": "Sample title for Bookmark 3",
+        "url": "Sample url for Bookmark 3",
+        "source": "Sample source for Bookmark 3",
+        "read_status": "archived"
+      },
+      {
+        "name": "Bookmark 4",
+        "bookmark_id": "Sample bookmark_id for Bookmark 4",
+        "title": "Sample title for Bookmark 4",
+        "url": "Sample url for Bookmark 4",
+        "source": "Sample source for Bookmark 4",
+        "read_status": "unread"
+      },
+      {
+        "name": "Bookmark 5",
+        "bookmark_id": "Sample bookmark_id for Bookmark 5",
+        "title": "Sample title for Bookmark 5",
+        "url": "Sample url for Bookmark 5",
+        "source": "Sample source for Bookmark 5",
+        "read_status": "reading"
+      }
+    ],
+    "JournalEntry": [
+      {
+        "name": "JournalEntry 1",
+        "entry_id": "Sample entry_id for JournalEntry 1",
+        "mood": "good",
+        "summary": "Sample summary for JournalEntry 1",
+        "word_count": 100
+      },
+      {
+        "name": "JournalEntry 2",
+        "entry_id": "Sample entry_id for JournalEntry 2",
+        "mood": "neutral",
+        "summary": "Sample summary for JournalEntry 2",
+        "word_count": 200
+      },
+      {
+        "name": "JournalEntry 3",
+        "entry_id": "Sample entry_id for JournalEntry 3",
+        "mood": "low",
+        "summary": "Sample summary for JournalEntry 3",
+        "word_count": 300
+      },
+      {
+        "name": "JournalEntry 4",
+        "entry_id": "Sample entry_id for JournalEntry 4",
+        "mood": "difficult",
+        "summary": "Sample summary for JournalEntry 4",
+        "word_count": 400
+      },
+      {
+        "name": "JournalEntry 5",
+        "entry_id": "Sample entry_id for JournalEntry 5",
+        "mood": "great",
+        "summary": "Sample summary for JournalEntry 5",
+        "word_count": 500
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "KNOWS",
+      "source_label": "Contact",
+      "source_name": "Contact 1",
+      "target_label": "Contact",
+      "target_name": "Contact 3"
+    },
+    {
+      "type": "KNOWS",
+      "source_label": "Contact",
+      "source_name": "Contact 2",
+      "target_label": "Contact",
+      "target_name": "Contact 4"
+    },
+    {
+      "type": "KNOWS",
+      "source_label": "Contact",
+      "source_name": "Contact 2",
+      "target_label": "Contact",
+      "target_name": "Contact 1"
+    },
+    {
+      "type": "KNOWS",
+      "source_label": "Contact",
+      "source_name": "Contact 3",
+      "target_label": "Contact",
+      "target_name": "Contact 5"
+    },
+    {
+      "type": "KNOWS",
+      "source_label": "Contact",
+      "source_name": "Contact 5",
+      "target_label": "Contact",
+      "target_name": "Contact 4"
+    },
+    {
+      "type": "KNOWS",
+      "source_label": "Contact",
+      "source_name": "Contact 5",
+      "target_label": "Contact",
+      "target_name": "Contact 3"
+    },
+    {
+      "type": "TAGGED",
+      "source_label": "Note",
+      "source_name": "Note 1",
+      "target_label": "Topic",
+      "target_name": "Topic 5"
+    },
+    {
+      "type": "TAGGED",
+      "source_label": "Note",
+      "source_name": "Note 2",
+      "target_label": "Topic",
+      "target_name": "Topic 1"
+    },
+    {
+      "type": "TAGGED",
+      "source_label": "Note",
+      "source_name": "Note 3",
+      "target_label": "Topic",
+      "target_name": "Topic 3"
+    },
+    {
+      "type": "TAGGED",
+      "source_label": "Note",
+      "source_name": "Note 3",
+      "target_label": "Topic",
+      "target_name": "Topic 1"
+    },
+    {
+      "type": "TAGGED",
+      "source_label": "Note",
+      "source_name": "Note 4",
+      "target_label": "Topic",
+      "target_name": "Topic 2"
+    },
+    {
+      "type": "TAGGED",
+      "source_label": "Note",
+      "source_name": "Note 5",
+      "target_label": "Topic",
+      "target_name": "Topic 5"
+    },
+    {
+      "type": "TAGGED",
+      "source_label": "Note",
+      "source_name": "Note 5",
+      "target_label": "Topic",
+      "target_name": "Topic 4"
+    },
+    {
+      "type": "WORKED_ON",
+      "source_label": "Contact",
+      "source_name": "Contact 1",
+      "target_label": "Project",
+      "target_name": "Project 4"
+    },
+    {
+      "type": "WORKED_ON",
+      "source_label": "Contact",
+      "source_name": "Contact 2",
+      "target_label": "Project",
+      "target_name": "Project 1"
+    },
+    {
+      "type": "WORKED_ON",
+      "source_label": "Contact",
+      "source_name": "Contact 2",
+      "target_label": "Project",
+      "target_name": "Project 3"
+    },
+    {
+      "type": "WORKED_ON",
+      "source_label": "Contact",
+      "source_name": "Contact 3",
+      "target_label": "Project",
+      "target_name": "Project 5"
+    },
+    {
+      "type": "WORKED_ON",
+      "source_label": "Contact",
+      "source_name": "Contact 3",
+      "target_label": "Project",
+      "target_name": "Project 2"
+    },
+    {
+      "type": "WORKED_ON",
+      "source_label": "Contact",
+      "source_name": "Contact 4",
+      "target_label": "Project",
+      "target_name": "Project 1"
+    },
+    {
+      "type": "WORKED_ON",
+      "source_label": "Contact",
+      "source_name": "Contact 5",
+      "target_label": "Project",
+      "target_name": "Project 1"
+    },
+    {
+      "type": "WORKED_ON",
+      "source_label": "Contact",
+      "source_name": "Contact 5",
+      "target_label": "Project",
+      "target_name": "Project 5"
+    },
+    {
+      "type": "REFERENCES",
+      "source_label": "Note",
+      "source_name": "Note 1",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 2"
+    },
+    {
+      "type": "REFERENCES",
+      "source_label": "Note",
+      "source_name": "Note 1",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 3"
+    },
+    {
+      "type": "REFERENCES",
+      "source_label": "Note",
+      "source_name": "Note 2",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 4"
+    },
+    {
+      "type": "REFERENCES",
+      "source_label": "Note",
+      "source_name": "Note 3",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 3"
+    },
+    {
+      "type": "REFERENCES",
+      "source_label": "Note",
+      "source_name": "Note 4",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 3"
+    },
+    {
+      "type": "REFERENCES",
+      "source_label": "Note",
+      "source_name": "Note 4",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 2"
+    },
+    {
+      "type": "REFERENCES",
+      "source_label": "Note",
+      "source_name": "Note 5",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 2"
+    },
+    {
+      "type": "RELATED_TO",
+      "source_label": "Topic",
+      "source_name": "Topic 1",
+      "target_label": "Topic",
+      "target_name": "Topic 4"
+    },
+    {
+      "type": "RELATED_TO",
+      "source_label": "Topic",
+      "source_name": "Topic 2",
+      "target_label": "Topic",
+      "target_name": "Topic 4"
+    },
+    {
+      "type": "RELATED_TO",
+      "source_label": "Topic",
+      "source_name": "Topic 3",
+      "target_label": "Topic",
+      "target_name": "Topic 1"
+    },
+    {
+      "type": "RELATED_TO",
+      "source_label": "Topic",
+      "source_name": "Topic 3",
+      "target_label": "Topic",
+      "target_name": "Topic 2"
+    },
+    {
+      "type": "RELATED_TO",
+      "source_label": "Topic",
+      "source_name": "Topic 4",
+      "target_label": "Topic",
+      "target_name": "Topic 3"
+    },
+    {
+      "type": "RELATED_TO",
+      "source_label": "Topic",
+      "source_name": "Topic 5",
+      "target_label": "Topic",
+      "target_name": "Topic 1"
+    },
+    {
+      "type": "RELATED_TO",
+      "source_label": "Topic",
+      "source_name": "Topic 5",
+      "target_label": "Topic",
+      "target_name": "Topic 4"
+    },
+    {
+      "type": "MENTIONED_IN",
+      "source_label": "Contact",
+      "source_name": "Contact 1",
+      "target_label": "JournalEntry",
+      "target_name": "JournalEntry 1"
+    },
+    {
+      "type": "MENTIONED_IN",
+      "source_label": "Contact",
+      "source_name": "Contact 1",
+      "target_label": "JournalEntry",
+      "target_name": "JournalEntry 5"
+    },
+    {
+      "type": "MENTIONED_IN",
+      "source_label": "Contact",
+      "source_name": "Contact 2",
+      "target_label": "JournalEntry",
+      "target_name": "JournalEntry 5"
+    },
+    {
+      "type": "MENTIONED_IN",
+      "source_label": "Contact",
+      "source_name": "Contact 3",
+      "target_label": "JournalEntry",
+      "target_name": "JournalEntry 5"
+    },
+    {
+      "type": "MENTIONED_IN",
+      "source_label": "Contact",
+      "source_name": "Contact 4",
+      "target_label": "JournalEntry",
+      "target_name": "JournalEntry 1"
+    },
+    {
+      "type": "MENTIONED_IN",
+      "source_label": "Contact",
+      "source_name": "Contact 4",
+      "target_label": "JournalEntry",
+      "target_name": "JournalEntry 3"
+    },
+    {
+      "type": "MENTIONED_IN",
+      "source_label": "Contact",
+      "source_name": "Contact 5",
+      "target_label": "JournalEntry",
+      "target_name": "JournalEntry 5"
+    },
+    {
+      "type": "MENTIONED_IN",
+      "source_label": "Contact",
+      "source_name": "Contact 5",
+      "target_label": "JournalEntry",
+      "target_name": "JournalEntry 4"
+    },
+    {
+      "type": "BELONGS_TO",
+      "source_label": "Note",
+      "source_name": "Note 1",
+      "target_label": "Project",
+      "target_name": "Project 1"
+    },
+    {
+      "type": "BELONGS_TO",
+      "source_label": "Note",
+      "source_name": "Note 2",
+      "target_label": "Project",
+      "target_name": "Project 3"
+    },
+    {
+      "type": "BELONGS_TO",
+      "source_label": "Note",
+      "source_name": "Note 2",
+      "target_label": "Project",
+      "target_name": "Project 2"
+    },
+    {
+      "type": "BELONGS_TO",
+      "source_label": "Note",
+      "source_name": "Note 3",
+      "target_label": "Project",
+      "target_name": "Project 4"
+    },
+    {
+      "type": "BELONGS_TO",
+      "source_label": "Note",
+      "source_name": "Note 4",
+      "target_label": "Project",
+      "target_name": "Project 5"
+    },
+    {
+      "type": "BELONGS_TO",
+      "source_label": "Note",
+      "source_name": "Note 4",
+      "target_label": "Project",
+      "target_name": "Project 3"
+    },
+    {
+      "type": "BELONGS_TO",
+      "source_label": "Note",
+      "source_name": "Note 5",
+      "target_label": "Project",
+      "target_name": "Project 2"
+    },
+    {
+      "type": "INSPIRED_BY",
+      "source_label": "JournalEntry",
+      "source_name": "JournalEntry 1",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 4"
+    },
+    {
+      "type": "INSPIRED_BY",
+      "source_label": "JournalEntry",
+      "source_name": "JournalEntry 1",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 5"
+    },
+    {
+      "type": "INSPIRED_BY",
+      "source_label": "JournalEntry",
+      "source_name": "JournalEntry 2",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 4"
+    },
+    {
+      "type": "INSPIRED_BY",
+      "source_label": "JournalEntry",
+      "source_name": "JournalEntry 2",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 2"
+    },
+    {
+      "type": "INSPIRED_BY",
+      "source_label": "JournalEntry",
+      "source_name": "JournalEntry 3",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 3"
+    },
+    {
+      "type": "INSPIRED_BY",
+      "source_label": "JournalEntry",
+      "source_name": "JournalEntry 4",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 3"
+    },
+    {
+      "type": "INSPIRED_BY",
+      "source_label": "JournalEntry",
+      "source_name": "JournalEntry 4",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 4"
+    },
+    {
+      "type": "INSPIRED_BY",
+      "source_label": "JournalEntry",
+      "source_name": "JournalEntry 5",
+      "target_label": "Bookmark",
+      "target_name": "Bookmark 4"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "journal_entry",
+      "template_name": "Journal Entry",
+      "title": "Journal Entry #1",
+      "content": "Sample Journal Entry #1\n\nThis is a sample daily journal entries with reflections and observations for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "journal_entry",
+      "template_name": "Journal Entry",
+      "title": "Journal Entry #2",
+      "content": "Sample Journal Entry #2\n\nThis is a sample daily journal entries with reflections and observations for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "journal_entry",
+      "template_name": "Journal Entry",
+      "title": "Journal Entry #3",
+      "content": "Sample Journal Entry #3\n\nThis is a sample daily journal entries with reflections and observations for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "journal_entry",
+      "template_name": "Journal Entry",
+      "title": "Journal Entry #4",
+      "content": "Sample Journal Entry #4\n\nThis is a sample daily journal entries with reflections and observations for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "journal_entry",
+      "template_name": "Journal Entry",
+      "title": "Journal Entry #5",
+      "content": "Sample Journal Entry #5\n\nThis is a sample daily journal entries with reflections and observations for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #1",
+      "content": "Sample Meeting Notes #1\n\nThis is a sample notes from meetings with contacts for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #2",
+      "content": "Sample Meeting Notes #2\n\nThis is a sample notes from meetings with contacts for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #3",
+      "content": "Sample Meeting Notes #3\n\nThis is a sample notes from meetings with contacts for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #4",
+      "content": "Sample Meeting Notes #4\n\nThis is a sample notes from meetings with contacts for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Meeting Notes",
+      "title": "Meeting Notes #5",
+      "content": "Sample Meeting Notes #5\n\nThis is a sample notes from meetings with contacts for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "personal_email",
+      "template_name": "Personal Email",
+      "title": "Personal Email #1",
+      "content": "Sample Personal Email #1\n\nThis is a sample personal email correspondence for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "personal_email",
+      "template_name": "Personal Email",
+      "title": "Personal Email #2",
+      "content": "Sample Personal Email #2\n\nThis is a sample personal email correspondence for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "personal_email",
+      "template_name": "Personal Email",
+      "title": "Personal Email #3",
+      "content": "Sample Personal Email #3\n\nThis is a sample personal email correspondence for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "personal_email",
+      "template_name": "Personal Email",
+      "title": "Personal Email #4",
+      "content": "Sample Personal Email #4\n\nThis is a sample personal email correspondence for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "personal_email",
+      "template_name": "Personal Email",
+      "title": "Personal Email #5",
+      "content": "Sample Personal Email #5\n\nThis is a sample personal email correspondence for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "project_update",
+      "template_name": "Project Update",
+      "title": "Project Update #1",
+      "content": "Sample Project Update #1\n\nThis is a sample status updates and progress notes for personal projects for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "project_update",
+      "template_name": "Project Update",
+      "title": "Project Update #2",
+      "content": "Sample Project Update #2\n\nThis is a sample status updates and progress notes for personal projects for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "project_update",
+      "template_name": "Project Update",
+      "title": "Project Update #3",
+      "content": "Sample Project Update #3\n\nThis is a sample status updates and progress notes for personal projects for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "project_update",
+      "template_name": "Project Update",
+      "title": "Project Update #4",
+      "content": "Sample Project Update #4\n\nThis is a sample status updates and progress notes for personal projects for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "project_update",
+      "template_name": "Project Update",
+      "title": "Project Update #5",
+      "content": "Sample Project Update #5\n\nThis is a sample status updates and progress notes for personal projects for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "reading_notes",
+      "template_name": "Reading Notes",
+      "title": "Reading Notes #1",
+      "content": "Sample Reading Notes #1\n\nThis is a sample notes and highlights from reading bookmarked content for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "reading_notes",
+      "template_name": "Reading Notes",
+      "title": "Reading Notes #2",
+      "content": "Sample Reading Notes #2\n\nThis is a sample notes and highlights from reading bookmarked content for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "reading_notes",
+      "template_name": "Reading Notes",
+      "title": "Reading Notes #3",
+      "content": "Sample Reading Notes #3\n\nThis is a sample notes and highlights from reading bookmarked content for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "reading_notes",
+      "template_name": "Reading Notes",
+      "title": "Reading Notes #4",
+      "content": "Sample Reading Notes #4\n\nThis is a sample notes and highlights from reading bookmarked content for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "reading_notes",
+      "template_name": "Reading Notes",
+      "title": "Reading Notes #5",
+      "content": "Sample Reading Notes #5\n\nThis is a sample notes and highlights from reading bookmarked content for the Personal Knowledge domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "knowledge_connection",
+      "task": "Find meaningful connections between Topic 4 and other knowledge areas",
+      "steps": [
+        {
+          "thought": "Identify notes and bookmarks related to this topic",
+          "action": "Query all notes and bookmarks tagged with or referencing this topic",
+          "observation": "Results retrieved for: Query all notes and bookmarks tagged with or referencing this topic"
+        },
+        {
+          "thought": "Look for overlapping contacts and projects",
+          "action": "Find people and projects connected to this topic's knowledge cluster",
+          "observation": "Results retrieved for: Find people and projects connected to this topic's knowledge cluster"
+        },
+        {
+          "thought": "Discover non-obvious cross-topic connections",
+          "action": "Traverse topic relationships to find bridging concepts",
+          "observation": "Results retrieved for: Traverse topic relationships to find bridging concepts"
+        }
+      ],
+      "outcome": "Found {{count}} connections, strongest link: {{connection}}"
+    },
+    {
+      "id": "project_prioritization",
+      "task": "Prioritize among active projects based on current context",
+      "steps": [
+        {
+          "thought": "Review all active projects and their recent activity",
+          "action": "Query projects by status and recent note/update frequency",
+          "observation": "Results retrieved for: Query projects by status and recent note/update frequency"
+        },
+        {
+          "thought": "Assess alignment with current journal reflections and goals",
+          "action": "Cross-reference project topics with recent journal entries",
+          "observation": "Results retrieved for: Cross-reference project topics with recent journal entries"
+        },
+        {
+          "thought": "Consider deadline proximity and contact dependencies",
+          "action": "Check project deadlines and collaborator availability",
+          "observation": "Results retrieved for: Check project deadlines and collaborator availability"
+        }
+      ],
+      "outcome": "Priority ranking: {{ranking}} based on {{criteria}}"
+    },
+    {
+      "id": "contact_reconnection",
+      "task": "Identify contacts to reconnect with based on shared interests",
+      "steps": [
+        {
+          "thought": "Find contacts not reached out to recently",
+          "action": "Query contacts ordered by last_contact date ascending",
+          "observation": "Results retrieved for: Query contacts ordered by last_contact date ascending"
+        },
+        {
+          "thought": "Match dormant contacts with active topics and projects",
+          "action": "Find topic and project overlaps between user activity and contacts",
+          "observation": "Results retrieved for: Find topic and project overlaps between user activity and contacts"
+        },
+        {
+          "thought": "Generate personalized reconnection suggestions",
+          "action": "Pull shared notes, projects, and recent bookmarks relevant to each contact",
+          "observation": "Results retrieved for: Pull shared notes, projects, and recent bookmarks relevant to each contact"
+        }
+      ],
+      "outcome": "Suggest reconnecting with {{contacts}} about {{topics}}"
+    }
+  ]
+}

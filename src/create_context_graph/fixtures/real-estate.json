@@ -1,0 +1,1224 @@
+{
+  "domain": "real-estate",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Property": [
+      {
+        "name": "Property 1",
+        "property_id": "Sample property_id for Property 1",
+        "address": "Sample address for Property 1",
+        "property_type": "condo",
+        "bedrooms": 100,
+        "bathrooms": 10.5,
+        "square_feet": 100,
+        "lot_size_acres": 10.5,
+        "year_built": 100,
+        "tax_assessed_value": 10.5
+      },
+      {
+        "name": "Property 2",
+        "property_id": "Sample property_id for Property 2",
+        "address": "Sample address for Property 2",
+        "property_type": "townhouse",
+        "bedrooms": 200,
+        "bathrooms": 21.0,
+        "square_feet": 200,
+        "lot_size_acres": 21.0,
+        "year_built": 200,
+        "tax_assessed_value": 21.0
+      },
+      {
+        "name": "Property 3",
+        "property_id": "Sample property_id for Property 3",
+        "address": "Sample address for Property 3",
+        "property_type": "multi_family",
+        "bedrooms": 300,
+        "bathrooms": 31.5,
+        "square_feet": 300,
+        "lot_size_acres": 31.5,
+        "year_built": 300,
+        "tax_assessed_value": 31.5
+      },
+      {
+        "name": "Property 4",
+        "property_id": "Sample property_id for Property 4",
+        "address": "Sample address for Property 4",
+        "property_type": "commercial",
+        "bedrooms": 400,
+        "bathrooms": 42.0,
+        "square_feet": 400,
+        "lot_size_acres": 42.0,
+        "year_built": 400,
+        "tax_assessed_value": 42.0
+      },
+      {
+        "name": "Property 5",
+        "property_id": "Sample property_id for Property 5",
+        "address": "Sample address for Property 5",
+        "property_type": "land",
+        "bedrooms": 500,
+        "bathrooms": 52.5,
+        "square_feet": 500,
+        "lot_size_acres": 52.5,
+        "year_built": 500,
+        "tax_assessed_value": 52.5
+      }
+    ],
+    "Listing": [
+      {
+        "name": "Listing 1",
+        "listing_id": "Sample listing_id for Listing 1",
+        "list_price": 10.5,
+        "status": "pending",
+        "mls_number": "Sample mls_number for Listing 1",
+        "days_on_market": 100,
+        "description": "Sample description for Listing 1"
+      },
+      {
+        "name": "Listing 2",
+        "listing_id": "Sample listing_id for Listing 2",
+        "list_price": 21.0,
+        "status": "sold",
+        "mls_number": "Sample mls_number for Listing 2",
+        "days_on_market": 200,
+        "description": "Sample description for Listing 2"
+      },
+      {
+        "name": "Listing 3",
+        "listing_id": "Sample listing_id for Listing 3",
+        "list_price": 31.5,
+        "status": "withdrawn",
+        "mls_number": "Sample mls_number for Listing 3",
+        "days_on_market": 300,
+        "description": "Sample description for Listing 3"
+      },
+      {
+        "name": "Listing 4",
+        "listing_id": "Sample listing_id for Listing 4",
+        "list_price": 42.0,
+        "status": "expired",
+        "mls_number": "Sample mls_number for Listing 4",
+        "days_on_market": 400,
+        "description": "Sample description for Listing 4"
+      },
+      {
+        "name": "Listing 5",
+        "listing_id": "Sample listing_id for Listing 5",
+        "list_price": 52.5,
+        "status": "active",
+        "mls_number": "Sample mls_number for Listing 5",
+        "days_on_market": 500,
+        "description": "Sample description for Listing 5"
+      }
+    ],
+    "Agent": [
+      {
+        "name": "Agent 1",
+        "agent_id": "Sample agent_id for Agent 1",
+        "license_number": "Sample license_number for Agent 1",
+        "brokerage": "Sample brokerage for Agent 1",
+        "specialization": "commercial",
+        "years_experience": 100,
+        "total_sales_volume": 10.5
+      },
+      {
+        "name": "Agent 2",
+        "agent_id": "Sample agent_id for Agent 2",
+        "license_number": "Sample license_number for Agent 2",
+        "brokerage": "Sample brokerage for Agent 2",
+        "specialization": "luxury",
+        "years_experience": 200,
+        "total_sales_volume": 21.0
+      },
+      {
+        "name": "Agent 3",
+        "agent_id": "Sample agent_id for Agent 3",
+        "license_number": "Sample license_number for Agent 3",
+        "brokerage": "Sample brokerage for Agent 3",
+        "specialization": "investment",
+        "years_experience": 300,
+        "total_sales_volume": 31.5
+      },
+      {
+        "name": "Agent 4",
+        "agent_id": "Sample agent_id for Agent 4",
+        "license_number": "Sample license_number for Agent 4",
+        "brokerage": "Sample brokerage for Agent 4",
+        "specialization": "land",
+        "years_experience": 400,
+        "total_sales_volume": 42.0
+      },
+      {
+        "name": "Agent 5",
+        "agent_id": "Sample agent_id for Agent 5",
+        "license_number": "Sample license_number for Agent 5",
+        "brokerage": "Sample brokerage for Agent 5",
+        "specialization": "property_management",
+        "years_experience": 500,
+        "total_sales_volume": 52.5
+      }
+    ],
+    "Transaction": [
+      {
+        "name": "Transaction 1",
+        "transaction_id": "Sample transaction_id for Transaction 1",
+        "sale_price": 10.5,
+        "transaction_type": "sale",
+        "financing_type": "fha",
+        "commission_pct": 10.5
+      },
+      {
+        "name": "Transaction 2",
+        "transaction_id": "Sample transaction_id for Transaction 2",
+        "sale_price": 21.0,
+        "transaction_type": "lease",
+        "financing_type": "va",
+        "commission_pct": 21.0
+      },
+      {
+        "name": "Transaction 3",
+        "transaction_id": "Sample transaction_id for Transaction 3",
+        "sale_price": 31.5,
+        "transaction_type": "refinance",
+        "financing_type": "cash",
+        "commission_pct": 31.5
+      },
+      {
+        "name": "Transaction 4",
+        "transaction_id": "Sample transaction_id for Transaction 4",
+        "sale_price": 42.0,
+        "transaction_type": "foreclosure",
+        "financing_type": "jumbo",
+        "commission_pct": 42.0
+      },
+      {
+        "name": "Transaction 5",
+        "transaction_id": "Sample transaction_id for Transaction 5",
+        "sale_price": 52.5,
+        "transaction_type": "short_sale",
+        "financing_type": "usda",
+        "commission_pct": 52.5
+      }
+    ],
+    "Inspection": [
+      {
+        "name": "Inspection 1",
+        "inspection_id": "Sample inspection_id for Inspection 1",
+        "inspector_name": "Sample inspector_name for Inspection 1",
+        "inspection_type": "structural",
+        "result": "pass_with_conditions",
+        "findings": "Sample findings for Inspection 1",
+        "estimated_repair_cost": 10.5
+      },
+      {
+        "name": "Inspection 2",
+        "inspection_id": "Sample inspection_id for Inspection 2",
+        "inspector_name": "Sample inspector_name for Inspection 2",
+        "inspection_type": "electrical",
+        "result": "fail",
+        "findings": "Sample findings for Inspection 2",
+        "estimated_repair_cost": 21.0
+      },
+      {
+        "name": "Inspection 3",
+        "inspection_id": "Sample inspection_id for Inspection 3",
+        "inspector_name": "Sample inspector_name for Inspection 3",
+        "inspection_type": "plumbing",
+        "result": "pass",
+        "findings": "Sample findings for Inspection 3",
+        "estimated_repair_cost": 31.5
+      },
+      {
+        "name": "Inspection 4",
+        "inspection_id": "Sample inspection_id for Inspection 4",
+        "inspector_name": "Sample inspector_name for Inspection 4",
+        "inspection_type": "pest",
+        "result": "pass_with_conditions",
+        "findings": "Sample findings for Inspection 4",
+        "estimated_repair_cost": 42.0
+      },
+      {
+        "name": "Inspection 5",
+        "inspection_id": "Sample inspection_id for Inspection 5",
+        "inspector_name": "Sample inspector_name for Inspection 5",
+        "inspection_type": "roof",
+        "result": "fail",
+        "findings": "Sample findings for Inspection 5",
+        "estimated_repair_cost": 52.5
+      }
+    ],
+    "Neighborhood": [
+      {
+        "name": "Neighborhood 1",
+        "neighborhood_id": "Sample neighborhood_id for Neighborhood 1",
+        "city": "Sample city for Neighborhood 1",
+        "state": "Sample state for Neighborhood 1",
+        "zip_code": "Sample zip_code for Neighborhood 1",
+        "median_home_price": 10.5,
+        "school_rating": 10.5,
+        "walkability_score": 100
+      },
+      {
+        "name": "Neighborhood 2",
+        "neighborhood_id": "Sample neighborhood_id for Neighborhood 2",
+        "city": "Sample city for Neighborhood 2",
+        "state": "Sample state for Neighborhood 2",
+        "zip_code": "Sample zip_code for Neighborhood 2",
+        "median_home_price": 21.0,
+        "school_rating": 21.0,
+        "walkability_score": 200
+      },
+      {
+        "name": "Neighborhood 3",
+        "neighborhood_id": "Sample neighborhood_id for Neighborhood 3",
+        "city": "Sample city for Neighborhood 3",
+        "state": "Sample state for Neighborhood 3",
+        "zip_code": "Sample zip_code for Neighborhood 3",
+        "median_home_price": 31.5,
+        "school_rating": 31.5,
+        "walkability_score": 300
+      },
+      {
+        "name": "Neighborhood 4",
+        "neighborhood_id": "Sample neighborhood_id for Neighborhood 4",
+        "city": "Sample city for Neighborhood 4",
+        "state": "Sample state for Neighborhood 4",
+        "zip_code": "Sample zip_code for Neighborhood 4",
+        "median_home_price": 42.0,
+        "school_rating": 42.0,
+        "walkability_score": 400
+      },
+      {
+        "name": "Neighborhood 5",
+        "neighborhood_id": "Sample neighborhood_id for Neighborhood 5",
+        "city": "Sample city for Neighborhood 5",
+        "state": "Sample state for Neighborhood 5",
+        "zip_code": "Sample zip_code for Neighborhood 5",
+        "median_home_price": 52.5,
+        "school_rating": 52.5,
+        "walkability_score": 500
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "LISTED_BY",
+      "source_label": "Listing",
+      "source_name": "Listing 1",
+      "target_label": "Agent",
+      "target_name": "Agent 5"
+    },
+    {
+      "type": "LISTED_BY",
+      "source_label": "Listing",
+      "source_name": "Listing 2",
+      "target_label": "Agent",
+      "target_name": "Agent 4"
+    },
+    {
+      "type": "LISTED_BY",
+      "source_label": "Listing",
+      "source_name": "Listing 2",
+      "target_label": "Agent",
+      "target_name": "Agent 2"
+    },
+    {
+      "type": "LISTED_BY",
+      "source_label": "Listing",
+      "source_name": "Listing 3",
+      "target_label": "Agent",
+      "target_name": "Agent 4"
+    },
+    {
+      "type": "LISTED_BY",
+      "source_label": "Listing",
+      "source_name": "Listing 4",
+      "target_label": "Agent",
+      "target_name": "Agent 2"
+    },
+    {
+      "type": "LISTED_BY",
+      "source_label": "Listing",
+      "source_name": "Listing 5",
+      "target_label": "Agent",
+      "target_name": "Agent 3"
+    },
+    {
+      "type": "LISTING_FOR",
+      "source_label": "Listing",
+      "source_name": "Listing 1",
+      "target_label": "Property",
+      "target_name": "Property 4"
+    },
+    {
+      "type": "LISTING_FOR",
+      "source_label": "Listing",
+      "source_name": "Listing 1",
+      "target_label": "Property",
+      "target_name": "Property 3"
+    },
+    {
+      "type": "LISTING_FOR",
+      "source_label": "Listing",
+      "source_name": "Listing 2",
+      "target_label": "Property",
+      "target_name": "Property 3"
+    },
+    {
+      "type": "LISTING_FOR",
+      "source_label": "Listing",
+      "source_name": "Listing 2",
+      "target_label": "Property",
+      "target_name": "Property 4"
+    },
+    {
+      "type": "LISTING_FOR",
+      "source_label": "Listing",
+      "source_name": "Listing 3",
+      "target_label": "Property",
+      "target_name": "Property 2"
+    },
+    {
+      "type": "LISTING_FOR",
+      "source_label": "Listing",
+      "source_name": "Listing 4",
+      "target_label": "Property",
+      "target_name": "Property 3"
+    },
+    {
+      "type": "LISTING_FOR",
+      "source_label": "Listing",
+      "source_name": "Listing 5",
+      "target_label": "Property",
+      "target_name": "Property 3"
+    },
+    {
+      "type": "LISTING_FOR",
+      "source_label": "Listing",
+      "source_name": "Listing 5",
+      "target_label": "Property",
+      "target_name": "Property 1"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "Inspection",
+      "source_name": "Inspection 1",
+      "target_label": "Property",
+      "target_name": "Property 5"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "Inspection",
+      "source_name": "Inspection 1",
+      "target_label": "Property",
+      "target_name": "Property 4"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "Inspection",
+      "source_name": "Inspection 2",
+      "target_label": "Property",
+      "target_name": "Property 5"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "Inspection",
+      "source_name": "Inspection 2",
+      "target_label": "Property",
+      "target_name": "Property 2"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "Inspection",
+      "source_name": "Inspection 3",
+      "target_label": "Property",
+      "target_name": "Property 4"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "Inspection",
+      "source_name": "Inspection 4",
+      "target_label": "Property",
+      "target_name": "Property 5"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "Inspection",
+      "source_name": "Inspection 5",
+      "target_label": "Property",
+      "target_name": "Property 2"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "Inspection",
+      "source_name": "Inspection 5",
+      "target_label": "Property",
+      "target_name": "Property 3"
+    },
+    {
+      "type": "SOLD_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Person",
+      "target_name": "Person 2"
+    },
+    {
+      "type": "SOLD_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Person",
+      "target_name": "Person 4"
+    },
+    {
+      "type": "SOLD_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 2",
+      "target_label": "Person",
+      "target_name": "Person 2"
+    },
+    {
+      "type": "SOLD_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 3",
+      "target_label": "Person",
+      "target_name": "Person 3"
+    },
+    {
+      "type": "SOLD_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 4",
+      "target_label": "Person",
+      "target_name": "Person 4"
+    },
+    {
+      "type": "SOLD_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 5",
+      "target_label": "Person",
+      "target_name": "Person 5"
+    },
+    {
+      "type": "APPRAISED_AT",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Property",
+      "target_name": "Property 1"
+    },
+    {
+      "type": "APPRAISED_AT",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Property",
+      "target_name": "Property 5"
+    },
+    {
+      "type": "APPRAISED_AT",
+      "source_label": "Transaction",
+      "source_name": "Transaction 2",
+      "target_label": "Property",
+      "target_name": "Property 2"
+    },
+    {
+      "type": "APPRAISED_AT",
+      "source_label": "Transaction",
+      "source_name": "Transaction 2",
+      "target_label": "Property",
+      "target_name": "Property 5"
+    },
+    {
+      "type": "APPRAISED_AT",
+      "source_label": "Transaction",
+      "source_name": "Transaction 3",
+      "target_label": "Property",
+      "target_name": "Property 1"
+    },
+    {
+      "type": "APPRAISED_AT",
+      "source_label": "Transaction",
+      "source_name": "Transaction 4",
+      "target_label": "Property",
+      "target_name": "Property 3"
+    },
+    {
+      "type": "APPRAISED_AT",
+      "source_label": "Transaction",
+      "source_name": "Transaction 4",
+      "target_label": "Property",
+      "target_name": "Property 1"
+    },
+    {
+      "type": "APPRAISED_AT",
+      "source_label": "Transaction",
+      "source_name": "Transaction 5",
+      "target_label": "Property",
+      "target_name": "Property 2"
+    },
+    {
+      "type": "APPRAISED_AT",
+      "source_label": "Transaction",
+      "source_name": "Transaction 5",
+      "target_label": "Property",
+      "target_name": "Property 4"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Property",
+      "source_name": "Property 1",
+      "target_label": "Neighborhood",
+      "target_name": "Neighborhood 3"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Property",
+      "source_name": "Property 2",
+      "target_label": "Neighborhood",
+      "target_name": "Neighborhood 2"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Property",
+      "source_name": "Property 3",
+      "target_label": "Neighborhood",
+      "target_name": "Neighborhood 2"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Property",
+      "source_name": "Property 4",
+      "target_label": "Neighborhood",
+      "target_name": "Neighborhood 2"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Property",
+      "source_name": "Property 5",
+      "target_label": "Neighborhood",
+      "target_name": "Neighborhood 3"
+    },
+    {
+      "type": "COMPARABLE_TO",
+      "source_label": "Property",
+      "source_name": "Property 1",
+      "target_label": "Property",
+      "target_name": "Property 4"
+    },
+    {
+      "type": "COMPARABLE_TO",
+      "source_label": "Property",
+      "source_name": "Property 2",
+      "target_label": "Property",
+      "target_name": "Property 4"
+    },
+    {
+      "type": "COMPARABLE_TO",
+      "source_label": "Property",
+      "source_name": "Property 3",
+      "target_label": "Property",
+      "target_name": "Property 4"
+    },
+    {
+      "type": "COMPARABLE_TO",
+      "source_label": "Property",
+      "source_name": "Property 4",
+      "target_label": "Property",
+      "target_name": "Property 3"
+    },
+    {
+      "type": "COMPARABLE_TO",
+      "source_label": "Property",
+      "source_name": "Property 4",
+      "target_label": "Property",
+      "target_name": "Property 5"
+    },
+    {
+      "type": "COMPARABLE_TO",
+      "source_label": "Property",
+      "source_name": "Property 5",
+      "target_label": "Property",
+      "target_name": "Property 2"
+    },
+    {
+      "type": "REPRESENTED_BY",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Agent",
+      "target_name": "Agent 1"
+    },
+    {
+      "type": "REPRESENTED_BY",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Agent",
+      "target_name": "Agent 5"
+    },
+    {
+      "type": "REPRESENTED_BY",
+      "source_label": "Transaction",
+      "source_name": "Transaction 2",
+      "target_label": "Agent",
+      "target_name": "Agent 3"
+    },
+    {
+      "type": "REPRESENTED_BY",
+      "source_label": "Transaction",
+      "source_name": "Transaction 3",
+      "target_label": "Agent",
+      "target_name": "Agent 5"
+    },
+    {
+      "type": "REPRESENTED_BY",
+      "source_label": "Transaction",
+      "source_name": "Transaction 4",
+      "target_label": "Agent",
+      "target_name": "Agent 5"
+    },
+    {
+      "type": "REPRESENTED_BY",
+      "source_label": "Transaction",
+      "source_name": "Transaction 4",
+      "target_label": "Agent",
+      "target_name": "Agent 1"
+    },
+    {
+      "type": "REPRESENTED_BY",
+      "source_label": "Transaction",
+      "source_name": "Transaction 5",
+      "target_label": "Agent",
+      "target_name": "Agent 2"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "listing_description",
+      "template_name": "Listing Description",
+      "title": "Listing Description #1",
+      "content": "Sample Listing Description #1\n\nThis is a sample mls listing descriptions for properties for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "listing_description",
+      "template_name": "Listing Description",
+      "title": "Listing Description #2",
+      "content": "Sample Listing Description #2\n\nThis is a sample mls listing descriptions for properties for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "listing_description",
+      "template_name": "Listing Description",
+      "title": "Listing Description #3",
+      "content": "Sample Listing Description #3\n\nThis is a sample mls listing descriptions for properties for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "listing_description",
+      "template_name": "Listing Description",
+      "title": "Listing Description #4",
+      "content": "Sample Listing Description #4\n\nThis is a sample mls listing descriptions for properties for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "listing_description",
+      "template_name": "Listing Description",
+      "title": "Listing Description #5",
+      "content": "Sample Listing Description #5\n\nThis is a sample mls listing descriptions for properties for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inspection_report",
+      "template_name": "Inspection Report",
+      "title": "Inspection Report #1",
+      "content": "Sample Inspection Report #1\n\nThis is a sample property inspection findings and recommendations for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inspection_report",
+      "template_name": "Inspection Report",
+      "title": "Inspection Report #2",
+      "content": "Sample Inspection Report #2\n\nThis is a sample property inspection findings and recommendations for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inspection_report",
+      "template_name": "Inspection Report",
+      "title": "Inspection Report #3",
+      "content": "Sample Inspection Report #3\n\nThis is a sample property inspection findings and recommendations for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inspection_report",
+      "template_name": "Inspection Report",
+      "title": "Inspection Report #4",
+      "content": "Sample Inspection Report #4\n\nThis is a sample property inspection findings and recommendations for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "inspection_report",
+      "template_name": "Inspection Report",
+      "title": "Inspection Report #5",
+      "content": "Sample Inspection Report #5\n\nThis is a sample property inspection findings and recommendations for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "closing_doc",
+      "template_name": "Closing Document",
+      "title": "Closing Document #1",
+      "content": "Sample Closing Document #1\n\nThis is a sample transaction closing summaries and settlement statements for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "closing_doc",
+      "template_name": "Closing Document",
+      "title": "Closing Document #2",
+      "content": "Sample Closing Document #2\n\nThis is a sample transaction closing summaries and settlement statements for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "closing_doc",
+      "template_name": "Closing Document",
+      "title": "Closing Document #3",
+      "content": "Sample Closing Document #3\n\nThis is a sample transaction closing summaries and settlement statements for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "closing_doc",
+      "template_name": "Closing Document",
+      "title": "Closing Document #4",
+      "content": "Sample Closing Document #4\n\nThis is a sample transaction closing summaries and settlement statements for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "closing_doc",
+      "template_name": "Closing Document",
+      "title": "Closing Document #5",
+      "content": "Sample Closing Document #5\n\nThis is a sample transaction closing summaries and settlement statements for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "market_analysis",
+      "template_name": "Market Analysis",
+      "title": "Market Analysis #1",
+      "content": "Sample Market Analysis #1\n\nThis is a sample comparative market analysis reports for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "market_analysis",
+      "template_name": "Market Analysis",
+      "title": "Market Analysis #2",
+      "content": "Sample Market Analysis #2\n\nThis is a sample comparative market analysis reports for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "market_analysis",
+      "template_name": "Market Analysis",
+      "title": "Market Analysis #3",
+      "content": "Sample Market Analysis #3\n\nThis is a sample comparative market analysis reports for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "market_analysis",
+      "template_name": "Market Analysis",
+      "title": "Market Analysis #4",
+      "content": "Sample Market Analysis #4\n\nThis is a sample comparative market analysis reports for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "market_analysis",
+      "template_name": "Market Analysis",
+      "title": "Market Analysis #5",
+      "content": "Sample Market Analysis #5\n\nThis is a sample comparative market analysis reports for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "client_communication",
+      "template_name": "Client Communication",
+      "title": "Client Communication #1",
+      "content": "Sample Client Communication #1\n\nThis is a sample agent-to-client emails and updates for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "client_communication",
+      "template_name": "Client Communication",
+      "title": "Client Communication #2",
+      "content": "Sample Client Communication #2\n\nThis is a sample agent-to-client emails and updates for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "client_communication",
+      "template_name": "Client Communication",
+      "title": "Client Communication #3",
+      "content": "Sample Client Communication #3\n\nThis is a sample agent-to-client emails and updates for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "client_communication",
+      "template_name": "Client Communication",
+      "title": "Client Communication #4",
+      "content": "Sample Client Communication #4\n\nThis is a sample agent-to-client emails and updates for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "client_communication",
+      "template_name": "Client Communication",
+      "title": "Client Communication #5",
+      "content": "Sample Client Communication #5\n\nThis is a sample agent-to-client emails and updates for the Real Estate domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "pricing_strategy",
+      "task": "Determine optimal listing price for {{property.address}}",
+      "steps": [
+        {
+          "thought": "Analyze comparable properties in the neighborhood",
+          "action": "Query recent sales of similar properties in the same area",
+          "observation": "Results retrieved for: Query recent sales of similar properties in the same area"
+        },
+        {
+          "thought": "Assess current market conditions and trends",
+          "action": "Review days on market, price reductions, and absorption rate",
+          "observation": "Results retrieved for: Review days on market, price reductions, and absorption rate"
+        },
+        {
+          "thought": "Factor in property condition and unique features",
+          "action": "Review inspection results and compare amenities to comps",
+          "observation": "Results retrieved for: Review inspection results and compare amenities to comps"
+        },
+        {
+          "thought": "Consider seller's timeline and motivation",
+          "action": "Balance quick sale vs maximum price strategy",
+          "observation": "Results retrieved for: Balance quick sale vs maximum price strategy"
+        }
+      ],
+      "outcome": "Recommended list price: ${{price}} based on {{rationale}}"
+    },
+    {
+      "id": "offer_evaluation",
+      "task": "Evaluate purchase offer of ${{amount}} for {{property.address}}",
+      "steps": [
+        {
+          "thought": "Compare offer to list price and market value",
+          "action": "Check list price, comparable sales, and current market conditions",
+          "observation": "Results retrieved for: Check list price, comparable sales, and current market conditions"
+        },
+        {
+          "thought": "Assess buyer qualification and financing strength",
+          "action": "Review financing type, contingencies, and closing timeline",
+          "observation": "Results retrieved for: Review financing type, contingencies, and closing timeline"
+        },
+        {
+          "thought": "Consider competing offers and negotiation leverage",
+          "action": "Check days on market, showing activity, and other interest",
+          "observation": "Results retrieved for: Check days on market, showing activity, and other interest"
+        }
+      ],
+      "outcome": "Recommendation: {{recommendation}} \u2014 {{rationale}}"
+    },
+    {
+      "id": "investment_analysis",
+      "task": "Evaluate {{property.address}} as an investment property",
+      "steps": [
+        {
+          "thought": "Calculate potential rental income and cap rate",
+          "action": "Query comparable rental rates in the neighborhood",
+          "observation": "Results retrieved for: Query comparable rental rates in the neighborhood"
+        },
+        {
+          "thought": "Assess property condition and capital expenditure needs",
+          "action": "Review inspection findings and estimated repair costs",
+          "observation": "Results retrieved for: Review inspection findings and estimated repair costs"
+        },
+        {
+          "thought": "Evaluate neighborhood growth trajectory and appreciation potential",
+          "action": "Analyze median price trends and development indicators",
+          "observation": "Results retrieved for: Analyze median price trends and development indicators"
+        }
+      ],
+      "outcome": "Investment grade: {{grade}} with projected ROI of {{roi}}"
+    }
+  ]
+}

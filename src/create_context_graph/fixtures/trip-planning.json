@@ -1,0 +1,1243 @@
+{
+  "domain": "trip-planning",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Destination": [
+      {
+        "name": "Destination 1",
+        "destination_id": "Sample destination_id for Destination 1",
+        "country": "Sample country for Destination 1",
+        "region": "Sample region for Destination 1",
+        "destination_type": "beach",
+        "best_season": "summer",
+        "avg_daily_cost": 10.5
+      },
+      {
+        "name": "Destination 2",
+        "destination_id": "Sample destination_id for Destination 2",
+        "country": "Sample country for Destination 2",
+        "region": "Sample region for Destination 2",
+        "destination_type": "mountain",
+        "best_season": "fall",
+        "avg_daily_cost": 21.0
+      },
+      {
+        "name": "Destination 3",
+        "destination_id": "Sample destination_id for Destination 3",
+        "country": "Sample country for Destination 3",
+        "region": "Sample region for Destination 3",
+        "destination_type": "island",
+        "best_season": "winter",
+        "avg_daily_cost": 31.5
+      },
+      {
+        "name": "Destination 4",
+        "destination_id": "Sample destination_id for Destination 4",
+        "country": "Sample country for Destination 4",
+        "region": "Sample region for Destination 4",
+        "destination_type": "countryside",
+        "best_season": "year_round",
+        "avg_daily_cost": 42.0
+      },
+      {
+        "name": "Destination 5",
+        "destination_id": "Sample destination_id for Destination 5",
+        "country": "Sample country for Destination 5",
+        "region": "Sample region for Destination 5",
+        "destination_type": "historical",
+        "best_season": "spring",
+        "avg_daily_cost": 52.5
+      }
+    ],
+    "Hotel": [
+      {
+        "name": "Hotel 1",
+        "hotel_id": "Sample hotel_id for Hotel 1",
+        "category": "mid_range",
+        "star_rating": 10.5,
+        "price_per_night": 10.5,
+        "amenities": "Sample amenities for Hotel 1",
+        "address": "Sample address for Hotel 1"
+      },
+      {
+        "name": "Hotel 2",
+        "hotel_id": "Sample hotel_id for Hotel 2",
+        "category": "luxury",
+        "star_rating": 21.0,
+        "price_per_night": 21.0,
+        "amenities": "Sample amenities for Hotel 2",
+        "address": "Sample address for Hotel 2"
+      },
+      {
+        "name": "Hotel 3",
+        "hotel_id": "Sample hotel_id for Hotel 3",
+        "category": "boutique",
+        "star_rating": 31.5,
+        "price_per_night": 31.5,
+        "amenities": "Sample amenities for Hotel 3",
+        "address": "Sample address for Hotel 3"
+      },
+      {
+        "name": "Hotel 4",
+        "hotel_id": "Sample hotel_id for Hotel 4",
+        "category": "hostel",
+        "star_rating": 42.0,
+        "price_per_night": 42.0,
+        "amenities": "Sample amenities for Hotel 4",
+        "address": "Sample address for Hotel 4"
+      },
+      {
+        "name": "Hotel 5",
+        "hotel_id": "Sample hotel_id for Hotel 5",
+        "category": "vacation_rental",
+        "star_rating": 52.5,
+        "price_per_night": 52.5,
+        "amenities": "Sample amenities for Hotel 5",
+        "address": "Sample address for Hotel 5"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Activity 1",
+        "activity_id": "Sample activity_id for Activity 1",
+        "activity_type": "adventure",
+        "duration_hours": 10.5,
+        "price": 10.5,
+        "difficulty": "moderate",
+        "rating": 10.5
+      },
+      {
+        "name": "Activity 2",
+        "activity_id": "Sample activity_id for Activity 2",
+        "activity_type": "cultural",
+        "duration_hours": 21.0,
+        "price": 21.0,
+        "difficulty": "challenging",
+        "rating": 21.0
+      },
+      {
+        "name": "Activity 3",
+        "activity_id": "Sample activity_id for Activity 3",
+        "activity_type": "food_tour",
+        "duration_hours": 31.5,
+        "price": 31.5,
+        "difficulty": "extreme",
+        "rating": 31.5
+      },
+      {
+        "name": "Activity 4",
+        "activity_id": "Sample activity_id for Activity 4",
+        "activity_type": "nature",
+        "duration_hours": 42.0,
+        "price": 42.0,
+        "difficulty": "easy",
+        "rating": 42.0
+      },
+      {
+        "name": "Activity 5",
+        "activity_id": "Sample activity_id for Activity 5",
+        "activity_type": "nightlife",
+        "duration_hours": 52.5,
+        "price": 52.5,
+        "difficulty": "moderate",
+        "rating": 52.5
+      }
+    ],
+    "Restaurant": [
+      {
+        "name": "Restaurant 1",
+        "restaurant_id": "Sample restaurant_id for Restaurant 1",
+        "cuisine": "italian",
+        "price_range": "moderate",
+        "rating": 10.5,
+        "michelin_stars": 100,
+        "reservation_required": false
+      },
+      {
+        "name": "Restaurant 2",
+        "restaurant_id": "Sample restaurant_id for Restaurant 2",
+        "cuisine": "japanese",
+        "price_range": "upscale",
+        "rating": 21.0,
+        "michelin_stars": 200,
+        "reservation_required": true
+      },
+      {
+        "name": "Restaurant 3",
+        "restaurant_id": "Sample restaurant_id for Restaurant 3",
+        "cuisine": "french",
+        "price_range": "fine_dining",
+        "rating": 31.5,
+        "michelin_stars": 300,
+        "reservation_required": false
+      },
+      {
+        "name": "Restaurant 4",
+        "restaurant_id": "Sample restaurant_id for Restaurant 4",
+        "cuisine": "mexican",
+        "price_range": "budget",
+        "rating": 42.0,
+        "michelin_stars": 400,
+        "reservation_required": true
+      },
+      {
+        "name": "Restaurant 5",
+        "restaurant_id": "Sample restaurant_id for Restaurant 5",
+        "cuisine": "indian",
+        "price_range": "moderate",
+        "rating": 52.5,
+        "michelin_stars": 500,
+        "reservation_required": false
+      }
+    ],
+    "Itinerary": [
+      {
+        "name": "Itinerary 1",
+        "itinerary_id": "Sample itinerary_id for Itinerary 1",
+        "travelers": 100,
+        "total_budget": 10.5,
+        "status": "booked"
+      },
+      {
+        "name": "Itinerary 2",
+        "itinerary_id": "Sample itinerary_id for Itinerary 2",
+        "travelers": 200,
+        "total_budget": 21.0,
+        "status": "in_progress"
+      },
+      {
+        "name": "Itinerary 3",
+        "itinerary_id": "Sample itinerary_id for Itinerary 3",
+        "travelers": 300,
+        "total_budget": 31.5,
+        "status": "completed"
+      },
+      {
+        "name": "Itinerary 4",
+        "itinerary_id": "Sample itinerary_id for Itinerary 4",
+        "travelers": 400,
+        "total_budget": 42.0,
+        "status": "cancelled"
+      },
+      {
+        "name": "Itinerary 5",
+        "itinerary_id": "Sample itinerary_id for Itinerary 5",
+        "travelers": 500,
+        "total_budget": 52.5,
+        "status": "planning"
+      }
+    ],
+    "Review": [
+      {
+        "name": "Review 1",
+        "review_id": "Sample review_id for Review 1",
+        "rating": 10.5,
+        "title": "Sample title for Review 1",
+        "content": "Sample content for Review 1",
+        "reviewer": "Sample reviewer for Review 1",
+        "travel_style": "couple"
+      },
+      {
+        "name": "Review 2",
+        "review_id": "Sample review_id for Review 2",
+        "rating": 21.0,
+        "title": "Sample title for Review 2",
+        "content": "Sample content for Review 2",
+        "reviewer": "Sample reviewer for Review 2",
+        "travel_style": "family"
+      },
+      {
+        "name": "Review 3",
+        "review_id": "Sample review_id for Review 3",
+        "rating": 31.5,
+        "title": "Sample title for Review 3",
+        "content": "Sample content for Review 3",
+        "reviewer": "Sample reviewer for Review 3",
+        "travel_style": "group"
+      },
+      {
+        "name": "Review 4",
+        "review_id": "Sample review_id for Review 4",
+        "rating": 42.0,
+        "title": "Sample title for Review 4",
+        "content": "Sample content for Review 4",
+        "reviewer": "Sample reviewer for Review 4",
+        "travel_style": "business"
+      },
+      {
+        "name": "Review 5",
+        "review_id": "Sample review_id for Review 5",
+        "rating": 52.5,
+        "title": "Sample title for Review 5",
+        "content": "Sample content for Review 5",
+        "reviewer": "Sample reviewer for Review 5",
+        "travel_style": "solo"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Hotel",
+      "source_name": "Hotel 1",
+      "target_label": "Destination",
+      "target_name": "Destination 1"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Hotel",
+      "source_name": "Hotel 1",
+      "target_label": "Destination",
+      "target_name": "Destination 2"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Hotel",
+      "source_name": "Hotel 2",
+      "target_label": "Destination",
+      "target_name": "Destination 3"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Hotel",
+      "source_name": "Hotel 2",
+      "target_label": "Destination",
+      "target_name": "Destination 2"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Hotel",
+      "source_name": "Hotel 3",
+      "target_label": "Destination",
+      "target_name": "Destination 5"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Hotel",
+      "source_name": "Hotel 4",
+      "target_label": "Destination",
+      "target_name": "Destination 1"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Hotel",
+      "source_name": "Hotel 4",
+      "target_label": "Destination",
+      "target_name": "Destination 4"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Hotel",
+      "source_name": "Hotel 5",
+      "target_label": "Destination",
+      "target_name": "Destination 2"
+    },
+    {
+      "type": "LOCATED_IN",
+      "source_label": "Hotel",
+      "source_name": "Hotel 5",
+      "target_label": "Destination",
+      "target_name": "Destination 5"
+    },
+    {
+      "type": "RECOMMENDED_FOR",
+      "source_label": "Activity",
+      "source_name": "Activity 1",
+      "target_label": "Destination",
+      "target_name": "Destination 2"
+    },
+    {
+      "type": "RECOMMENDED_FOR",
+      "source_label": "Activity",
+      "source_name": "Activity 2",
+      "target_label": "Destination",
+      "target_name": "Destination 1"
+    },
+    {
+      "type": "RECOMMENDED_FOR",
+      "source_label": "Activity",
+      "source_name": "Activity 3",
+      "target_label": "Destination",
+      "target_name": "Destination 1"
+    },
+    {
+      "type": "RECOMMENDED_FOR",
+      "source_label": "Activity",
+      "source_name": "Activity 4",
+      "target_label": "Destination",
+      "target_name": "Destination 2"
+    },
+    {
+      "type": "RECOMMENDED_FOR",
+      "source_label": "Activity",
+      "source_name": "Activity 4",
+      "target_label": "Destination",
+      "target_name": "Destination 3"
+    },
+    {
+      "type": "RECOMMENDED_FOR",
+      "source_label": "Activity",
+      "source_name": "Activity 5",
+      "target_label": "Destination",
+      "target_name": "Destination 2"
+    },
+    {
+      "type": "RECOMMENDED_FOR",
+      "source_label": "Activity",
+      "source_name": "Activity 5",
+      "target_label": "Destination",
+      "target_name": "Destination 4"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 1",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 1",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 2",
+      "target_label": "Hotel",
+      "target_name": "Hotel 5"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 3",
+      "target_label": "Hotel",
+      "target_name": "Hotel 4"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 4",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 4",
+      "target_label": "Hotel",
+      "target_name": "Hotel 5"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 5",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 5",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "NEAR",
+      "source_label": "Restaurant",
+      "source_name": "Restaurant 1",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "NEAR",
+      "source_label": "Restaurant",
+      "source_name": "Restaurant 2",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "NEAR",
+      "source_label": "Restaurant",
+      "source_name": "Restaurant 2",
+      "target_label": "Hotel",
+      "target_name": "Hotel 4"
+    },
+    {
+      "type": "NEAR",
+      "source_label": "Restaurant",
+      "source_name": "Restaurant 3",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "NEAR",
+      "source_label": "Restaurant",
+      "source_name": "Restaurant 4",
+      "target_label": "Hotel",
+      "target_name": "Hotel 3"
+    },
+    {
+      "type": "NEAR",
+      "source_label": "Restaurant",
+      "source_name": "Restaurant 4",
+      "target_label": "Hotel",
+      "target_name": "Hotel 1"
+    },
+    {
+      "type": "NEAR",
+      "source_label": "Restaurant",
+      "source_name": "Restaurant 5",
+      "target_label": "Hotel",
+      "target_name": "Hotel 2"
+    },
+    {
+      "type": "NEAR",
+      "source_label": "Restaurant",
+      "source_name": "Restaurant 5",
+      "target_label": "Hotel",
+      "target_name": "Hotel 1"
+    },
+    {
+      "type": "PART_OF_TRIP",
+      "source_label": "Activity",
+      "source_name": "Activity 1",
+      "target_label": "Itinerary",
+      "target_name": "Itinerary 1"
+    },
+    {
+      "type": "PART_OF_TRIP",
+      "source_label": "Activity",
+      "source_name": "Activity 1",
+      "target_label": "Itinerary",
+      "target_name": "Itinerary 2"
+    },
+    {
+      "type": "PART_OF_TRIP",
+      "source_label": "Activity",
+      "source_name": "Activity 2",
+      "target_label": "Itinerary",
+      "target_name": "Itinerary 4"
+    },
+    {
+      "type": "PART_OF_TRIP",
+      "source_label": "Activity",
+      "source_name": "Activity 2",
+      "target_label": "Itinerary",
+      "target_name": "Itinerary 3"
+    },
+    {
+      "type": "PART_OF_TRIP",
+      "source_label": "Activity",
+      "source_name": "Activity 3",
+      "target_label": "Itinerary",
+      "target_name": "Itinerary 2"
+    },
+    {
+      "type": "PART_OF_TRIP",
+      "source_label": "Activity",
+      "source_name": "Activity 3",
+      "target_label": "Itinerary",
+      "target_name": "Itinerary 5"
+    },
+    {
+      "type": "PART_OF_TRIP",
+      "source_label": "Activity",
+      "source_name": "Activity 4",
+      "target_label": "Itinerary",
+      "target_name": "Itinerary 2"
+    },
+    {
+      "type": "PART_OF_TRIP",
+      "source_label": "Activity",
+      "source_name": "Activity 4",
+      "target_label": "Itinerary",
+      "target_name": "Itinerary 1"
+    },
+    {
+      "type": "PART_OF_TRIP",
+      "source_label": "Activity",
+      "source_name": "Activity 5",
+      "target_label": "Itinerary",
+      "target_name": "Itinerary 3"
+    },
+    {
+      "type": "REVIEWED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 1",
+      "target_label": "Review",
+      "target_name": "Review 4"
+    },
+    {
+      "type": "REVIEWED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 1",
+      "target_label": "Review",
+      "target_name": "Review 3"
+    },
+    {
+      "type": "REVIEWED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 2",
+      "target_label": "Review",
+      "target_name": "Review 4"
+    },
+    {
+      "type": "REVIEWED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 2",
+      "target_label": "Review",
+      "target_name": "Review 3"
+    },
+    {
+      "type": "REVIEWED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 3",
+      "target_label": "Review",
+      "target_name": "Review 2"
+    },
+    {
+      "type": "REVIEWED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 4",
+      "target_label": "Review",
+      "target_name": "Review 5"
+    },
+    {
+      "type": "REVIEWED_BY",
+      "source_label": "Hotel",
+      "source_name": "Hotel 5",
+      "target_label": "Review",
+      "target_name": "Review 1"
+    },
+    {
+      "type": "INCLUDES_DESTINATION",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 1",
+      "target_label": "Destination",
+      "target_name": "Destination 1"
+    },
+    {
+      "type": "INCLUDES_DESTINATION",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 1",
+      "target_label": "Destination",
+      "target_name": "Destination 5"
+    },
+    {
+      "type": "INCLUDES_DESTINATION",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 2",
+      "target_label": "Destination",
+      "target_name": "Destination 4"
+    },
+    {
+      "type": "INCLUDES_DESTINATION",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 3",
+      "target_label": "Destination",
+      "target_name": "Destination 2"
+    },
+    {
+      "type": "INCLUDES_DESTINATION",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 3",
+      "target_label": "Destination",
+      "target_name": "Destination 1"
+    },
+    {
+      "type": "INCLUDES_DESTINATION",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 4",
+      "target_label": "Destination",
+      "target_name": "Destination 4"
+    },
+    {
+      "type": "INCLUDES_DESTINATION",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 4",
+      "target_label": "Destination",
+      "target_name": "Destination 3"
+    },
+    {
+      "type": "INCLUDES_DESTINATION",
+      "source_label": "Itinerary",
+      "source_name": "Itinerary 5",
+      "target_label": "Destination",
+      "target_name": "Destination 2"
+    },
+    {
+      "type": "REVIEWED_ACTIVITY",
+      "source_label": "Review",
+      "source_name": "Review 1",
+      "target_label": "Activity",
+      "target_name": "Activity 4"
+    },
+    {
+      "type": "REVIEWED_ACTIVITY",
+      "source_label": "Review",
+      "source_name": "Review 2",
+      "target_label": "Activity",
+      "target_name": "Activity 1"
+    },
+    {
+      "type": "REVIEWED_ACTIVITY",
+      "source_label": "Review",
+      "source_name": "Review 3",
+      "target_label": "Activity",
+      "target_name": "Activity 4"
+    },
+    {
+      "type": "REVIEWED_ACTIVITY",
+      "source_label": "Review",
+      "source_name": "Review 3",
+      "target_label": "Activity",
+      "target_name": "Activity 2"
+    },
+    {
+      "type": "REVIEWED_ACTIVITY",
+      "source_label": "Review",
+      "source_name": "Review 4",
+      "target_label": "Activity",
+      "target_name": "Activity 1"
+    },
+    {
+      "type": "REVIEWED_ACTIVITY",
+      "source_label": "Review",
+      "source_name": "Review 5",
+      "target_label": "Activity",
+      "target_name": "Activity 1"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "itinerary_doc",
+      "template_name": "Itinerary Document",
+      "title": "Itinerary Document #1",
+      "content": "Sample Itinerary Document #1\n\nThis is a sample detailed day-by-day travel itinerary for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "itinerary_doc",
+      "template_name": "Itinerary Document",
+      "title": "Itinerary Document #2",
+      "content": "Sample Itinerary Document #2\n\nThis is a sample detailed day-by-day travel itinerary for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "itinerary_doc",
+      "template_name": "Itinerary Document",
+      "title": "Itinerary Document #3",
+      "content": "Sample Itinerary Document #3\n\nThis is a sample detailed day-by-day travel itinerary for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "itinerary_doc",
+      "template_name": "Itinerary Document",
+      "title": "Itinerary Document #4",
+      "content": "Sample Itinerary Document #4\n\nThis is a sample detailed day-by-day travel itinerary for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "itinerary_doc",
+      "template_name": "Itinerary Document",
+      "title": "Itinerary Document #5",
+      "content": "Sample Itinerary Document #5\n\nThis is a sample detailed day-by-day travel itinerary for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #1",
+      "content": "Sample Booking Confirmation #1\n\nThis is a sample confirmation details for hotel and activity bookings for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #2",
+      "content": "Sample Booking Confirmation #2\n\nThis is a sample confirmation details for hotel and activity bookings for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #3",
+      "content": "Sample Booking Confirmation #3\n\nThis is a sample confirmation details for hotel and activity bookings for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #4",
+      "content": "Sample Booking Confirmation #4\n\nThis is a sample confirmation details for hotel and activity bookings for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #5",
+      "content": "Sample Booking Confirmation #5\n\nThis is a sample confirmation details for hotel and activity bookings for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "travel_review",
+      "template_name": "Travel Review",
+      "title": "Travel Review #1",
+      "content": "Sample Travel Review #1\n\nThis is a sample detailed reviews of destinations, hotels, and activities for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "travel_review",
+      "template_name": "Travel Review",
+      "title": "Travel Review #2",
+      "content": "Sample Travel Review #2\n\nThis is a sample detailed reviews of destinations, hotels, and activities for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "travel_review",
+      "template_name": "Travel Review",
+      "title": "Travel Review #3",
+      "content": "Sample Travel Review #3\n\nThis is a sample detailed reviews of destinations, hotels, and activities for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "travel_review",
+      "template_name": "Travel Review",
+      "title": "Travel Review #4",
+      "content": "Sample Travel Review #4\n\nThis is a sample detailed reviews of destinations, hotels, and activities for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "travel_review",
+      "template_name": "Travel Review",
+      "title": "Travel Review #5",
+      "content": "Sample Travel Review #5\n\nThis is a sample detailed reviews of destinations, hotels, and activities for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "destination_guide",
+      "template_name": "Destination Guide",
+      "title": "Destination Guide #1",
+      "content": "Sample Destination Guide #1\n\nThis is a sample comprehensive guide to a travel destination for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "destination_guide",
+      "template_name": "Destination Guide",
+      "title": "Destination Guide #2",
+      "content": "Sample Destination Guide #2\n\nThis is a sample comprehensive guide to a travel destination for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "destination_guide",
+      "template_name": "Destination Guide",
+      "title": "Destination Guide #3",
+      "content": "Sample Destination Guide #3\n\nThis is a sample comprehensive guide to a travel destination for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "destination_guide",
+      "template_name": "Destination Guide",
+      "title": "Destination Guide #4",
+      "content": "Sample Destination Guide #4\n\nThis is a sample comprehensive guide to a travel destination for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "destination_guide",
+      "template_name": "Destination Guide",
+      "title": "Destination Guide #5",
+      "content": "Sample Destination Guide #5\n\nThis is a sample comprehensive guide to a travel destination for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "budget_summary",
+      "template_name": "Budget Summary",
+      "title": "Budget Summary #1",
+      "content": "Sample Budget Summary #1\n\nThis is a sample detailed budget breakdown for a trip for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "budget_summary",
+      "template_name": "Budget Summary",
+      "title": "Budget Summary #2",
+      "content": "Sample Budget Summary #2\n\nThis is a sample detailed budget breakdown for a trip for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "budget_summary",
+      "template_name": "Budget Summary",
+      "title": "Budget Summary #3",
+      "content": "Sample Budget Summary #3\n\nThis is a sample detailed budget breakdown for a trip for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "budget_summary",
+      "template_name": "Budget Summary",
+      "title": "Budget Summary #4",
+      "content": "Sample Budget Summary #4\n\nThis is a sample detailed budget breakdown for a trip for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "budget_summary",
+      "template_name": "Budget Summary",
+      "title": "Budget Summary #5",
+      "content": "Sample Budget Summary #5\n\nThis is a sample detailed budget breakdown for a trip for the Trip Planning domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "destination_selection",
+      "task": "Help choose the best destination for a {{review.travel_style}} trip in {{destination.best_season}}",
+      "steps": [
+        {
+          "thought": "Identify destinations matching travel style and season preferences",
+          "action": "Query destinations filtered by best_season and type, with reviews by travel style",
+          "observation": "Results retrieved for: Query destinations filtered by best_season and type, with reviews by travel style"
+        },
+        {
+          "thought": "Compare costs and value across candidate destinations",
+          "action": "Calculate average daily costs including hotel, activities, and dining",
+          "observation": "Results retrieved for: Calculate average daily costs including hotel, activities, and dining"
+        },
+        {
+          "thought": "Review traveler ratings and recent experiences",
+          "action": "Aggregate review scores by destination and travel style",
+          "observation": "Results retrieved for: Aggregate review scores by destination and travel style"
+        }
+      ],
+      "outcome": "Recommended destination: {{destination}} based on {{criteria}}"
+    },
+    {
+      "id": "hotel_selection",
+      "task": "Select the best hotel in Destination 3 for budget ${{budget}}/night",
+      "steps": [
+        {
+          "thought": "Filter hotels by price range and destination",
+          "action": "Query hotels in destination within budget, ordered by rating",
+          "observation": "Results retrieved for: Query hotels in destination within budget, ordered by rating"
+        },
+        {
+          "thought": "Evaluate amenities and proximity to planned activities",
+          "action": "Check hotel amenities and distance to booked activities",
+          "observation": "Results retrieved for: Check hotel amenities and distance to booked activities"
+        },
+        {
+          "thought": "Review guest experiences from similar travelers",
+          "action": "Pull reviews filtered by matching travel style",
+          "observation": "Results retrieved for: Pull reviews filtered by matching travel style"
+        }
+      ],
+      "outcome": "Recommended hotel: {{hotel}} ({{rating}} stars, ${{price}}/night)"
+    },
+    {
+      "id": "itinerary_optimization",
+      "task": "Optimize itinerary Itinerary 5 for best experience within budget",
+      "steps": [
+        {
+          "thought": "Assess current activity schedule for time conflicts and logistics",
+          "action": "Map all activities by day, check for overlaps and travel time",
+          "observation": "Results retrieved for: Map all activities by day, check for overlaps and travel time"
+        },
+        {
+          "thought": "Identify budget allocation and remaining flexibility",
+          "action": "Sum current bookings and compare against total budget",
+          "observation": "Results retrieved for: Sum current bookings and compare against total budget"
+        },
+        {
+          "thought": "Suggest alternatives for low-rated or overpriced items",
+          "action": "Find higher-rated or better-value alternatives for each activity slot",
+          "observation": "Results retrieved for: Find higher-rated or better-value alternatives for each activity slot"
+        }
+      ],
+      "outcome": "Optimized plan saves ${{savings}} with {{improvement}} in ratings"
+    }
+  ]
+}

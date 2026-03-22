@@ -1,0 +1,103 @@
+"""{{ domain.name }} AI Agent — Google ADK implementation."""
+
+from __future__ import annotations
+
+import json
+import uuid
+
+from google.adk.agents import Agent
+from google.adk.tools import FunctionTool
+
+from app.config import settings
+from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+
+
+SYSTEM_PROMPT = """{{ system_prompt }}"""
+
+# ---------------------------------------------------------------------------
+# Agent tools — domain-specific for {{ domain.name }}
+# ---------------------------------------------------------------------------
+
+{% for tool in agent_tools %}
+def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{ 'str' if param.type == 'string' else 'int' if param.type == 'integer' else 'float' if param.type == 'float' else 'str' }}{% if param.default is not none %} = {{ param.default if param.type != 'string' else '"' + param.default + '"' }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}) -> str:
+    """{{ tool.description }}"""
+    import asyncio
+    cypher = """{{ tool.cypher | indent(4) }}"""
+    params = {
+{% for param in tool.parameters %}
+        "{{ param.name }}": {{ param.name }},
+{% endfor %}
+    }
+    result = asyncio.run(execute_cypher(cypher, params))
+    return json.dumps(result, default=str)
+
+{% endfor %}
+
+{% raw %}
+def run_cypher(query: str, parameters: str = "{}") -> str:
+    """Execute a read-only Cypher query against the knowledge graph."""
+    import asyncio
+    params = json.loads(parameters) if parameters else {}
+    result = asyncio.run(execute_cypher(query, params))
+    return json.dumps(result, default=str)
+
+
+def get_graph_schema() -> str:
+    """Get the knowledge graph schema (node labels and relationship types)."""
+    import asyncio
+    result = asyncio.run(get_schema())
+    return json.dumps(result, default=str)
+{% endraw %}
+
+agent = Agent(
+    name="{{ domain.id }}_agent",
+    model="gemini-2.0-flash",
+    instruction=SYSTEM_PROMPT,
+    tools=[
+{% for tool in agent_tools %}
+        FunctionTool({{ tool.name }}),
+{% endfor %}
+        FunctionTool(run_cypher),
+        FunctionTool(get_graph_schema),
+    ],
+)
+
+{% raw %}
+# ---------------------------------------------------------------------------
+# Message handler
+# ---------------------------------------------------------------------------
+
+
+async def handle_message(message: str, session_id: str | None = None) -> dict:
+    """Handle an incoming chat message."""
+    if session_id is None:
+        session_id = str(uuid.uuid4())
+
+    from google.adk.runners import Runner
+    from google.adk.sessions import InMemorySessionService
+
+    session_service = InMemorySessionService()
+    runner = Runner(agent=agent, app_name="context-graph", session_service=session_service)
+
+    session = await session_service.create_session(
+        app_name="context-graph", user_id=session_id
+    )
+
+    from google.genai import types
+    content = types.Content(
+        role="user", parts=[types.Part.from_text(message)]
+    )
+
+    response_text = ""
+    async for event in runner.run_async(
+        user_id=session_id, session_id=session.id, new_message=content
+    ):
+        if hasattr(event, "text") and event.text:
+            response_text += event.text
+
+    return {
+        "response": response_text or "No response generated.",
+        "session_id": session_id,
+        "graph_data": None,
+    }
+{% endraw %}

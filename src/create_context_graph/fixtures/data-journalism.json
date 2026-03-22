@@ -1,0 +1,1188 @@
+{
+  "domain": "data-journalism",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Source": [
+      {
+        "name": "Source 1",
+        "source_id": "Sample source_id for Source 1",
+        "source_type": "document",
+        "credibility": "reliable",
+        "affiliation": "Sample affiliation for Source 1",
+        "protected": false
+      },
+      {
+        "name": "Source 2",
+        "source_id": "Sample source_id for Source 2",
+        "source_type": "database",
+        "credibility": "unverified",
+        "affiliation": "Sample affiliation for Source 2",
+        "protected": true
+      },
+      {
+        "name": "Source 3",
+        "source_id": "Sample source_id for Source 3",
+        "source_type": "whistleblower",
+        "credibility": "disputed",
+        "affiliation": "Sample affiliation for Source 3",
+        "protected": false
+      },
+      {
+        "name": "Source 4",
+        "source_id": "Sample source_id for Source 4",
+        "source_type": "public_record",
+        "credibility": "anonymous",
+        "affiliation": "Sample affiliation for Source 4",
+        "protected": true
+      },
+      {
+        "name": "Source 5",
+        "source_id": "Sample source_id for Source 5",
+        "source_type": "expert",
+        "credibility": "verified",
+        "affiliation": "Sample affiliation for Source 5",
+        "protected": false
+      }
+    ],
+    "Story": [
+      {
+        "name": "Story 1",
+        "story_id": "Sample story_id for Story 1",
+        "headline": "Sample headline for Story 1",
+        "status": "researching",
+        "beat": "business",
+        "word_count": 100
+      },
+      {
+        "name": "Story 2",
+        "story_id": "Sample story_id for Story 2",
+        "headline": "Sample headline for Story 2",
+        "status": "drafting",
+        "beat": "tech",
+        "word_count": 200
+      },
+      {
+        "name": "Story 3",
+        "story_id": "Sample story_id for Story 3",
+        "headline": "Sample headline for Story 3",
+        "status": "review",
+        "beat": "health",
+        "word_count": 300
+      },
+      {
+        "name": "Story 4",
+        "story_id": "Sample story_id for Story 4",
+        "headline": "Sample headline for Story 4",
+        "status": "published",
+        "beat": "environment",
+        "word_count": 400
+      },
+      {
+        "name": "Story 5",
+        "story_id": "Sample story_id for Story 5",
+        "headline": "Sample headline for Story 5",
+        "status": "retracted",
+        "beat": "justice",
+        "word_count": 500
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Dataset 1",
+        "dataset_id": "Sample dataset_id for Dataset 1",
+        "description": "Sample description for Dataset 1",
+        "record_count": 100,
+        "source_agency": "Sample source_agency for Dataset 1",
+        "obtained_via": "public",
+        "date_range": "Sample date_range for Dataset 1"
+      },
+      {
+        "name": "Dataset 2",
+        "dataset_id": "Sample dataset_id for Dataset 2",
+        "description": "Sample description for Dataset 2",
+        "record_count": 200,
+        "source_agency": "Sample source_agency for Dataset 2",
+        "obtained_via": "leaked",
+        "date_range": "Sample date_range for Dataset 2"
+      },
+      {
+        "name": "Dataset 3",
+        "dataset_id": "Sample dataset_id for Dataset 3",
+        "description": "Sample description for Dataset 3",
+        "record_count": 300,
+        "source_agency": "Sample source_agency for Dataset 3",
+        "obtained_via": "scraped",
+        "date_range": "Sample date_range for Dataset 3"
+      },
+      {
+        "name": "Dataset 4",
+        "dataset_id": "Sample dataset_id for Dataset 4",
+        "description": "Sample description for Dataset 4",
+        "record_count": 400,
+        "source_agency": "Sample source_agency for Dataset 4",
+        "obtained_via": "partnership",
+        "date_range": "Sample date_range for Dataset 4"
+      },
+      {
+        "name": "Dataset 5",
+        "dataset_id": "Sample dataset_id for Dataset 5",
+        "description": "Sample description for Dataset 5",
+        "record_count": 500,
+        "source_agency": "Sample source_agency for Dataset 5",
+        "obtained_via": "purchased",
+        "date_range": "Sample date_range for Dataset 5"
+      }
+    ],
+    "Claim": [
+      {
+        "name": "Claim 1",
+        "claim_id": "Sample claim_id for Claim 1",
+        "statement": "Sample statement for Claim 1",
+        "made_by": "Sample made_by for Claim 1",
+        "verification_status": "mostly_true",
+        "context": "Sample context for Claim 1"
+      },
+      {
+        "name": "Claim 2",
+        "claim_id": "Sample claim_id for Claim 2",
+        "statement": "Sample statement for Claim 2",
+        "made_by": "Sample made_by for Claim 2",
+        "verification_status": "half_true",
+        "context": "Sample context for Claim 2"
+      },
+      {
+        "name": "Claim 3",
+        "claim_id": "Sample claim_id for Claim 3",
+        "statement": "Sample statement for Claim 3",
+        "made_by": "Sample made_by for Claim 3",
+        "verification_status": "mostly_false",
+        "context": "Sample context for Claim 3"
+      },
+      {
+        "name": "Claim 4",
+        "claim_id": "Sample claim_id for Claim 4",
+        "statement": "Sample statement for Claim 4",
+        "made_by": "Sample made_by for Claim 4",
+        "verification_status": "false",
+        "context": "Sample context for Claim 4"
+      },
+      {
+        "name": "Claim 5",
+        "claim_id": "Sample claim_id for Claim 5",
+        "statement": "Sample statement for Claim 5",
+        "made_by": "Sample made_by for Claim 5",
+        "verification_status": "unverified",
+        "context": "Sample context for Claim 5"
+      }
+    ],
+    "Correction": [
+      {
+        "name": "Correction 1",
+        "correction_id": "Sample correction_id for Correction 1",
+        "original_text": "Sample original_text for Correction 1",
+        "corrected_text": "Sample corrected_text for Correction 1",
+        "reason": "misquote"
+      },
+      {
+        "name": "Correction 2",
+        "correction_id": "Sample correction_id for Correction 2",
+        "original_text": "Sample original_text for Correction 2",
+        "corrected_text": "Sample corrected_text for Correction 2",
+        "reason": "context_missing"
+      },
+      {
+        "name": "Correction 3",
+        "correction_id": "Sample correction_id for Correction 3",
+        "original_text": "Sample original_text for Correction 3",
+        "corrected_text": "Sample corrected_text for Correction 3",
+        "reason": "data_error"
+      },
+      {
+        "name": "Correction 4",
+        "correction_id": "Sample correction_id for Correction 4",
+        "original_text": "Sample original_text for Correction 4",
+        "corrected_text": "Sample corrected_text for Correction 4",
+        "reason": "attribution"
+      },
+      {
+        "name": "Correction 5",
+        "correction_id": "Sample correction_id for Correction 5",
+        "original_text": "Sample original_text for Correction 5",
+        "corrected_text": "Sample corrected_text for Correction 5",
+        "reason": "factual_error"
+      }
+    ],
+    "Investigation": [
+      {
+        "name": "Investigation 1",
+        "investigation_id": "Sample investigation_id for Investigation 1",
+        "description": "Sample description for Investigation 1",
+        "status": "paused",
+        "lead_reporter": "Sample lead_reporter for Investigation 1"
+      },
+      {
+        "name": "Investigation 2",
+        "investigation_id": "Sample investigation_id for Investigation 2",
+        "description": "Sample description for Investigation 2",
+        "status": "completed",
+        "lead_reporter": "Sample lead_reporter for Investigation 2"
+      },
+      {
+        "name": "Investigation 3",
+        "investigation_id": "Sample investigation_id for Investigation 3",
+        "description": "Sample description for Investigation 3",
+        "status": "killed",
+        "lead_reporter": "Sample lead_reporter for Investigation 3"
+      },
+      {
+        "name": "Investigation 4",
+        "investigation_id": "Sample investigation_id for Investigation 4",
+        "description": "Sample description for Investigation 4",
+        "status": "active",
+        "lead_reporter": "Sample lead_reporter for Investigation 4"
+      },
+      {
+        "name": "Investigation 5",
+        "investigation_id": "Sample investigation_id for Investigation 5",
+        "description": "Sample description for Investigation 5",
+        "status": "paused",
+        "lead_reporter": "Sample lead_reporter for Investigation 5"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "SOURCED_FROM",
+      "source_label": "Story",
+      "source_name": "Story 1",
+      "target_label": "Source",
+      "target_name": "Source 4"
+    },
+    {
+      "type": "SOURCED_FROM",
+      "source_label": "Story",
+      "source_name": "Story 1",
+      "target_label": "Source",
+      "target_name": "Source 2"
+    },
+    {
+      "type": "SOURCED_FROM",
+      "source_label": "Story",
+      "source_name": "Story 2",
+      "target_label": "Source",
+      "target_name": "Source 1"
+    },
+    {
+      "type": "SOURCED_FROM",
+      "source_label": "Story",
+      "source_name": "Story 3",
+      "target_label": "Source",
+      "target_name": "Source 4"
+    },
+    {
+      "type": "SOURCED_FROM",
+      "source_label": "Story",
+      "source_name": "Story 3",
+      "target_label": "Source",
+      "target_name": "Source 1"
+    },
+    {
+      "type": "SOURCED_FROM",
+      "source_label": "Story",
+      "source_name": "Story 4",
+      "target_label": "Source",
+      "target_name": "Source 2"
+    },
+    {
+      "type": "SOURCED_FROM",
+      "source_label": "Story",
+      "source_name": "Story 5",
+      "target_label": "Source",
+      "target_name": "Source 4"
+    },
+    {
+      "type": "FACT_CHECKED",
+      "source_label": "Claim",
+      "source_name": "Claim 1",
+      "target_label": "Dataset",
+      "target_name": "Dataset 2"
+    },
+    {
+      "type": "FACT_CHECKED",
+      "source_label": "Claim",
+      "source_name": "Claim 1",
+      "target_label": "Dataset",
+      "target_name": "Dataset 4"
+    },
+    {
+      "type": "FACT_CHECKED",
+      "source_label": "Claim",
+      "source_name": "Claim 2",
+      "target_label": "Dataset",
+      "target_name": "Dataset 3"
+    },
+    {
+      "type": "FACT_CHECKED",
+      "source_label": "Claim",
+      "source_name": "Claim 3",
+      "target_label": "Dataset",
+      "target_name": "Dataset 1"
+    },
+    {
+      "type": "FACT_CHECKED",
+      "source_label": "Claim",
+      "source_name": "Claim 3",
+      "target_label": "Dataset",
+      "target_name": "Dataset 3"
+    },
+    {
+      "type": "FACT_CHECKED",
+      "source_label": "Claim",
+      "source_name": "Claim 4",
+      "target_label": "Dataset",
+      "target_name": "Dataset 2"
+    },
+    {
+      "type": "FACT_CHECKED",
+      "source_label": "Claim",
+      "source_name": "Claim 4",
+      "target_label": "Dataset",
+      "target_name": "Dataset 1"
+    },
+    {
+      "type": "FACT_CHECKED",
+      "source_label": "Claim",
+      "source_name": "Claim 5",
+      "target_label": "Dataset",
+      "target_name": "Dataset 3"
+    },
+    {
+      "type": "CONTRADICTS",
+      "source_label": "Claim",
+      "source_name": "Claim 1",
+      "target_label": "Claim",
+      "target_name": "Claim 4"
+    },
+    {
+      "type": "CONTRADICTS",
+      "source_label": "Claim",
+      "source_name": "Claim 2",
+      "target_label": "Claim",
+      "target_name": "Claim 5"
+    },
+    {
+      "type": "CONTRADICTS",
+      "source_label": "Claim",
+      "source_name": "Claim 2",
+      "target_label": "Claim",
+      "target_name": "Claim 1"
+    },
+    {
+      "type": "CONTRADICTS",
+      "source_label": "Claim",
+      "source_name": "Claim 3",
+      "target_label": "Claim",
+      "target_name": "Claim 5"
+    },
+    {
+      "type": "CONTRADICTS",
+      "source_label": "Claim",
+      "source_name": "Claim 4",
+      "target_label": "Claim",
+      "target_name": "Claim 3"
+    },
+    {
+      "type": "CONTRADICTS",
+      "source_label": "Claim",
+      "source_name": "Claim 4",
+      "target_label": "Claim",
+      "target_name": "Claim 2"
+    },
+    {
+      "type": "CONTRADICTS",
+      "source_label": "Claim",
+      "source_name": "Claim 5",
+      "target_label": "Claim",
+      "target_name": "Claim 4"
+    },
+    {
+      "type": "CONTRADICTS",
+      "source_label": "Claim",
+      "source_name": "Claim 5",
+      "target_label": "Claim",
+      "target_name": "Claim 3"
+    },
+    {
+      "type": "SUPPORTS",
+      "source_label": "Dataset",
+      "source_name": "Dataset 1",
+      "target_label": "Claim",
+      "target_name": "Claim 3"
+    },
+    {
+      "type": "SUPPORTS",
+      "source_label": "Dataset",
+      "source_name": "Dataset 1",
+      "target_label": "Claim",
+      "target_name": "Claim 5"
+    },
+    {
+      "type": "SUPPORTS",
+      "source_label": "Dataset",
+      "source_name": "Dataset 2",
+      "target_label": "Claim",
+      "target_name": "Claim 1"
+    },
+    {
+      "type": "SUPPORTS",
+      "source_label": "Dataset",
+      "source_name": "Dataset 3",
+      "target_label": "Claim",
+      "target_name": "Claim 1"
+    },
+    {
+      "type": "SUPPORTS",
+      "source_label": "Dataset",
+      "source_name": "Dataset 4",
+      "target_label": "Claim",
+      "target_name": "Claim 2"
+    },
+    {
+      "type": "SUPPORTS",
+      "source_label": "Dataset",
+      "source_name": "Dataset 5",
+      "target_label": "Claim",
+      "target_name": "Claim 5"
+    },
+    {
+      "type": "PUBLISHED_IN",
+      "source_label": "Claim",
+      "source_name": "Claim 1",
+      "target_label": "Story",
+      "target_name": "Story 3"
+    },
+    {
+      "type": "PUBLISHED_IN",
+      "source_label": "Claim",
+      "source_name": "Claim 2",
+      "target_label": "Story",
+      "target_name": "Story 4"
+    },
+    {
+      "type": "PUBLISHED_IN",
+      "source_label": "Claim",
+      "source_name": "Claim 3",
+      "target_label": "Story",
+      "target_name": "Story 4"
+    },
+    {
+      "type": "PUBLISHED_IN",
+      "source_label": "Claim",
+      "source_name": "Claim 3",
+      "target_label": "Story",
+      "target_name": "Story 3"
+    },
+    {
+      "type": "PUBLISHED_IN",
+      "source_label": "Claim",
+      "source_name": "Claim 4",
+      "target_label": "Story",
+      "target_name": "Story 2"
+    },
+    {
+      "type": "PUBLISHED_IN",
+      "source_label": "Claim",
+      "source_name": "Claim 4",
+      "target_label": "Story",
+      "target_name": "Story 1"
+    },
+    {
+      "type": "PUBLISHED_IN",
+      "source_label": "Claim",
+      "source_name": "Claim 5",
+      "target_label": "Story",
+      "target_name": "Story 3"
+    },
+    {
+      "type": "INVESTIGATED_BY",
+      "source_label": "Story",
+      "source_name": "Story 1",
+      "target_label": "Investigation",
+      "target_name": "Investigation 2"
+    },
+    {
+      "type": "INVESTIGATED_BY",
+      "source_label": "Story",
+      "source_name": "Story 1",
+      "target_label": "Investigation",
+      "target_name": "Investigation 3"
+    },
+    {
+      "type": "INVESTIGATED_BY",
+      "source_label": "Story",
+      "source_name": "Story 2",
+      "target_label": "Investigation",
+      "target_name": "Investigation 3"
+    },
+    {
+      "type": "INVESTIGATED_BY",
+      "source_label": "Story",
+      "source_name": "Story 2",
+      "target_label": "Investigation",
+      "target_name": "Investigation 5"
+    },
+    {
+      "type": "INVESTIGATED_BY",
+      "source_label": "Story",
+      "source_name": "Story 3",
+      "target_label": "Investigation",
+      "target_name": "Investigation 3"
+    },
+    {
+      "type": "INVESTIGATED_BY",
+      "source_label": "Story",
+      "source_name": "Story 4",
+      "target_label": "Investigation",
+      "target_name": "Investigation 2"
+    },
+    {
+      "type": "INVESTIGATED_BY",
+      "source_label": "Story",
+      "source_name": "Story 5",
+      "target_label": "Investigation",
+      "target_name": "Investigation 1"
+    },
+    {
+      "type": "CORRECTED_IN",
+      "source_label": "Correction",
+      "source_name": "Correction 1",
+      "target_label": "Story",
+      "target_name": "Story 1"
+    },
+    {
+      "type": "CORRECTED_IN",
+      "source_label": "Correction",
+      "source_name": "Correction 1",
+      "target_label": "Story",
+      "target_name": "Story 3"
+    },
+    {
+      "type": "CORRECTED_IN",
+      "source_label": "Correction",
+      "source_name": "Correction 2",
+      "target_label": "Story",
+      "target_name": "Story 3"
+    },
+    {
+      "type": "CORRECTED_IN",
+      "source_label": "Correction",
+      "source_name": "Correction 2",
+      "target_label": "Story",
+      "target_name": "Story 2"
+    },
+    {
+      "type": "CORRECTED_IN",
+      "source_label": "Correction",
+      "source_name": "Correction 3",
+      "target_label": "Story",
+      "target_name": "Story 3"
+    },
+    {
+      "type": "CORRECTED_IN",
+      "source_label": "Correction",
+      "source_name": "Correction 3",
+      "target_label": "Story",
+      "target_name": "Story 2"
+    },
+    {
+      "type": "CORRECTED_IN",
+      "source_label": "Correction",
+      "source_name": "Correction 4",
+      "target_label": "Story",
+      "target_name": "Story 3"
+    },
+    {
+      "type": "CORRECTED_IN",
+      "source_label": "Correction",
+      "source_name": "Correction 4",
+      "target_label": "Story",
+      "target_name": "Story 1"
+    },
+    {
+      "type": "CORRECTED_IN",
+      "source_label": "Correction",
+      "source_name": "Correction 5",
+      "target_label": "Story",
+      "target_name": "Story 4"
+    },
+    {
+      "type": "PROVIDED_BY",
+      "source_label": "Dataset",
+      "source_name": "Dataset 1",
+      "target_label": "Source",
+      "target_name": "Source 5"
+    },
+    {
+      "type": "PROVIDED_BY",
+      "source_label": "Dataset",
+      "source_name": "Dataset 1",
+      "target_label": "Source",
+      "target_name": "Source 1"
+    },
+    {
+      "type": "PROVIDED_BY",
+      "source_label": "Dataset",
+      "source_name": "Dataset 2",
+      "target_label": "Source",
+      "target_name": "Source 1"
+    },
+    {
+      "type": "PROVIDED_BY",
+      "source_label": "Dataset",
+      "source_name": "Dataset 2",
+      "target_label": "Source",
+      "target_name": "Source 2"
+    },
+    {
+      "type": "PROVIDED_BY",
+      "source_label": "Dataset",
+      "source_name": "Dataset 3",
+      "target_label": "Source",
+      "target_name": "Source 2"
+    },
+    {
+      "type": "PROVIDED_BY",
+      "source_label": "Dataset",
+      "source_name": "Dataset 3",
+      "target_label": "Source",
+      "target_name": "Source 3"
+    },
+    {
+      "type": "PROVIDED_BY",
+      "source_label": "Dataset",
+      "source_name": "Dataset 4",
+      "target_label": "Source",
+      "target_name": "Source 5"
+    },
+    {
+      "type": "PROVIDED_BY",
+      "source_label": "Dataset",
+      "source_name": "Dataset 4",
+      "target_label": "Source",
+      "target_name": "Source 3"
+    },
+    {
+      "type": "PROVIDED_BY",
+      "source_label": "Dataset",
+      "source_name": "Dataset 5",
+      "target_label": "Source",
+      "target_name": "Source 2"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "investigation_notes",
+      "template_name": "Investigation Notes",
+      "title": "Investigation Notes #1",
+      "content": "Sample Investigation Notes #1\n\nThis is a sample working notes and findings from ongoing investigations for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "investigation_notes",
+      "template_name": "Investigation Notes",
+      "title": "Investigation Notes #2",
+      "content": "Sample Investigation Notes #2\n\nThis is a sample working notes and findings from ongoing investigations for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "investigation_notes",
+      "template_name": "Investigation Notes",
+      "title": "Investigation Notes #3",
+      "content": "Sample Investigation Notes #3\n\nThis is a sample working notes and findings from ongoing investigations for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "investigation_notes",
+      "template_name": "Investigation Notes",
+      "title": "Investigation Notes #4",
+      "content": "Sample Investigation Notes #4\n\nThis is a sample working notes and findings from ongoing investigations for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "investigation_notes",
+      "template_name": "Investigation Notes",
+      "title": "Investigation Notes #5",
+      "content": "Sample Investigation Notes #5\n\nThis is a sample working notes and findings from ongoing investigations for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "foia_request",
+      "template_name": "FOIA Request",
+      "title": "FOIA Request #1",
+      "content": "Sample FOIA Request #1\n\nThis is a sample freedom of information act request documents for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "foia_request",
+      "template_name": "FOIA Request",
+      "title": "FOIA Request #2",
+      "content": "Sample FOIA Request #2\n\nThis is a sample freedom of information act request documents for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "foia_request",
+      "template_name": "FOIA Request",
+      "title": "FOIA Request #3",
+      "content": "Sample FOIA Request #3\n\nThis is a sample freedom of information act request documents for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "foia_request",
+      "template_name": "FOIA Request",
+      "title": "FOIA Request #4",
+      "content": "Sample FOIA Request #4\n\nThis is a sample freedom of information act request documents for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "foia_request",
+      "template_name": "FOIA Request",
+      "title": "FOIA Request #5",
+      "content": "Sample FOIA Request #5\n\nThis is a sample freedom of information act request documents for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "editorial_memo",
+      "template_name": "Editorial Memo",
+      "title": "Editorial Memo #1",
+      "content": "Sample Editorial Memo #1\n\nThis is a sample internal memos between reporters and editors for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "editorial_memo",
+      "template_name": "Editorial Memo",
+      "title": "Editorial Memo #2",
+      "content": "Sample Editorial Memo #2\n\nThis is a sample internal memos between reporters and editors for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "editorial_memo",
+      "template_name": "Editorial Memo",
+      "title": "Editorial Memo #3",
+      "content": "Sample Editorial Memo #3\n\nThis is a sample internal memos between reporters and editors for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "editorial_memo",
+      "template_name": "Editorial Memo",
+      "title": "Editorial Memo #4",
+      "content": "Sample Editorial Memo #4\n\nThis is a sample internal memos between reporters and editors for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "editorial_memo",
+      "template_name": "Editorial Memo",
+      "title": "Editorial Memo #5",
+      "content": "Sample Editorial Memo #5\n\nThis is a sample internal memos between reporters and editors for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "fact_check_report",
+      "template_name": "Fact-Check Report",
+      "title": "Fact-Check Report #1",
+      "content": "Sample Fact-Check Report #1\n\nThis is a sample detailed fact-checking analysis of claims for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "fact_check_report",
+      "template_name": "Fact-Check Report",
+      "title": "Fact-Check Report #2",
+      "content": "Sample Fact-Check Report #2\n\nThis is a sample detailed fact-checking analysis of claims for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "fact_check_report",
+      "template_name": "Fact-Check Report",
+      "title": "Fact-Check Report #3",
+      "content": "Sample Fact-Check Report #3\n\nThis is a sample detailed fact-checking analysis of claims for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "fact_check_report",
+      "template_name": "Fact-Check Report",
+      "title": "Fact-Check Report #4",
+      "content": "Sample Fact-Check Report #4\n\nThis is a sample detailed fact-checking analysis of claims for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "fact_check_report",
+      "template_name": "Fact-Check Report",
+      "title": "Fact-Check Report #5",
+      "content": "Sample Fact-Check Report #5\n\nThis is a sample detailed fact-checking analysis of claims for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "source_interview",
+      "template_name": "Source Interview Notes",
+      "title": "Source Interview Notes #1",
+      "content": "Sample Source Interview Notes #1\n\nThis is a sample notes from interviews with sources for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "source_interview",
+      "template_name": "Source Interview Notes",
+      "title": "Source Interview Notes #2",
+      "content": "Sample Source Interview Notes #2\n\nThis is a sample notes from interviews with sources for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "source_interview",
+      "template_name": "Source Interview Notes",
+      "title": "Source Interview Notes #3",
+      "content": "Sample Source Interview Notes #3\n\nThis is a sample notes from interviews with sources for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "source_interview",
+      "template_name": "Source Interview Notes",
+      "title": "Source Interview Notes #4",
+      "content": "Sample Source Interview Notes #4\n\nThis is a sample notes from interviews with sources for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "source_interview",
+      "template_name": "Source Interview Notes",
+      "title": "Source Interview Notes #5",
+      "content": "Sample Source Interview Notes #5\n\nThis is a sample notes from interviews with sources for the Data Journalism domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "source_credibility",
+      "task": "Assess credibility of source Source 4 for story {{story.headline}}",
+      "steps": [
+        {
+          "thought": "Review source's track record and prior contributions",
+          "action": "Query all stories and claims previously sourced from this person",
+          "observation": "Results retrieved for: Query all stories and claims previously sourced from this person"
+        },
+        {
+          "thought": "Cross-reference claims with independent datasets",
+          "action": "Match source's claims against available fact-check datasets",
+          "observation": "Results retrieved for: Match source's claims against available fact-check datasets"
+        },
+        {
+          "thought": "Evaluate potential conflicts of interest",
+          "action": "Check source affiliation against story subjects and entities",
+          "observation": "Results retrieved for: Check source affiliation against story subjects and entities"
+        }
+      ],
+      "outcome": "Credibility assessment: {{rating}}. Recommendation: {{recommendation}}"
+    },
+    {
+      "id": "publication_readiness",
+      "task": "Determine if story {{story.headline}} is ready for publication",
+      "steps": [
+        {
+          "thought": "Verify all key claims have been fact-checked",
+          "action": "Query all claims linked to this story and their verification status",
+          "observation": "Results retrieved for: Query all claims linked to this story and their verification status"
+        },
+        {
+          "thought": "Assess source diversity and independence",
+          "action": "Review all sources for this story and check for single-source claims",
+          "observation": "Results retrieved for: Review all sources for this story and check for single-source claims"
+        },
+        {
+          "thought": "Check for potential corrections or legal risks",
+          "action": "Review claims for disputed or unverified status, flag legal concerns",
+          "observation": "Results retrieved for: Review claims for disputed or unverified status, flag legal concerns"
+        },
+        {
+          "thought": "Verify data accuracy and methodology",
+          "action": "Audit datasets used and confirm analysis reproducibility",
+          "observation": "Results retrieved for: Audit datasets used and confirm analysis reproducibility"
+        }
+      ],
+      "outcome": "Publication status: {{status}}. Outstanding items: {{items}}"
+    },
+    {
+      "id": "claim_verification",
+      "task": "Verify claim: '{{claim.statement}}' made by {{claim.made_by}}",
+      "steps": [
+        {
+          "thought": "Search for supporting or contradicting evidence in datasets",
+          "action": "Query datasets and cross-reference with claim specifics",
+          "observation": "Results retrieved for: Query datasets and cross-reference with claim specifics"
+        },
+        {
+          "thought": "Find independent sources who can confirm or deny",
+          "action": "Search source network for relevant experts or witnesses",
+          "observation": "Results retrieved for: Search source network for relevant experts or witnesses"
+        },
+        {
+          "thought": "Check for prior fact-checks of similar claims",
+          "action": "Search claim history for related or identical statements",
+          "observation": "Results retrieved for: Search claim history for related or identical statements"
+        }
+      ],
+      "outcome": "Verdict: {{verdict}}. Evidence strength: {{strength}}"
+    }
+  ]
+}

@@ -1,0 +1,1227 @@
+{
+  "domain": "gaming",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Player": [
+      {
+        "name": "Player 1",
+        "player_id": "Sample player_id for Player 1",
+        "username": "Sample username for Player 1",
+        "level": 100,
+        "play_time_hours": 10.5,
+        "region": "eu",
+        "status": "inactive"
+      },
+      {
+        "name": "Player 2",
+        "player_id": "Sample player_id for Player 2",
+        "username": "Sample username for Player 2",
+        "level": 200,
+        "play_time_hours": 21.0,
+        "region": "asia",
+        "status": "banned"
+      },
+      {
+        "name": "Player 3",
+        "player_id": "Sample player_id for Player 3",
+        "username": "Sample username for Player 3",
+        "level": 300,
+        "play_time_hours": 31.5,
+        "region": "oceania",
+        "status": "suspended"
+      },
+      {
+        "name": "Player 4",
+        "player_id": "Sample player_id for Player 4",
+        "username": "Sample username for Player 4",
+        "level": 400,
+        "play_time_hours": 42.0,
+        "region": "sa",
+        "status": "active"
+      },
+      {
+        "name": "Player 5",
+        "player_id": "Sample player_id for Player 5",
+        "username": "Sample username for Player 5",
+        "level": 500,
+        "play_time_hours": 52.5,
+        "region": "africa",
+        "status": "inactive"
+      }
+    ],
+    "Character": [
+      {
+        "name": "Character 1",
+        "character_id": "Sample character_id for Character 1",
+        "character_class": "mage",
+        "level": 100,
+        "experience_points": 100,
+        "health": 100,
+        "power_rating": 10.5
+      },
+      {
+        "name": "Character 2",
+        "character_id": "Sample character_id for Character 2",
+        "character_class": "rogue",
+        "level": 200,
+        "experience_points": 200,
+        "health": 200,
+        "power_rating": 21.0
+      },
+      {
+        "name": "Character 3",
+        "character_id": "Sample character_id for Character 3",
+        "character_class": "healer",
+        "level": 300,
+        "experience_points": 300,
+        "health": 300,
+        "power_rating": 31.5
+      },
+      {
+        "name": "Character 4",
+        "character_id": "Sample character_id for Character 4",
+        "character_class": "ranger",
+        "level": 400,
+        "experience_points": 400,
+        "health": 400,
+        "power_rating": 42.0
+      },
+      {
+        "name": "Character 5",
+        "character_id": "Sample character_id for Character 5",
+        "character_class": "paladin",
+        "level": 500,
+        "experience_points": 500,
+        "health": 500,
+        "power_rating": 52.5
+      }
+    ],
+    "Item": [
+      {
+        "name": "Item 1",
+        "item_id": "Sample item_id for Item 1",
+        "item_type": "armor",
+        "rarity": "uncommon",
+        "level_requirement": 100,
+        "gold_value": 100,
+        "stats_bonus": "Sample stats_bonus for Item 1"
+      },
+      {
+        "name": "Item 2",
+        "item_id": "Sample item_id for Item 2",
+        "item_type": "consumable",
+        "rarity": "rare",
+        "level_requirement": 200,
+        "gold_value": 200,
+        "stats_bonus": "Sample stats_bonus for Item 2"
+      },
+      {
+        "name": "Item 3",
+        "item_id": "Sample item_id for Item 3",
+        "item_type": "material",
+        "rarity": "epic",
+        "level_requirement": 300,
+        "gold_value": 300,
+        "stats_bonus": "Sample stats_bonus for Item 3"
+      },
+      {
+        "name": "Item 4",
+        "item_id": "Sample item_id for Item 4",
+        "item_type": "cosmetic",
+        "rarity": "legendary",
+        "level_requirement": 400,
+        "gold_value": 400,
+        "stats_bonus": "Sample stats_bonus for Item 4"
+      },
+      {
+        "name": "Item 5",
+        "item_id": "Sample item_id for Item 5",
+        "item_type": "mount",
+        "rarity": "mythic",
+        "level_requirement": 500,
+        "gold_value": 500,
+        "stats_bonus": "Sample stats_bonus for Item 5"
+      }
+    ],
+    "Quest": [
+      {
+        "name": "Quest 1",
+        "quest_id": "Sample quest_id for Quest 1",
+        "description": "Sample description for Quest 1",
+        "quest_type": "side_quest",
+        "difficulty": "normal",
+        "experience_reward": 100,
+        "gold_reward": 100
+      },
+      {
+        "name": "Quest 2",
+        "quest_id": "Sample quest_id for Quest 2",
+        "description": "Sample description for Quest 2",
+        "quest_type": "daily",
+        "difficulty": "hard",
+        "experience_reward": 200,
+        "gold_reward": 200
+      },
+      {
+        "name": "Quest 3",
+        "quest_id": "Sample quest_id for Quest 3",
+        "description": "Sample description for Quest 3",
+        "quest_type": "weekly",
+        "difficulty": "heroic",
+        "experience_reward": 300,
+        "gold_reward": 300
+      },
+      {
+        "name": "Quest 4",
+        "quest_id": "Sample quest_id for Quest 4",
+        "description": "Sample description for Quest 4",
+        "quest_type": "raid",
+        "difficulty": "mythic",
+        "experience_reward": 400,
+        "gold_reward": 400
+      },
+      {
+        "name": "Quest 5",
+        "quest_id": "Sample quest_id for Quest 5",
+        "description": "Sample description for Quest 5",
+        "quest_type": "pvp",
+        "difficulty": "easy",
+        "experience_reward": 500,
+        "gold_reward": 500
+      }
+    ],
+    "Guild": [
+      {
+        "name": "Guild 1",
+        "guild_id": "Sample guild_id for Guild 1",
+        "level": 100,
+        "member_count": 100,
+        "faction": "horde",
+        "rank": 100
+      },
+      {
+        "name": "Guild 2",
+        "guild_id": "Sample guild_id for Guild 2",
+        "level": 200,
+        "member_count": 200,
+        "faction": "neutral",
+        "rank": 200
+      },
+      {
+        "name": "Guild 3",
+        "guild_id": "Sample guild_id for Guild 3",
+        "level": 300,
+        "member_count": 300,
+        "faction": "alliance",
+        "rank": 300
+      },
+      {
+        "name": "Guild 4",
+        "guild_id": "Sample guild_id for Guild 4",
+        "level": 400,
+        "member_count": 400,
+        "faction": "horde",
+        "rank": 400
+      },
+      {
+        "name": "Guild 5",
+        "guild_id": "Sample guild_id for Guild 5",
+        "level": 500,
+        "member_count": 500,
+        "faction": "neutral",
+        "rank": 500
+      }
+    ],
+    "Achievement": [
+      {
+        "name": "Achievement 1",
+        "achievement_id": "Sample achievement_id for Achievement 1",
+        "description": "Sample description for Achievement 1",
+        "category": "exploration",
+        "points": 100,
+        "rarity_pct": 10.5
+      },
+      {
+        "name": "Achievement 2",
+        "achievement_id": "Sample achievement_id for Achievement 2",
+        "description": "Sample description for Achievement 2",
+        "category": "crafting",
+        "points": 200,
+        "rarity_pct": 21.0
+      },
+      {
+        "name": "Achievement 3",
+        "achievement_id": "Sample achievement_id for Achievement 3",
+        "description": "Sample description for Achievement 3",
+        "category": "social",
+        "points": 300,
+        "rarity_pct": 31.5
+      },
+      {
+        "name": "Achievement 4",
+        "achievement_id": "Sample achievement_id for Achievement 4",
+        "description": "Sample description for Achievement 4",
+        "category": "pvp",
+        "points": 400,
+        "rarity_pct": 42.0
+      },
+      {
+        "name": "Achievement 5",
+        "achievement_id": "Sample achievement_id for Achievement 5",
+        "description": "Sample description for Achievement 5",
+        "category": "collection",
+        "points": 500,
+        "rarity_pct": 52.5
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PLAYS",
+      "source_label": "Player",
+      "source_name": "Player 1",
+      "target_label": "Character",
+      "target_name": "Character 2"
+    },
+    {
+      "type": "PLAYS",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Character",
+      "target_name": "Character 2"
+    },
+    {
+      "type": "PLAYS",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Character",
+      "target_name": "Character 4"
+    },
+    {
+      "type": "PLAYS",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Character",
+      "target_name": "Character 4"
+    },
+    {
+      "type": "PLAYS",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Character",
+      "target_name": "Character 1"
+    },
+    {
+      "type": "PLAYS",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Character",
+      "target_name": "Character 2"
+    },
+    {
+      "type": "PLAYS",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Character",
+      "target_name": "Character 3"
+    },
+    {
+      "type": "PLAYS",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Character",
+      "target_name": "Character 5"
+    },
+    {
+      "type": "COMPLETED",
+      "source_label": "Character",
+      "source_name": "Character 1",
+      "target_label": "Quest",
+      "target_name": "Quest 3"
+    },
+    {
+      "type": "COMPLETED",
+      "source_label": "Character",
+      "source_name": "Character 2",
+      "target_label": "Quest",
+      "target_name": "Quest 3"
+    },
+    {
+      "type": "COMPLETED",
+      "source_label": "Character",
+      "source_name": "Character 2",
+      "target_label": "Quest",
+      "target_name": "Quest 4"
+    },
+    {
+      "type": "COMPLETED",
+      "source_label": "Character",
+      "source_name": "Character 3",
+      "target_label": "Quest",
+      "target_name": "Quest 1"
+    },
+    {
+      "type": "COMPLETED",
+      "source_label": "Character",
+      "source_name": "Character 4",
+      "target_label": "Quest",
+      "target_name": "Quest 1"
+    },
+    {
+      "type": "COMPLETED",
+      "source_label": "Character",
+      "source_name": "Character 4",
+      "target_label": "Quest",
+      "target_name": "Quest 3"
+    },
+    {
+      "type": "COMPLETED",
+      "source_label": "Character",
+      "source_name": "Character 5",
+      "target_label": "Quest",
+      "target_name": "Quest 1"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 1",
+      "target_label": "Item",
+      "target_name": "Item 2"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 1",
+      "target_label": "Item",
+      "target_name": "Item 4"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 2",
+      "target_label": "Item",
+      "target_name": "Item 3"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 2",
+      "target_label": "Item",
+      "target_name": "Item 4"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 3",
+      "target_label": "Item",
+      "target_name": "Item 2"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 3",
+      "target_label": "Item",
+      "target_name": "Item 4"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 4",
+      "target_label": "Item",
+      "target_name": "Item 5"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 4",
+      "target_label": "Item",
+      "target_name": "Item 1"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 5",
+      "target_label": "Item",
+      "target_name": "Item 4"
+    },
+    {
+      "type": "EQUIPPED",
+      "source_label": "Character",
+      "source_name": "Character 5",
+      "target_label": "Item",
+      "target_name": "Item 1"
+    },
+    {
+      "type": "TRADED_WITH",
+      "source_label": "Player",
+      "source_name": "Player 1",
+      "target_label": "Player",
+      "target_name": "Player 4"
+    },
+    {
+      "type": "TRADED_WITH",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Player",
+      "target_name": "Player 1"
+    },
+    {
+      "type": "TRADED_WITH",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Player",
+      "target_name": "Player 1"
+    },
+    {
+      "type": "TRADED_WITH",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Player",
+      "target_name": "Player 5"
+    },
+    {
+      "type": "TRADED_WITH",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Player",
+      "target_name": "Player 3"
+    },
+    {
+      "type": "TRADED_WITH",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Player",
+      "target_name": "Player 1"
+    },
+    {
+      "type": "TRADED_WITH",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Player",
+      "target_name": "Player 4"
+    },
+    {
+      "type": "MEMBER_OF",
+      "source_label": "Player",
+      "source_name": "Player 1",
+      "target_label": "Guild",
+      "target_name": "Guild 2"
+    },
+    {
+      "type": "MEMBER_OF",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Guild",
+      "target_name": "Guild 2"
+    },
+    {
+      "type": "MEMBER_OF",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Guild",
+      "target_name": "Guild 5"
+    },
+    {
+      "type": "MEMBER_OF",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Guild",
+      "target_name": "Guild 2"
+    },
+    {
+      "type": "MEMBER_OF",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Guild",
+      "target_name": "Guild 4"
+    },
+    {
+      "type": "MEMBER_OF",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Guild",
+      "target_name": "Guild 5"
+    },
+    {
+      "type": "MEMBER_OF",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Guild",
+      "target_name": "Guild 1"
+    },
+    {
+      "type": "UNLOCKED",
+      "source_label": "Character",
+      "source_name": "Character 1",
+      "target_label": "Achievement",
+      "target_name": "Achievement 3"
+    },
+    {
+      "type": "UNLOCKED",
+      "source_label": "Character",
+      "source_name": "Character 2",
+      "target_label": "Achievement",
+      "target_name": "Achievement 2"
+    },
+    {
+      "type": "UNLOCKED",
+      "source_label": "Character",
+      "source_name": "Character 2",
+      "target_label": "Achievement",
+      "target_name": "Achievement 1"
+    },
+    {
+      "type": "UNLOCKED",
+      "source_label": "Character",
+      "source_name": "Character 3",
+      "target_label": "Achievement",
+      "target_name": "Achievement 1"
+    },
+    {
+      "type": "UNLOCKED",
+      "source_label": "Character",
+      "source_name": "Character 3",
+      "target_label": "Achievement",
+      "target_name": "Achievement 5"
+    },
+    {
+      "type": "UNLOCKED",
+      "source_label": "Character",
+      "source_name": "Character 4",
+      "target_label": "Achievement",
+      "target_name": "Achievement 5"
+    },
+    {
+      "type": "UNLOCKED",
+      "source_label": "Character",
+      "source_name": "Character 5",
+      "target_label": "Achievement",
+      "target_name": "Achievement 2"
+    },
+    {
+      "type": "UNLOCKED",
+      "source_label": "Character",
+      "source_name": "Character 5",
+      "target_label": "Achievement",
+      "target_name": "Achievement 1"
+    },
+    {
+      "type": "REWARDS",
+      "source_label": "Quest",
+      "source_name": "Quest 1",
+      "target_label": "Item",
+      "target_name": "Item 5"
+    },
+    {
+      "type": "REWARDS",
+      "source_label": "Quest",
+      "source_name": "Quest 2",
+      "target_label": "Item",
+      "target_name": "Item 2"
+    },
+    {
+      "type": "REWARDS",
+      "source_label": "Quest",
+      "source_name": "Quest 3",
+      "target_label": "Item",
+      "target_name": "Item 2"
+    },
+    {
+      "type": "REWARDS",
+      "source_label": "Quest",
+      "source_name": "Quest 3",
+      "target_label": "Item",
+      "target_name": "Item 5"
+    },
+    {
+      "type": "REWARDS",
+      "source_label": "Quest",
+      "source_name": "Quest 4",
+      "target_label": "Item",
+      "target_name": "Item 3"
+    },
+    {
+      "type": "REWARDS",
+      "source_label": "Quest",
+      "source_name": "Quest 4",
+      "target_label": "Item",
+      "target_name": "Item 5"
+    },
+    {
+      "type": "REWARDS",
+      "source_label": "Quest",
+      "source_name": "Quest 5",
+      "target_label": "Item",
+      "target_name": "Item 4"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Character",
+      "source_name": "Character 1",
+      "target_label": "Item",
+      "target_name": "Item 3"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Character",
+      "source_name": "Character 2",
+      "target_label": "Item",
+      "target_name": "Item 4"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Character",
+      "source_name": "Character 3",
+      "target_label": "Item",
+      "target_name": "Item 5"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Character",
+      "source_name": "Character 4",
+      "target_label": "Item",
+      "target_name": "Item 3"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Character",
+      "source_name": "Character 4",
+      "target_label": "Item",
+      "target_name": "Item 2"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Character",
+      "source_name": "Character 5",
+      "target_label": "Item",
+      "target_name": "Item 3"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "quest_log",
+      "template_name": "Quest Log",
+      "title": "Quest Log #1",
+      "content": "Sample Quest Log #1\n\nThis is a sample detailed quest storylines and completion logs for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "quest_log",
+      "template_name": "Quest Log",
+      "title": "Quest Log #2",
+      "content": "Sample Quest Log #2\n\nThis is a sample detailed quest storylines and completion logs for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "quest_log",
+      "template_name": "Quest Log",
+      "title": "Quest Log #3",
+      "content": "Sample Quest Log #3\n\nThis is a sample detailed quest storylines and completion logs for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "quest_log",
+      "template_name": "Quest Log",
+      "title": "Quest Log #4",
+      "content": "Sample Quest Log #4\n\nThis is a sample detailed quest storylines and completion logs for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "quest_log",
+      "template_name": "Quest Log",
+      "title": "Quest Log #5",
+      "content": "Sample Quest Log #5\n\nThis is a sample detailed quest storylines and completion logs for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "patch_notes",
+      "template_name": "Patch Notes",
+      "title": "Patch Notes #1",
+      "content": "Sample Patch Notes #1\n\nThis is a sample game update and balance change documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "patch_notes",
+      "template_name": "Patch Notes",
+      "title": "Patch Notes #2",
+      "content": "Sample Patch Notes #2\n\nThis is a sample game update and balance change documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "patch_notes",
+      "template_name": "Patch Notes",
+      "title": "Patch Notes #3",
+      "content": "Sample Patch Notes #3\n\nThis is a sample game update and balance change documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "patch_notes",
+      "template_name": "Patch Notes",
+      "title": "Patch Notes #4",
+      "content": "Sample Patch Notes #4\n\nThis is a sample game update and balance change documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "patch_notes",
+      "template_name": "Patch Notes",
+      "title": "Patch Notes #5",
+      "content": "Sample Patch Notes #5\n\nThis is a sample game update and balance change documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guild_communication",
+      "template_name": "Guild Communication",
+      "title": "Guild Communication #1",
+      "content": "Sample Guild Communication #1\n\nThis is a sample guild announcements, strategies, and communications for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guild_communication",
+      "template_name": "Guild Communication",
+      "title": "Guild Communication #2",
+      "content": "Sample Guild Communication #2\n\nThis is a sample guild announcements, strategies, and communications for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guild_communication",
+      "template_name": "Guild Communication",
+      "title": "Guild Communication #3",
+      "content": "Sample Guild Communication #3\n\nThis is a sample guild announcements, strategies, and communications for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guild_communication",
+      "template_name": "Guild Communication",
+      "title": "Guild Communication #4",
+      "content": "Sample Guild Communication #4\n\nThis is a sample guild announcements, strategies, and communications for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guild_communication",
+      "template_name": "Guild Communication",
+      "title": "Guild Communication #5",
+      "content": "Sample Guild Communication #5\n\nThis is a sample guild announcements, strategies, and communications for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_report",
+      "template_name": "Player Report",
+      "title": "Player Report #1",
+      "content": "Sample Player Report #1\n\nThis is a sample player behavior reports and moderation documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_report",
+      "template_name": "Player Report",
+      "title": "Player Report #2",
+      "content": "Sample Player Report #2\n\nThis is a sample player behavior reports and moderation documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_report",
+      "template_name": "Player Report",
+      "title": "Player Report #3",
+      "content": "Sample Player Report #3\n\nThis is a sample player behavior reports and moderation documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_report",
+      "template_name": "Player Report",
+      "title": "Player Report #4",
+      "content": "Sample Player Report #4\n\nThis is a sample player behavior reports and moderation documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_report",
+      "template_name": "Player Report",
+      "title": "Player Report #5",
+      "content": "Sample Player Report #5\n\nThis is a sample player behavior reports and moderation documentation for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "balance_analysis",
+      "template_name": "Balance Analysis",
+      "title": "Balance Analysis #1",
+      "content": "Sample Balance Analysis #1\n\nThis is a sample game economy and class balance analysis reports for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "balance_analysis",
+      "template_name": "Balance Analysis",
+      "title": "Balance Analysis #2",
+      "content": "Sample Balance Analysis #2\n\nThis is a sample game economy and class balance analysis reports for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "balance_analysis",
+      "template_name": "Balance Analysis",
+      "title": "Balance Analysis #3",
+      "content": "Sample Balance Analysis #3\n\nThis is a sample game economy and class balance analysis reports for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "balance_analysis",
+      "template_name": "Balance Analysis",
+      "title": "Balance Analysis #4",
+      "content": "Sample Balance Analysis #4\n\nThis is a sample game economy and class balance analysis reports for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "balance_analysis",
+      "template_name": "Balance Analysis",
+      "title": "Balance Analysis #5",
+      "content": "Sample Balance Analysis #5\n\nThis is a sample game economy and class balance analysis reports for the Gaming domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "balance_adjustment",
+      "task": "Evaluate whether {{character.character_class}} class needs balance adjustment",
+      "steps": [
+        {
+          "thought": "Analyze class performance metrics across content types",
+          "action": "Query quest completion rates and PvP win rates by class",
+          "observation": "Results retrieved for: Query quest completion rates and PvP win rates by class"
+        },
+        {
+          "thought": "Compare item utilization and build diversity",
+          "action": "Check equipped items and popular builds per class",
+          "observation": "Results retrieved for: Check equipped items and popular builds per class"
+        },
+        {
+          "thought": "Assess player sentiment and community feedback",
+          "action": "Review player reports and achievement unlock rates",
+          "observation": "Results retrieved for: Review player reports and achievement unlock rates"
+        },
+        {
+          "thought": "Model impact of proposed adjustments",
+          "action": "Simulate stat changes and estimate new performance ranges",
+          "observation": "Results retrieved for: Simulate stat changes and estimate new performance ranges"
+        }
+      ],
+      "outcome": "Balance decision: {{decision}} \u2014 {{rationale}}"
+    },
+    {
+      "id": "economy_intervention",
+      "task": "Determine if gold inflation requires market intervention",
+      "steps": [
+        {
+          "thought": "Analyze gold supply trends and sink effectiveness",
+          "action": "Query gold rewards, trade volumes, and gold drains",
+          "observation": "Results retrieved for: Query gold rewards, trade volumes, and gold drains"
+        },
+        {
+          "thought": "Check item pricing trends on the player market",
+          "action": "Review trade history for price inflation signals",
+          "observation": "Results retrieved for: Review trade history for price inflation signals"
+        },
+        {
+          "thought": "Evaluate impact on new vs veteran player experience",
+          "action": "Compare purchasing power across player level brackets",
+          "observation": "Results retrieved for: Compare purchasing power across player level brackets"
+        }
+      ],
+      "outcome": "Economy action: {{action}} with expected impact {{impact}}"
+    },
+    {
+      "id": "event_design",
+      "task": "Design a limited-time event for player engagement boost",
+      "steps": [
+        {
+          "thought": "Identify current engagement weak points and player dropoff",
+          "action": "Query player activity trends and inactive account rates",
+          "observation": "Results retrieved for: Query player activity trends and inactive account rates"
+        },
+        {
+          "thought": "Review success metrics from previous events",
+          "action": "Analyze past event quests, participation, and retention impact",
+          "observation": "Results retrieved for: Analyze past event quests, participation, and retention impact"
+        },
+        {
+          "thought": "Select appropriate rewards and difficulty tuning",
+          "action": "Check item rarity distribution and achievement unlock gaps",
+          "observation": "Results retrieved for: Check item rarity distribution and achievement unlock gaps"
+        }
+      ],
+      "outcome": "Event design: {{event}} targeting {{audience}} with {{rewards}}"
+    }
+  ]
+}

@@ -1,0 +1,1441 @@
+{
+  "domain": "healthcare",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Patient": [
+      {
+        "name": "Patient 1",
+        "patient_id": "Sample patient_id for Patient 1",
+        "blood_type": "A-",
+        "allergies": "Sample allergies for Patient 1"
+      },
+      {
+        "name": "Patient 2",
+        "patient_id": "Sample patient_id for Patient 2",
+        "blood_type": "B+",
+        "allergies": "Sample allergies for Patient 2"
+      },
+      {
+        "name": "Patient 3",
+        "patient_id": "Sample patient_id for Patient 3",
+        "blood_type": "B-",
+        "allergies": "Sample allergies for Patient 3"
+      },
+      {
+        "name": "Patient 4",
+        "patient_id": "Sample patient_id for Patient 4",
+        "blood_type": "AB+",
+        "allergies": "Sample allergies for Patient 4"
+      },
+      {
+        "name": "Patient 5",
+        "patient_id": "Sample patient_id for Patient 5",
+        "blood_type": "AB-",
+        "allergies": "Sample allergies for Patient 5"
+      }
+    ],
+    "Provider": [
+      {
+        "name": "Provider 1",
+        "provider_id": "Sample provider_id for Provider 1",
+        "specialty": "cardiology",
+        "license_number": "Sample license_number for Provider 1"
+      },
+      {
+        "name": "Provider 2",
+        "provider_id": "Sample provider_id for Provider 2",
+        "specialty": "oncology",
+        "license_number": "Sample license_number for Provider 2"
+      },
+      {
+        "name": "Provider 3",
+        "provider_id": "Sample provider_id for Provider 3",
+        "specialty": "neurology",
+        "license_number": "Sample license_number for Provider 3"
+      },
+      {
+        "name": "Provider 4",
+        "provider_id": "Sample provider_id for Provider 4",
+        "specialty": "orthopedics",
+        "license_number": "Sample license_number for Provider 4"
+      },
+      {
+        "name": "Provider 5",
+        "provider_id": "Sample provider_id for Provider 5",
+        "specialty": "pediatrics",
+        "license_number": "Sample license_number for Provider 5"
+      }
+    ],
+    "Diagnosis": [
+      {
+        "name": "Diagnosis 1",
+        "icd_code": "Sample icd_code for Diagnosis 1",
+        "category": "acute",
+        "severity": "moderate"
+      },
+      {
+        "name": "Diagnosis 2",
+        "icd_code": "Sample icd_code for Diagnosis 2",
+        "category": "infectious",
+        "severity": "severe"
+      },
+      {
+        "name": "Diagnosis 3",
+        "icd_code": "Sample icd_code for Diagnosis 3",
+        "category": "autoimmune",
+        "severity": "critical"
+      },
+      {
+        "name": "Diagnosis 4",
+        "icd_code": "Sample icd_code for Diagnosis 4",
+        "category": "genetic",
+        "severity": "mild"
+      },
+      {
+        "name": "Diagnosis 5",
+        "icd_code": "Sample icd_code for Diagnosis 5",
+        "category": "mental_health",
+        "severity": "moderate"
+      }
+    ],
+    "Treatment": [
+      {
+        "name": "Treatment 1",
+        "treatment_id": "Sample treatment_id for Treatment 1",
+        "treatment_type": "surgery",
+        "status": "in_progress"
+      },
+      {
+        "name": "Treatment 2",
+        "treatment_id": "Sample treatment_id for Treatment 2",
+        "treatment_type": "therapy",
+        "status": "completed"
+      },
+      {
+        "name": "Treatment 3",
+        "treatment_id": "Sample treatment_id for Treatment 3",
+        "treatment_type": "procedure",
+        "status": "cancelled"
+      },
+      {
+        "name": "Treatment 4",
+        "treatment_id": "Sample treatment_id for Treatment 4",
+        "treatment_type": "imaging",
+        "status": "planned"
+      },
+      {
+        "name": "Treatment 5",
+        "treatment_id": "Sample treatment_id for Treatment 5",
+        "treatment_type": "lab_test",
+        "status": "in_progress"
+      }
+    ],
+    "Encounter": [
+      {
+        "name": "Encounter 1",
+        "encounter_id": "Sample encounter_id for Encounter 1",
+        "encounter_type": "outpatient",
+        "chief_complaint": "Sample chief_complaint for Encounter 1",
+        "disposition": "Sample disposition for Encounter 1"
+      },
+      {
+        "name": "Encounter 2",
+        "encounter_id": "Sample encounter_id for Encounter 2",
+        "encounter_type": "emergency",
+        "chief_complaint": "Sample chief_complaint for Encounter 2",
+        "disposition": "Sample disposition for Encounter 2"
+      },
+      {
+        "name": "Encounter 3",
+        "encounter_id": "Sample encounter_id for Encounter 3",
+        "encounter_type": "telehealth",
+        "chief_complaint": "Sample chief_complaint for Encounter 3",
+        "disposition": "Sample disposition for Encounter 3"
+      },
+      {
+        "name": "Encounter 4",
+        "encounter_id": "Sample encounter_id for Encounter 4",
+        "encounter_type": "inpatient",
+        "chief_complaint": "Sample chief_complaint for Encounter 4",
+        "disposition": "Sample disposition for Encounter 4"
+      },
+      {
+        "name": "Encounter 5",
+        "encounter_id": "Sample encounter_id for Encounter 5",
+        "encounter_type": "outpatient",
+        "chief_complaint": "Sample chief_complaint for Encounter 5",
+        "disposition": "Sample disposition for Encounter 5"
+      }
+    ],
+    "Facility": [
+      {
+        "name": "Facility 1",
+        "facility_id": "Sample facility_id for Facility 1",
+        "facility_type": "clinic",
+        "bed_count": 100
+      },
+      {
+        "name": "Facility 2",
+        "facility_id": "Sample facility_id for Facility 2",
+        "facility_type": "urgent_care",
+        "bed_count": 200
+      },
+      {
+        "name": "Facility 3",
+        "facility_id": "Sample facility_id for Facility 3",
+        "facility_type": "lab",
+        "bed_count": 300
+      },
+      {
+        "name": "Facility 4",
+        "facility_id": "Sample facility_id for Facility 4",
+        "facility_type": "pharmacy",
+        "bed_count": 400
+      },
+      {
+        "name": "Facility 5",
+        "facility_id": "Sample facility_id for Facility 5",
+        "facility_type": "rehab_center",
+        "bed_count": 500
+      }
+    ],
+    "Medication": [
+      {
+        "name": "Medication 1",
+        "ndc_code": "Sample ndc_code for Medication 1",
+        "drug_class": "Sample drug_class for Medication 1",
+        "dosage_form": "Sample dosage_form for Medication 1",
+        "contraindications": "Sample contraindications for Medication 1"
+      },
+      {
+        "name": "Medication 2",
+        "ndc_code": "Sample ndc_code for Medication 2",
+        "drug_class": "Sample drug_class for Medication 2",
+        "dosage_form": "Sample dosage_form for Medication 2",
+        "contraindications": "Sample contraindications for Medication 2"
+      },
+      {
+        "name": "Medication 3",
+        "ndc_code": "Sample ndc_code for Medication 3",
+        "drug_class": "Sample drug_class for Medication 3",
+        "dosage_form": "Sample dosage_form for Medication 3",
+        "contraindications": "Sample contraindications for Medication 3"
+      },
+      {
+        "name": "Medication 4",
+        "ndc_code": "Sample ndc_code for Medication 4",
+        "drug_class": "Sample drug_class for Medication 4",
+        "dosage_form": "Sample dosage_form for Medication 4",
+        "contraindications": "Sample contraindications for Medication 4"
+      },
+      {
+        "name": "Medication 5",
+        "ndc_code": "Sample ndc_code for Medication 5",
+        "drug_class": "Sample drug_class for Medication 5",
+        "dosage_form": "Sample dosage_form for Medication 5",
+        "contraindications": "Sample contraindications for Medication 5"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "DIAGNOSED_WITH",
+      "source_label": "Patient",
+      "source_name": "Patient 1",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 4"
+    },
+    {
+      "type": "DIAGNOSED_WITH",
+      "source_label": "Patient",
+      "source_name": "Patient 2",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 1"
+    },
+    {
+      "type": "DIAGNOSED_WITH",
+      "source_label": "Patient",
+      "source_name": "Patient 2",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 4"
+    },
+    {
+      "type": "DIAGNOSED_WITH",
+      "source_label": "Patient",
+      "source_name": "Patient 3",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 5"
+    },
+    {
+      "type": "DIAGNOSED_WITH",
+      "source_label": "Patient",
+      "source_name": "Patient 4",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 1"
+    },
+    {
+      "type": "DIAGNOSED_WITH",
+      "source_label": "Patient",
+      "source_name": "Patient 4",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 2"
+    },
+    {
+      "type": "DIAGNOSED_WITH",
+      "source_label": "Patient",
+      "source_name": "Patient 5",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 3"
+    },
+    {
+      "type": "DIAGNOSED_WITH",
+      "source_label": "Patient",
+      "source_name": "Patient 5",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 1"
+    },
+    {
+      "type": "TREATED_BY",
+      "source_label": "Patient",
+      "source_name": "Patient 1",
+      "target_label": "Provider",
+      "target_name": "Provider 5"
+    },
+    {
+      "type": "TREATED_BY",
+      "source_label": "Patient",
+      "source_name": "Patient 1",
+      "target_label": "Provider",
+      "target_name": "Provider 2"
+    },
+    {
+      "type": "TREATED_BY",
+      "source_label": "Patient",
+      "source_name": "Patient 2",
+      "target_label": "Provider",
+      "target_name": "Provider 1"
+    },
+    {
+      "type": "TREATED_BY",
+      "source_label": "Patient",
+      "source_name": "Patient 3",
+      "target_label": "Provider",
+      "target_name": "Provider 1"
+    },
+    {
+      "type": "TREATED_BY",
+      "source_label": "Patient",
+      "source_name": "Patient 4",
+      "target_label": "Provider",
+      "target_name": "Provider 3"
+    },
+    {
+      "type": "TREATED_BY",
+      "source_label": "Patient",
+      "source_name": "Patient 5",
+      "target_label": "Provider",
+      "target_name": "Provider 5"
+    },
+    {
+      "type": "TREATED_BY",
+      "source_label": "Patient",
+      "source_name": "Patient 5",
+      "target_label": "Provider",
+      "target_name": "Provider 2"
+    },
+    {
+      "type": "PRESCRIBED",
+      "source_label": "Provider",
+      "source_name": "Provider 1",
+      "target_label": "Medication",
+      "target_name": "Medication 2"
+    },
+    {
+      "type": "PRESCRIBED",
+      "source_label": "Provider",
+      "source_name": "Provider 1",
+      "target_label": "Medication",
+      "target_name": "Medication 3"
+    },
+    {
+      "type": "PRESCRIBED",
+      "source_label": "Provider",
+      "source_name": "Provider 2",
+      "target_label": "Medication",
+      "target_name": "Medication 1"
+    },
+    {
+      "type": "PRESCRIBED",
+      "source_label": "Provider",
+      "source_name": "Provider 2",
+      "target_label": "Medication",
+      "target_name": "Medication 4"
+    },
+    {
+      "type": "PRESCRIBED",
+      "source_label": "Provider",
+      "source_name": "Provider 3",
+      "target_label": "Medication",
+      "target_name": "Medication 1"
+    },
+    {
+      "type": "PRESCRIBED",
+      "source_label": "Provider",
+      "source_name": "Provider 4",
+      "target_label": "Medication",
+      "target_name": "Medication 3"
+    },
+    {
+      "type": "PRESCRIBED",
+      "source_label": "Provider",
+      "source_name": "Provider 5",
+      "target_label": "Medication",
+      "target_name": "Medication 4"
+    },
+    {
+      "type": "REFERRED_TO",
+      "source_label": "Provider",
+      "source_name": "Provider 1",
+      "target_label": "Provider",
+      "target_name": "Provider 5"
+    },
+    {
+      "type": "REFERRED_TO",
+      "source_label": "Provider",
+      "source_name": "Provider 1",
+      "target_label": "Provider",
+      "target_name": "Provider 3"
+    },
+    {
+      "type": "REFERRED_TO",
+      "source_label": "Provider",
+      "source_name": "Provider 3",
+      "target_label": "Provider",
+      "target_name": "Provider 2"
+    },
+    {
+      "type": "REFERRED_TO",
+      "source_label": "Provider",
+      "source_name": "Provider 3",
+      "target_label": "Provider",
+      "target_name": "Provider 4"
+    },
+    {
+      "type": "REFERRED_TO",
+      "source_label": "Provider",
+      "source_name": "Provider 4",
+      "target_label": "Provider",
+      "target_name": "Provider 5"
+    },
+    {
+      "type": "REFERRED_TO",
+      "source_label": "Provider",
+      "source_name": "Provider 4",
+      "target_label": "Provider",
+      "target_name": "Provider 3"
+    },
+    {
+      "type": "REFERRED_TO",
+      "source_label": "Provider",
+      "source_name": "Provider 5",
+      "target_label": "Provider",
+      "target_name": "Provider 1"
+    },
+    {
+      "type": "REFERRED_TO",
+      "source_label": "Provider",
+      "source_name": "Provider 5",
+      "target_label": "Provider",
+      "target_name": "Provider 4"
+    },
+    {
+      "type": "HAD_ENCOUNTER",
+      "source_label": "Patient",
+      "source_name": "Patient 1",
+      "target_label": "Encounter",
+      "target_name": "Encounter 3"
+    },
+    {
+      "type": "HAD_ENCOUNTER",
+      "source_label": "Patient",
+      "source_name": "Patient 2",
+      "target_label": "Encounter",
+      "target_name": "Encounter 5"
+    },
+    {
+      "type": "HAD_ENCOUNTER",
+      "source_label": "Patient",
+      "source_name": "Patient 3",
+      "target_label": "Encounter",
+      "target_name": "Encounter 2"
+    },
+    {
+      "type": "HAD_ENCOUNTER",
+      "source_label": "Patient",
+      "source_name": "Patient 3",
+      "target_label": "Encounter",
+      "target_name": "Encounter 1"
+    },
+    {
+      "type": "HAD_ENCOUNTER",
+      "source_label": "Patient",
+      "source_name": "Patient 4",
+      "target_label": "Encounter",
+      "target_name": "Encounter 3"
+    },
+    {
+      "type": "HAD_ENCOUNTER",
+      "source_label": "Patient",
+      "source_name": "Patient 5",
+      "target_label": "Encounter",
+      "target_name": "Encounter 1"
+    },
+    {
+      "type": "HAD_ENCOUNTER",
+      "source_label": "Patient",
+      "source_name": "Patient 5",
+      "target_label": "Encounter",
+      "target_name": "Encounter 2"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 1",
+      "target_label": "Encounter",
+      "target_name": "Encounter 3"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 1",
+      "target_label": "Encounter",
+      "target_name": "Encounter 4"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 2",
+      "target_label": "Encounter",
+      "target_name": "Encounter 2"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 2",
+      "target_label": "Encounter",
+      "target_name": "Encounter 3"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 3",
+      "target_label": "Encounter",
+      "target_name": "Encounter 4"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 3",
+      "target_label": "Encounter",
+      "target_name": "Encounter 2"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 4",
+      "target_label": "Encounter",
+      "target_name": "Encounter 5"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 4",
+      "target_label": "Encounter",
+      "target_name": "Encounter 1"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 5",
+      "target_label": "Encounter",
+      "target_name": "Encounter 5"
+    },
+    {
+      "type": "ATTENDED",
+      "source_label": "Provider",
+      "source_name": "Provider 5",
+      "target_label": "Encounter",
+      "target_name": "Encounter 2"
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source_label": "Encounter",
+      "source_name": "Encounter 1",
+      "target_label": "Facility",
+      "target_name": "Facility 3"
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source_label": "Encounter",
+      "source_name": "Encounter 1",
+      "target_label": "Facility",
+      "target_name": "Facility 2"
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source_label": "Encounter",
+      "source_name": "Encounter 2",
+      "target_label": "Facility",
+      "target_name": "Facility 3"
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source_label": "Encounter",
+      "source_name": "Encounter 3",
+      "target_label": "Facility",
+      "target_name": "Facility 1"
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source_label": "Encounter",
+      "source_name": "Encounter 3",
+      "target_label": "Facility",
+      "target_name": "Facility 3"
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source_label": "Encounter",
+      "source_name": "Encounter 4",
+      "target_label": "Facility",
+      "target_name": "Facility 1"
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source_label": "Encounter",
+      "source_name": "Encounter 5",
+      "target_label": "Facility",
+      "target_name": "Facility 4"
+    },
+    {
+      "type": "RESULTED_IN",
+      "source_label": "Encounter",
+      "source_name": "Encounter 1",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 3"
+    },
+    {
+      "type": "RESULTED_IN",
+      "source_label": "Encounter",
+      "source_name": "Encounter 1",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 4"
+    },
+    {
+      "type": "RESULTED_IN",
+      "source_label": "Encounter",
+      "source_name": "Encounter 2",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 3"
+    },
+    {
+      "type": "RESULTED_IN",
+      "source_label": "Encounter",
+      "source_name": "Encounter 2",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 2"
+    },
+    {
+      "type": "RESULTED_IN",
+      "source_label": "Encounter",
+      "source_name": "Encounter 3",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 2"
+    },
+    {
+      "type": "RESULTED_IN",
+      "source_label": "Encounter",
+      "source_name": "Encounter 3",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 4"
+    },
+    {
+      "type": "RESULTED_IN",
+      "source_label": "Encounter",
+      "source_name": "Encounter 4",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 2"
+    },
+    {
+      "type": "RESULTED_IN",
+      "source_label": "Encounter",
+      "source_name": "Encounter 5",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 1"
+    },
+    {
+      "type": "RESULTED_IN",
+      "source_label": "Encounter",
+      "source_name": "Encounter 5",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 5"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Encounter",
+      "source_name": "Encounter 1",
+      "target_label": "Treatment",
+      "target_name": "Treatment 5"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Encounter",
+      "source_name": "Encounter 2",
+      "target_label": "Treatment",
+      "target_name": "Treatment 1"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Encounter",
+      "source_name": "Encounter 3",
+      "target_label": "Treatment",
+      "target_name": "Treatment 3"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Encounter",
+      "source_name": "Encounter 3",
+      "target_label": "Treatment",
+      "target_name": "Treatment 5"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Encounter",
+      "source_name": "Encounter 4",
+      "target_label": "Treatment",
+      "target_name": "Treatment 1"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Encounter",
+      "source_name": "Encounter 5",
+      "target_label": "Treatment",
+      "target_name": "Treatment 2"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Encounter",
+      "source_name": "Encounter 5",
+      "target_label": "Treatment",
+      "target_name": "Treatment 3"
+    },
+    {
+      "type": "TREATS",
+      "source_label": "Treatment",
+      "source_name": "Treatment 1",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 2"
+    },
+    {
+      "type": "TREATS",
+      "source_label": "Treatment",
+      "source_name": "Treatment 1",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 3"
+    },
+    {
+      "type": "TREATS",
+      "source_label": "Treatment",
+      "source_name": "Treatment 2",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 2"
+    },
+    {
+      "type": "TREATS",
+      "source_label": "Treatment",
+      "source_name": "Treatment 3",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 1"
+    },
+    {
+      "type": "TREATS",
+      "source_label": "Treatment",
+      "source_name": "Treatment 4",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 2"
+    },
+    {
+      "type": "TREATS",
+      "source_label": "Treatment",
+      "source_name": "Treatment 5",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 1"
+    },
+    {
+      "type": "TREATS",
+      "source_label": "Treatment",
+      "source_name": "Treatment 5",
+      "target_label": "Diagnosis",
+      "target_name": "Diagnosis 4"
+    },
+    {
+      "type": "USES",
+      "source_label": "Treatment",
+      "source_name": "Treatment 1",
+      "target_label": "Medication",
+      "target_name": "Medication 4"
+    },
+    {
+      "type": "USES",
+      "source_label": "Treatment",
+      "source_name": "Treatment 2",
+      "target_label": "Medication",
+      "target_name": "Medication 2"
+    },
+    {
+      "type": "USES",
+      "source_label": "Treatment",
+      "source_name": "Treatment 3",
+      "target_label": "Medication",
+      "target_name": "Medication 4"
+    },
+    {
+      "type": "USES",
+      "source_label": "Treatment",
+      "source_name": "Treatment 4",
+      "target_label": "Medication",
+      "target_name": "Medication 5"
+    },
+    {
+      "type": "USES",
+      "source_label": "Treatment",
+      "source_name": "Treatment 4",
+      "target_label": "Medication",
+      "target_name": "Medication 2"
+    },
+    {
+      "type": "USES",
+      "source_label": "Treatment",
+      "source_name": "Treatment 5",
+      "target_label": "Medication",
+      "target_name": "Medication 2"
+    },
+    {
+      "type": "CONTRAINDICATED_WITH",
+      "source_label": "Medication",
+      "source_name": "Medication 1",
+      "target_label": "Medication",
+      "target_name": "Medication 5"
+    },
+    {
+      "type": "CONTRAINDICATED_WITH",
+      "source_label": "Medication",
+      "source_name": "Medication 3",
+      "target_label": "Medication",
+      "target_name": "Medication 1"
+    },
+    {
+      "type": "CONTRAINDICATED_WITH",
+      "source_label": "Medication",
+      "source_name": "Medication 4",
+      "target_label": "Medication",
+      "target_name": "Medication 1"
+    },
+    {
+      "type": "CONTRAINDICATED_WITH",
+      "source_label": "Medication",
+      "source_name": "Medication 5",
+      "target_label": "Medication",
+      "target_name": "Medication 1"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Provider",
+      "source_name": "Provider 1",
+      "target_label": "Facility",
+      "target_name": "Facility 1"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Provider",
+      "source_name": "Provider 2",
+      "target_label": "Facility",
+      "target_name": "Facility 3"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Provider",
+      "source_name": "Provider 3",
+      "target_label": "Facility",
+      "target_name": "Facility 3"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Provider",
+      "source_name": "Provider 3",
+      "target_label": "Facility",
+      "target_name": "Facility 2"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Provider",
+      "source_name": "Provider 4",
+      "target_label": "Facility",
+      "target_name": "Facility 1"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Provider",
+      "source_name": "Provider 4",
+      "target_label": "Facility",
+      "target_name": "Facility 3"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Provider",
+      "source_name": "Provider 5",
+      "target_label": "Facility",
+      "target_name": "Facility 1"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Provider",
+      "source_name": "Provider 5",
+      "target_label": "Facility",
+      "target_name": "Facility 3"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "discharge_summary",
+      "template_name": "Discharge Summary",
+      "title": "Discharge Summary #1",
+      "content": "Sample Discharge Summary #1\n\nThis is a sample patient discharge summaries after hospital stays for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "discharge_summary",
+      "template_name": "Discharge Summary",
+      "title": "Discharge Summary #2",
+      "content": "Sample Discharge Summary #2\n\nThis is a sample patient discharge summaries after hospital stays for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "discharge_summary",
+      "template_name": "Discharge Summary",
+      "title": "Discharge Summary #3",
+      "content": "Sample Discharge Summary #3\n\nThis is a sample patient discharge summaries after hospital stays for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "discharge_summary",
+      "template_name": "Discharge Summary",
+      "title": "Discharge Summary #4",
+      "content": "Sample Discharge Summary #4\n\nThis is a sample patient discharge summaries after hospital stays for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "discharge_summary",
+      "template_name": "Discharge Summary",
+      "title": "Discharge Summary #5",
+      "content": "Sample Discharge Summary #5\n\nThis is a sample patient discharge summaries after hospital stays for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "referral_letter",
+      "template_name": "Referral Letter",
+      "title": "Referral Letter #1",
+      "content": "Sample Referral Letter #1\n\nThis is a sample provider-to-provider referral communications for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "referral_letter",
+      "template_name": "Referral Letter",
+      "title": "Referral Letter #2",
+      "content": "Sample Referral Letter #2\n\nThis is a sample provider-to-provider referral communications for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "referral_letter",
+      "template_name": "Referral Letter",
+      "title": "Referral Letter #3",
+      "content": "Sample Referral Letter #3\n\nThis is a sample provider-to-provider referral communications for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "referral_letter",
+      "template_name": "Referral Letter",
+      "title": "Referral Letter #4",
+      "content": "Sample Referral Letter #4\n\nThis is a sample provider-to-provider referral communications for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "referral_letter",
+      "template_name": "Referral Letter",
+      "title": "Referral Letter #5",
+      "content": "Sample Referral Letter #5\n\nThis is a sample provider-to-provider referral communications for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_report",
+      "template_name": "Laboratory Report",
+      "title": "Laboratory Report #1",
+      "content": "Sample Laboratory Report #1\n\nThis is a sample lab test results and interpretations for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_report",
+      "template_name": "Laboratory Report",
+      "title": "Laboratory Report #2",
+      "content": "Sample Laboratory Report #2\n\nThis is a sample lab test results and interpretations for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_report",
+      "template_name": "Laboratory Report",
+      "title": "Laboratory Report #3",
+      "content": "Sample Laboratory Report #3\n\nThis is a sample lab test results and interpretations for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_report",
+      "template_name": "Laboratory Report",
+      "title": "Laboratory Report #4",
+      "content": "Sample Laboratory Report #4\n\nThis is a sample lab test results and interpretations for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_report",
+      "template_name": "Laboratory Report",
+      "title": "Laboratory Report #5",
+      "content": "Sample Laboratory Report #5\n\nThis is a sample lab test results and interpretations for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "progress_note",
+      "template_name": "Clinical Progress Note",
+      "title": "Clinical Progress Note #1",
+      "content": "Sample Clinical Progress Note #1\n\nThis is a sample provider notes from patient encounters for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "progress_note",
+      "template_name": "Clinical Progress Note",
+      "title": "Clinical Progress Note #2",
+      "content": "Sample Clinical Progress Note #2\n\nThis is a sample provider notes from patient encounters for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "progress_note",
+      "template_name": "Clinical Progress Note",
+      "title": "Clinical Progress Note #3",
+      "content": "Sample Clinical Progress Note #3\n\nThis is a sample provider notes from patient encounters for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "progress_note",
+      "template_name": "Clinical Progress Note",
+      "title": "Clinical Progress Note #4",
+      "content": "Sample Clinical Progress Note #4\n\nThis is a sample provider notes from patient encounters for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "progress_note",
+      "template_name": "Clinical Progress Note",
+      "title": "Clinical Progress Note #5",
+      "content": "Sample Clinical Progress Note #5\n\nThis is a sample provider notes from patient encounters for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Case Conference Notes",
+      "title": "Case Conference Notes #1",
+      "content": "Sample Case Conference Notes #1\n\nThis is a sample multi-disciplinary team case discussions for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Case Conference Notes",
+      "title": "Case Conference Notes #2",
+      "content": "Sample Case Conference Notes #2\n\nThis is a sample multi-disciplinary team case discussions for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Case Conference Notes",
+      "title": "Case Conference Notes #3",
+      "content": "Sample Case Conference Notes #3\n\nThis is a sample multi-disciplinary team case discussions for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Case Conference Notes",
+      "title": "Case Conference Notes #4",
+      "content": "Sample Case Conference Notes #4\n\nThis is a sample multi-disciplinary team case discussions for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Case Conference Notes",
+      "title": "Case Conference Notes #5",
+      "content": "Sample Case Conference Notes #5\n\nThis is a sample multi-disciplinary team case discussions for the Healthcare domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "treatment_selection",
+      "task": "Select appropriate treatment plan for Patient 2 diagnosed with Diagnosis 5",
+      "steps": [
+        {
+          "thought": "Review patient history and current diagnoses",
+          "action": "Query patient entity graph including past encounters, diagnoses, and medications",
+          "observation": "Results retrieved for: Query patient entity graph including past encounters, diagnoses, and medications"
+        },
+        {
+          "thought": "Check for medication contraindications and allergies",
+          "action": "Cross-reference proposed medications with patient allergies and current prescriptions",
+          "observation": "Results retrieved for: Cross-reference proposed medications with patient allergies and current prescriptions"
+        },
+        {
+          "thought": "Evaluate treatment options based on clinical evidence",
+          "action": "Find similar past cases and their treatment outcomes",
+          "observation": "Results retrieved for: Find similar past cases and their treatment outcomes"
+        },
+        {
+          "thought": "Consider patient preferences and facility capabilities",
+          "action": "Review available treatments at the patient's facility",
+          "observation": "Results retrieved for: Review available treatments at the patient's facility"
+        }
+      ],
+      "outcome": "Treatment plan: {{plan}}. Rationale: {{rationale}}"
+    },
+    {
+      "id": "referral_decision",
+      "task": "Determine if patient Patient 4 should be referred to a specialist for Diagnosis 2",
+      "steps": [
+        {
+          "thought": "Assess the complexity and progression of the condition",
+          "action": "Query diagnosis history and treatment response",
+          "observation": "Results retrieved for: Query diagnosis history and treatment response"
+        },
+        {
+          "thought": "Identify appropriate specialists in the network",
+          "action": "Search providers by specialty and facility affiliation",
+          "observation": "Results retrieved for: Search providers by specialty and facility affiliation"
+        },
+        {
+          "thought": "Check specialist availability and patient coverage",
+          "action": "Query provider schedules and patient insurance compatibility",
+          "observation": "Results retrieved for: Query provider schedules and patient insurance compatibility"
+        }
+      ],
+      "outcome": "Referral decision: {{decision}}. Specialist: {{provider.name}}"
+    },
+    {
+      "id": "readmission_risk",
+      "task": "Assess readmission risk for Patient 2 being discharged after Diagnosis 1 treatment",
+      "steps": [
+        {
+          "thought": "Review patient's hospitalization and readmission history",
+          "action": "Query past encounters and discharge outcomes",
+          "observation": "Results retrieved for: Query past encounters and discharge outcomes"
+        },
+        {
+          "thought": "Evaluate completeness of discharge plan",
+          "action": "Check for scheduled follow-ups, medication reconciliation, and support services",
+          "observation": "Results retrieved for: Check for scheduled follow-ups, medication reconciliation, and support services"
+        },
+        {
+          "thought": "Identify risk factors from similar patients",
+          "action": "Find patients with similar diagnoses and demographics, check their readmission rates",
+          "observation": "Results retrieved for: Find patients with similar diagnoses and demographics, check their readmission rates"
+        }
+      ],
+      "outcome": "Risk level: {{risk_level}}. Mitigation: {{actions}}"
+    }
+  ]
+}

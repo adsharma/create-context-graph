@@ -1,0 +1,1209 @@
+{
+  "domain": "product-management",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Feature": [
+      {
+        "name": "Feature 1",
+        "feature_id": "Sample feature_id for Feature 1",
+        "description": "Sample description for Feature 1",
+        "priority": "high",
+        "status": "discovery",
+        "effort_estimate": "s",
+        "impact_score": 10.5
+      },
+      {
+        "name": "Feature 2",
+        "feature_id": "Sample feature_id for Feature 2",
+        "description": "Sample description for Feature 2",
+        "priority": "medium",
+        "status": "defined",
+        "effort_estimate": "m",
+        "impact_score": 21.0
+      },
+      {
+        "name": "Feature 3",
+        "feature_id": "Sample feature_id for Feature 3",
+        "description": "Sample description for Feature 3",
+        "priority": "low",
+        "status": "in_progress",
+        "effort_estimate": "l",
+        "impact_score": 31.5
+      },
+      {
+        "name": "Feature 4",
+        "feature_id": "Sample feature_id for Feature 4",
+        "description": "Sample description for Feature 4",
+        "priority": "critical",
+        "status": "shipped",
+        "effort_estimate": "xl",
+        "impact_score": 42.0
+      },
+      {
+        "name": "Feature 5",
+        "feature_id": "Sample feature_id for Feature 5",
+        "description": "Sample description for Feature 5",
+        "priority": "high",
+        "status": "deprecated",
+        "effort_estimate": "xs",
+        "impact_score": 52.5
+      }
+    ],
+    "Epic": [
+      {
+        "name": "Epic 1",
+        "epic_id": "Sample epic_id for Epic 1",
+        "description": "Sample description for Epic 1",
+        "status": "active",
+        "quarter": "Sample quarter for Epic 1",
+        "theme": "retention"
+      },
+      {
+        "name": "Epic 2",
+        "epic_id": "Sample epic_id for Epic 2",
+        "description": "Sample description for Epic 2",
+        "status": "completed",
+        "quarter": "Sample quarter for Epic 2",
+        "theme": "monetization"
+      },
+      {
+        "name": "Epic 3",
+        "epic_id": "Sample epic_id for Epic 3",
+        "description": "Sample description for Epic 3",
+        "status": "cancelled",
+        "quarter": "Sample quarter for Epic 3",
+        "theme": "platform"
+      },
+      {
+        "name": "Epic 4",
+        "epic_id": "Sample epic_id for Epic 4",
+        "description": "Sample description for Epic 4",
+        "status": "draft",
+        "quarter": "Sample quarter for Epic 4",
+        "theme": "infrastructure"
+      },
+      {
+        "name": "Epic 5",
+        "epic_id": "Sample epic_id for Epic 5",
+        "description": "Sample description for Epic 5",
+        "status": "active",
+        "quarter": "Sample quarter for Epic 5",
+        "theme": "compliance"
+      }
+    ],
+    "UserPersona": [
+      {
+        "name": "UserPersona 1",
+        "persona_id": "Sample persona_id for UserPersona 1",
+        "role": "Sample role for UserPersona 1",
+        "segment": "smb",
+        "pain_points": "Sample pain_points for UserPersona 1",
+        "goals": "Sample goals for UserPersona 1"
+      },
+      {
+        "name": "UserPersona 2",
+        "persona_id": "Sample persona_id for UserPersona 2",
+        "role": "Sample role for UserPersona 2",
+        "segment": "consumer",
+        "pain_points": "Sample pain_points for UserPersona 2",
+        "goals": "Sample goals for UserPersona 2"
+      },
+      {
+        "name": "UserPersona 3",
+        "persona_id": "Sample persona_id for UserPersona 3",
+        "role": "Sample role for UserPersona 3",
+        "segment": "developer",
+        "pain_points": "Sample pain_points for UserPersona 3",
+        "goals": "Sample goals for UserPersona 3"
+      },
+      {
+        "name": "UserPersona 4",
+        "persona_id": "Sample persona_id for UserPersona 4",
+        "role": "Sample role for UserPersona 4",
+        "segment": "admin",
+        "pain_points": "Sample pain_points for UserPersona 4",
+        "goals": "Sample goals for UserPersona 4"
+      },
+      {
+        "name": "UserPersona 5",
+        "persona_id": "Sample persona_id for UserPersona 5",
+        "role": "Sample role for UserPersona 5",
+        "segment": "enterprise",
+        "pain_points": "Sample pain_points for UserPersona 5",
+        "goals": "Sample goals for UserPersona 5"
+      }
+    ],
+    "Metric": [
+      {
+        "name": "Metric 1",
+        "metric_id": "Sample metric_id for Metric 1",
+        "metric_type": "engagement",
+        "current_value": 10.5,
+        "target_value": 10.5,
+        "unit": "Sample unit for Metric 1"
+      },
+      {
+        "name": "Metric 2",
+        "metric_id": "Sample metric_id for Metric 2",
+        "metric_type": "retention",
+        "current_value": 21.0,
+        "target_value": 21.0,
+        "unit": "Sample unit for Metric 2"
+      },
+      {
+        "name": "Metric 3",
+        "metric_id": "Sample metric_id for Metric 3",
+        "metric_type": "revenue",
+        "current_value": 31.5,
+        "target_value": 31.5,
+        "unit": "Sample unit for Metric 3"
+      },
+      {
+        "name": "Metric 4",
+        "metric_id": "Sample metric_id for Metric 4",
+        "metric_type": "conversion",
+        "current_value": 42.0,
+        "target_value": 42.0,
+        "unit": "Sample unit for Metric 4"
+      },
+      {
+        "name": "Metric 5",
+        "metric_id": "Sample metric_id for Metric 5",
+        "metric_type": "satisfaction",
+        "current_value": 52.5,
+        "target_value": 52.5,
+        "unit": "Sample unit for Metric 5"
+      }
+    ],
+    "Release": [
+      {
+        "name": "Release 1",
+        "release_id": "Sample release_id for Release 1",
+        "version": "Sample version for Release 1",
+        "release_type": "minor",
+        "status": "development"
+      },
+      {
+        "name": "Release 2",
+        "release_id": "Sample release_id for Release 2",
+        "version": "Sample version for Release 2",
+        "release_type": "patch",
+        "status": "staging"
+      },
+      {
+        "name": "Release 3",
+        "release_id": "Sample release_id for Release 3",
+        "version": "Sample version for Release 3",
+        "release_type": "hotfix",
+        "status": "released"
+      },
+      {
+        "name": "Release 4",
+        "release_id": "Sample release_id for Release 4",
+        "version": "Sample version for Release 4",
+        "release_type": "beta",
+        "status": "rolled_back"
+      },
+      {
+        "name": "Release 5",
+        "release_id": "Sample release_id for Release 5",
+        "version": "Sample version for Release 5",
+        "release_type": "major",
+        "status": "planning"
+      }
+    ],
+    "Feedback": [
+      {
+        "name": "Feedback 1",
+        "feedback_id": "Sample feedback_id for Feedback 1",
+        "title": "Sample title for Feedback 1",
+        "feedback_type": "bug_report",
+        "source": "survey",
+        "sentiment": "neutral",
+        "verbatim": "Sample verbatim for Feedback 1"
+      },
+      {
+        "name": "Feedback 2",
+        "feedback_id": "Sample feedback_id for Feedback 2",
+        "title": "Sample title for Feedback 2",
+        "feedback_type": "complaint",
+        "source": "support_ticket",
+        "sentiment": "negative",
+        "verbatim": "Sample verbatim for Feedback 2"
+      },
+      {
+        "name": "Feedback 3",
+        "feedback_id": "Sample feedback_id for Feedback 3",
+        "title": "Sample title for Feedback 3",
+        "feedback_type": "praise",
+        "source": "app_review",
+        "sentiment": "positive",
+        "verbatim": "Sample verbatim for Feedback 3"
+      },
+      {
+        "name": "Feedback 4",
+        "feedback_id": "Sample feedback_id for Feedback 4",
+        "title": "Sample title for Feedback 4",
+        "feedback_type": "suggestion",
+        "source": "social_media",
+        "sentiment": "neutral",
+        "verbatim": "Sample verbatim for Feedback 4"
+      },
+      {
+        "name": "Feedback 5",
+        "feedback_id": "Sample feedback_id for Feedback 5",
+        "title": "Sample title for Feedback 5",
+        "feedback_type": "feature_request",
+        "source": "sales_call",
+        "sentiment": "negative",
+        "verbatim": "Sample verbatim for Feedback 5"
+      }
+    ],
+    "Objective": [
+      {
+        "name": "Objective 1",
+        "objective_id": "Sample objective_id for Objective 1",
+        "quarter": "Sample quarter for Objective 1",
+        "status": "at_risk"
+      },
+      {
+        "name": "Objective 2",
+        "objective_id": "Sample objective_id for Objective 2",
+        "quarter": "Sample quarter for Objective 2",
+        "status": "behind"
+      },
+      {
+        "name": "Objective 3",
+        "objective_id": "Sample objective_id for Objective 3",
+        "quarter": "Sample quarter for Objective 3",
+        "status": "achieved"
+      },
+      {
+        "name": "Objective 4",
+        "objective_id": "Sample objective_id for Objective 4",
+        "quarter": "Sample quarter for Objective 4",
+        "status": "on_track"
+      },
+      {
+        "name": "Objective 5",
+        "objective_id": "Sample objective_id for Objective 5",
+        "quarter": "Sample quarter for Objective 5",
+        "status": "at_risk"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "REQUESTED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 1"
+    },
+    {
+      "type": "REQUESTED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 1"
+    },
+    {
+      "type": "REQUESTED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 3"
+    },
+    {
+      "type": "REQUESTED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 5"
+    },
+    {
+      "type": "REQUESTED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 2"
+    },
+    {
+      "type": "REQUESTED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 4"
+    },
+    {
+      "type": "REQUESTED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 1"
+    },
+    {
+      "type": "PRIORITIZED_IN",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Epic",
+      "target_name": "Epic 4"
+    },
+    {
+      "type": "PRIORITIZED_IN",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "Epic",
+      "target_name": "Epic 2"
+    },
+    {
+      "type": "PRIORITIZED_IN",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Epic",
+      "target_name": "Epic 3"
+    },
+    {
+      "type": "PRIORITIZED_IN",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Epic",
+      "target_name": "Epic 1"
+    },
+    {
+      "type": "PRIORITIZED_IN",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Epic",
+      "target_name": "Epic 2"
+    },
+    {
+      "type": "PRIORITIZED_IN",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Epic",
+      "target_name": "Epic 1"
+    },
+    {
+      "type": "PRIORITIZED_IN",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Epic",
+      "target_name": "Epic 2"
+    },
+    {
+      "type": "MEASURED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Metric",
+      "target_name": "Metric 1"
+    },
+    {
+      "type": "MEASURED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "Metric",
+      "target_name": "Metric 2"
+    },
+    {
+      "type": "MEASURED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "Metric",
+      "target_name": "Metric 3"
+    },
+    {
+      "type": "MEASURED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Metric",
+      "target_name": "Metric 5"
+    },
+    {
+      "type": "MEASURED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Metric",
+      "target_name": "Metric 3"
+    },
+    {
+      "type": "MEASURED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Metric",
+      "target_name": "Metric 4"
+    },
+    {
+      "type": "MEASURED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Metric",
+      "target_name": "Metric 4"
+    },
+    {
+      "type": "MEASURED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Metric",
+      "target_name": "Metric 5"
+    },
+    {
+      "type": "PART_OF_RELEASE",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Release",
+      "target_name": "Release 5"
+    },
+    {
+      "type": "PART_OF_RELEASE",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "Release",
+      "target_name": "Release 1"
+    },
+    {
+      "type": "PART_OF_RELEASE",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Release",
+      "target_name": "Release 2"
+    },
+    {
+      "type": "PART_OF_RELEASE",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Release",
+      "target_name": "Release 5"
+    },
+    {
+      "type": "PART_OF_RELEASE",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Release",
+      "target_name": "Release 3"
+    },
+    {
+      "type": "PART_OF_RELEASE",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Release",
+      "target_name": "Release 3"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Feature",
+      "target_name": "Feature 4"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Feature",
+      "target_name": "Feature 3"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Feature",
+      "target_name": "Feature 2"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Feature",
+      "target_name": "Feature 1"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Feature",
+      "target_name": "Feature 3"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Feature",
+      "target_name": "Feature 3"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Feature",
+      "target_name": "Feature 4"
+    },
+    {
+      "type": "ADDRESSES",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Feedback",
+      "target_name": "Feedback 5"
+    },
+    {
+      "type": "ADDRESSES",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Feedback",
+      "target_name": "Feedback 1"
+    },
+    {
+      "type": "ADDRESSES",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "Feedback",
+      "target_name": "Feedback 4"
+    },
+    {
+      "type": "ADDRESSES",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Feedback",
+      "target_name": "Feedback 3"
+    },
+    {
+      "type": "ADDRESSES",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Feedback",
+      "target_name": "Feedback 5"
+    },
+    {
+      "type": "ADDRESSES",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Feedback",
+      "target_name": "Feedback 3"
+    },
+    {
+      "type": "ADDRESSES",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Feedback",
+      "target_name": "Feedback 5"
+    },
+    {
+      "type": "ADDRESSES",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Feedback",
+      "target_name": "Feedback 3"
+    },
+    {
+      "type": "CONTRIBUTES_TO",
+      "source_label": "Epic",
+      "source_name": "Epic 1",
+      "target_label": "Objective",
+      "target_name": "Objective 2"
+    },
+    {
+      "type": "CONTRIBUTES_TO",
+      "source_label": "Epic",
+      "source_name": "Epic 2",
+      "target_label": "Objective",
+      "target_name": "Objective 2"
+    },
+    {
+      "type": "CONTRIBUTES_TO",
+      "source_label": "Epic",
+      "source_name": "Epic 3",
+      "target_label": "Objective",
+      "target_name": "Objective 2"
+    },
+    {
+      "type": "CONTRIBUTES_TO",
+      "source_label": "Epic",
+      "source_name": "Epic 4",
+      "target_label": "Objective",
+      "target_name": "Objective 3"
+    },
+    {
+      "type": "CONTRIBUTES_TO",
+      "source_label": "Epic",
+      "source_name": "Epic 4",
+      "target_label": "Objective",
+      "target_name": "Objective 1"
+    },
+    {
+      "type": "CONTRIBUTES_TO",
+      "source_label": "Epic",
+      "source_name": "Epic 5",
+      "target_label": "Objective",
+      "target_name": "Objective 1"
+    },
+    {
+      "type": "SUBMITTED_BY",
+      "source_label": "Feedback",
+      "source_name": "Feedback 1",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 2"
+    },
+    {
+      "type": "SUBMITTED_BY",
+      "source_label": "Feedback",
+      "source_name": "Feedback 1",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 3"
+    },
+    {
+      "type": "SUBMITTED_BY",
+      "source_label": "Feedback",
+      "source_name": "Feedback 2",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 1"
+    },
+    {
+      "type": "SUBMITTED_BY",
+      "source_label": "Feedback",
+      "source_name": "Feedback 3",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 3"
+    },
+    {
+      "type": "SUBMITTED_BY",
+      "source_label": "Feedback",
+      "source_name": "Feedback 4",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 2"
+    },
+    {
+      "type": "SUBMITTED_BY",
+      "source_label": "Feedback",
+      "source_name": "Feedback 4",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 4"
+    },
+    {
+      "type": "SUBMITTED_BY",
+      "source_label": "Feedback",
+      "source_name": "Feedback 5",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 5"
+    },
+    {
+      "type": "SUBMITTED_BY",
+      "source_label": "Feedback",
+      "source_name": "Feedback 5",
+      "target_label": "UserPersona",
+      "target_name": "UserPersona 2"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "prd",
+      "template_name": "Product Requirements Document",
+      "title": "Product Requirements Document #1",
+      "content": "Sample Product Requirements Document #1\n\nThis is a sample detailed product requirements document for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "prd",
+      "template_name": "Product Requirements Document",
+      "title": "Product Requirements Document #2",
+      "content": "Sample Product Requirements Document #2\n\nThis is a sample detailed product requirements document for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "prd",
+      "template_name": "Product Requirements Document",
+      "title": "Product Requirements Document #3",
+      "content": "Sample Product Requirements Document #3\n\nThis is a sample detailed product requirements document for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "prd",
+      "template_name": "Product Requirements Document",
+      "title": "Product Requirements Document #4",
+      "content": "Sample Product Requirements Document #4\n\nThis is a sample detailed product requirements document for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "prd",
+      "template_name": "Product Requirements Document",
+      "title": "Product Requirements Document #5",
+      "content": "Sample Product Requirements Document #5\n\nThis is a sample detailed product requirements document for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "roadmap_update",
+      "template_name": "Roadmap Update",
+      "title": "Roadmap Update #1",
+      "content": "Sample Roadmap Update #1\n\nThis is a sample quarterly roadmap update for stakeholders for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "roadmap_update",
+      "template_name": "Roadmap Update",
+      "title": "Roadmap Update #2",
+      "content": "Sample Roadmap Update #2\n\nThis is a sample quarterly roadmap update for stakeholders for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "roadmap_update",
+      "template_name": "Roadmap Update",
+      "title": "Roadmap Update #3",
+      "content": "Sample Roadmap Update #3\n\nThis is a sample quarterly roadmap update for stakeholders for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "roadmap_update",
+      "template_name": "Roadmap Update",
+      "title": "Roadmap Update #4",
+      "content": "Sample Roadmap Update #4\n\nThis is a sample quarterly roadmap update for stakeholders for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "roadmap_update",
+      "template_name": "Roadmap Update",
+      "title": "Roadmap Update #5",
+      "content": "Sample Roadmap Update #5\n\nThis is a sample quarterly roadmap update for stakeholders for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "user_interview_notes",
+      "template_name": "User Interview Notes",
+      "title": "User Interview Notes #1",
+      "content": "Sample User Interview Notes #1\n\nThis is a sample structured notes from user research interviews for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "user_interview_notes",
+      "template_name": "User Interview Notes",
+      "title": "User Interview Notes #2",
+      "content": "Sample User Interview Notes #2\n\nThis is a sample structured notes from user research interviews for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "user_interview_notes",
+      "template_name": "User Interview Notes",
+      "title": "User Interview Notes #3",
+      "content": "Sample User Interview Notes #3\n\nThis is a sample structured notes from user research interviews for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "user_interview_notes",
+      "template_name": "User Interview Notes",
+      "title": "User Interview Notes #4",
+      "content": "Sample User Interview Notes #4\n\nThis is a sample structured notes from user research interviews for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "user_interview_notes",
+      "template_name": "User Interview Notes",
+      "title": "User Interview Notes #5",
+      "content": "Sample User Interview Notes #5\n\nThis is a sample structured notes from user research interviews for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "sprint_review",
+      "template_name": "Sprint Review",
+      "title": "Sprint Review #1",
+      "content": "Sample Sprint Review #1\n\nThis is a sample sprint review summary with demos and outcomes for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "sprint_review",
+      "template_name": "Sprint Review",
+      "title": "Sprint Review #2",
+      "content": "Sample Sprint Review #2\n\nThis is a sample sprint review summary with demos and outcomes for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "sprint_review",
+      "template_name": "Sprint Review",
+      "title": "Sprint Review #3",
+      "content": "Sample Sprint Review #3\n\nThis is a sample sprint review summary with demos and outcomes for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "sprint_review",
+      "template_name": "Sprint Review",
+      "title": "Sprint Review #4",
+      "content": "Sample Sprint Review #4\n\nThis is a sample sprint review summary with demos and outcomes for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "sprint_review",
+      "template_name": "Sprint Review",
+      "title": "Sprint Review #5",
+      "content": "Sample Sprint Review #5\n\nThis is a sample sprint review summary with demos and outcomes for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "feature_spec",
+      "template_name": "Feature Specification",
+      "title": "Feature Specification #1",
+      "content": "Sample Feature Specification #1\n\nThis is a sample technical specification for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "feature_spec",
+      "template_name": "Feature Specification",
+      "title": "Feature Specification #2",
+      "content": "Sample Feature Specification #2\n\nThis is a sample technical specification for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "feature_spec",
+      "template_name": "Feature Specification",
+      "title": "Feature Specification #3",
+      "content": "Sample Feature Specification #3\n\nThis is a sample technical specification for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "feature_spec",
+      "template_name": "Feature Specification",
+      "title": "Feature Specification #4",
+      "content": "Sample Feature Specification #4\n\nThis is a sample technical specification for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "feature_spec",
+      "template_name": "Feature Specification",
+      "title": "Feature Specification #5",
+      "content": "Sample Feature Specification #5\n\nThis is a sample technical specification for a feature for the Product Management domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "feature_prioritization",
+      "task": "Decide whether to prioritize Feature 4 for the upcoming sprint",
+      "steps": [
+        {
+          "thought": "Assess user demand and feedback volume for this feature",
+          "action": "Query feedback items that this feature addresses and their sentiment",
+          "observation": "Results retrieved for: Query feedback items that this feature addresses and their sentiment"
+        },
+        {
+          "thought": "Evaluate impact on key metrics and strategic objectives",
+          "action": "Check which metrics this feature affects and projected improvement",
+          "observation": "Results retrieved for: Check which metrics this feature affects and projected improvement"
+        },
+        {
+          "thought": "Consider effort, dependencies, and team capacity",
+          "action": "Review effort estimate, dependency chain, and current sprint load",
+          "observation": "Results retrieved for: Review effort estimate, dependency chain, and current sprint load"
+        },
+        {
+          "thought": "Compare against competing features for the same release",
+          "action": "Rank all candidate features by impact-to-effort ratio",
+          "observation": "Results retrieved for: Rank all candidate features by impact-to-effort ratio"
+        }
+      ],
+      "outcome": "Decision: {{decision}} the feature based on {{rationale}}"
+    },
+    {
+      "id": "release_go_no_go",
+      "task": "Determine if Release 3 is ready to ship",
+      "steps": [
+        {
+          "thought": "Check feature completion status for all planned items",
+          "action": "Query all features in this release and their current status",
+          "observation": "Results retrieved for: Query all features in this release and their current status"
+        },
+        {
+          "thought": "Evaluate quality signals and regression risk",
+          "action": "Review bug reports and test coverage for release features",
+          "observation": "Results retrieved for: Review bug reports and test coverage for release features"
+        },
+        {
+          "thought": "Assess metric baselines and rollback plan readiness",
+          "action": "Verify monitoring dashboards and rollback procedures",
+          "observation": "Results retrieved for: Verify monitoring dashboards and rollback procedures"
+        }
+      ],
+      "outcome": "Decision: {{decision}} to release with {{conditions}}"
+    },
+    {
+      "id": "persona_investment",
+      "task": "Determine investment level for {{user_persona.name}} persona in Q{{quarter}}",
+      "steps": [
+        {
+          "thought": "Analyze current engagement and retention for this segment",
+          "action": "Query metrics tied to this persona's features",
+          "observation": "Results retrieved for: Query metrics tied to this persona's features"
+        },
+        {
+          "thought": "Review outstanding feedback and unmet needs",
+          "action": "Aggregate feedback from this persona segment",
+          "observation": "Results retrieved for: Aggregate feedback from this persona segment"
+        },
+        {
+          "thought": "Compare revenue potential vs investment required",
+          "action": "Estimate ROI of persona-targeted features",
+          "observation": "Results retrieved for: Estimate ROI of persona-targeted features"
+        }
+      ],
+      "outcome": "Recommendation: {{level}} investment for {{persona}} based on {{rationale}}"
+    }
+  ]
+}

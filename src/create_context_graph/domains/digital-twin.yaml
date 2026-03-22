@@ -1,0 +1,402 @@
+inherits: _base
+
+domain:
+  id: digital-twin
+  name: Digital Twin
+  description: IoT asset monitoring, sensor data management, predictive maintenance, and system health analysis
+  tagline: "AI-powered Digital Twin Intelligence"
+  emoji: "\U0001F3ED"
+
+entity_types:
+  - label: Asset
+    pole_type: OBJECT
+    subtype: PHYSICAL_ASSET
+    color: "#2563eb"
+    icon: hard-drive
+    properties:
+      - name: asset_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: asset_type
+        type: string
+        enum: [turbine, pump, motor, hvac, conveyor, compressor, generator]
+      - name: manufacturer
+        type: string
+      - name: install_date
+        type: date
+      - name: location
+        type: string
+      - name: status
+        type: string
+        enum: [operational, degraded, offline, maintenance, decommissioned]
+
+  - label: Sensor
+    pole_type: OBJECT
+    subtype: IOT_SENSOR
+    color: "#10b981"
+    icon: radio
+    properties:
+      - name: sensor_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: sensor_type
+        type: string
+        enum: [temperature, pressure, vibration, flow, humidity, voltage, current]
+      - name: unit
+        type: string
+      - name: min_threshold
+        type: float
+      - name: max_threshold
+        type: float
+      - name: status
+        type: string
+        enum: [active, calibrating, faulty, offline]
+
+  - label: Reading
+    pole_type: EVENT
+    subtype: SENSOR_READING
+    color: "#06b6d4"
+    icon: activity
+    properties:
+      - name: reading_id
+        type: string
+        required: true
+        unique: true
+      - name: value
+        type: float
+        required: true
+      - name: timestamp
+        type: datetime
+        required: true
+      - name: quality
+        type: string
+        enum: [good, suspect, bad, interpolated]
+
+  - label: Alert
+    pole_type: EVENT
+    subtype: SYSTEM_ALERT
+    color: "#ef4444"
+    icon: alert-triangle
+    properties:
+      - name: alert_id
+        type: string
+        required: true
+        unique: true
+      - name: severity
+        type: string
+        required: true
+        enum: [info, warning, critical, emergency]
+      - name: message
+        type: string
+        required: true
+      - name: triggered_at
+        type: datetime
+        required: true
+      - name: acknowledged_at
+        type: datetime
+      - name: resolved_at
+        type: datetime
+      - name: status
+        type: string
+        enum: [active, acknowledged, resolved, suppressed]
+
+  - label: MaintenanceRecord
+    pole_type: EVENT
+    subtype: MAINTENANCE
+    color: "#f59e0b"
+    icon: wrench
+    properties:
+      - name: record_id
+        type: string
+        required: true
+        unique: true
+      - name: maintenance_type
+        type: string
+        required: true
+        enum: [preventive, corrective, predictive, emergency]
+      - name: description
+        type: string
+      - name: scheduled_date
+        type: date
+      - name: completed_date
+        type: date
+      - name: cost
+        type: float
+      - name: technician
+        type: string
+
+  - label: System
+    pole_type: OBJECT
+    subtype: ASSET_SYSTEM
+    color: "#8b5cf6"
+    icon: network
+    properties:
+      - name: system_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: system_type
+        type: string
+        enum: [cooling, electrical, hydraulic, pneumatic, control, safety]
+      - name: criticality
+        type: string
+        enum: [low, medium, high, critical]
+      - name: location
+        type: string
+
+relationships:
+  - type: MONITORED_BY
+    source: Asset
+    target: Sensor
+  - type: TRIGGERED
+    source: Reading
+    target: Alert
+  - type: MAINTAINED
+    source: MaintenanceRecord
+    target: Asset
+  - type: CONNECTED_TO
+    source: Asset
+    target: Asset
+  - type: PART_OF
+    source: Asset
+    target: System
+  - type: GENERATED
+    source: Sensor
+    target: Reading
+  - type: CAUSED_BY
+    source: Alert
+    target: Asset
+  - type: FOLLOWED_UP
+    source: MaintenanceRecord
+    target: Alert
+
+document_templates:
+  - id: sensor_report
+    name: Sensor Report
+    description: Periodic sensor reading summary and trend analysis
+    count: 10
+    prompt_template: |
+      Write a sensor report for {{sensor.name}} ({{sensor.sensor_type}})
+      monitoring asset {{asset.name}} at {{asset.location}}.
+      Include recent readings, trend analysis, threshold status,
+      and anomaly detection results.
+    required_entities: [Sensor, Asset, Reading]
+
+  - id: maintenance_log
+    name: Maintenance Log
+    description: Detailed log of maintenance activities performed
+    count: 8
+    prompt_template: |
+      Write a maintenance log entry for {{maintenancerecord.maintenance_type}}
+      maintenance on asset {{asset.name}} ({{asset.asset_type}}).
+      Technician: {{maintenancerecord.technician}}. Date: {{maintenancerecord.completed_date}}.
+      Include work performed, parts replaced, and post-maintenance test results.
+    required_entities: [MaintenanceRecord, Asset]
+
+  - id: alert_digest
+    name: Alert Digest
+    description: Summary of alerts and their resolution status
+    count: 8
+    prompt_template: |
+      Write an alert digest for system {{system.name}} covering recent
+      alerts. Include alert {{alert.alert_id}} (severity: {{alert.severity}})
+      for asset {{asset.name}}. Summarize root causes, response actions,
+      and current status.
+    required_entities: [Alert, Asset, System]
+
+  - id: system_status_report
+    name: System Status Report
+    description: Overall system health and performance report
+    count: 6
+    prompt_template: |
+      Write a system status report for {{system.name}} ({{system.system_type}},
+      criticality: {{system.criticality}}). Include health of all assets
+      in the system, sensor readings summary, active alerts, and
+      upcoming maintenance schedule.
+    required_entities: [System, Asset, Sensor]
+
+  - id: performance_analysis
+    name: Performance Analysis
+    description: Deep analysis of asset performance and efficiency
+    count: 6
+    prompt_template: |
+      Write a performance analysis for asset {{asset.name}} ({{asset.asset_type}})
+      in system {{system.name}}. Include efficiency metrics from sensor data,
+      maintenance history impact, downtime analysis, and recommendations
+      for optimization.
+    required_entities: [Asset, System, Sensor, MaintenanceRecord]
+
+decision_traces:
+  - id: predictive_maintenance
+    task: "Determine if asset {{asset.name}} requires predictive maintenance"
+    steps:
+      - thought: "Analyze recent sensor readings for degradation patterns"
+        action: "Query sensor readings and identify trend deviations from baseline"
+      - thought: "Review maintenance history and failure patterns"
+        action: "Pull maintenance records and calculate mean time between failures"
+      - thought: "Assess impact of downtime on connected systems"
+        action: "Map asset dependencies and evaluate criticality of connected systems"
+      - thought: "Compare cost of preventive action vs risk of failure"
+        action: "Calculate maintenance cost vs estimated cost of unplanned downtime"
+    outcome_template: "Recommendation: {{action}} within {{timeframe}} based on {{evidence}}"
+
+  - id: alert_triage
+    task: "Triage and prioritize alert {{alert.alert_id}} for asset {{asset.name}}"
+    steps:
+      - thought: "Assess alert severity and affected asset criticality"
+        action: "Query alert details and asset system criticality level"
+      - thought: "Check for correlated alerts on connected assets"
+        action: "Search for alerts on assets connected to or in the same system"
+      - thought: "Determine root cause vs symptom"
+        action: "Analyze sensor reading patterns leading up to the alert trigger"
+    outcome_template: "Priority: {{priority}}. Root cause: {{cause}}. Action: {{action}}"
+
+  - id: system_optimization
+    task: "Optimize performance of system {{system.name}}"
+    steps:
+      - thought: "Identify underperforming assets based on sensor baselines"
+        action: "Compare current sensor readings against optimal operating ranges"
+      - thought: "Analyze maintenance patterns for efficiency opportunities"
+        action: "Review maintenance frequency and correlate with performance metrics"
+      - thought: "Model impact of proposed changes on overall system output"
+        action: "Simulate adjustments based on historical sensor-performance correlations"
+    outcome_template: "Optimization plan: {{plan}} with expected {{improvement}}% gain"
+
+demo_scenarios:
+  - name: Asset Monitoring
+    prompts:
+      - "Show me all assets currently in degraded status"
+      - "What are the latest sensor readings for Turbine A3?"
+      - "Which assets have the most maintenance records this quarter?"
+
+  - name: Alert Management
+    prompts:
+      - "Show me all critical alerts that haven't been acknowledged"
+      - "What caused the pressure alert on Pump B2 yesterday?"
+      - "Are there any correlated alerts across the cooling system?"
+
+  - name: Predictive Insights
+    prompts:
+      - "Which assets are likely to need maintenance in the next 30 days?"
+      - "Show me the performance trend for the electrical system"
+      - "What is the mean time between failures for our compressors?"
+
+agent_tools:
+  - name: search_asset
+    description: Search for assets by name, type, location, or status
+    cypher: |
+      MATCH (a:Asset)
+      WHERE toLower(a.name) CONTAINS toLower($query)
+         OR toLower(coalesce(a.asset_type, '')) CONTAINS toLower($query)
+         OR toLower(coalesce(a.location, '')) CONTAINS toLower($query)
+      OPTIONAL MATCH (a)-[:PART_OF]->(s:System)
+      OPTIONAL MATCH (a)-[:MONITORED_BY]->(sen:Sensor)
+      RETURN a, s, collect(DISTINCT sen) AS sensors
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Asset name, type, or location to search for
+
+  - name: sensor_readings
+    description: Get recent sensor readings for an asset or sensor
+    cypher: |
+      MATCH (a:Asset {name: $asset_name})-[:MONITORED_BY]->(s:Sensor)-[:GENERATED]->(r:Reading)
+      RETURN s.name, s.sensor_type, s.unit, r.value, r.timestamp, r.quality,
+             s.min_threshold, s.max_threshold
+      ORDER BY r.timestamp DESC
+      LIMIT 50
+    parameters:
+      - name: asset_name
+        type: string
+        description: Name of the asset to get readings for
+
+  - name: alert_history
+    description: Get alert history for an asset or system
+    cypher: |
+      MATCH (al:Alert)-[:CAUSED_BY]->(a:Asset)
+      WHERE a.name = $asset_name OR $asset_name = ''
+      OPTIONAL MATCH (a)-[:PART_OF]->(s:System)
+      RETURN al, a.name AS asset_name, s.name AS system_name
+      ORDER BY al.triggered_at DESC
+      LIMIT 20
+    parameters:
+      - name: asset_name
+        type: string
+        description: Asset name to filter alerts (empty for all)
+
+  - name: maintenance_schedule
+    description: View maintenance history and upcoming scheduled maintenance
+    cypher: |
+      MATCH (mr:MaintenanceRecord)-[:MAINTAINED]->(a:Asset)
+      WHERE a.name = $asset_name OR $asset_name = ''
+      OPTIONAL MATCH (mr)-[:FOLLOWED_UP]->(al:Alert)
+      RETURN mr, a.name AS asset_name, al
+      ORDER BY coalesce(mr.scheduled_date, mr.completed_date) DESC
+      LIMIT 20
+    parameters:
+      - name: asset_name
+        type: string
+        description: Asset name to filter maintenance records (empty for all)
+
+  - name: system_health
+    description: Get overall health status for a system and its assets
+    cypher: |
+      MATCH (s:System {name: $system_name})<-[:PART_OF]-(a:Asset)
+      OPTIONAL MATCH (a)-[:MONITORED_BY]->(sen:Sensor)
+      OPTIONAL MATCH (al:Alert)-[:CAUSED_BY]->(a)
+      WHERE al.status = 'active'
+      RETURN s, a.name AS asset_name, a.status AS asset_status,
+             count(DISTINCT sen) AS sensor_count,
+             count(DISTINCT al) AS active_alerts
+      ORDER BY active_alerts DESC
+    parameters:
+      - name: system_name
+        type: string
+        description: Name of the system to check health for
+
+system_prompt: |
+  You are an AI assistant for digital twin and industrial IoT management. You have
+  access to a knowledge graph of physical assets, sensors, readings, alerts,
+  maintenance records, and interconnected systems.
+
+  Your capabilities include:
+  - Monitoring asset health and sensor readings in real time
+  - Analyzing alert patterns and performing root cause analysis
+  - Reviewing maintenance history and predicting future needs
+  - Mapping asset dependencies and system-level impacts
+  - Identifying performance optimization opportunities
+
+  Always ground your analysis in sensor data and maintenance records. When raising
+  concerns, cite specific readings, thresholds, and historical patterns from the
+  knowledge graph. Prioritize safety-critical alerts above all else.
+
+visualization:
+  node_colors:
+    Asset: "#2563eb"
+    Sensor: "#10b981"
+    Reading: "#06b6d4"
+    Alert: "#ef4444"
+    MaintenanceRecord: "#f59e0b"
+    System: "#8b5cf6"
+    Person: "#22c55e"
+    Location: "#a855f7"
+  node_sizes:
+    Asset: 30
+    Sensor: 20
+    Reading: 10
+    Alert: 25
+    MaintenanceRecord: 20
+    System: 30
+  default_cypher: "MATCH (s:System)<-[:PART_OF]-(a:Asset) OPTIONAL MATCH (a)-[r]-(n) RETURN s, a, r, n LIMIT 100"

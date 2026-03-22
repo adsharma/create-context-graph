@@ -1,0 +1,82 @@
+"""{{ domain.name }} AI Agent — PydanticAI implementation."""
+
+from __future__ import annotations
+
+import json
+import uuid
+from dataclasses import dataclass
+
+from pydantic_ai import Agent, RunContext
+
+from app.config import settings
+from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+
+
+SYSTEM_PROMPT = """{{ system_prompt }}"""
+
+
+{% raw %}
+@dataclass
+class AgentDeps:
+    """Dependencies injected into the agent."""
+    session_id: str
+
+
+agent = Agent(
+    "anthropic:claude-sonnet-4-20250514",
+    system_prompt=SYSTEM_PROMPT,
+    deps_type=AgentDeps,
+)
+{% endraw %}
+
+# ---------------------------------------------------------------------------
+# Agent tools — domain-specific for {{ domain.name }}
+# ---------------------------------------------------------------------------
+
+{% for tool in agent_tools %}
+@agent.tool
+async def {{ tool.name }}(ctx: RunContext[AgentDeps]{% for param in tool.parameters %}, {{ param.name }}: {{ 'str' if param.type == 'string' else 'int' if param.type == 'integer' else 'float' if param.type == 'float' else 'str' }}{% if param.default is not none %} = {{ param.default if param.type != 'string' else '"' + param.default + '"' }}{% endif %}{% endfor %}) -> list[dict]:
+    """{{ tool.description }}"""
+    cypher = """{{ tool.cypher | indent(4) }}"""
+    params = {
+{% for param in tool.parameters %}
+        "{{ param.name }}": {{ param.name }},
+{% endfor %}
+    }
+    return await execute_cypher(cypher, params)
+
+{% endfor %}
+
+{% raw %}
+@agent.tool
+async def run_cypher(ctx: RunContext[AgentDeps], query: str, parameters: str = "{}") -> list[dict]:
+    """Execute a read-only Cypher query against the knowledge graph."""
+    params = json.loads(parameters) if parameters else {}
+    return await execute_cypher(query, params)
+
+
+@agent.tool
+async def get_graph_schema(ctx: RunContext[AgentDeps]) -> dict:
+    """Get the knowledge graph schema (node labels and relationship types)."""
+    return await get_schema()
+
+
+# ---------------------------------------------------------------------------
+# Message handler
+# ---------------------------------------------------------------------------
+
+
+async def handle_message(message: str, session_id: str | None = None) -> dict:
+    """Handle an incoming chat message."""
+    if session_id is None:
+        session_id = str(uuid.uuid4())
+
+    deps = AgentDeps(session_id=session_id)
+    result = await agent.run(message, deps=deps)
+
+    return {
+        "response": result.data,
+        "session_id": session_id,
+        "graph_data": None,
+    }
+{% endraw %}

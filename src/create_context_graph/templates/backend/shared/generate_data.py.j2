@@ -1,0 +1,85 @@
+"""Generate sample data for {{ domain.name }} context graph."""
+{% raw %}
+from __future__ import annotations
+
+import asyncio
+import json
+from pathlib import Path
+
+from app.config import settings
+from app.context_graph_client import connect_neo4j, close_neo4j, execute_cypher
+
+
+DATA_DIR = Path(__file__).parent.parent.parent / "data"
+
+
+async def apply_schema():
+    """Apply the Cypher schema constraints and indexes."""
+    schema_path = Path(__file__).parent.parent.parent / "cypher" / "schema.cypher"
+    if schema_path.exists():
+        schema = schema_path.read_text()
+        for statement in schema.split(";"):
+            stmt = statement.strip()
+            if stmt and not stmt.startswith("//"):
+                try:
+                    await execute_cypher(stmt)
+                    print(f"  Applied: {stmt[:60]}...")
+                except Exception as e:
+                    print(f"  Warning: {e}")
+
+
+async def load_fixture_data():
+    """Load pre-generated fixture data if available."""
+    fixture_path = DATA_DIR / "fixtures.json"
+    if not fixture_path.exists():
+        print("No fixture data found. Create data/fixtures.json to seed data.")
+        return
+
+    data = json.loads(fixture_path.read_text())
+
+    # Create entities
+    entities = data.get("entities", {})
+    for label, items in entities.items():
+        for item in items:
+            props = ", ".join(f"{k}: ${k}" for k in item.keys())
+            cypher = f"MERGE (n:{label} {{{props}}})"
+            try:
+                await execute_cypher(cypher, item)
+            except Exception as e:
+                print(f"  Warning creating {label}: {e}")
+        print(f"  Created {len(items)} {label} nodes")
+
+    # Create relationships
+    relationships = data.get("relationships", [])
+    for rel in relationships:
+        cypher = f"""
+        MATCH (a:{rel['source_label']} {{name: $source_name}})
+        MATCH (b:{rel['target_label']} {{name: $target_name}})
+        MERGE (a)-[r:{rel['type']}]->(b)
+        """
+        try:
+            await execute_cypher(cypher, {
+                "source_name": rel["source_name"],
+                "target_name": rel["target_name"],
+            })
+        except Exception as e:
+            print(f"  Warning creating relationship: {e}")
+    print(f"  Created {len(relationships)} relationships")
+{% endraw %}
+
+async def main():
+    print("Seeding {{ domain.name }} context graph...")
+    await connect_neo4j()
+
+    print("\n[1/2] Applying schema...")
+    await apply_schema()
+
+    print("\n[2/2] Loading data...")
+    await load_fixture_data()
+
+    await close_neo4j()
+    print("\nDone! Your {{ domain.name }} context graph is ready.")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

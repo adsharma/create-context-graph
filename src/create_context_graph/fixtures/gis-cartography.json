@@ -1,0 +1,1225 @@
+{
+  "domain": "gis-cartography",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Feature": [
+      {
+        "name": "Feature 1",
+        "feature_id": "Sample feature_id for Feature 1",
+        "feature_type": "line",
+        "geometry_wkt": "Sample geometry_wkt for Feature 1",
+        "category": "infrastructure",
+        "source": "Sample source for Feature 1",
+        "accuracy_meters": 10.5
+      },
+      {
+        "name": "Feature 2",
+        "feature_id": "Sample feature_id for Feature 2",
+        "feature_type": "polygon",
+        "geometry_wkt": "Sample geometry_wkt for Feature 2",
+        "category": "administrative",
+        "source": "Sample source for Feature 2",
+        "accuracy_meters": 21.0
+      },
+      {
+        "name": "Feature 3",
+        "feature_id": "Sample feature_id for Feature 3",
+        "feature_type": "multipoint",
+        "geometry_wkt": "Sample geometry_wkt for Feature 3",
+        "category": "hydrological",
+        "source": "Sample source for Feature 3",
+        "accuracy_meters": 31.5
+      },
+      {
+        "name": "Feature 4",
+        "feature_id": "Sample feature_id for Feature 4",
+        "feature_type": "multipolygon",
+        "geometry_wkt": "Sample geometry_wkt for Feature 4",
+        "category": "elevation",
+        "source": "Sample source for Feature 4",
+        "accuracy_meters": 42.0
+      },
+      {
+        "name": "Feature 5",
+        "feature_id": "Sample feature_id for Feature 5",
+        "feature_type": "raster",
+        "geometry_wkt": "Sample geometry_wkt for Feature 5",
+        "category": "land_use",
+        "source": "Sample source for Feature 5",
+        "accuracy_meters": 52.5
+      }
+    ],
+    "Layer": [
+      {
+        "name": "Layer 1",
+        "layer_id": "Sample layer_id for Layer 1",
+        "layer_type": "raster",
+        "crs": "Sample crs for Layer 1",
+        "scale": "Sample scale for Layer 1",
+        "feature_count": 100,
+        "visibility": "hidden"
+      },
+      {
+        "name": "Layer 2",
+        "layer_id": "Sample layer_id for Layer 2",
+        "layer_type": "tile",
+        "crs": "Sample crs for Layer 2",
+        "scale": "Sample scale for Layer 2",
+        "feature_count": 200,
+        "visibility": "filtered"
+      },
+      {
+        "name": "Layer 3",
+        "layer_id": "Sample layer_id for Layer 3",
+        "layer_type": "wms",
+        "crs": "Sample crs for Layer 3",
+        "scale": "Sample scale for Layer 3",
+        "feature_count": 300,
+        "visibility": "visible"
+      },
+      {
+        "name": "Layer 4",
+        "layer_id": "Sample layer_id for Layer 4",
+        "layer_type": "wfs",
+        "crs": "Sample crs for Layer 4",
+        "scale": "Sample scale for Layer 4",
+        "feature_count": 400,
+        "visibility": "hidden"
+      },
+      {
+        "name": "Layer 5",
+        "layer_id": "Sample layer_id for Layer 5",
+        "layer_type": "geojson",
+        "crs": "Sample crs for Layer 5",
+        "scale": "Sample scale for Layer 5",
+        "feature_count": 500,
+        "visibility": "filtered"
+      }
+    ],
+    "Survey": [
+      {
+        "name": "Survey 1",
+        "survey_id": "Sample survey_id for Survey 1",
+        "survey_type": "cadastral",
+        "surveyor": "Sample surveyor for Survey 1",
+        "accuracy_class": "second_order",
+        "instrument": "Sample instrument for Survey 1"
+      },
+      {
+        "name": "Survey 2",
+        "survey_id": "Sample survey_id for Survey 2",
+        "survey_type": "geodetic",
+        "surveyor": "Sample surveyor for Survey 2",
+        "accuracy_class": "third_order",
+        "instrument": "Sample instrument for Survey 2"
+      },
+      {
+        "name": "Survey 3",
+        "survey_id": "Sample survey_id for Survey 3",
+        "survey_type": "bathymetric",
+        "surveyor": "Sample surveyor for Survey 3",
+        "accuracy_class": "mapping_grade",
+        "instrument": "Sample instrument for Survey 3"
+      },
+      {
+        "name": "Survey 4",
+        "survey_id": "Sample survey_id for Survey 4",
+        "survey_type": "photogrammetric",
+        "surveyor": "Sample surveyor for Survey 4",
+        "accuracy_class": "navigation",
+        "instrument": "Sample instrument for Survey 4"
+      },
+      {
+        "name": "Survey 5",
+        "survey_id": "Sample survey_id for Survey 5",
+        "survey_type": "lidar",
+        "surveyor": "Sample surveyor for Survey 5",
+        "accuracy_class": "first_order",
+        "instrument": "Sample instrument for Survey 5"
+      }
+    ],
+    "Coordinate": [
+      {
+        "name": "Coordinate 1",
+        "coordinate_id": "Sample coordinate_id for Coordinate 1",
+        "latitude": 10.5,
+        "longitude": 10.5,
+        "elevation": 10.5,
+        "crs": "Sample crs for Coordinate 1",
+        "point_type": "benchmark"
+      },
+      {
+        "name": "Coordinate 2",
+        "coordinate_id": "Sample coordinate_id for Coordinate 2",
+        "latitude": 21.0,
+        "longitude": 21.0,
+        "elevation": 21.0,
+        "crs": "Sample crs for Coordinate 2",
+        "point_type": "station"
+      },
+      {
+        "name": "Coordinate 3",
+        "coordinate_id": "Sample coordinate_id for Coordinate 3",
+        "latitude": 31.5,
+        "longitude": 31.5,
+        "elevation": 31.5,
+        "crs": "Sample crs for Coordinate 3",
+        "point_type": "waypoint"
+      },
+      {
+        "name": "Coordinate 4",
+        "coordinate_id": "Sample coordinate_id for Coordinate 4",
+        "latitude": 42.0,
+        "longitude": 42.0,
+        "elevation": 42.0,
+        "crs": "Sample crs for Coordinate 4",
+        "point_type": "vertex"
+      },
+      {
+        "name": "Coordinate 5",
+        "coordinate_id": "Sample coordinate_id for Coordinate 5",
+        "latitude": 52.5,
+        "longitude": 52.5,
+        "elevation": 52.5,
+        "crs": "Sample crs for Coordinate 5",
+        "point_type": "control_point"
+      }
+    ],
+    "Boundary": [
+      {
+        "name": "Boundary 1",
+        "boundary_id": "Sample boundary_id for Boundary 1",
+        "boundary_type": "state",
+        "area_sq_km": 10.5,
+        "perimeter_km": 10.5,
+        "jurisdiction": "Sample jurisdiction for Boundary 1",
+        "legal_description": "Sample legal_description for Boundary 1"
+      },
+      {
+        "name": "Boundary 2",
+        "boundary_id": "Sample boundary_id for Boundary 2",
+        "boundary_type": "county",
+        "area_sq_km": 21.0,
+        "perimeter_km": 21.0,
+        "jurisdiction": "Sample jurisdiction for Boundary 2",
+        "legal_description": "Sample legal_description for Boundary 2"
+      },
+      {
+        "name": "Boundary 3",
+        "boundary_id": "Sample boundary_id for Boundary 3",
+        "boundary_type": "municipal",
+        "area_sq_km": 31.5,
+        "perimeter_km": 31.5,
+        "jurisdiction": "Sample jurisdiction for Boundary 3",
+        "legal_description": "Sample legal_description for Boundary 3"
+      },
+      {
+        "name": "Boundary 4",
+        "boundary_id": "Sample boundary_id for Boundary 4",
+        "boundary_type": "parcel",
+        "area_sq_km": 42.0,
+        "perimeter_km": 42.0,
+        "jurisdiction": "Sample jurisdiction for Boundary 4",
+        "legal_description": "Sample legal_description for Boundary 4"
+      },
+      {
+        "name": "Boundary 5",
+        "boundary_id": "Sample boundary_id for Boundary 5",
+        "boundary_type": "zone",
+        "area_sq_km": 52.5,
+        "perimeter_km": 52.5,
+        "jurisdiction": "Sample jurisdiction for Boundary 5",
+        "legal_description": "Sample legal_description for Boundary 5"
+      }
+    ],
+    "MapProject": [
+      {
+        "name": "MapProject 1",
+        "project_id": "Sample project_id for MapProject 1",
+        "project_type": "thematic_map",
+        "scale": "Sample scale for MapProject 1",
+        "projection": "Sample projection for MapProject 1",
+        "status": "data_collection",
+        "output_format": "geotiff"
+      },
+      {
+        "name": "MapProject 2",
+        "project_id": "Sample project_id for MapProject 2",
+        "project_type": "cadastral_map",
+        "scale": "Sample scale for MapProject 2",
+        "projection": "Sample projection for MapProject 2",
+        "status": "processing",
+        "output_format": "shapefile"
+      },
+      {
+        "name": "MapProject 3",
+        "project_id": "Sample project_id for MapProject 3",
+        "project_type": "atlas",
+        "scale": "Sample scale for MapProject 3",
+        "projection": "Sample projection for MapProject 3",
+        "status": "cartography",
+        "output_format": "geopackage"
+      },
+      {
+        "name": "MapProject 4",
+        "project_id": "Sample project_id for MapProject 4",
+        "project_type": "web_map",
+        "scale": "Sample scale for MapProject 4",
+        "projection": "Sample projection for MapProject 4",
+        "status": "review",
+        "output_format": "web_tile"
+      },
+      {
+        "name": "MapProject 5",
+        "project_id": "Sample project_id for MapProject 5",
+        "project_type": "3d_model",
+        "scale": "Sample scale for MapProject 5",
+        "projection": "Sample projection for MapProject 5",
+        "status": "published",
+        "output_format": "mbtiles"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Layer",
+      "source_name": "Layer 1",
+      "target_label": "Feature",
+      "target_name": "Feature 5"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Layer",
+      "source_name": "Layer 1",
+      "target_label": "Feature",
+      "target_name": "Feature 1"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Layer",
+      "source_name": "Layer 2",
+      "target_label": "Feature",
+      "target_name": "Feature 5"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Layer",
+      "source_name": "Layer 3",
+      "target_label": "Feature",
+      "target_name": "Feature 4"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Layer",
+      "source_name": "Layer 4",
+      "target_label": "Feature",
+      "target_name": "Feature 5"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Layer",
+      "source_name": "Layer 4",
+      "target_label": "Feature",
+      "target_name": "Feature 3"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Layer",
+      "source_name": "Layer 5",
+      "target_label": "Feature",
+      "target_name": "Feature 3"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Layer",
+      "source_name": "Layer 5",
+      "target_label": "Feature",
+      "target_name": "Feature 5"
+    },
+    {
+      "type": "BORDERS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 1",
+      "target_label": "Boundary",
+      "target_name": "Boundary 4"
+    },
+    {
+      "type": "BORDERS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 2",
+      "target_label": "Boundary",
+      "target_name": "Boundary 1"
+    },
+    {
+      "type": "BORDERS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 3",
+      "target_label": "Boundary",
+      "target_name": "Boundary 1"
+    },
+    {
+      "type": "BORDERS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 4",
+      "target_label": "Boundary",
+      "target_name": "Boundary 1"
+    },
+    {
+      "type": "BORDERS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 5",
+      "target_label": "Boundary",
+      "target_name": "Boundary 3"
+    },
+    {
+      "type": "SURVEYED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Survey",
+      "target_name": "Survey 5"
+    },
+    {
+      "type": "SURVEYED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "Survey",
+      "target_name": "Survey 3"
+    },
+    {
+      "type": "SURVEYED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "Survey",
+      "target_name": "Survey 4"
+    },
+    {
+      "type": "SURVEYED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Survey",
+      "target_name": "Survey 5"
+    },
+    {
+      "type": "SURVEYED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Survey",
+      "target_name": "Survey 1"
+    },
+    {
+      "type": "SURVEYED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Survey",
+      "target_name": "Survey 5"
+    },
+    {
+      "type": "SURVEYED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Survey",
+      "target_name": "Survey 4"
+    },
+    {
+      "type": "SURVEYED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Survey",
+      "target_name": "Survey 5"
+    },
+    {
+      "type": "SURVEYED_BY",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Survey",
+      "target_name": "Survey 3"
+    },
+    {
+      "type": "OVERLAPS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 1",
+      "target_label": "Boundary",
+      "target_name": "Boundary 3"
+    },
+    {
+      "type": "OVERLAPS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 2",
+      "target_label": "Boundary",
+      "target_name": "Boundary 3"
+    },
+    {
+      "type": "OVERLAPS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 2",
+      "target_label": "Boundary",
+      "target_name": "Boundary 5"
+    },
+    {
+      "type": "OVERLAPS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 3",
+      "target_label": "Boundary",
+      "target_name": "Boundary 5"
+    },
+    {
+      "type": "OVERLAPS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 4",
+      "target_label": "Boundary",
+      "target_name": "Boundary 2"
+    },
+    {
+      "type": "OVERLAPS",
+      "source_label": "Boundary",
+      "source_name": "Boundary 5",
+      "target_label": "Boundary",
+      "target_name": "Boundary 2"
+    },
+    {
+      "type": "PART_OF_LAYER",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Layer",
+      "target_name": "Layer 2"
+    },
+    {
+      "type": "PART_OF_LAYER",
+      "source_label": "Feature",
+      "source_name": "Feature 1",
+      "target_label": "Layer",
+      "target_name": "Layer 3"
+    },
+    {
+      "type": "PART_OF_LAYER",
+      "source_label": "Feature",
+      "source_name": "Feature 2",
+      "target_label": "Layer",
+      "target_name": "Layer 1"
+    },
+    {
+      "type": "PART_OF_LAYER",
+      "source_label": "Feature",
+      "source_name": "Feature 3",
+      "target_label": "Layer",
+      "target_name": "Layer 2"
+    },
+    {
+      "type": "PART_OF_LAYER",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Layer",
+      "target_name": "Layer 3"
+    },
+    {
+      "type": "PART_OF_LAYER",
+      "source_label": "Feature",
+      "source_name": "Feature 4",
+      "target_label": "Layer",
+      "target_name": "Layer 2"
+    },
+    {
+      "type": "PART_OF_LAYER",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Layer",
+      "target_name": "Layer 5"
+    },
+    {
+      "type": "PART_OF_LAYER",
+      "source_label": "Feature",
+      "source_name": "Feature 5",
+      "target_label": "Layer",
+      "target_name": "Layer 3"
+    },
+    {
+      "type": "REFERENCED_IN",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 1",
+      "target_label": "Survey",
+      "target_name": "Survey 3"
+    },
+    {
+      "type": "REFERENCED_IN",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 1",
+      "target_label": "Survey",
+      "target_name": "Survey 2"
+    },
+    {
+      "type": "REFERENCED_IN",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 2",
+      "target_label": "Survey",
+      "target_name": "Survey 4"
+    },
+    {
+      "type": "REFERENCED_IN",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 2",
+      "target_label": "Survey",
+      "target_name": "Survey 5"
+    },
+    {
+      "type": "REFERENCED_IN",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 3",
+      "target_label": "Survey",
+      "target_name": "Survey 1"
+    },
+    {
+      "type": "REFERENCED_IN",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 4",
+      "target_label": "Survey",
+      "target_name": "Survey 4"
+    },
+    {
+      "type": "REFERENCED_IN",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 5",
+      "target_label": "Survey",
+      "target_name": "Survey 5"
+    },
+    {
+      "type": "INCLUDES_LAYER",
+      "source_label": "MapProject",
+      "source_name": "MapProject 1",
+      "target_label": "Layer",
+      "target_name": "Layer 5"
+    },
+    {
+      "type": "INCLUDES_LAYER",
+      "source_label": "MapProject",
+      "source_name": "MapProject 1",
+      "target_label": "Layer",
+      "target_name": "Layer 2"
+    },
+    {
+      "type": "INCLUDES_LAYER",
+      "source_label": "MapProject",
+      "source_name": "MapProject 2",
+      "target_label": "Layer",
+      "target_name": "Layer 1"
+    },
+    {
+      "type": "INCLUDES_LAYER",
+      "source_label": "MapProject",
+      "source_name": "MapProject 2",
+      "target_label": "Layer",
+      "target_name": "Layer 2"
+    },
+    {
+      "type": "INCLUDES_LAYER",
+      "source_label": "MapProject",
+      "source_name": "MapProject 3",
+      "target_label": "Layer",
+      "target_name": "Layer 2"
+    },
+    {
+      "type": "INCLUDES_LAYER",
+      "source_label": "MapProject",
+      "source_name": "MapProject 3",
+      "target_label": "Layer",
+      "target_name": "Layer 5"
+    },
+    {
+      "type": "INCLUDES_LAYER",
+      "source_label": "MapProject",
+      "source_name": "MapProject 4",
+      "target_label": "Layer",
+      "target_name": "Layer 3"
+    },
+    {
+      "type": "INCLUDES_LAYER",
+      "source_label": "MapProject",
+      "source_name": "MapProject 4",
+      "target_label": "Layer",
+      "target_name": "Layer 2"
+    },
+    {
+      "type": "INCLUDES_LAYER",
+      "source_label": "MapProject",
+      "source_name": "MapProject 5",
+      "target_label": "Layer",
+      "target_name": "Layer 4"
+    },
+    {
+      "type": "DEFINES",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 1",
+      "target_label": "Boundary",
+      "target_name": "Boundary 2"
+    },
+    {
+      "type": "DEFINES",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 2",
+      "target_label": "Boundary",
+      "target_name": "Boundary 2"
+    },
+    {
+      "type": "DEFINES",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 3",
+      "target_label": "Boundary",
+      "target_name": "Boundary 2"
+    },
+    {
+      "type": "DEFINES",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 3",
+      "target_label": "Boundary",
+      "target_name": "Boundary 1"
+    },
+    {
+      "type": "DEFINES",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 4",
+      "target_label": "Boundary",
+      "target_name": "Boundary 5"
+    },
+    {
+      "type": "DEFINES",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 4",
+      "target_label": "Boundary",
+      "target_name": "Boundary 3"
+    },
+    {
+      "type": "DEFINES",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 5",
+      "target_label": "Boundary",
+      "target_name": "Boundary 3"
+    },
+    {
+      "type": "DEFINES",
+      "source_label": "Coordinate",
+      "source_name": "Coordinate 5",
+      "target_label": "Boundary",
+      "target_name": "Boundary 2"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "survey_report",
+      "template_name": "Survey Report",
+      "title": "Survey Report #1",
+      "content": "Sample Survey Report #1\n\nThis is a sample field survey report with methodology and results for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "survey_report",
+      "template_name": "Survey Report",
+      "title": "Survey Report #2",
+      "content": "Sample Survey Report #2\n\nThis is a sample field survey report with methodology and results for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "survey_report",
+      "template_name": "Survey Report",
+      "title": "Survey Report #3",
+      "content": "Sample Survey Report #3\n\nThis is a sample field survey report with methodology and results for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "survey_report",
+      "template_name": "Survey Report",
+      "title": "Survey Report #4",
+      "content": "Sample Survey Report #4\n\nThis is a sample field survey report with methodology and results for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "survey_report",
+      "template_name": "Survey Report",
+      "title": "Survey Report #5",
+      "content": "Sample Survey Report #5\n\nThis is a sample field survey report with methodology and results for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "boundary_description",
+      "template_name": "Boundary Description",
+      "title": "Boundary Description #1",
+      "content": "Sample Boundary Description #1\n\nThis is a sample legal boundary description with metes and bounds for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "boundary_description",
+      "template_name": "Boundary Description",
+      "title": "Boundary Description #2",
+      "content": "Sample Boundary Description #2\n\nThis is a sample legal boundary description with metes and bounds for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "boundary_description",
+      "template_name": "Boundary Description",
+      "title": "Boundary Description #3",
+      "content": "Sample Boundary Description #3\n\nThis is a sample legal boundary description with metes and bounds for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "boundary_description",
+      "template_name": "Boundary Description",
+      "title": "Boundary Description #4",
+      "content": "Sample Boundary Description #4\n\nThis is a sample legal boundary description with metes and bounds for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "boundary_description",
+      "template_name": "Boundary Description",
+      "title": "Boundary Description #5",
+      "content": "Sample Boundary Description #5\n\nThis is a sample legal boundary description with metes and bounds for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "field_notes",
+      "template_name": "Field Notes",
+      "title": "Field Notes #1",
+      "content": "Sample Field Notes #1\n\nThis is a sample surveyor's field notes and observations for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "field_notes",
+      "template_name": "Field Notes",
+      "title": "Field Notes #2",
+      "content": "Sample Field Notes #2\n\nThis is a sample surveyor's field notes and observations for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "field_notes",
+      "template_name": "Field Notes",
+      "title": "Field Notes #3",
+      "content": "Sample Field Notes #3\n\nThis is a sample surveyor's field notes and observations for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "field_notes",
+      "template_name": "Field Notes",
+      "title": "Field Notes #4",
+      "content": "Sample Field Notes #4\n\nThis is a sample surveyor's field notes and observations for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "field_notes",
+      "template_name": "Field Notes",
+      "title": "Field Notes #5",
+      "content": "Sample Field Notes #5\n\nThis is a sample surveyor's field notes and observations for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "map_project_spec",
+      "template_name": "Map Project Specification",
+      "title": "Map Project Specification #1",
+      "content": "Sample Map Project Specification #1\n\nThis is a sample specifications for a cartographic production project for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "map_project_spec",
+      "template_name": "Map Project Specification",
+      "title": "Map Project Specification #2",
+      "content": "Sample Map Project Specification #2\n\nThis is a sample specifications for a cartographic production project for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "map_project_spec",
+      "template_name": "Map Project Specification",
+      "title": "Map Project Specification #3",
+      "content": "Sample Map Project Specification #3\n\nThis is a sample specifications for a cartographic production project for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "map_project_spec",
+      "template_name": "Map Project Specification",
+      "title": "Map Project Specification #4",
+      "content": "Sample Map Project Specification #4\n\nThis is a sample specifications for a cartographic production project for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "map_project_spec",
+      "template_name": "Map Project Specification",
+      "title": "Map Project Specification #5",
+      "content": "Sample Map Project Specification #5\n\nThis is a sample specifications for a cartographic production project for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "spatial_analysis",
+      "template_name": "Spatial Analysis Report",
+      "title": "Spatial Analysis Report #1",
+      "content": "Sample Spatial Analysis Report #1\n\nThis is a sample report on spatial analysis findings and methodology for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "spatial_analysis",
+      "template_name": "Spatial Analysis Report",
+      "title": "Spatial Analysis Report #2",
+      "content": "Sample Spatial Analysis Report #2\n\nThis is a sample report on spatial analysis findings and methodology for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "spatial_analysis",
+      "template_name": "Spatial Analysis Report",
+      "title": "Spatial Analysis Report #3",
+      "content": "Sample Spatial Analysis Report #3\n\nThis is a sample report on spatial analysis findings and methodology for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "spatial_analysis",
+      "template_name": "Spatial Analysis Report",
+      "title": "Spatial Analysis Report #4",
+      "content": "Sample Spatial Analysis Report #4\n\nThis is a sample report on spatial analysis findings and methodology for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "spatial_analysis",
+      "template_name": "Spatial Analysis Report",
+      "title": "Spatial Analysis Report #5",
+      "content": "Sample Spatial Analysis Report #5\n\nThis is a sample report on spatial analysis findings and methodology for the GIS & Cartography domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "data_source_selection",
+      "task": "Select the best data source for mapping Boundary 5",
+      "steps": [
+        {
+          "thought": "Assess available survey data and its accuracy",
+          "action": "Query surveys covering the area and their accuracy classes",
+          "observation": "Results retrieved for: Query surveys covering the area and their accuracy classes"
+        },
+        {
+          "thought": "Evaluate existing layer data coverage and currency",
+          "action": "Check which layers contain features within the boundary",
+          "observation": "Results retrieved for: Check which layers contain features within the boundary"
+        },
+        {
+          "thought": "Consider project requirements for scale and accuracy",
+          "action": "Match data source accuracy against project specification needs",
+          "observation": "Results retrieved for: Match data source accuracy against project specification needs"
+        },
+        {
+          "thought": "Determine if supplemental field work is needed",
+          "action": "Identify coverage gaps and accuracy shortfalls",
+          "observation": "Results retrieved for: Identify coverage gaps and accuracy shortfalls"
+        }
+      ],
+      "outcome": "Data source: {{source}} with {{accuracy}} accuracy. Field work {{needed_or_not}}"
+    },
+    {
+      "id": "projection_selection",
+      "task": "Determine the optimal map projection for {{map_project.name}}",
+      "steps": [
+        {
+          "thought": "Analyze the geographic extent of the project area",
+          "action": "Query boundary extents and coordinate ranges",
+          "observation": "Results retrieved for: Query boundary extents and coordinate ranges"
+        },
+        {
+          "thought": "Consider the purpose of the map and required properties",
+          "action": "Evaluate conformal vs equal-area vs equidistant needs",
+          "observation": "Results retrieved for: Evaluate conformal vs equal-area vs equidistant needs"
+        },
+        {
+          "thought": "Check standard projections for the jurisdiction",
+          "action": "Look up standard CRS for the project's geographic area",
+          "observation": "Results retrieved for: Look up standard CRS for the project's geographic area"
+        }
+      ],
+      "outcome": "Recommended projection: {{projection}} because {{rationale}}"
+    },
+    {
+      "id": "boundary_dispute",
+      "task": "Investigate boundary discrepancy between {{boundary_a}} and {{boundary_b}}",
+      "steps": [
+        {
+          "thought": "Compare survey records for both boundaries",
+          "action": "Query surveys and coordinates defining each boundary",
+          "observation": "Results retrieved for: Query surveys and coordinates defining each boundary"
+        },
+        {
+          "thought": "Identify the specific area of overlap or gap",
+          "action": "Analyze spatial relationships between boundary geometries",
+          "observation": "Results retrieved for: Analyze spatial relationships between boundary geometries"
+        },
+        {
+          "thought": "Review legal descriptions and historical records",
+          "action": "Compare legal descriptions with survey coordinates",
+          "observation": "Results retrieved for: Compare legal descriptions with survey coordinates"
+        }
+      ],
+      "outcome": "Finding: {{finding}}. Discrepancy of {{area}} sq km. Recommendation: {{recommendation}}"
+    }
+  ]
+}

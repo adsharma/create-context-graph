@@ -1,0 +1,1222 @@
+{
+  "domain": "golf-sports",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Course": [
+      {
+        "name": "Course 1",
+        "course_id": "Sample course_id for Course 1",
+        "par": 100,
+        "yardage": 100,
+        "course_rating": 10.5,
+        "slope_rating": 100,
+        "course_type": "private",
+        "location": "Sample location for Course 1"
+      },
+      {
+        "name": "Course 2",
+        "course_id": "Sample course_id for Course 2",
+        "par": 200,
+        "yardage": 200,
+        "course_rating": 21.0,
+        "slope_rating": 200,
+        "course_type": "resort",
+        "location": "Sample location for Course 2"
+      },
+      {
+        "name": "Course 3",
+        "course_id": "Sample course_id for Course 3",
+        "par": 300,
+        "yardage": 300,
+        "course_rating": 31.5,
+        "slope_rating": 300,
+        "course_type": "municipal",
+        "location": "Sample location for Course 3"
+      },
+      {
+        "name": "Course 4",
+        "course_id": "Sample course_id for Course 4",
+        "par": 400,
+        "yardage": 400,
+        "course_rating": 42.0,
+        "slope_rating": 400,
+        "course_type": "links",
+        "location": "Sample location for Course 4"
+      },
+      {
+        "name": "Course 5",
+        "course_id": "Sample course_id for Course 5",
+        "par": 500,
+        "yardage": 500,
+        "course_rating": 52.5,
+        "slope_rating": 500,
+        "course_type": "parkland",
+        "location": "Sample location for Course 5"
+      }
+    ],
+    "Player": [
+      {
+        "name": "Player 1",
+        "player_id": "Sample player_id for Player 1",
+        "player_type": "amateur",
+        "home_course": "Sample home_course for Player 1",
+        "country": "Sample country for Player 1",
+        "ranking": 100
+      },
+      {
+        "name": "Player 2",
+        "player_id": "Sample player_id for Player 2",
+        "player_type": "junior",
+        "home_course": "Sample home_course for Player 2",
+        "country": "Sample country for Player 2",
+        "ranking": 200
+      },
+      {
+        "name": "Player 3",
+        "player_id": "Sample player_id for Player 3",
+        "player_type": "senior",
+        "home_course": "Sample home_course for Player 3",
+        "country": "Sample country for Player 3",
+        "ranking": 300
+      },
+      {
+        "name": "Player 4",
+        "player_id": "Sample player_id for Player 4",
+        "player_type": "professional",
+        "home_course": "Sample home_course for Player 4",
+        "country": "Sample country for Player 4",
+        "ranking": 400
+      },
+      {
+        "name": "Player 5",
+        "player_id": "Sample player_id for Player 5",
+        "player_type": "amateur",
+        "home_course": "Sample home_course for Player 5",
+        "country": "Sample country for Player 5",
+        "ranking": 500
+      }
+    ],
+    "Round": [
+      {
+        "name": "Round 1",
+        "round_id": "Sample round_id for Round 1",
+        "total_score": 100,
+        "score_to_par": 100,
+        "putts": 100,
+        "fairways_hit": 100,
+        "greens_in_regulation": 100,
+        "weather_conditions": "cloudy"
+      },
+      {
+        "name": "Round 2",
+        "round_id": "Sample round_id for Round 2",
+        "total_score": 200,
+        "score_to_par": 200,
+        "putts": 200,
+        "fairways_hit": 200,
+        "greens_in_regulation": 200,
+        "weather_conditions": "rainy"
+      },
+      {
+        "name": "Round 3",
+        "round_id": "Sample round_id for Round 3",
+        "total_score": 300,
+        "score_to_par": 300,
+        "putts": 300,
+        "fairways_hit": 300,
+        "greens_in_regulation": 300,
+        "weather_conditions": "windy"
+      },
+      {
+        "name": "Round 4",
+        "round_id": "Sample round_id for Round 4",
+        "total_score": 400,
+        "score_to_par": 400,
+        "putts": 400,
+        "fairways_hit": 400,
+        "greens_in_regulation": 400,
+        "weather_conditions": "mixed"
+      },
+      {
+        "name": "Round 5",
+        "round_id": "Sample round_id for Round 5",
+        "total_score": 500,
+        "score_to_par": 500,
+        "putts": 500,
+        "fairways_hit": 500,
+        "greens_in_regulation": 500,
+        "weather_conditions": "clear"
+      }
+    ],
+    "Tournament": [
+      {
+        "name": "Tournament 1",
+        "tournament_id": "Sample tournament_id for Tournament 1",
+        "tournament_type": "tour_event",
+        "purse": 10.5,
+        "field_size": 100
+      },
+      {
+        "name": "Tournament 2",
+        "tournament_id": "Sample tournament_id for Tournament 2",
+        "tournament_type": "invitational",
+        "purse": 21.0,
+        "field_size": 200
+      },
+      {
+        "name": "Tournament 3",
+        "tournament_id": "Sample tournament_id for Tournament 3",
+        "tournament_type": "charity",
+        "purse": 31.5,
+        "field_size": 300
+      },
+      {
+        "name": "Tournament 4",
+        "tournament_id": "Sample tournament_id for Tournament 4",
+        "tournament_type": "club_championship",
+        "purse": 42.0,
+        "field_size": 400
+      },
+      {
+        "name": "Tournament 5",
+        "tournament_id": "Sample tournament_id for Tournament 5",
+        "tournament_type": "amateur",
+        "purse": 52.5,
+        "field_size": 500
+      }
+    ],
+    "Handicap": [
+      {
+        "name": "Handicap 1",
+        "handicap_id": "Sample handicap_id for Handicap 1",
+        "handicap_index": 10.5,
+        "low_index": 10.5,
+        "trend": "stable",
+        "rounds_counted": 100
+      },
+      {
+        "name": "Handicap 2",
+        "handicap_id": "Sample handicap_id for Handicap 2",
+        "handicap_index": 21.0,
+        "low_index": 21.0,
+        "trend": "declining",
+        "rounds_counted": 200
+      },
+      {
+        "name": "Handicap 3",
+        "handicap_id": "Sample handicap_id for Handicap 3",
+        "handicap_index": 31.5,
+        "low_index": 31.5,
+        "trend": "improving",
+        "rounds_counted": 300
+      },
+      {
+        "name": "Handicap 4",
+        "handicap_id": "Sample handicap_id for Handicap 4",
+        "handicap_index": 42.0,
+        "low_index": 42.0,
+        "trend": "stable",
+        "rounds_counted": 400
+      },
+      {
+        "name": "Handicap 5",
+        "handicap_id": "Sample handicap_id for Handicap 5",
+        "handicap_index": 52.5,
+        "low_index": 52.5,
+        "trend": "declining",
+        "rounds_counted": 500
+      }
+    ],
+    "Hole": [
+      {
+        "name": "Hole 1",
+        "hole_id": "Sample hole_id for Hole 1",
+        "hole_number": 100,
+        "par": 100,
+        "yardage": 100,
+        "handicap_stroke": 100,
+        "description": "Sample description for Hole 1"
+      },
+      {
+        "name": "Hole 2",
+        "hole_id": "Sample hole_id for Hole 2",
+        "hole_number": 200,
+        "par": 200,
+        "yardage": 200,
+        "handicap_stroke": 200,
+        "description": "Sample description for Hole 2"
+      },
+      {
+        "name": "Hole 3",
+        "hole_id": "Sample hole_id for Hole 3",
+        "hole_number": 300,
+        "par": 300,
+        "yardage": 300,
+        "handicap_stroke": 300,
+        "description": "Sample description for Hole 3"
+      },
+      {
+        "name": "Hole 4",
+        "hole_id": "Sample hole_id for Hole 4",
+        "hole_number": 400,
+        "par": 400,
+        "yardage": 400,
+        "handicap_stroke": 400,
+        "description": "Sample description for Hole 4"
+      },
+      {
+        "name": "Hole 5",
+        "hole_id": "Sample hole_id for Hole 5",
+        "hole_number": 500,
+        "par": 500,
+        "yardage": 500,
+        "handicap_stroke": 500,
+        "description": "Sample description for Hole 5"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PLAYED_AT",
+      "source_label": "Round",
+      "source_name": "Round 1",
+      "target_label": "Course",
+      "target_name": "Course 5"
+    },
+    {
+      "type": "PLAYED_AT",
+      "source_label": "Round",
+      "source_name": "Round 1",
+      "target_label": "Course",
+      "target_name": "Course 3"
+    },
+    {
+      "type": "PLAYED_AT",
+      "source_label": "Round",
+      "source_name": "Round 2",
+      "target_label": "Course",
+      "target_name": "Course 5"
+    },
+    {
+      "type": "PLAYED_AT",
+      "source_label": "Round",
+      "source_name": "Round 2",
+      "target_label": "Course",
+      "target_name": "Course 4"
+    },
+    {
+      "type": "PLAYED_AT",
+      "source_label": "Round",
+      "source_name": "Round 3",
+      "target_label": "Course",
+      "target_name": "Course 3"
+    },
+    {
+      "type": "PLAYED_AT",
+      "source_label": "Round",
+      "source_name": "Round 3",
+      "target_label": "Course",
+      "target_name": "Course 1"
+    },
+    {
+      "type": "PLAYED_AT",
+      "source_label": "Round",
+      "source_name": "Round 4",
+      "target_label": "Course",
+      "target_name": "Course 5"
+    },
+    {
+      "type": "PLAYED_AT",
+      "source_label": "Round",
+      "source_name": "Round 5",
+      "target_label": "Course",
+      "target_name": "Course 5"
+    },
+    {
+      "type": "SCORED",
+      "source_label": "Player",
+      "source_name": "Player 1",
+      "target_label": "Round",
+      "target_name": "Round 1"
+    },
+    {
+      "type": "SCORED",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Round",
+      "target_name": "Round 2"
+    },
+    {
+      "type": "SCORED",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Round",
+      "target_name": "Round 2"
+    },
+    {
+      "type": "SCORED",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Round",
+      "target_name": "Round 3"
+    },
+    {
+      "type": "SCORED",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Round",
+      "target_name": "Round 1"
+    },
+    {
+      "type": "SCORED",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Round",
+      "target_name": "Round 2"
+    },
+    {
+      "type": "SCORED",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Round",
+      "target_name": "Round 3"
+    },
+    {
+      "type": "COMPETED_IN",
+      "source_label": "Player",
+      "source_name": "Player 1",
+      "target_label": "Tournament",
+      "target_name": "Tournament 2"
+    },
+    {
+      "type": "COMPETED_IN",
+      "source_label": "Player",
+      "source_name": "Player 1",
+      "target_label": "Tournament",
+      "target_name": "Tournament 3"
+    },
+    {
+      "type": "COMPETED_IN",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Tournament",
+      "target_name": "Tournament 2"
+    },
+    {
+      "type": "COMPETED_IN",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Tournament",
+      "target_name": "Tournament 2"
+    },
+    {
+      "type": "COMPETED_IN",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Tournament",
+      "target_name": "Tournament 1"
+    },
+    {
+      "type": "COMPETED_IN",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Tournament",
+      "target_name": "Tournament 2"
+    },
+    {
+      "type": "COMPETED_IN",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Tournament",
+      "target_name": "Tournament 2"
+    },
+    {
+      "type": "RANKED",
+      "source_label": "Player",
+      "source_name": "Player 1",
+      "target_label": "Tournament",
+      "target_name": "Tournament 5"
+    },
+    {
+      "type": "RANKED",
+      "source_label": "Player",
+      "source_name": "Player 1",
+      "target_label": "Tournament",
+      "target_name": "Tournament 4"
+    },
+    {
+      "type": "RANKED",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Tournament",
+      "target_name": "Tournament 4"
+    },
+    {
+      "type": "RANKED",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Tournament",
+      "target_name": "Tournament 1"
+    },
+    {
+      "type": "RANKED",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Tournament",
+      "target_name": "Tournament 1"
+    },
+    {
+      "type": "RANKED",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Tournament",
+      "target_name": "Tournament 3"
+    },
+    {
+      "type": "RANKED",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Tournament",
+      "target_name": "Tournament 1"
+    },
+    {
+      "type": "RANKED",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Tournament",
+      "target_name": "Tournament 3"
+    },
+    {
+      "type": "RANKED",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Tournament",
+      "target_name": "Tournament 1"
+    },
+    {
+      "type": "HOSTS",
+      "source_label": "Course",
+      "source_name": "Course 1",
+      "target_label": "Tournament",
+      "target_name": "Tournament 3"
+    },
+    {
+      "type": "HOSTS",
+      "source_label": "Course",
+      "source_name": "Course 1",
+      "target_label": "Tournament",
+      "target_name": "Tournament 5"
+    },
+    {
+      "type": "HOSTS",
+      "source_label": "Course",
+      "source_name": "Course 2",
+      "target_label": "Tournament",
+      "target_name": "Tournament 2"
+    },
+    {
+      "type": "HOSTS",
+      "source_label": "Course",
+      "source_name": "Course 2",
+      "target_label": "Tournament",
+      "target_name": "Tournament 3"
+    },
+    {
+      "type": "HOSTS",
+      "source_label": "Course",
+      "source_name": "Course 3",
+      "target_label": "Tournament",
+      "target_name": "Tournament 4"
+    },
+    {
+      "type": "HOSTS",
+      "source_label": "Course",
+      "source_name": "Course 3",
+      "target_label": "Tournament",
+      "target_name": "Tournament 3"
+    },
+    {
+      "type": "HOSTS",
+      "source_label": "Course",
+      "source_name": "Course 4",
+      "target_label": "Tournament",
+      "target_name": "Tournament 3"
+    },
+    {
+      "type": "HOSTS",
+      "source_label": "Course",
+      "source_name": "Course 4",
+      "target_label": "Tournament",
+      "target_name": "Tournament 4"
+    },
+    {
+      "type": "HOSTS",
+      "source_label": "Course",
+      "source_name": "Course 5",
+      "target_label": "Tournament",
+      "target_name": "Tournament 3"
+    },
+    {
+      "type": "PART_OF_COURSE",
+      "source_label": "Hole",
+      "source_name": "Hole 1",
+      "target_label": "Course",
+      "target_name": "Course 1"
+    },
+    {
+      "type": "PART_OF_COURSE",
+      "source_label": "Hole",
+      "source_name": "Hole 1",
+      "target_label": "Course",
+      "target_name": "Course 3"
+    },
+    {
+      "type": "PART_OF_COURSE",
+      "source_label": "Hole",
+      "source_name": "Hole 2",
+      "target_label": "Course",
+      "target_name": "Course 2"
+    },
+    {
+      "type": "PART_OF_COURSE",
+      "source_label": "Hole",
+      "source_name": "Hole 2",
+      "target_label": "Course",
+      "target_name": "Course 5"
+    },
+    {
+      "type": "PART_OF_COURSE",
+      "source_label": "Hole",
+      "source_name": "Hole 3",
+      "target_label": "Course",
+      "target_name": "Course 1"
+    },
+    {
+      "type": "PART_OF_COURSE",
+      "source_label": "Hole",
+      "source_name": "Hole 4",
+      "target_label": "Course",
+      "target_name": "Course 1"
+    },
+    {
+      "type": "PART_OF_COURSE",
+      "source_label": "Hole",
+      "source_name": "Hole 5",
+      "target_label": "Course",
+      "target_name": "Course 3"
+    },
+    {
+      "type": "PART_OF_COURSE",
+      "source_label": "Hole",
+      "source_name": "Hole 5",
+      "target_label": "Course",
+      "target_name": "Course 1"
+    },
+    {
+      "type": "HAS_HANDICAP",
+      "source_label": "Player",
+      "source_name": "Player 1",
+      "target_label": "Handicap",
+      "target_name": "Handicap 4"
+    },
+    {
+      "type": "HAS_HANDICAP",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Handicap",
+      "target_name": "Handicap 1"
+    },
+    {
+      "type": "HAS_HANDICAP",
+      "source_label": "Player",
+      "source_name": "Player 2",
+      "target_label": "Handicap",
+      "target_name": "Handicap 2"
+    },
+    {
+      "type": "HAS_HANDICAP",
+      "source_label": "Player",
+      "source_name": "Player 3",
+      "target_label": "Handicap",
+      "target_name": "Handicap 5"
+    },
+    {
+      "type": "HAS_HANDICAP",
+      "source_label": "Player",
+      "source_name": "Player 4",
+      "target_label": "Handicap",
+      "target_name": "Handicap 2"
+    },
+    {
+      "type": "HAS_HANDICAP",
+      "source_label": "Player",
+      "source_name": "Player 5",
+      "target_label": "Handicap",
+      "target_name": "Handicap 4"
+    },
+    {
+      "type": "ROUND_IN_TOURNAMENT",
+      "source_label": "Round",
+      "source_name": "Round 1",
+      "target_label": "Tournament",
+      "target_name": "Tournament 4"
+    },
+    {
+      "type": "ROUND_IN_TOURNAMENT",
+      "source_label": "Round",
+      "source_name": "Round 1",
+      "target_label": "Tournament",
+      "target_name": "Tournament 2"
+    },
+    {
+      "type": "ROUND_IN_TOURNAMENT",
+      "source_label": "Round",
+      "source_name": "Round 2",
+      "target_label": "Tournament",
+      "target_name": "Tournament 1"
+    },
+    {
+      "type": "ROUND_IN_TOURNAMENT",
+      "source_label": "Round",
+      "source_name": "Round 3",
+      "target_label": "Tournament",
+      "target_name": "Tournament 2"
+    },
+    {
+      "type": "ROUND_IN_TOURNAMENT",
+      "source_label": "Round",
+      "source_name": "Round 4",
+      "target_label": "Tournament",
+      "target_name": "Tournament 2"
+    },
+    {
+      "type": "ROUND_IN_TOURNAMENT",
+      "source_label": "Round",
+      "source_name": "Round 5",
+      "target_label": "Tournament",
+      "target_name": "Tournament 5"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "scorecard",
+      "template_name": "Scorecard",
+      "title": "Scorecard #1",
+      "content": "Sample Scorecard #1\n\nThis is a sample detailed round scorecard with hole-by-hole breakdown for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "scorecard",
+      "template_name": "Scorecard",
+      "title": "Scorecard #2",
+      "content": "Sample Scorecard #2\n\nThis is a sample detailed round scorecard with hole-by-hole breakdown for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "scorecard",
+      "template_name": "Scorecard",
+      "title": "Scorecard #3",
+      "content": "Sample Scorecard #3\n\nThis is a sample detailed round scorecard with hole-by-hole breakdown for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "scorecard",
+      "template_name": "Scorecard",
+      "title": "Scorecard #4",
+      "content": "Sample Scorecard #4\n\nThis is a sample detailed round scorecard with hole-by-hole breakdown for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "scorecard",
+      "template_name": "Scorecard",
+      "title": "Scorecard #5",
+      "content": "Sample Scorecard #5\n\nThis is a sample detailed round scorecard with hole-by-hole breakdown for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tournament_recap",
+      "template_name": "Tournament Recap",
+      "title": "Tournament Recap #1",
+      "content": "Sample Tournament Recap #1\n\nThis is a sample summary of tournament results and highlights for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tournament_recap",
+      "template_name": "Tournament Recap",
+      "title": "Tournament Recap #2",
+      "content": "Sample Tournament Recap #2\n\nThis is a sample summary of tournament results and highlights for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tournament_recap",
+      "template_name": "Tournament Recap",
+      "title": "Tournament Recap #3",
+      "content": "Sample Tournament Recap #3\n\nThis is a sample summary of tournament results and highlights for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tournament_recap",
+      "template_name": "Tournament Recap",
+      "title": "Tournament Recap #4",
+      "content": "Sample Tournament Recap #4\n\nThis is a sample summary of tournament results and highlights for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "tournament_recap",
+      "template_name": "Tournament Recap",
+      "title": "Tournament Recap #5",
+      "content": "Sample Tournament Recap #5\n\nThis is a sample summary of tournament results and highlights for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "course_evaluation",
+      "template_name": "Course Evaluation",
+      "title": "Course Evaluation #1",
+      "content": "Sample Course Evaluation #1\n\nThis is a sample comprehensive evaluation of a golf course for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "course_evaluation",
+      "template_name": "Course Evaluation",
+      "title": "Course Evaluation #2",
+      "content": "Sample Course Evaluation #2\n\nThis is a sample comprehensive evaluation of a golf course for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "course_evaluation",
+      "template_name": "Course Evaluation",
+      "title": "Course Evaluation #3",
+      "content": "Sample Course Evaluation #3\n\nThis is a sample comprehensive evaluation of a golf course for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "course_evaluation",
+      "template_name": "Course Evaluation",
+      "title": "Course Evaluation #4",
+      "content": "Sample Course Evaluation #4\n\nThis is a sample comprehensive evaluation of a golf course for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "course_evaluation",
+      "template_name": "Course Evaluation",
+      "title": "Course Evaluation #5",
+      "content": "Sample Course Evaluation #5\n\nThis is a sample comprehensive evaluation of a golf course for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_profile",
+      "template_name": "Player Profile",
+      "title": "Player Profile #1",
+      "content": "Sample Player Profile #1\n\nThis is a sample comprehensive player profile with statistics and history for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_profile",
+      "template_name": "Player Profile",
+      "title": "Player Profile #2",
+      "content": "Sample Player Profile #2\n\nThis is a sample comprehensive player profile with statistics and history for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_profile",
+      "template_name": "Player Profile",
+      "title": "Player Profile #3",
+      "content": "Sample Player Profile #3\n\nThis is a sample comprehensive player profile with statistics and history for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_profile",
+      "template_name": "Player Profile",
+      "title": "Player Profile #4",
+      "content": "Sample Player Profile #4\n\nThis is a sample comprehensive player profile with statistics and history for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "player_profile",
+      "template_name": "Player Profile",
+      "title": "Player Profile #5",
+      "content": "Sample Player Profile #5\n\nThis is a sample comprehensive player profile with statistics and history for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "handicap_report",
+      "template_name": "Handicap Report",
+      "title": "Handicap Report #1",
+      "content": "Sample Handicap Report #1\n\nThis is a sample handicap trend analysis and scoring patterns for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "handicap_report",
+      "template_name": "Handicap Report",
+      "title": "Handicap Report #2",
+      "content": "Sample Handicap Report #2\n\nThis is a sample handicap trend analysis and scoring patterns for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "handicap_report",
+      "template_name": "Handicap Report",
+      "title": "Handicap Report #3",
+      "content": "Sample Handicap Report #3\n\nThis is a sample handicap trend analysis and scoring patterns for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "handicap_report",
+      "template_name": "Handicap Report",
+      "title": "Handicap Report #4",
+      "content": "Sample Handicap Report #4\n\nThis is a sample handicap trend analysis and scoring patterns for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "handicap_report",
+      "template_name": "Handicap Report",
+      "title": "Handicap Report #5",
+      "content": "Sample Handicap Report #5\n\nThis is a sample handicap trend analysis and scoring patterns for the Golf Sports domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "tournament_selection",
+      "task": "Evaluate which tournament Player 2 should enter next",
+      "steps": [
+        {
+          "thought": "Review player's current form and recent round scores",
+          "action": "Query recent rounds and scoring trends for the player",
+          "observation": "Results retrieved for: Query recent rounds and scoring trends for the player"
+        },
+        {
+          "thought": "Assess course fit based on player strengths",
+          "action": "Compare player statistics with course characteristics of upcoming tournaments",
+          "observation": "Results retrieved for: Compare player statistics with course characteristics of upcoming tournaments"
+        },
+        {
+          "thought": "Consider ranking implications and field strength",
+          "action": "Analyze tournament field quality and potential ranking movement",
+          "observation": "Results retrieved for: Analyze tournament field quality and potential ranking movement"
+        }
+      ],
+      "outcome": "Recommendation: enter {{tournament}} based on {{rationale}}"
+    },
+    {
+      "id": "handicap_adjustment",
+      "task": "Determine if Player 1's handicap accurately reflects current ability",
+      "steps": [
+        {
+          "thought": "Analyze recent scoring differentials vs handicap index",
+          "action": "Query last 20 rounds and calculate scoring differentials",
+          "observation": "Results retrieved for: Query last 20 rounds and calculate scoring differentials"
+        },
+        {
+          "thought": "Identify trends in performance across different courses",
+          "action": "Compare scores at high-slope vs low-slope courses",
+          "observation": "Results retrieved for: Compare scores at high-slope vs low-slope courses"
+        },
+        {
+          "thought": "Check for exceptional tournament scores",
+          "action": "Look for rounds significantly better or worse than handicap",
+          "observation": "Results retrieved for: Look for rounds significantly better or worse than handicap"
+        }
+      ],
+      "outcome": "Assessment: handicap is {{assessment}} with recommended action {{action}}"
+    },
+    {
+      "id": "course_strategy",
+      "task": "Develop a course strategy for Player 5 at Course 3",
+      "steps": [
+        {
+          "thought": "Analyze hole-by-hole difficulty and player tendencies",
+          "action": "Query hole data and player's historical performance on similar holes",
+          "observation": "Results retrieved for: Query hole data and player's historical performance on similar holes"
+        },
+        {
+          "thought": "Identify scoring opportunities and risk holes",
+          "action": "Map birdie opportunities vs high-risk holes based on player stats",
+          "observation": "Results retrieved for: Map birdie opportunities vs high-risk holes based on player stats"
+        },
+        {
+          "thought": "Consider weather and course conditions",
+          "action": "Factor in expected conditions and adjust strategy",
+          "observation": "Results retrieved for: Factor in expected conditions and adjust strategy"
+        }
+      ],
+      "outcome": "Strategy: {{strategy}} targeting score of {{target_score}}"
+    }
+  ]
+}

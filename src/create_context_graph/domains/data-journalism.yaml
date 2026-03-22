@@ -1,0 +1,408 @@
+inherits: _base
+
+domain:
+  id: data-journalism
+  name: Data Journalism
+  description: Investigative journalism, source management, fact-checking, and data-driven storytelling
+  tagline: "AI-powered Investigative Intelligence"
+  emoji: "\U0001F4F0"
+
+entity_types:
+  - label: Source
+    pole_type: OBJECT
+    subtype: INFORMATION_SOURCE
+    color: "#0d9488"
+    icon: user-check
+    properties:
+      - name: source_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: source_type
+        type: string
+        enum: [person, document, database, whistleblower, public_record, expert]
+      - name: credibility
+        type: string
+        enum: [verified, reliable, unverified, disputed, anonymous]
+      - name: affiliation
+        type: string
+      - name: last_contact
+        type: date
+      - name: protected
+        type: boolean
+
+  - label: Story
+    pole_type: OBJECT
+    subtype: NEWS_STORY
+    color: "#7c3aed"
+    icon: file-text
+    properties:
+      - name: story_id
+        type: string
+        required: true
+        unique: true
+      - name: headline
+        type: string
+        required: true
+      - name: status
+        type: string
+        required: true
+        enum: [pitch, researching, drafting, review, published, retracted]
+      - name: beat
+        type: string
+        enum: [politics, business, tech, health, environment, justice, education]
+      - name: published_date
+        type: date
+      - name: word_count
+        type: integer
+
+  - label: Dataset
+    pole_type: OBJECT
+    subtype: JOURNALISM_DATASET
+    color: "#2563eb"
+    icon: table
+    properties:
+      - name: dataset_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: description
+        type: string
+      - name: record_count
+        type: integer
+      - name: source_agency
+        type: string
+      - name: obtained_via
+        type: string
+        enum: [foia, public, leaked, scraped, partnership, purchased]
+      - name: date_range
+        type: string
+
+  - label: Claim
+    pole_type: OBJECT
+    subtype: FACTUAL_CLAIM
+    color: "#f59e0b"
+    icon: message-circle
+    properties:
+      - name: claim_id
+        type: string
+        required: true
+        unique: true
+      - name: statement
+        type: string
+        required: true
+      - name: made_by
+        type: string
+      - name: date
+        type: date
+      - name: verification_status
+        type: string
+        enum: ["true", "mostly_true", "half_true", "mostly_false", "false", "unverified"]
+      - name: context
+        type: string
+
+  - label: Correction
+    pole_type: EVENT
+    subtype: EDITORIAL_CORRECTION
+    color: "#ef4444"
+    icon: alert-circle
+    properties:
+      - name: correction_id
+        type: string
+        required: true
+        unique: true
+      - name: original_text
+        type: string
+        required: true
+      - name: corrected_text
+        type: string
+        required: true
+      - name: reason
+        type: string
+        enum: [factual_error, misquote, context_missing, data_error, attribution]
+      - name: issued_date
+        type: date
+        required: true
+
+  - label: Investigation
+    pole_type: EVENT
+    subtype: JOURNALISTIC_INVESTIGATION
+    color: "#dc2626"
+    icon: search
+    properties:
+      - name: investigation_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: description
+        type: string
+      - name: started_date
+        type: date
+        required: true
+      - name: status
+        type: string
+        enum: [active, paused, completed, killed]
+      - name: lead_reporter
+        type: string
+
+relationships:
+  - type: SOURCED_FROM
+    source: Story
+    target: Source
+  - type: FACT_CHECKED
+    source: Claim
+    target: Dataset
+  - type: CONTRADICTS
+    source: Claim
+    target: Claim
+  - type: SUPPORTS
+    source: Dataset
+    target: Claim
+  - type: PUBLISHED_IN
+    source: Claim
+    target: Story
+  - type: INVESTIGATED_BY
+    source: Story
+    target: Investigation
+  - type: CORRECTED_IN
+    source: Correction
+    target: Story
+  - type: PROVIDED_BY
+    source: Dataset
+    target: Source
+
+document_templates:
+  - id: investigation_notes
+    name: Investigation Notes
+    description: Working notes and findings from ongoing investigations
+    count: 10
+    prompt_template: |
+      Write investigation notes for "{{investigation.name}}"
+      led by {{investigation.lead_reporter}}. Status: {{investigation.status}}.
+      Key source: {{source.name}} ({{source.credibility}}).
+      Include findings, leads to pursue, evidence gaps, and next steps.
+    required_entities: [Investigation, Source]
+
+  - id: foia_request
+    name: FOIA Request
+    description: Freedom of Information Act request documents
+    count: 6
+    prompt_template: |
+      Write a FOIA request for records related to investigation
+      "{{investigation.name}}". Requesting agency: {{dataset.source_agency}}.
+      Specify records sought, time period, and justification for
+      fee waiver based on public interest.
+    required_entities: [Investigation, Dataset]
+
+  - id: editorial_memo
+    name: Editorial Memo
+    description: Internal memos between reporters and editors
+    count: 8
+    prompt_template: |
+      Write an editorial memo regarding story "{{story.headline}}"
+      (status: {{story.status}}, beat: {{story.beat}}).
+      Include story summary, source assessment ({{source.name}},
+      credibility: {{source.credibility}}), legal considerations,
+      and publication readiness.
+    required_entities: [Story, Source]
+
+  - id: fact_check_report
+    name: Fact-Check Report
+    description: Detailed fact-checking analysis of claims
+    count: 8
+    prompt_template: |
+      Write a fact-check report for the claim: "{{claim.statement}}"
+      made by {{claim.made_by}} on {{claim.date}}.
+      Supporting dataset: {{dataset.name}} ({{dataset.record_count}} records).
+      Include evidence analysis, context, verdict, and rating justification.
+    required_entities: [Claim, Dataset, Source]
+
+  - id: source_interview
+    name: Source Interview Notes
+    description: Notes from interviews with sources
+    count: 10
+    prompt_template: |
+      Write interview notes from a session with {{source.name}}
+      (type: {{source.source_type}}, credibility: {{source.credibility}})
+      for investigation "{{investigation.name}}".
+      Include key statements, claims made, documents provided,
+      and follow-up questions.
+    required_entities: [Source, Investigation, Claim]
+
+decision_traces:
+  - id: source_credibility
+    task: "Assess credibility of source {{source.name}} for story {{story.headline}}"
+    steps:
+      - thought: "Review source's track record and prior contributions"
+        action: "Query all stories and claims previously sourced from this person"
+      - thought: "Cross-reference claims with independent datasets"
+        action: "Match source's claims against available fact-check datasets"
+      - thought: "Evaluate potential conflicts of interest"
+        action: "Check source affiliation against story subjects and entities"
+    outcome_template: "Credibility assessment: {{rating}}. Recommendation: {{recommendation}}"
+
+  - id: publication_readiness
+    task: "Determine if story {{story.headline}} is ready for publication"
+    steps:
+      - thought: "Verify all key claims have been fact-checked"
+        action: "Query all claims linked to this story and their verification status"
+      - thought: "Assess source diversity and independence"
+        action: "Review all sources for this story and check for single-source claims"
+      - thought: "Check for potential corrections or legal risks"
+        action: "Review claims for disputed or unverified status, flag legal concerns"
+      - thought: "Verify data accuracy and methodology"
+        action: "Audit datasets used and confirm analysis reproducibility"
+    outcome_template: "Publication status: {{status}}. Outstanding items: {{items}}"
+
+  - id: claim_verification
+    task: "Verify claim: '{{claim.statement}}' made by {{claim.made_by}}"
+    steps:
+      - thought: "Search for supporting or contradicting evidence in datasets"
+        action: "Query datasets and cross-reference with claim specifics"
+      - thought: "Find independent sources who can confirm or deny"
+        action: "Search source network for relevant experts or witnesses"
+      - thought: "Check for prior fact-checks of similar claims"
+        action: "Search claim history for related or identical statements"
+    outcome_template: "Verdict: {{verdict}}. Evidence strength: {{strength}}"
+
+demo_scenarios:
+  - name: Investigation Management
+    prompts:
+      - "Show me all active investigations and their current status"
+      - "Which sources have contributed to the city contracts investigation?"
+      - "What datasets have we obtained via FOIA this year?"
+
+  - name: Fact-Checking
+    prompts:
+      - "Show me all unverified claims in published stories"
+      - "Which claims by the mayor contradict our datasets?"
+      - "What is the fact-check history for claims about budget spending?"
+
+  - name: Source Intelligence
+    prompts:
+      - "Which sources have the highest credibility ratings?"
+      - "Show me the source network for our healthcare investigation"
+      - "Are there any sources connected to multiple investigations?"
+
+agent_tools:
+  - name: search_source
+    description: Search for sources by name, type, or credibility
+    cypher: |
+      MATCH (src:Source)
+      WHERE toLower(src.name) CONTAINS toLower($query)
+         OR toLower(coalesce(src.affiliation, '')) CONTAINS toLower($query)
+      OPTIONAL MATCH (s:Story)-[:SOURCED_FROM]->(src)
+      OPTIONAL MATCH (d:Dataset)-[:PROVIDED_BY]->(src)
+      RETURN src, collect(DISTINCT s) AS stories, collect(DISTINCT d) AS datasets
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Source name, affiliation, or keyword
+
+  - name: claim_verification
+    description: Check verification status of claims and supporting evidence
+    cypher: |
+      MATCH (c:Claim)
+      WHERE toLower(c.statement) CONTAINS toLower($query)
+         OR toLower(coalesce(c.made_by, '')) CONTAINS toLower($query)
+      OPTIONAL MATCH (d:Dataset)-[:SUPPORTS]->(c)
+      OPTIONAL MATCH (c)-[:CONTRADICTS]-(other:Claim)
+      OPTIONAL MATCH (c)-[:PUBLISHED_IN]->(s:Story)
+      RETURN c, collect(DISTINCT d) AS datasets, collect(DISTINCT other) AS contradictions,
+             collect(DISTINCT s) AS stories
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Claim text, claimant name, or keyword
+
+  - name: dataset_analysis
+    description: Search and analyze journalism datasets
+    cypher: |
+      MATCH (d:Dataset)
+      WHERE toLower(d.name) CONTAINS toLower($query)
+         OR toLower(coalesce(d.source_agency, '')) CONTAINS toLower($query)
+      OPTIONAL MATCH (d)-[:SUPPORTS]->(c:Claim)
+      OPTIONAL MATCH (d)-[:PROVIDED_BY]->(src:Source)
+      RETURN d, collect(DISTINCT c) AS supported_claims, collect(DISTINCT src) AS sources
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Dataset name, source agency, or keyword
+
+  - name: story_timeline
+    description: Get the timeline of a story from investigation to publication
+    cypher: |
+      MATCH (s:Story)
+      WHERE toLower(s.headline) CONTAINS toLower($query)
+      OPTIONAL MATCH (s)-[:SOURCED_FROM]->(src:Source)
+      OPTIONAL MATCH (c:Claim)-[:PUBLISHED_IN]->(s)
+      OPTIONAL MATCH (s)-[:INVESTIGATED_BY]->(inv:Investigation)
+      OPTIONAL MATCH (cor:Correction)-[:CORRECTED_IN]->(s)
+      RETURN s, collect(DISTINCT src) AS sources, collect(DISTINCT c) AS claims,
+             inv, collect(DISTINCT cor) AS corrections
+      LIMIT 10
+    parameters:
+      - name: query
+        type: string
+        description: Story headline or keyword
+
+  - name: source_network
+    description: Map the network of sources connected to investigations
+    cypher: |
+      MATCH (inv:Investigation)<-[:INVESTIGATED_BY]-(s:Story)-[:SOURCED_FROM]->(src:Source)
+      WHERE toLower(inv.name) CONTAINS toLower($query)
+      OPTIONAL MATCH (d:Dataset)-[:PROVIDED_BY]->(src)
+      RETURN inv, s, src, collect(DISTINCT d) AS datasets
+      LIMIT 30
+    parameters:
+      - name: query
+        type: string
+        description: Investigation name or keyword
+
+system_prompt: |
+  You are an AI assistant for data journalism and investigative reporting. You have
+  access to a knowledge graph of sources, stories, datasets, claims, corrections,
+  and investigations.
+
+  Your capabilities include:
+  - Searching and evaluating source credibility and networks
+  - Fact-checking claims against available datasets
+  - Tracking investigation progress and story development
+  - Identifying contradictions and corroborating evidence
+  - Mapping connections between sources, stories, and investigations
+
+  Always prioritize accuracy and source protection. Never reveal protected source
+  identities. When assessing claims, clearly distinguish between verified facts,
+  supported claims, and unverified assertions. Cite specific evidence from the
+  knowledge graph.
+
+visualization:
+  node_colors:
+    Source: "#0d9488"
+    Story: "#7c3aed"
+    Dataset: "#2563eb"
+    Claim: "#f59e0b"
+    Correction: "#ef4444"
+    Investigation: "#dc2626"
+    Person: "#22c55e"
+    Organization: "#64748b"
+  node_sizes:
+    Source: 25
+    Story: 30
+    Dataset: 20
+    Claim: 20
+    Correction: 15
+    Investigation: 30
+  default_cypher: "MATCH (s:Story)-[r]-(n) RETURN s, r, n LIMIT 100"

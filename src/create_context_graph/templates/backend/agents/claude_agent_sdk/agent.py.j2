@@ -1,0 +1,143 @@
+"""{{ domain.name }} AI Agent — Claude Agent SDK implementation."""
+
+from __future__ import annotations
+
+import json
+import uuid
+
+import anthropic
+
+from app.config import settings
+from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+
+
+SYSTEM_PROMPT = """{{ system_prompt }}"""
+
+client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
+
+# ---------------------------------------------------------------------------
+# Tool definitions for {{ domain.name }}
+# ---------------------------------------------------------------------------
+
+TOOLS = [
+{% for tool in agent_tools %}
+    {
+        "name": "{{ tool.name }}",
+        "description": "{{ tool.description }}",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+{% for param in tool.parameters %}
+                "{{ param.name }}": {
+                    "type": "{{ 'string' if param.type == 'string' else 'integer' if param.type == 'integer' else 'number' if param.type == 'float' else 'string' }}",
+                    "description": "{{ param.description | default(param.name) }}",
+                },
+{% endfor %}
+            },
+            "required": [{% for param in tool.parameters %}{% if param.default is none %}"{{ param.name }}"{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}],
+        },
+    },
+{% endfor %}
+{% raw %}
+    {
+        "name": "execute_cypher",
+        "description": "Execute a read-only Cypher query against the knowledge graph",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "query": {"type": "string", "description": "Cypher query string"},
+                "parameters": {"type": "object", "description": "Query parameters"},
+            },
+            "required": ["query"],
+        },
+    },
+    {
+        "name": "get_schema",
+        "description": "Get the knowledge graph schema (node labels and relationship types)",
+        "input_schema": {
+            "type": "object",
+            "properties": {},
+        },
+    },
+]
+{% endraw %}
+
+# ---------------------------------------------------------------------------
+# Tool execution
+# ---------------------------------------------------------------------------
+
+TOOL_CYPHER = {
+{% for tool in agent_tools %}
+    "{{ tool.name }}": """{{ tool.cypher | indent(4) }}""",
+{% endfor %}
+}
+
+{% raw %}
+async def execute_tool(tool_name: str, tool_input: dict) -> str:
+    """Execute a tool and return the result as a string."""
+    if tool_name == "execute_cypher":
+        result = await execute_cypher(
+            tool_input["query"],
+            tool_input.get("parameters", {}),
+        )
+        return json.dumps(result, default=str)
+
+    if tool_name == "get_schema":
+        result = await get_schema()
+        return json.dumps(result, default=str)
+
+    if tool_name in TOOL_CYPHER:
+        result = await execute_cypher(TOOL_CYPHER[tool_name], tool_input)
+        return json.dumps(result, default=str)
+
+    return json.dumps({"error": f"Unknown tool: {tool_name}"})
+
+
+# ---------------------------------------------------------------------------
+# Message handler with agentic loop
+# ---------------------------------------------------------------------------
+
+
+async def handle_message(message: str, session_id: str | None = None) -> dict:
+    """Handle an incoming chat message with tool-use loop."""
+    if session_id is None:
+        session_id = str(uuid.uuid4())
+
+    messages = [{"role": "user", "content": message}]
+
+    while True:
+        response = await client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=4096,
+            system=SYSTEM_PROMPT,
+            tools=TOOLS,
+            messages=messages,
+        )
+
+        if response.stop_reason == "tool_use":
+            messages.append({"role": "assistant", "content": response.content})
+
+            tool_results = []
+            for block in response.content:
+                if block.type == "tool_use":
+                    result = await execute_tool(block.name, block.input)
+                    tool_results.append({
+                        "type": "tool_result",
+                        "tool_use_id": block.id,
+                        "content": result,
+                    })
+
+            messages.append({"role": "user", "content": tool_results})
+        else:
+            text_parts = [
+                block.text for block in response.content if hasattr(block, "text")
+            ]
+            response_text = "\n".join(text_parts)
+            break
+
+    return {
+        "response": response_text,
+        "session_id": session_id,
+        "graph_data": None,
+    }
+{% endraw %}

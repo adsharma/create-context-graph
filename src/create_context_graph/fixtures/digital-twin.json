@@ -1,0 +1,1143 @@
+{
+  "domain": "digital-twin",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Asset": [
+      {
+        "name": "Asset 1",
+        "asset_id": "Sample asset_id for Asset 1",
+        "asset_type": "pump",
+        "manufacturer": "Sample manufacturer for Asset 1",
+        "location": "Sample location for Asset 1",
+        "status": "degraded"
+      },
+      {
+        "name": "Asset 2",
+        "asset_id": "Sample asset_id for Asset 2",
+        "asset_type": "motor",
+        "manufacturer": "Sample manufacturer for Asset 2",
+        "location": "Sample location for Asset 2",
+        "status": "offline"
+      },
+      {
+        "name": "Asset 3",
+        "asset_id": "Sample asset_id for Asset 3",
+        "asset_type": "hvac",
+        "manufacturer": "Sample manufacturer for Asset 3",
+        "location": "Sample location for Asset 3",
+        "status": "maintenance"
+      },
+      {
+        "name": "Asset 4",
+        "asset_id": "Sample asset_id for Asset 4",
+        "asset_type": "conveyor",
+        "manufacturer": "Sample manufacturer for Asset 4",
+        "location": "Sample location for Asset 4",
+        "status": "decommissioned"
+      },
+      {
+        "name": "Asset 5",
+        "asset_id": "Sample asset_id for Asset 5",
+        "asset_type": "compressor",
+        "manufacturer": "Sample manufacturer for Asset 5",
+        "location": "Sample location for Asset 5",
+        "status": "operational"
+      }
+    ],
+    "Sensor": [
+      {
+        "name": "Sensor 1",
+        "sensor_id": "Sample sensor_id for Sensor 1",
+        "sensor_type": "pressure",
+        "unit": "Sample unit for Sensor 1",
+        "min_threshold": 10.5,
+        "max_threshold": 10.5,
+        "status": "calibrating"
+      },
+      {
+        "name": "Sensor 2",
+        "sensor_id": "Sample sensor_id for Sensor 2",
+        "sensor_type": "vibration",
+        "unit": "Sample unit for Sensor 2",
+        "min_threshold": 21.0,
+        "max_threshold": 21.0,
+        "status": "faulty"
+      },
+      {
+        "name": "Sensor 3",
+        "sensor_id": "Sample sensor_id for Sensor 3",
+        "sensor_type": "flow",
+        "unit": "Sample unit for Sensor 3",
+        "min_threshold": 31.5,
+        "max_threshold": 31.5,
+        "status": "offline"
+      },
+      {
+        "name": "Sensor 4",
+        "sensor_id": "Sample sensor_id for Sensor 4",
+        "sensor_type": "humidity",
+        "unit": "Sample unit for Sensor 4",
+        "min_threshold": 42.0,
+        "max_threshold": 42.0,
+        "status": "active"
+      },
+      {
+        "name": "Sensor 5",
+        "sensor_id": "Sample sensor_id for Sensor 5",
+        "sensor_type": "voltage",
+        "unit": "Sample unit for Sensor 5",
+        "min_threshold": 52.5,
+        "max_threshold": 52.5,
+        "status": "calibrating"
+      }
+    ],
+    "Reading": [
+      {
+        "name": "Reading 1",
+        "reading_id": "Sample reading_id for Reading 1",
+        "value": 10.5,
+        "quality": "suspect"
+      },
+      {
+        "name": "Reading 2",
+        "reading_id": "Sample reading_id for Reading 2",
+        "value": 21.0,
+        "quality": "bad"
+      },
+      {
+        "name": "Reading 3",
+        "reading_id": "Sample reading_id for Reading 3",
+        "value": 31.5,
+        "quality": "interpolated"
+      },
+      {
+        "name": "Reading 4",
+        "reading_id": "Sample reading_id for Reading 4",
+        "value": 42.0,
+        "quality": "good"
+      },
+      {
+        "name": "Reading 5",
+        "reading_id": "Sample reading_id for Reading 5",
+        "value": 52.5,
+        "quality": "suspect"
+      }
+    ],
+    "Alert": [
+      {
+        "name": "Alert 1",
+        "alert_id": "Sample alert_id for Alert 1",
+        "severity": "warning",
+        "message": "Sample message for Alert 1",
+        "status": "acknowledged"
+      },
+      {
+        "name": "Alert 2",
+        "alert_id": "Sample alert_id for Alert 2",
+        "severity": "critical",
+        "message": "Sample message for Alert 2",
+        "status": "resolved"
+      },
+      {
+        "name": "Alert 3",
+        "alert_id": "Sample alert_id for Alert 3",
+        "severity": "emergency",
+        "message": "Sample message for Alert 3",
+        "status": "suppressed"
+      },
+      {
+        "name": "Alert 4",
+        "alert_id": "Sample alert_id for Alert 4",
+        "severity": "info",
+        "message": "Sample message for Alert 4",
+        "status": "active"
+      },
+      {
+        "name": "Alert 5",
+        "alert_id": "Sample alert_id for Alert 5",
+        "severity": "warning",
+        "message": "Sample message for Alert 5",
+        "status": "acknowledged"
+      }
+    ],
+    "MaintenanceRecord": [
+      {
+        "name": "MaintenanceRecord 1",
+        "record_id": "Sample record_id for MaintenanceRecord 1",
+        "maintenance_type": "corrective",
+        "description": "Sample description for MaintenanceRecord 1",
+        "cost": 10.5,
+        "technician": "Sample technician for MaintenanceRecord 1"
+      },
+      {
+        "name": "MaintenanceRecord 2",
+        "record_id": "Sample record_id for MaintenanceRecord 2",
+        "maintenance_type": "predictive",
+        "description": "Sample description for MaintenanceRecord 2",
+        "cost": 21.0,
+        "technician": "Sample technician for MaintenanceRecord 2"
+      },
+      {
+        "name": "MaintenanceRecord 3",
+        "record_id": "Sample record_id for MaintenanceRecord 3",
+        "maintenance_type": "emergency",
+        "description": "Sample description for MaintenanceRecord 3",
+        "cost": 31.5,
+        "technician": "Sample technician for MaintenanceRecord 3"
+      },
+      {
+        "name": "MaintenanceRecord 4",
+        "record_id": "Sample record_id for MaintenanceRecord 4",
+        "maintenance_type": "preventive",
+        "description": "Sample description for MaintenanceRecord 4",
+        "cost": 42.0,
+        "technician": "Sample technician for MaintenanceRecord 4"
+      },
+      {
+        "name": "MaintenanceRecord 5",
+        "record_id": "Sample record_id for MaintenanceRecord 5",
+        "maintenance_type": "corrective",
+        "description": "Sample description for MaintenanceRecord 5",
+        "cost": 52.5,
+        "technician": "Sample technician for MaintenanceRecord 5"
+      }
+    ],
+    "System": [
+      {
+        "name": "System 1",
+        "system_id": "Sample system_id for System 1",
+        "system_type": "electrical",
+        "criticality": "medium",
+        "location": "Sample location for System 1"
+      },
+      {
+        "name": "System 2",
+        "system_id": "Sample system_id for System 2",
+        "system_type": "hydraulic",
+        "criticality": "high",
+        "location": "Sample location for System 2"
+      },
+      {
+        "name": "System 3",
+        "system_id": "Sample system_id for System 3",
+        "system_type": "pneumatic",
+        "criticality": "critical",
+        "location": "Sample location for System 3"
+      },
+      {
+        "name": "System 4",
+        "system_id": "Sample system_id for System 4",
+        "system_type": "control",
+        "criticality": "low",
+        "location": "Sample location for System 4"
+      },
+      {
+        "name": "System 5",
+        "system_id": "Sample system_id for System 5",
+        "system_type": "safety",
+        "criticality": "medium",
+        "location": "Sample location for System 5"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "MONITORED_BY",
+      "source_label": "Asset",
+      "source_name": "Asset 1",
+      "target_label": "Sensor",
+      "target_name": "Sensor 5"
+    },
+    {
+      "type": "MONITORED_BY",
+      "source_label": "Asset",
+      "source_name": "Asset 2",
+      "target_label": "Sensor",
+      "target_name": "Sensor 2"
+    },
+    {
+      "type": "MONITORED_BY",
+      "source_label": "Asset",
+      "source_name": "Asset 2",
+      "target_label": "Sensor",
+      "target_name": "Sensor 4"
+    },
+    {
+      "type": "MONITORED_BY",
+      "source_label": "Asset",
+      "source_name": "Asset 3",
+      "target_label": "Sensor",
+      "target_name": "Sensor 3"
+    },
+    {
+      "type": "MONITORED_BY",
+      "source_label": "Asset",
+      "source_name": "Asset 4",
+      "target_label": "Sensor",
+      "target_name": "Sensor 2"
+    },
+    {
+      "type": "MONITORED_BY",
+      "source_label": "Asset",
+      "source_name": "Asset 4",
+      "target_label": "Sensor",
+      "target_name": "Sensor 3"
+    },
+    {
+      "type": "MONITORED_BY",
+      "source_label": "Asset",
+      "source_name": "Asset 5",
+      "target_label": "Sensor",
+      "target_name": "Sensor 1"
+    },
+    {
+      "type": "MONITORED_BY",
+      "source_label": "Asset",
+      "source_name": "Asset 5",
+      "target_label": "Sensor",
+      "target_name": "Sensor 4"
+    },
+    {
+      "type": "TRIGGERED",
+      "source_label": "Reading",
+      "source_name": "Reading 1",
+      "target_label": "Alert",
+      "target_name": "Alert 1"
+    },
+    {
+      "type": "TRIGGERED",
+      "source_label": "Reading",
+      "source_name": "Reading 1",
+      "target_label": "Alert",
+      "target_name": "Alert 4"
+    },
+    {
+      "type": "TRIGGERED",
+      "source_label": "Reading",
+      "source_name": "Reading 2",
+      "target_label": "Alert",
+      "target_name": "Alert 2"
+    },
+    {
+      "type": "TRIGGERED",
+      "source_label": "Reading",
+      "source_name": "Reading 3",
+      "target_label": "Alert",
+      "target_name": "Alert 1"
+    },
+    {
+      "type": "TRIGGERED",
+      "source_label": "Reading",
+      "source_name": "Reading 3",
+      "target_label": "Alert",
+      "target_name": "Alert 3"
+    },
+    {
+      "type": "TRIGGERED",
+      "source_label": "Reading",
+      "source_name": "Reading 4",
+      "target_label": "Alert",
+      "target_name": "Alert 4"
+    },
+    {
+      "type": "TRIGGERED",
+      "source_label": "Reading",
+      "source_name": "Reading 4",
+      "target_label": "Alert",
+      "target_name": "Alert 5"
+    },
+    {
+      "type": "TRIGGERED",
+      "source_label": "Reading",
+      "source_name": "Reading 5",
+      "target_label": "Alert",
+      "target_name": "Alert 4"
+    },
+    {
+      "type": "MAINTAINED",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 1",
+      "target_label": "Asset",
+      "target_name": "Asset 1"
+    },
+    {
+      "type": "MAINTAINED",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 2",
+      "target_label": "Asset",
+      "target_name": "Asset 5"
+    },
+    {
+      "type": "MAINTAINED",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 3",
+      "target_label": "Asset",
+      "target_name": "Asset 5"
+    },
+    {
+      "type": "MAINTAINED",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 4",
+      "target_label": "Asset",
+      "target_name": "Asset 2"
+    },
+    {
+      "type": "MAINTAINED",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 5",
+      "target_label": "Asset",
+      "target_name": "Asset 2"
+    },
+    {
+      "type": "MAINTAINED",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 5",
+      "target_label": "Asset",
+      "target_name": "Asset 3"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Asset",
+      "source_name": "Asset 1",
+      "target_label": "Asset",
+      "target_name": "Asset 5"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Asset",
+      "source_name": "Asset 2",
+      "target_label": "Asset",
+      "target_name": "Asset 5"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Asset",
+      "source_name": "Asset 3",
+      "target_label": "Asset",
+      "target_name": "Asset 4"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Asset",
+      "source_name": "Asset 4",
+      "target_label": "Asset",
+      "target_name": "Asset 2"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Asset",
+      "source_name": "Asset 5",
+      "target_label": "Asset",
+      "target_name": "Asset 4"
+    },
+    {
+      "type": "PART_OF",
+      "source_label": "Asset",
+      "source_name": "Asset 1",
+      "target_label": "System",
+      "target_name": "System 1"
+    },
+    {
+      "type": "PART_OF",
+      "source_label": "Asset",
+      "source_name": "Asset 2",
+      "target_label": "System",
+      "target_name": "System 3"
+    },
+    {
+      "type": "PART_OF",
+      "source_label": "Asset",
+      "source_name": "Asset 3",
+      "target_label": "System",
+      "target_name": "System 3"
+    },
+    {
+      "type": "PART_OF",
+      "source_label": "Asset",
+      "source_name": "Asset 4",
+      "target_label": "System",
+      "target_name": "System 5"
+    },
+    {
+      "type": "PART_OF",
+      "source_label": "Asset",
+      "source_name": "Asset 4",
+      "target_label": "System",
+      "target_name": "System 2"
+    },
+    {
+      "type": "PART_OF",
+      "source_label": "Asset",
+      "source_name": "Asset 5",
+      "target_label": "System",
+      "target_name": "System 5"
+    },
+    {
+      "type": "PART_OF",
+      "source_label": "Asset",
+      "source_name": "Asset 5",
+      "target_label": "System",
+      "target_name": "System 3"
+    },
+    {
+      "type": "GENERATED",
+      "source_label": "Sensor",
+      "source_name": "Sensor 1",
+      "target_label": "Reading",
+      "target_name": "Reading 4"
+    },
+    {
+      "type": "GENERATED",
+      "source_label": "Sensor",
+      "source_name": "Sensor 2",
+      "target_label": "Reading",
+      "target_name": "Reading 1"
+    },
+    {
+      "type": "GENERATED",
+      "source_label": "Sensor",
+      "source_name": "Sensor 3",
+      "target_label": "Reading",
+      "target_name": "Reading 2"
+    },
+    {
+      "type": "GENERATED",
+      "source_label": "Sensor",
+      "source_name": "Sensor 4",
+      "target_label": "Reading",
+      "target_name": "Reading 5"
+    },
+    {
+      "type": "GENERATED",
+      "source_label": "Sensor",
+      "source_name": "Sensor 4",
+      "target_label": "Reading",
+      "target_name": "Reading 2"
+    },
+    {
+      "type": "GENERATED",
+      "source_label": "Sensor",
+      "source_name": "Sensor 5",
+      "target_label": "Reading",
+      "target_name": "Reading 1"
+    },
+    {
+      "type": "CAUSED_BY",
+      "source_label": "Alert",
+      "source_name": "Alert 1",
+      "target_label": "Asset",
+      "target_name": "Asset 2"
+    },
+    {
+      "type": "CAUSED_BY",
+      "source_label": "Alert",
+      "source_name": "Alert 1",
+      "target_label": "Asset",
+      "target_name": "Asset 5"
+    },
+    {
+      "type": "CAUSED_BY",
+      "source_label": "Alert",
+      "source_name": "Alert 2",
+      "target_label": "Asset",
+      "target_name": "Asset 1"
+    },
+    {
+      "type": "CAUSED_BY",
+      "source_label": "Alert",
+      "source_name": "Alert 3",
+      "target_label": "Asset",
+      "target_name": "Asset 2"
+    },
+    {
+      "type": "CAUSED_BY",
+      "source_label": "Alert",
+      "source_name": "Alert 3",
+      "target_label": "Asset",
+      "target_name": "Asset 4"
+    },
+    {
+      "type": "CAUSED_BY",
+      "source_label": "Alert",
+      "source_name": "Alert 4",
+      "target_label": "Asset",
+      "target_name": "Asset 5"
+    },
+    {
+      "type": "CAUSED_BY",
+      "source_label": "Alert",
+      "source_name": "Alert 5",
+      "target_label": "Asset",
+      "target_name": "Asset 4"
+    },
+    {
+      "type": "FOLLOWED_UP",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 1",
+      "target_label": "Alert",
+      "target_name": "Alert 1"
+    },
+    {
+      "type": "FOLLOWED_UP",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 2",
+      "target_label": "Alert",
+      "target_name": "Alert 2"
+    },
+    {
+      "type": "FOLLOWED_UP",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 3",
+      "target_label": "Alert",
+      "target_name": "Alert 1"
+    },
+    {
+      "type": "FOLLOWED_UP",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 3",
+      "target_label": "Alert",
+      "target_name": "Alert 3"
+    },
+    {
+      "type": "FOLLOWED_UP",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 4",
+      "target_label": "Alert",
+      "target_name": "Alert 5"
+    },
+    {
+      "type": "FOLLOWED_UP",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 5",
+      "target_label": "Alert",
+      "target_name": "Alert 5"
+    },
+    {
+      "type": "FOLLOWED_UP",
+      "source_label": "MaintenanceRecord",
+      "source_name": "MaintenanceRecord 5",
+      "target_label": "Alert",
+      "target_name": "Alert 1"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "sensor_report",
+      "template_name": "Sensor Report",
+      "title": "Sensor Report #1",
+      "content": "Sample Sensor Report #1\n\nThis is a sample periodic sensor reading summary and trend analysis for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "sensor_report",
+      "template_name": "Sensor Report",
+      "title": "Sensor Report #2",
+      "content": "Sample Sensor Report #2\n\nThis is a sample periodic sensor reading summary and trend analysis for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "sensor_report",
+      "template_name": "Sensor Report",
+      "title": "Sensor Report #3",
+      "content": "Sample Sensor Report #3\n\nThis is a sample periodic sensor reading summary and trend analysis for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "sensor_report",
+      "template_name": "Sensor Report",
+      "title": "Sensor Report #4",
+      "content": "Sample Sensor Report #4\n\nThis is a sample periodic sensor reading summary and trend analysis for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "sensor_report",
+      "template_name": "Sensor Report",
+      "title": "Sensor Report #5",
+      "content": "Sample Sensor Report #5\n\nThis is a sample periodic sensor reading summary and trend analysis for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #1",
+      "content": "Sample Maintenance Log #1\n\nThis is a sample detailed log of maintenance activities performed for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #2",
+      "content": "Sample Maintenance Log #2\n\nThis is a sample detailed log of maintenance activities performed for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #3",
+      "content": "Sample Maintenance Log #3\n\nThis is a sample detailed log of maintenance activities performed for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #4",
+      "content": "Sample Maintenance Log #4\n\nThis is a sample detailed log of maintenance activities performed for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #5",
+      "content": "Sample Maintenance Log #5\n\nThis is a sample detailed log of maintenance activities performed for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "alert_digest",
+      "template_name": "Alert Digest",
+      "title": "Alert Digest #1",
+      "content": "Sample Alert Digest #1\n\nThis is a sample summary of alerts and their resolution status for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "alert_digest",
+      "template_name": "Alert Digest",
+      "title": "Alert Digest #2",
+      "content": "Sample Alert Digest #2\n\nThis is a sample summary of alerts and their resolution status for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "alert_digest",
+      "template_name": "Alert Digest",
+      "title": "Alert Digest #3",
+      "content": "Sample Alert Digest #3\n\nThis is a sample summary of alerts and their resolution status for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "alert_digest",
+      "template_name": "Alert Digest",
+      "title": "Alert Digest #4",
+      "content": "Sample Alert Digest #4\n\nThis is a sample summary of alerts and their resolution status for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "alert_digest",
+      "template_name": "Alert Digest",
+      "title": "Alert Digest #5",
+      "content": "Sample Alert Digest #5\n\nThis is a sample summary of alerts and their resolution status for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "system_status_report",
+      "template_name": "System Status Report",
+      "title": "System Status Report #1",
+      "content": "Sample System Status Report #1\n\nThis is a sample overall system health and performance report for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "system_status_report",
+      "template_name": "System Status Report",
+      "title": "System Status Report #2",
+      "content": "Sample System Status Report #2\n\nThis is a sample overall system health and performance report for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "system_status_report",
+      "template_name": "System Status Report",
+      "title": "System Status Report #3",
+      "content": "Sample System Status Report #3\n\nThis is a sample overall system health and performance report for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "system_status_report",
+      "template_name": "System Status Report",
+      "title": "System Status Report #4",
+      "content": "Sample System Status Report #4\n\nThis is a sample overall system health and performance report for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "system_status_report",
+      "template_name": "System Status Report",
+      "title": "System Status Report #5",
+      "content": "Sample System Status Report #5\n\nThis is a sample overall system health and performance report for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "performance_analysis",
+      "template_name": "Performance Analysis",
+      "title": "Performance Analysis #1",
+      "content": "Sample Performance Analysis #1\n\nThis is a sample deep analysis of asset performance and efficiency for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "performance_analysis",
+      "template_name": "Performance Analysis",
+      "title": "Performance Analysis #2",
+      "content": "Sample Performance Analysis #2\n\nThis is a sample deep analysis of asset performance and efficiency for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "performance_analysis",
+      "template_name": "Performance Analysis",
+      "title": "Performance Analysis #3",
+      "content": "Sample Performance Analysis #3\n\nThis is a sample deep analysis of asset performance and efficiency for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "performance_analysis",
+      "template_name": "Performance Analysis",
+      "title": "Performance Analysis #4",
+      "content": "Sample Performance Analysis #4\n\nThis is a sample deep analysis of asset performance and efficiency for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "performance_analysis",
+      "template_name": "Performance Analysis",
+      "title": "Performance Analysis #5",
+      "content": "Sample Performance Analysis #5\n\nThis is a sample deep analysis of asset performance and efficiency for the Digital Twin domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "predictive_maintenance",
+      "task": "Determine if asset Asset 1 requires predictive maintenance",
+      "steps": [
+        {
+          "thought": "Analyze recent sensor readings for degradation patterns",
+          "action": "Query sensor readings and identify trend deviations from baseline",
+          "observation": "Results retrieved for: Query sensor readings and identify trend deviations from baseline"
+        },
+        {
+          "thought": "Review maintenance history and failure patterns",
+          "action": "Pull maintenance records and calculate mean time between failures",
+          "observation": "Results retrieved for: Pull maintenance records and calculate mean time between failures"
+        },
+        {
+          "thought": "Assess impact of downtime on connected systems",
+          "action": "Map asset dependencies and evaluate criticality of connected systems",
+          "observation": "Results retrieved for: Map asset dependencies and evaluate criticality of connected systems"
+        },
+        {
+          "thought": "Compare cost of preventive action vs risk of failure",
+          "action": "Calculate maintenance cost vs estimated cost of unplanned downtime",
+          "observation": "Results retrieved for: Calculate maintenance cost vs estimated cost of unplanned downtime"
+        }
+      ],
+      "outcome": "Recommendation: {{action}} within {{timeframe}} based on {{evidence}}"
+    },
+    {
+      "id": "alert_triage",
+      "task": "Triage and prioritize alert {{alert.alert_id}} for asset Asset 3",
+      "steps": [
+        {
+          "thought": "Assess alert severity and affected asset criticality",
+          "action": "Query alert details and asset system criticality level",
+          "observation": "Results retrieved for: Query alert details and asset system criticality level"
+        },
+        {
+          "thought": "Check for correlated alerts on connected assets",
+          "action": "Search for alerts on assets connected to or in the same system",
+          "observation": "Results retrieved for: Search for alerts on assets connected to or in the same system"
+        },
+        {
+          "thought": "Determine root cause vs symptom",
+          "action": "Analyze sensor reading patterns leading up to the alert trigger",
+          "observation": "Results retrieved for: Analyze sensor reading patterns leading up to the alert trigger"
+        }
+      ],
+      "outcome": "Priority: {{priority}}. Root cause: {{cause}}. Action: {{action}}"
+    },
+    {
+      "id": "system_optimization",
+      "task": "Optimize performance of system System 2",
+      "steps": [
+        {
+          "thought": "Identify underperforming assets based on sensor baselines",
+          "action": "Compare current sensor readings against optimal operating ranges",
+          "observation": "Results retrieved for: Compare current sensor readings against optimal operating ranges"
+        },
+        {
+          "thought": "Analyze maintenance patterns for efficiency opportunities",
+          "action": "Review maintenance frequency and correlate with performance metrics",
+          "observation": "Results retrieved for: Review maintenance frequency and correlate with performance metrics"
+        },
+        {
+          "thought": "Model impact of proposed changes on overall system output",
+          "action": "Simulate adjustments based on historical sensor-performance correlations",
+          "observation": "Results retrieved for: Simulate adjustments based on historical sensor-performance correlations"
+        }
+      ],
+      "outcome": "Optimization plan: {{plan}} with expected {{improvement}}% gain"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+"""{{ domain.name }} AI Agent — MAF (Modular Agent Framework) implementation."""
+
+from __future__ import annotations
+
+import json
+import uuid
+
+from app.config import settings
+from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+
+
+SYSTEM_PROMPT = """{{ system_prompt }}"""
+
+# ---------------------------------------------------------------------------
+# Tool registry for {{ domain.name }}
+# ---------------------------------------------------------------------------
+
+{% raw %}
+TOOL_REGISTRY = {}
+
+
+def register_tool(name: str, description: str):
+    """Decorator to register a tool function."""
+    def decorator(func):
+        TOOL_REGISTRY[name] = {"function": func, "description": description}
+        return func
+    return decorator
+{% endraw %}
+
+{% for tool in agent_tools %}
+@register_tool("{{ tool.name }}", "{{ tool.description }}")
+async def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{ 'str' if param.type == 'string' else 'int' if param.type == 'integer' else 'float' if param.type == 'float' else 'str' }}{% if param.default is not none %} = {{ param.default if param.type != 'string' else '"' + param.default + '"' }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}) -> str:
+    """{{ tool.description }}"""
+    cypher = """{{ tool.cypher | indent(4) }}"""
+    params = {
+{% for param in tool.parameters %}
+        "{{ param.name }}": {{ param.name }},
+{% endfor %}
+    }
+    result = await execute_cypher(cypher, params)
+    return json.dumps(result, default=str)
+
+{% endfor %}
+
+{% raw %}
+@register_tool("execute_cypher", "Execute a read-only Cypher query against the knowledge graph")
+async def run_cypher(query: str, parameters: str = "{}") -> str:
+    """Execute a read-only Cypher query against the knowledge graph."""
+    params = json.loads(parameters) if parameters else {}
+    result = await execute_cypher(query, params)
+    return json.dumps(result, default=str)
+
+
+@register_tool("get_schema", "Get the knowledge graph schema")
+async def get_graph_schema() -> str:
+    """Get the knowledge graph schema (node labels and relationship types)."""
+    result = await get_schema()
+    return json.dumps(result, default=str)
+
+
+# ---------------------------------------------------------------------------
+# Simple modular agent with tool dispatch
+# ---------------------------------------------------------------------------
+
+
+async def handle_message(message: str, session_id: str | None = None) -> dict:
+    """Handle an incoming chat message.
+
+    This MAF implementation uses a simple tool-dispatch pattern.
+    Replace with your MAF agent configuration as needed.
+    """
+    if session_id is None:
+        session_id = str(uuid.uuid4())
+
+    # Simple keyword-based tool dispatch
+    results = []
+    message_lower = message.lower()
+
+    for tool_name, tool_info in TOOL_REGISTRY.items():
+        if tool_name.replace("_", " ") in message_lower or any(
+            word in message_lower for word in tool_name.split("_")
+        ):
+            try:
+                result = await tool_info["function"]()
+                results.append(f"**{tool_name}**: {result[:500]}")
+            except TypeError:
+                pass
+
+    if not results:
+        # Default: search entities
+        from app.context_graph_client import search_entities
+        search_results = await search_entities(message)
+        if search_results:
+            response = f"Found {len(search_results)} results:\n"
+            for r in search_results[:5]:
+                name = r.get("n", {}).get("name", "Unknown")
+                response += f"- {name}\n"
+        else:
+            available = ", ".join(TOOL_REGISTRY.keys())
+            response = (
+                f"I'm your {SYSTEM_PROMPT.split('.')[0].strip()} "
+                f"Available tools: {available}"
+            )
+        return {
+            "response": response,
+            "session_id": session_id,
+            "graph_data": None,
+        }
+
+    return {
+        "response": "\n\n".join(results),
+        "session_id": session_id,
+        "graph_data": None,
+    }
+{% endraw %}

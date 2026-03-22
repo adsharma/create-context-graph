@@ -1,0 +1,1159 @@
+{
+  "domain": "vacation-industry",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Resort": [
+      {
+        "name": "Resort 1",
+        "resort_id": "Sample resort_id for Resort 1",
+        "resort_type": "mountain",
+        "location": "Sample location for Resort 1",
+        "country": "Sample country for Resort 1",
+        "star_rating": 10.5,
+        "total_rooms": 100,
+        "status": "seasonal_closed"
+      },
+      {
+        "name": "Resort 2",
+        "resort_id": "Sample resort_id for Resort 2",
+        "resort_type": "ski",
+        "location": "Sample location for Resort 2",
+        "country": "Sample country for Resort 2",
+        "star_rating": 21.0,
+        "total_rooms": 200,
+        "status": "renovation"
+      },
+      {
+        "name": "Resort 3",
+        "resort_id": "Sample resort_id for Resort 3",
+        "resort_type": "spa",
+        "location": "Sample location for Resort 3",
+        "country": "Sample country for Resort 3",
+        "star_rating": 31.5,
+        "total_rooms": 300,
+        "status": "coming_soon"
+      },
+      {
+        "name": "Resort 4",
+        "resort_id": "Sample resort_id for Resort 4",
+        "resort_type": "golf",
+        "location": "Sample location for Resort 4",
+        "country": "Sample country for Resort 4",
+        "star_rating": 42.0,
+        "total_rooms": 400,
+        "status": "open"
+      },
+      {
+        "name": "Resort 5",
+        "resort_id": "Sample resort_id for Resort 5",
+        "resort_type": "all_inclusive",
+        "location": "Sample location for Resort 5",
+        "country": "Sample country for Resort 5",
+        "star_rating": 52.5,
+        "total_rooms": 500,
+        "status": "seasonal_closed"
+      }
+    ],
+    "Booking": [
+      {
+        "name": "Booking 1",
+        "booking_id": "Sample booking_id for Booking 1",
+        "total_cost": 10.5,
+        "currency": "Sample currency for Booking 1",
+        "booking_status": "pending",
+        "channel": "ota"
+      },
+      {
+        "name": "Booking 2",
+        "booking_id": "Sample booking_id for Booking 2",
+        "total_cost": 21.0,
+        "currency": "Sample currency for Booking 2",
+        "booking_status": "cancelled",
+        "channel": "travel_agent"
+      },
+      {
+        "name": "Booking 3",
+        "booking_id": "Sample booking_id for Booking 3",
+        "total_cost": 31.5,
+        "currency": "Sample currency for Booking 3",
+        "booking_status": "completed",
+        "channel": "corporate"
+      },
+      {
+        "name": "Booking 4",
+        "booking_id": "Sample booking_id for Booking 4",
+        "total_cost": 42.0,
+        "currency": "Sample currency for Booking 4",
+        "booking_status": "no_show",
+        "channel": "loyalty_program"
+      },
+      {
+        "name": "Booking 5",
+        "booking_id": "Sample booking_id for Booking 5",
+        "total_cost": 52.5,
+        "currency": "Sample currency for Booking 5",
+        "booking_status": "confirmed",
+        "channel": "direct"
+      }
+    ],
+    "Guest": [
+      {
+        "name": "Guest 1",
+        "guest_id": "Sample guest_id for Guest 1",
+        "email": "Sample email for Guest 1",
+        "loyalty_tier": "silver",
+        "nationality": "Sample nationality for Guest 1",
+        "travel_style": "adventure"
+      },
+      {
+        "name": "Guest 2",
+        "guest_id": "Sample guest_id for Guest 2",
+        "email": "Sample email for Guest 2",
+        "loyalty_tier": "gold",
+        "nationality": "Sample nationality for Guest 2",
+        "travel_style": "family"
+      },
+      {
+        "name": "Guest 3",
+        "guest_id": "Sample guest_id for Guest 3",
+        "email": "Sample email for Guest 3",
+        "loyalty_tier": "platinum",
+        "nationality": "Sample nationality for Guest 3",
+        "travel_style": "romantic"
+      },
+      {
+        "name": "Guest 4",
+        "guest_id": "Sample guest_id for Guest 4",
+        "email": "Sample email for Guest 4",
+        "loyalty_tier": "diamond",
+        "nationality": "Sample nationality for Guest 4",
+        "travel_style": "budget"
+      },
+      {
+        "name": "Guest 5",
+        "guest_id": "Sample guest_id for Guest 5",
+        "email": "Sample email for Guest 5",
+        "loyalty_tier": "standard",
+        "nationality": "Sample nationality for Guest 5",
+        "travel_style": "wellness"
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Activity 1",
+        "activity_id": "Sample activity_id for Activity 1",
+        "activity_type": "excursion",
+        "duration_hours": 10.5,
+        "price": 10.5,
+        "difficulty": "moderate",
+        "min_age": 100
+      },
+      {
+        "name": "Activity 2",
+        "activity_id": "Sample activity_id for Activity 2",
+        "activity_type": "spa",
+        "duration_hours": 21.0,
+        "price": 21.0,
+        "difficulty": "challenging",
+        "min_age": 200
+      },
+      {
+        "name": "Activity 3",
+        "activity_id": "Sample activity_id for Activity 3",
+        "activity_type": "dining",
+        "duration_hours": 31.5,
+        "price": 31.5,
+        "difficulty": "expert",
+        "min_age": 300
+      },
+      {
+        "name": "Activity 4",
+        "activity_id": "Sample activity_id for Activity 4",
+        "activity_type": "entertainment",
+        "duration_hours": 42.0,
+        "price": 42.0,
+        "difficulty": "easy",
+        "min_age": 400
+      },
+      {
+        "name": "Activity 5",
+        "activity_id": "Sample activity_id for Activity 5",
+        "activity_type": "fitness",
+        "duration_hours": 52.5,
+        "price": 52.5,
+        "difficulty": "moderate",
+        "min_age": 500
+      }
+    ],
+    "Season": [
+      {
+        "name": "Season 1",
+        "season_id": "Sample season_id for Season 1",
+        "season_type": "high",
+        "rate_multiplier": 10.5,
+        "avg_occupancy": 10.5
+      },
+      {
+        "name": "Season 2",
+        "season_id": "Sample season_id for Season 2",
+        "season_type": "shoulder",
+        "rate_multiplier": 21.0,
+        "avg_occupancy": 21.0
+      },
+      {
+        "name": "Season 3",
+        "season_id": "Sample season_id for Season 3",
+        "season_type": "low",
+        "rate_multiplier": 31.5,
+        "avg_occupancy": 31.5
+      },
+      {
+        "name": "Season 4",
+        "season_id": "Sample season_id for Season 4",
+        "season_type": "holiday",
+        "rate_multiplier": 42.0,
+        "avg_occupancy": 42.0
+      },
+      {
+        "name": "Season 5",
+        "season_id": "Sample season_id for Season 5",
+        "season_type": "peak",
+        "rate_multiplier": 52.5,
+        "avg_occupancy": 52.5
+      }
+    ],
+    "Package": [
+      {
+        "name": "Package 1",
+        "package_id": "Sample package_id for Package 1",
+        "package_type": "family",
+        "base_price": 10.5,
+        "duration_nights": 100,
+        "max_guests": 100,
+        "description": "Sample description for Package 1"
+      },
+      {
+        "name": "Package 2",
+        "package_id": "Sample package_id for Package 2",
+        "package_type": "adventure",
+        "base_price": 21.0,
+        "duration_nights": 200,
+        "max_guests": 200,
+        "description": "Sample description for Package 2"
+      },
+      {
+        "name": "Package 3",
+        "package_id": "Sample package_id for Package 3",
+        "package_type": "wellness",
+        "base_price": 31.5,
+        "duration_nights": 300,
+        "max_guests": 300,
+        "description": "Sample description for Package 3"
+      },
+      {
+        "name": "Package 4",
+        "package_id": "Sample package_id for Package 4",
+        "package_type": "all_inclusive",
+        "base_price": 42.0,
+        "duration_nights": 400,
+        "max_guests": 400,
+        "description": "Sample description for Package 4"
+      },
+      {
+        "name": "Package 5",
+        "package_id": "Sample package_id for Package 5",
+        "package_type": "weekend_getaway",
+        "base_price": 52.5,
+        "duration_nights": 500,
+        "max_guests": 500,
+        "description": "Sample description for Package 5"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Booking",
+      "source_name": "Booking 1",
+      "target_label": "Resort",
+      "target_name": "Resort 3"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Booking",
+      "source_name": "Booking 2",
+      "target_label": "Resort",
+      "target_name": "Resort 5"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Booking",
+      "source_name": "Booking 2",
+      "target_label": "Resort",
+      "target_name": "Resort 2"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Booking",
+      "source_name": "Booking 3",
+      "target_label": "Resort",
+      "target_name": "Resort 4"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Booking",
+      "source_name": "Booking 4",
+      "target_label": "Resort",
+      "target_name": "Resort 1"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Booking",
+      "source_name": "Booking 4",
+      "target_label": "Resort",
+      "target_name": "Resort 4"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Booking",
+      "source_name": "Booking 5",
+      "target_label": "Resort",
+      "target_name": "Resort 4"
+    },
+    {
+      "type": "BOOKED_AT",
+      "source_label": "Booking",
+      "source_name": "Booking 5",
+      "target_label": "Resort",
+      "target_name": "Resort 1"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Resort",
+      "target_name": "Resort 2"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Guest",
+      "source_name": "Guest 2",
+      "target_label": "Resort",
+      "target_name": "Resort 4"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Guest",
+      "source_name": "Guest 2",
+      "target_label": "Resort",
+      "target_name": "Resort 5"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Resort",
+      "target_name": "Resort 4"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Resort",
+      "target_name": "Resort 5"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Resort",
+      "target_name": "Resort 3"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Resort",
+      "target_name": "Resort 5"
+    },
+    {
+      "type": "REVIEWED",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Resort",
+      "target_name": "Resort 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Activity",
+      "target_name": "Activity 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Activity",
+      "target_name": "Activity 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Guest",
+      "source_name": "Guest 2",
+      "target_label": "Activity",
+      "target_name": "Activity 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Activity",
+      "target_name": "Activity 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Activity",
+      "target_name": "Activity 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Activity",
+      "target_name": "Activity 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Activity",
+      "target_name": "Activity 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Activity",
+      "target_name": "Activity 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Activity",
+      "target_name": "Activity 1"
+    },
+    {
+      "type": "AVAILABLE_IN",
+      "source_label": "Activity",
+      "source_name": "Activity 1",
+      "target_label": "Season",
+      "target_name": "Season 4"
+    },
+    {
+      "type": "AVAILABLE_IN",
+      "source_label": "Activity",
+      "source_name": "Activity 2",
+      "target_label": "Season",
+      "target_name": "Season 3"
+    },
+    {
+      "type": "AVAILABLE_IN",
+      "source_label": "Activity",
+      "source_name": "Activity 2",
+      "target_label": "Season",
+      "target_name": "Season 5"
+    },
+    {
+      "type": "AVAILABLE_IN",
+      "source_label": "Activity",
+      "source_name": "Activity 3",
+      "target_label": "Season",
+      "target_name": "Season 4"
+    },
+    {
+      "type": "AVAILABLE_IN",
+      "source_label": "Activity",
+      "source_name": "Activity 4",
+      "target_label": "Season",
+      "target_name": "Season 2"
+    },
+    {
+      "type": "AVAILABLE_IN",
+      "source_label": "Activity",
+      "source_name": "Activity 5",
+      "target_label": "Season",
+      "target_name": "Season 3"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Package",
+      "source_name": "Package 1",
+      "target_label": "Activity",
+      "target_name": "Activity 1"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Package",
+      "source_name": "Package 1",
+      "target_label": "Activity",
+      "target_name": "Activity 2"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Package",
+      "source_name": "Package 2",
+      "target_label": "Activity",
+      "target_name": "Activity 2"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Package",
+      "source_name": "Package 3",
+      "target_label": "Activity",
+      "target_name": "Activity 1"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Package",
+      "source_name": "Package 4",
+      "target_label": "Activity",
+      "target_name": "Activity 4"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Package",
+      "source_name": "Package 4",
+      "target_label": "Activity",
+      "target_name": "Activity 2"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Package",
+      "source_name": "Package 5",
+      "target_label": "Activity",
+      "target_name": "Activity 3"
+    },
+    {
+      "type": "INCLUDES",
+      "source_label": "Package",
+      "source_name": "Package 5",
+      "target_label": "Activity",
+      "target_name": "Activity 4"
+    },
+    {
+      "type": "PREFERRED_BY",
+      "source_label": "Package",
+      "source_name": "Package 1",
+      "target_label": "Guest",
+      "target_name": "Guest 1"
+    },
+    {
+      "type": "PREFERRED_BY",
+      "source_label": "Package",
+      "source_name": "Package 2",
+      "target_label": "Guest",
+      "target_name": "Guest 3"
+    },
+    {
+      "type": "PREFERRED_BY",
+      "source_label": "Package",
+      "source_name": "Package 2",
+      "target_label": "Guest",
+      "target_name": "Guest 4"
+    },
+    {
+      "type": "PREFERRED_BY",
+      "source_label": "Package",
+      "source_name": "Package 3",
+      "target_label": "Guest",
+      "target_name": "Guest 5"
+    },
+    {
+      "type": "PREFERRED_BY",
+      "source_label": "Package",
+      "source_name": "Package 4",
+      "target_label": "Guest",
+      "target_name": "Guest 5"
+    },
+    {
+      "type": "PREFERRED_BY",
+      "source_label": "Package",
+      "source_name": "Package 5",
+      "target_label": "Guest",
+      "target_name": "Guest 5"
+    },
+    {
+      "type": "MADE_BOOKING",
+      "source_label": "Guest",
+      "source_name": "Guest 1",
+      "target_label": "Booking",
+      "target_name": "Booking 4"
+    },
+    {
+      "type": "MADE_BOOKING",
+      "source_label": "Guest",
+      "source_name": "Guest 2",
+      "target_label": "Booking",
+      "target_name": "Booking 5"
+    },
+    {
+      "type": "MADE_BOOKING",
+      "source_label": "Guest",
+      "source_name": "Guest 2",
+      "target_label": "Booking",
+      "target_name": "Booking 1"
+    },
+    {
+      "type": "MADE_BOOKING",
+      "source_label": "Guest",
+      "source_name": "Guest 3",
+      "target_label": "Booking",
+      "target_name": "Booking 5"
+    },
+    {
+      "type": "MADE_BOOKING",
+      "source_label": "Guest",
+      "source_name": "Guest 4",
+      "target_label": "Booking",
+      "target_name": "Booking 1"
+    },
+    {
+      "type": "MADE_BOOKING",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Booking",
+      "target_name": "Booking 5"
+    },
+    {
+      "type": "MADE_BOOKING",
+      "source_label": "Guest",
+      "source_name": "Guest 5",
+      "target_label": "Booking",
+      "target_name": "Booking 1"
+    },
+    {
+      "type": "OFFERED_AT",
+      "source_label": "Package",
+      "source_name": "Package 1",
+      "target_label": "Resort",
+      "target_name": "Resort 3"
+    },
+    {
+      "type": "OFFERED_AT",
+      "source_label": "Package",
+      "source_name": "Package 1",
+      "target_label": "Resort",
+      "target_name": "Resort 5"
+    },
+    {
+      "type": "OFFERED_AT",
+      "source_label": "Package",
+      "source_name": "Package 2",
+      "target_label": "Resort",
+      "target_name": "Resort 5"
+    },
+    {
+      "type": "OFFERED_AT",
+      "source_label": "Package",
+      "source_name": "Package 2",
+      "target_label": "Resort",
+      "target_name": "Resort 3"
+    },
+    {
+      "type": "OFFERED_AT",
+      "source_label": "Package",
+      "source_name": "Package 3",
+      "target_label": "Resort",
+      "target_name": "Resort 5"
+    },
+    {
+      "type": "OFFERED_AT",
+      "source_label": "Package",
+      "source_name": "Package 3",
+      "target_label": "Resort",
+      "target_name": "Resort 2"
+    },
+    {
+      "type": "OFFERED_AT",
+      "source_label": "Package",
+      "source_name": "Package 4",
+      "target_label": "Resort",
+      "target_name": "Resort 5"
+    },
+    {
+      "type": "OFFERED_AT",
+      "source_label": "Package",
+      "source_name": "Package 5",
+      "target_label": "Resort",
+      "target_name": "Resort 2"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #1",
+      "content": "Sample Booking Confirmation #1\n\nThis is a sample guest booking confirmation with itinerary details for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #2",
+      "content": "Sample Booking Confirmation #2\n\nThis is a sample guest booking confirmation with itinerary details for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #3",
+      "content": "Sample Booking Confirmation #3\n\nThis is a sample guest booking confirmation with itinerary details for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #4",
+      "content": "Sample Booking Confirmation #4\n\nThis is a sample guest booking confirmation with itinerary details for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "booking_confirmation",
+      "template_name": "Booking Confirmation",
+      "title": "Booking Confirmation #5",
+      "content": "Sample Booking Confirmation #5\n\nThis is a sample guest booking confirmation with itinerary details for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_feedback",
+      "template_name": "Guest Feedback Summary",
+      "title": "Guest Feedback Summary #1",
+      "content": "Sample Guest Feedback Summary #1\n\nThis is a sample compiled guest feedback and review analysis for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_feedback",
+      "template_name": "Guest Feedback Summary",
+      "title": "Guest Feedback Summary #2",
+      "content": "Sample Guest Feedback Summary #2\n\nThis is a sample compiled guest feedback and review analysis for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_feedback",
+      "template_name": "Guest Feedback Summary",
+      "title": "Guest Feedback Summary #3",
+      "content": "Sample Guest Feedback Summary #3\n\nThis is a sample compiled guest feedback and review analysis for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_feedback",
+      "template_name": "Guest Feedback Summary",
+      "title": "Guest Feedback Summary #4",
+      "content": "Sample Guest Feedback Summary #4\n\nThis is a sample compiled guest feedback and review analysis for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "guest_feedback",
+      "template_name": "Guest Feedback Summary",
+      "title": "Guest Feedback Summary #5",
+      "content": "Sample Guest Feedback Summary #5\n\nThis is a sample compiled guest feedback and review analysis for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "seasonal_report",
+      "template_name": "Seasonal Operations Report",
+      "title": "Seasonal Operations Report #1",
+      "content": "Sample Seasonal Operations Report #1\n\nThis is a sample end-of-season operations and performance report for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "seasonal_report",
+      "template_name": "Seasonal Operations Report",
+      "title": "Seasonal Operations Report #2",
+      "content": "Sample Seasonal Operations Report #2\n\nThis is a sample end-of-season operations and performance report for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "seasonal_report",
+      "template_name": "Seasonal Operations Report",
+      "title": "Seasonal Operations Report #3",
+      "content": "Sample Seasonal Operations Report #3\n\nThis is a sample end-of-season operations and performance report for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "seasonal_report",
+      "template_name": "Seasonal Operations Report",
+      "title": "Seasonal Operations Report #4",
+      "content": "Sample Seasonal Operations Report #4\n\nThis is a sample end-of-season operations and performance report for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "seasonal_report",
+      "template_name": "Seasonal Operations Report",
+      "title": "Seasonal Operations Report #5",
+      "content": "Sample Seasonal Operations Report #5\n\nThis is a sample end-of-season operations and performance report for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "package_description",
+      "template_name": "Package Description",
+      "title": "Package Description #1",
+      "content": "Sample Package Description #1\n\nThis is a sample marketing description for a vacation package for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "package_description",
+      "template_name": "Package Description",
+      "title": "Package Description #2",
+      "content": "Sample Package Description #2\n\nThis is a sample marketing description for a vacation package for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "package_description",
+      "template_name": "Package Description",
+      "title": "Package Description #3",
+      "content": "Sample Package Description #3\n\nThis is a sample marketing description for a vacation package for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "package_description",
+      "template_name": "Package Description",
+      "title": "Package Description #4",
+      "content": "Sample Package Description #4\n\nThis is a sample marketing description for a vacation package for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "package_description",
+      "template_name": "Package Description",
+      "title": "Package Description #5",
+      "content": "Sample Package Description #5\n\nThis is a sample marketing description for a vacation package for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "activity_schedule",
+      "template_name": "Activity Schedule",
+      "title": "Activity Schedule #1",
+      "content": "Sample Activity Schedule #1\n\nThis is a sample weekly activity schedule for guests for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "activity_schedule",
+      "template_name": "Activity Schedule",
+      "title": "Activity Schedule #2",
+      "content": "Sample Activity Schedule #2\n\nThis is a sample weekly activity schedule for guests for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "activity_schedule",
+      "template_name": "Activity Schedule",
+      "title": "Activity Schedule #3",
+      "content": "Sample Activity Schedule #3\n\nThis is a sample weekly activity schedule for guests for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "activity_schedule",
+      "template_name": "Activity Schedule",
+      "title": "Activity Schedule #4",
+      "content": "Sample Activity Schedule #4\n\nThis is a sample weekly activity schedule for guests for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "activity_schedule",
+      "template_name": "Activity Schedule",
+      "title": "Activity Schedule #5",
+      "content": "Sample Activity Schedule #5\n\nThis is a sample weekly activity schedule for guests for the Vacation Industry domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "pricing_strategy",
+      "task": "Determine optimal pricing for Resort 4 during Season 2",
+      "steps": [
+        {
+          "thought": "Analyze historical occupancy and booking patterns",
+          "action": "Query booking data for the same season in previous years",
+          "observation": "Results retrieved for: Query booking data for the same season in previous years"
+        },
+        {
+          "thought": "Evaluate current demand signals and booking pace",
+          "action": "Compare current bookings against capacity and season targets",
+          "observation": "Results retrieved for: Compare current bookings against capacity and season targets"
+        },
+        {
+          "thought": "Consider competitor pricing and market conditions",
+          "action": "Review rate multipliers and guest feedback on value perception",
+          "observation": "Results retrieved for: Review rate multipliers and guest feedback on value perception"
+        },
+        {
+          "thought": "Model revenue impact of different rate adjustments",
+          "action": "Calculate projected revenue at various occupancy and rate scenarios",
+          "observation": "Results retrieved for: Calculate projected revenue at various occupancy and rate scenarios"
+        }
+      ],
+      "outcome": "Pricing recommendation: {{rate}} with projected occupancy {{occupancy}}%"
+    },
+    {
+      "id": "package_design",
+      "task": "Design a new vacation package for {{guest.travel_style}} travelers at Resort 3",
+      "steps": [
+        {
+          "thought": "Analyze guest preferences and popular activity combinations",
+          "action": "Query guest participation patterns and feedback by travel style",
+          "observation": "Results retrieved for: Query guest participation patterns and feedback by travel style"
+        },
+        {
+          "thought": "Identify high-margin activities to include",
+          "action": "Review activity pricing and guest satisfaction scores",
+          "observation": "Results retrieved for: Review activity pricing and guest satisfaction scores"
+        },
+        {
+          "thought": "Determine competitive pricing and duration",
+          "action": "Compare with existing packages and market benchmarks",
+          "observation": "Results retrieved for: Compare with existing packages and market benchmarks"
+        }
+      ],
+      "outcome": "Package: {{package_name}} at ${{price}} for {{nights}} nights including {{activities}}"
+    },
+    {
+      "id": "seasonal_planning",
+      "task": "Plan operations for upcoming Season 3 at Resort 4",
+      "steps": [
+        {
+          "thought": "Review previous season performance and lessons learned",
+          "action": "Query seasonal reports and guest feedback from last year",
+          "observation": "Results retrieved for: Query seasonal reports and guest feedback from last year"
+        },
+        {
+          "thought": "Forecast demand based on booking trends",
+          "action": "Analyze advance bookings and compare to historical pace",
+          "observation": "Results retrieved for: Analyze advance bookings and compare to historical pace"
+        },
+        {
+          "thought": "Plan staffing, activities, and inventory",
+          "action": "Determine resource requirements based on demand forecast",
+          "observation": "Results retrieved for: Determine resource requirements based on demand forecast"
+        }
+      ],
+      "outcome": "Plan: {{plan}} with estimated occupancy {{occupancy}}% and revenue ${{revenue}}"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{% raw %}"""Neo4j context graph client."""
+
+from __future__ import annotations
+
+from neo4j import AsyncGraphDatabase, AsyncDriver
+
+
+_driver: AsyncDriver | None = None
+
+
+async def connect_neo4j() -> None:
+    """Connect to Neo4j."""
+    global _driver
+    from app.config import settings
+    _driver = AsyncGraphDatabase.driver(
+        settings.neo4j_uri,
+        auth=(settings.neo4j_username, settings.neo4j_password),
+    )
+    await _driver.verify_connectivity()
+
+
+async def close_neo4j() -> None:
+    """Close Neo4j connection."""
+    global _driver
+    if _driver:
+        await _driver.close()
+        _driver = None
+
+
+def get_driver() -> AsyncDriver:
+    """Get the Neo4j driver instance."""
+    if _driver is None:
+        raise RuntimeError("Neo4j not connected. Call connect_neo4j() first.")
+    return _driver
+
+
+async def execute_cypher(query: str, parameters: dict | None = None) -> list[dict]:
+    """Execute a Cypher query and return results as dicts."""
+    driver = get_driver()
+    async with driver.session() as session:
+        result = await session.run(query, parameters or {})
+        records = await result.data()
+        return records
+
+
+async def search_entities(query: str, label: str | None = None, limit: int = 20) -> list[dict]:
+    """Full-text search across entities."""
+    cypher = """
+    MATCH (n)
+    WHERE ($label IS NULL OR $label IN labels(n))
+      AND (toLower(n.name) CONTAINS toLower($query)
+           OR toLower(coalesce(n.description, '')) CONTAINS toLower($query))
+    OPTIONAL MATCH (n)-[r]-(related)
+    RETURN n, type(r) AS rel_type, labels(related) AS related_labels,
+           related.name AS related_name
+    LIMIT $limit
+    """
+    return await execute_cypher(cypher, {"query": query, "label": label, "limit": limit})
+
+
+async def get_entity_graph(entity_name: str, depth: int = 2) -> dict:
+    """Get the subgraph around an entity."""
+    cypher = """
+    MATCH (n)
+    WHERE toLower(n.name) = toLower($name)
+    OPTIONAL MATCH path = (n)-[*1..2]-(connected)
+    RETURN n, collect(DISTINCT connected) AS connected_nodes
+    """
+    results = await execute_cypher(cypher, {"name": entity_name})
+    if results:
+        return results[0]
+    return {"nodes": [], "relationships": []}
+
+
+async def get_schema() -> dict:
+    """Get the graph database schema."""
+    labels_result = await execute_cypher("CALL db.labels()")
+    rel_types_result = await execute_cypher("CALL db.relationshipTypes()")
+    return {
+        "labels": [r["label"] for r in labels_result],
+        "relationship_types": [r["relationshipType"] for r in rel_types_result],
+    }
+
+
+async def reset_database() -> None:
+    """Drop all data and recreate schema."""
+    await execute_cypher("MATCH (n) DETACH DELETE n")
+{% endraw %}

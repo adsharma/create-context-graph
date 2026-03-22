@@ -1,0 +1,1115 @@
+{
+  "domain": "conservation",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Site": [
+      {
+        "name": "Site 1",
+        "site_id": "Sample site_id for Site 1",
+        "site_type": "wildlife_refuge",
+        "area_hectares": 10.5,
+        "country": "Sample country for Site 1",
+        "protection_level": "managed",
+        "status": "proposed"
+      },
+      {
+        "name": "Site 2",
+        "site_id": "Sample site_id for Site 2",
+        "site_type": "marine_reserve",
+        "area_hectares": 21.0,
+        "country": "Sample country for Site 2",
+        "protection_level": "sustainable_use",
+        "status": "degraded"
+      },
+      {
+        "name": "Site 3",
+        "site_id": "Sample site_id for Site 3",
+        "site_type": "forest_reserve",
+        "area_hectares": 31.5,
+        "country": "Sample country for Site 3",
+        "protection_level": "unprotected",
+        "status": "restored"
+      },
+      {
+        "name": "Site 4",
+        "site_id": "Sample site_id for Site 4",
+        "site_type": "wetland",
+        "area_hectares": 42.0,
+        "country": "Sample country for Site 4",
+        "protection_level": "strict",
+        "status": "active"
+      },
+      {
+        "name": "Site 5",
+        "site_id": "Sample site_id for Site 5",
+        "site_type": "corridor",
+        "area_hectares": 52.5,
+        "country": "Sample country for Site 5",
+        "protection_level": "managed",
+        "status": "proposed"
+      }
+    ],
+    "Species": [
+      {
+        "name": "Species 1",
+        "species_id": "Sample species_id for Species 1",
+        "common_name": "Sample common_name for Species 1",
+        "scientific_name": "Sample scientific_name for Species 1",
+        "conservation_status": "near_threatened",
+        "population_estimate": 100,
+        "taxonomy_class": "aves"
+      },
+      {
+        "name": "Species 2",
+        "species_id": "Sample species_id for Species 2",
+        "common_name": "Sample common_name for Species 2",
+        "scientific_name": "Sample scientific_name for Species 2",
+        "conservation_status": "vulnerable",
+        "population_estimate": 200,
+        "taxonomy_class": "reptilia"
+      },
+      {
+        "name": "Species 3",
+        "species_id": "Sample species_id for Species 3",
+        "common_name": "Sample common_name for Species 3",
+        "scientific_name": "Sample scientific_name for Species 3",
+        "conservation_status": "endangered",
+        "population_estimate": 300,
+        "taxonomy_class": "amphibia"
+      },
+      {
+        "name": "Species 4",
+        "species_id": "Sample species_id for Species 4",
+        "common_name": "Sample common_name for Species 4",
+        "scientific_name": "Sample scientific_name for Species 4",
+        "conservation_status": "critically_endangered",
+        "population_estimate": 400,
+        "taxonomy_class": "actinopterygii"
+      },
+      {
+        "name": "Species 5",
+        "species_id": "Sample species_id for Species 5",
+        "common_name": "Sample common_name for Species 5",
+        "scientific_name": "Sample scientific_name for Species 5",
+        "conservation_status": "extinct_in_wild",
+        "population_estimate": 500,
+        "taxonomy_class": "insecta"
+      }
+    ],
+    "Program": [
+      {
+        "name": "Program 1",
+        "program_id": "Sample program_id for Program 1",
+        "program_type": "species_recovery",
+        "status": "active"
+      },
+      {
+        "name": "Program 2",
+        "program_id": "Sample program_id for Program 2",
+        "program_type": "anti_poaching",
+        "status": "completed"
+      },
+      {
+        "name": "Program 3",
+        "program_id": "Sample program_id for Program 3",
+        "program_type": "community_engagement",
+        "status": "suspended"
+      },
+      {
+        "name": "Program 4",
+        "program_id": "Sample program_id for Program 4",
+        "program_type": "research",
+        "status": "planning"
+      },
+      {
+        "name": "Program 5",
+        "program_id": "Sample program_id for Program 5",
+        "program_type": "education",
+        "status": "active"
+      }
+    ],
+    "Funding": [
+      {
+        "name": "Funding 1",
+        "funding_id": "Sample funding_id for Funding 1",
+        "amount": 10.5,
+        "currency": "Sample currency for Funding 1",
+        "funding_type": "donation"
+      },
+      {
+        "name": "Funding 2",
+        "funding_id": "Sample funding_id for Funding 2",
+        "amount": 21.0,
+        "currency": "Sample currency for Funding 2",
+        "funding_type": "government"
+      },
+      {
+        "name": "Funding 3",
+        "funding_id": "Sample funding_id for Funding 3",
+        "amount": 31.5,
+        "currency": "Sample currency for Funding 3",
+        "funding_type": "corporate"
+      },
+      {
+        "name": "Funding 4",
+        "funding_id": "Sample funding_id for Funding 4",
+        "amount": 42.0,
+        "currency": "Sample currency for Funding 4",
+        "funding_type": "endowment"
+      },
+      {
+        "name": "Funding 5",
+        "funding_id": "Sample funding_id for Funding 5",
+        "amount": 52.5,
+        "currency": "Sample currency for Funding 5",
+        "funding_type": "grant"
+      }
+    ],
+    "Stakeholder": [
+      {
+        "name": "Stakeholder 1",
+        "stakeholder_id": "Sample stakeholder_id for Stakeholder 1",
+        "stakeholder_type": "government",
+        "role": "Sample role for Stakeholder 1",
+        "country": "Sample country for Stakeholder 1"
+      },
+      {
+        "name": "Stakeholder 2",
+        "stakeholder_id": "Sample stakeholder_id for Stakeholder 2",
+        "stakeholder_type": "community",
+        "role": "Sample role for Stakeholder 2",
+        "country": "Sample country for Stakeholder 2"
+      },
+      {
+        "name": "Stakeholder 3",
+        "stakeholder_id": "Sample stakeholder_id for Stakeholder 3",
+        "stakeholder_type": "academic",
+        "role": "Sample role for Stakeholder 3",
+        "country": "Sample country for Stakeholder 3"
+      },
+      {
+        "name": "Stakeholder 4",
+        "stakeholder_id": "Sample stakeholder_id for Stakeholder 4",
+        "stakeholder_type": "corporate",
+        "role": "Sample role for Stakeholder 4",
+        "country": "Sample country for Stakeholder 4"
+      },
+      {
+        "name": "Stakeholder 5",
+        "stakeholder_id": "Sample stakeholder_id for Stakeholder 5",
+        "stakeholder_type": "indigenous_group",
+        "role": "Sample role for Stakeholder 5",
+        "country": "Sample country for Stakeholder 5"
+      }
+    ],
+    "Monitoring": [
+      {
+        "name": "Monitoring 1",
+        "monitoring_id": "Sample monitoring_id for Monitoring 1",
+        "monitoring_type": "habitat_assessment",
+        "findings": "Sample findings for Monitoring 1",
+        "data_quality": "medium"
+      },
+      {
+        "name": "Monitoring 2",
+        "monitoring_id": "Sample monitoring_id for Monitoring 2",
+        "monitoring_type": "water_quality",
+        "findings": "Sample findings for Monitoring 2",
+        "data_quality": "low"
+      },
+      {
+        "name": "Monitoring 3",
+        "monitoring_id": "Sample monitoring_id for Monitoring 3",
+        "monitoring_type": "camera_trap",
+        "findings": "Sample findings for Monitoring 3",
+        "data_quality": "high"
+      },
+      {
+        "name": "Monitoring 4",
+        "monitoring_id": "Sample monitoring_id for Monitoring 4",
+        "monitoring_type": "acoustic",
+        "findings": "Sample findings for Monitoring 4",
+        "data_quality": "medium"
+      },
+      {
+        "name": "Monitoring 5",
+        "monitoring_id": "Sample monitoring_id for Monitoring 5",
+        "monitoring_type": "satellite",
+        "findings": "Sample findings for Monitoring 5",
+        "data_quality": "low"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PROTECTED_IN",
+      "source_label": "Species",
+      "source_name": "Species 1",
+      "target_label": "Site",
+      "target_name": "Site 4"
+    },
+    {
+      "type": "PROTECTED_IN",
+      "source_label": "Species",
+      "source_name": "Species 2",
+      "target_label": "Site",
+      "target_name": "Site 5"
+    },
+    {
+      "type": "PROTECTED_IN",
+      "source_label": "Species",
+      "source_name": "Species 2",
+      "target_label": "Site",
+      "target_name": "Site 3"
+    },
+    {
+      "type": "PROTECTED_IN",
+      "source_label": "Species",
+      "source_name": "Species 3",
+      "target_label": "Site",
+      "target_name": "Site 1"
+    },
+    {
+      "type": "PROTECTED_IN",
+      "source_label": "Species",
+      "source_name": "Species 3",
+      "target_label": "Site",
+      "target_name": "Site 3"
+    },
+    {
+      "type": "PROTECTED_IN",
+      "source_label": "Species",
+      "source_name": "Species 4",
+      "target_label": "Site",
+      "target_name": "Site 3"
+    },
+    {
+      "type": "PROTECTED_IN",
+      "source_label": "Species",
+      "source_name": "Species 5",
+      "target_label": "Site",
+      "target_name": "Site 5"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Program",
+      "source_name": "Program 1",
+      "target_label": "Funding",
+      "target_name": "Funding 2"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Program",
+      "source_name": "Program 1",
+      "target_label": "Funding",
+      "target_name": "Funding 1"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Program",
+      "source_name": "Program 2",
+      "target_label": "Funding",
+      "target_name": "Funding 4"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Program",
+      "source_name": "Program 3",
+      "target_label": "Funding",
+      "target_name": "Funding 4"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Program",
+      "source_name": "Program 4",
+      "target_label": "Funding",
+      "target_name": "Funding 2"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Program",
+      "source_name": "Program 5",
+      "target_label": "Funding",
+      "target_name": "Funding 4"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Program",
+      "source_name": "Program 5",
+      "target_label": "Funding",
+      "target_name": "Funding 1"
+    },
+    {
+      "type": "PARTNERED_WITH",
+      "source_label": "Stakeholder",
+      "source_name": "Stakeholder 1",
+      "target_label": "Program",
+      "target_name": "Program 3"
+    },
+    {
+      "type": "PARTNERED_WITH",
+      "source_label": "Stakeholder",
+      "source_name": "Stakeholder 1",
+      "target_label": "Program",
+      "target_name": "Program 1"
+    },
+    {
+      "type": "PARTNERED_WITH",
+      "source_label": "Stakeholder",
+      "source_name": "Stakeholder 2",
+      "target_label": "Program",
+      "target_name": "Program 2"
+    },
+    {
+      "type": "PARTNERED_WITH",
+      "source_label": "Stakeholder",
+      "source_name": "Stakeholder 3",
+      "target_label": "Program",
+      "target_name": "Program 5"
+    },
+    {
+      "type": "PARTNERED_WITH",
+      "source_label": "Stakeholder",
+      "source_name": "Stakeholder 4",
+      "target_label": "Program",
+      "target_name": "Program 1"
+    },
+    {
+      "type": "PARTNERED_WITH",
+      "source_label": "Stakeholder",
+      "source_name": "Stakeholder 4",
+      "target_label": "Program",
+      "target_name": "Program 2"
+    },
+    {
+      "type": "PARTNERED_WITH",
+      "source_label": "Stakeholder",
+      "source_name": "Stakeholder 5",
+      "target_label": "Program",
+      "target_name": "Program 5"
+    },
+    {
+      "type": "PARTNERED_WITH",
+      "source_label": "Stakeholder",
+      "source_name": "Stakeholder 5",
+      "target_label": "Program",
+      "target_name": "Program 1"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 1",
+      "target_label": "Species",
+      "target_name": "Species 3"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 2",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 3",
+      "target_label": "Species",
+      "target_name": "Species 1"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 4",
+      "target_label": "Species",
+      "target_name": "Species 5"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 5",
+      "target_label": "Species",
+      "target_name": "Species 3"
+    },
+    {
+      "type": "MONITORS",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 5",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Species",
+      "target_name": "Species 3"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Species",
+      "target_name": "Species 2"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Species",
+      "target_name": "Species 5"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Species",
+      "target_name": "Species 3"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Species",
+      "target_name": "Species 2"
+    },
+    {
+      "type": "THREATENS",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Species",
+      "target_name": "Species 5"
+    },
+    {
+      "type": "BENEFITS",
+      "source_label": "Program",
+      "source_name": "Program 1",
+      "target_label": "Species",
+      "target_name": "Species 1"
+    },
+    {
+      "type": "BENEFITS",
+      "source_label": "Program",
+      "source_name": "Program 1",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "BENEFITS",
+      "source_label": "Program",
+      "source_name": "Program 2",
+      "target_label": "Species",
+      "target_name": "Species 2"
+    },
+    {
+      "type": "BENEFITS",
+      "source_label": "Program",
+      "source_name": "Program 2",
+      "target_label": "Species",
+      "target_name": "Species 3"
+    },
+    {
+      "type": "BENEFITS",
+      "source_label": "Program",
+      "source_name": "Program 3",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "BENEFITS",
+      "source_label": "Program",
+      "source_name": "Program 4",
+      "target_label": "Species",
+      "target_name": "Species 4"
+    },
+    {
+      "type": "BENEFITS",
+      "source_label": "Program",
+      "source_name": "Program 5",
+      "target_label": "Species",
+      "target_name": "Species 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 1",
+      "target_label": "Site",
+      "target_name": "Site 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 1",
+      "target_label": "Site",
+      "target_name": "Site 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 2",
+      "target_label": "Site",
+      "target_name": "Site 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 3",
+      "target_label": "Site",
+      "target_name": "Site 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 4",
+      "target_label": "Site",
+      "target_name": "Site 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Monitoring",
+      "source_name": "Monitoring 5",
+      "target_label": "Site",
+      "target_name": "Site 5"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Site",
+      "source_name": "Site 1",
+      "target_label": "Stakeholder",
+      "target_name": "Stakeholder 1"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Site",
+      "source_name": "Site 1",
+      "target_label": "Stakeholder",
+      "target_name": "Stakeholder 5"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Site",
+      "source_name": "Site 2",
+      "target_label": "Stakeholder",
+      "target_name": "Stakeholder 3"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Site",
+      "source_name": "Site 2",
+      "target_label": "Stakeholder",
+      "target_name": "Stakeholder 5"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Site",
+      "source_name": "Site 3",
+      "target_label": "Stakeholder",
+      "target_name": "Stakeholder 2"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Site",
+      "source_name": "Site 4",
+      "target_label": "Stakeholder",
+      "target_name": "Stakeholder 4"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Site",
+      "source_name": "Site 4",
+      "target_label": "Stakeholder",
+      "target_name": "Stakeholder 2"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Site",
+      "source_name": "Site 5",
+      "target_label": "Stakeholder",
+      "target_name": "Stakeholder 2"
+    },
+    {
+      "type": "MANAGED_BY",
+      "source_label": "Site",
+      "source_name": "Site 5",
+      "target_label": "Stakeholder",
+      "target_name": "Stakeholder 4"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "conservation_plan",
+      "template_name": "Conservation Plan",
+      "title": "Conservation Plan #1",
+      "content": "Sample Conservation Plan #1\n\nThis is a sample strategic conservation plan for a site or species for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conservation_plan",
+      "template_name": "Conservation Plan",
+      "title": "Conservation Plan #2",
+      "content": "Sample Conservation Plan #2\n\nThis is a sample strategic conservation plan for a site or species for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conservation_plan",
+      "template_name": "Conservation Plan",
+      "title": "Conservation Plan #3",
+      "content": "Sample Conservation Plan #3\n\nThis is a sample strategic conservation plan for a site or species for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conservation_plan",
+      "template_name": "Conservation Plan",
+      "title": "Conservation Plan #4",
+      "content": "Sample Conservation Plan #4\n\nThis is a sample strategic conservation plan for a site or species for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "conservation_plan",
+      "template_name": "Conservation Plan",
+      "title": "Conservation Plan #5",
+      "content": "Sample Conservation Plan #5\n\nThis is a sample strategic conservation plan for a site or species for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "monitoring_report",
+      "template_name": "Monitoring Report",
+      "title": "Monitoring Report #1",
+      "content": "Sample Monitoring Report #1\n\nThis is a sample field monitoring report with survey results and observations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "monitoring_report",
+      "template_name": "Monitoring Report",
+      "title": "Monitoring Report #2",
+      "content": "Sample Monitoring Report #2\n\nThis is a sample field monitoring report with survey results and observations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "monitoring_report",
+      "template_name": "Monitoring Report",
+      "title": "Monitoring Report #3",
+      "content": "Sample Monitoring Report #3\n\nThis is a sample field monitoring report with survey results and observations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "monitoring_report",
+      "template_name": "Monitoring Report",
+      "title": "Monitoring Report #4",
+      "content": "Sample Monitoring Report #4\n\nThis is a sample field monitoring report with survey results and observations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "monitoring_report",
+      "template_name": "Monitoring Report",
+      "title": "Monitoring Report #5",
+      "content": "Sample Monitoring Report #5\n\nThis is a sample field monitoring report with survey results and observations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "donor_update",
+      "template_name": "Donor Update",
+      "title": "Donor Update #1",
+      "content": "Sample Donor Update #1\n\nThis is a sample progress update for funding organizations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "donor_update",
+      "template_name": "Donor Update",
+      "title": "Donor Update #2",
+      "content": "Sample Donor Update #2\n\nThis is a sample progress update for funding organizations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "donor_update",
+      "template_name": "Donor Update",
+      "title": "Donor Update #3",
+      "content": "Sample Donor Update #3\n\nThis is a sample progress update for funding organizations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "donor_update",
+      "template_name": "Donor Update",
+      "title": "Donor Update #4",
+      "content": "Sample Donor Update #4\n\nThis is a sample progress update for funding organizations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "donor_update",
+      "template_name": "Donor Update",
+      "title": "Donor Update #5",
+      "content": "Sample Donor Update #5\n\nThis is a sample progress update for funding organizations for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "stakeholder_communication",
+      "template_name": "Stakeholder Communication",
+      "title": "Stakeholder Communication #1",
+      "content": "Sample Stakeholder Communication #1\n\nThis is a sample communication to stakeholders about program activities for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "stakeholder_communication",
+      "template_name": "Stakeholder Communication",
+      "title": "Stakeholder Communication #2",
+      "content": "Sample Stakeholder Communication #2\n\nThis is a sample communication to stakeholders about program activities for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "stakeholder_communication",
+      "template_name": "Stakeholder Communication",
+      "title": "Stakeholder Communication #3",
+      "content": "Sample Stakeholder Communication #3\n\nThis is a sample communication to stakeholders about program activities for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "stakeholder_communication",
+      "template_name": "Stakeholder Communication",
+      "title": "Stakeholder Communication #4",
+      "content": "Sample Stakeholder Communication #4\n\nThis is a sample communication to stakeholders about program activities for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "stakeholder_communication",
+      "template_name": "Stakeholder Communication",
+      "title": "Stakeholder Communication #5",
+      "content": "Sample Stakeholder Communication #5\n\nThis is a sample communication to stakeholders about program activities for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "impact_assessment",
+      "template_name": "Impact Assessment",
+      "title": "Impact Assessment #1",
+      "content": "Sample Impact Assessment #1\n\nThis is a sample assessment of conservation program impact for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "impact_assessment",
+      "template_name": "Impact Assessment",
+      "title": "Impact Assessment #2",
+      "content": "Sample Impact Assessment #2\n\nThis is a sample assessment of conservation program impact for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "impact_assessment",
+      "template_name": "Impact Assessment",
+      "title": "Impact Assessment #3",
+      "content": "Sample Impact Assessment #3\n\nThis is a sample assessment of conservation program impact for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "impact_assessment",
+      "template_name": "Impact Assessment",
+      "title": "Impact Assessment #4",
+      "content": "Sample Impact Assessment #4\n\nThis is a sample assessment of conservation program impact for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "impact_assessment",
+      "template_name": "Impact Assessment",
+      "title": "Impact Assessment #5",
+      "content": "Sample Impact Assessment #5\n\nThis is a sample assessment of conservation program impact for the Conservation domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "species_intervention",
+      "task": "Evaluate whether to escalate conservation intervention for {{species.common_name}} at Site 5",
+      "steps": [
+        {
+          "thought": "Review current population trends and monitoring data",
+          "action": "Query recent monitoring events and population estimates for the species",
+          "observation": "Results retrieved for: Query recent monitoring events and population estimates for the species"
+        },
+        {
+          "thought": "Assess threat levels and habitat condition",
+          "action": "Examine threat factors and site protection status",
+          "observation": "Results retrieved for: Examine threat factors and site protection status"
+        },
+        {
+          "thought": "Evaluate available resources and program capacity",
+          "action": "Check current funding, active programs, and stakeholder partnerships",
+          "observation": "Results retrieved for: Check current funding, active programs, and stakeholder partnerships"
+        },
+        {
+          "thought": "Consider potential impact and cost-effectiveness",
+          "action": "Compare intervention options against projected outcomes",
+          "observation": "Results retrieved for: Compare intervention options against projected outcomes"
+        }
+      ],
+      "outcome": "Decision: {{decision}} intervention based on {{rationale}}"
+    },
+    {
+      "id": "funding_allocation",
+      "task": "Determine allocation of Funding 4 across conservation programs",
+      "steps": [
+        {
+          "thought": "Assess urgency of each program's conservation needs",
+          "action": "Rank programs by species threat level and habitat degradation",
+          "observation": "Results retrieved for: Rank programs by species threat level and habitat degradation"
+        },
+        {
+          "thought": "Evaluate program effectiveness and track record",
+          "action": "Review monitoring outcomes and past program performance",
+          "observation": "Results retrieved for: Review monitoring outcomes and past program performance"
+        },
+        {
+          "thought": "Consider stakeholder commitments and matching funds",
+          "action": "Check partner contributions and co-funding agreements",
+          "observation": "Results retrieved for: Check partner contributions and co-funding agreements"
+        }
+      ],
+      "outcome": "Allocation plan: {{plan}} with expected outcomes {{outcomes}}"
+    },
+    {
+      "id": "site_protection",
+      "task": "Assess whether to expand protection level for Site 3",
+      "steps": [
+        {
+          "thought": "Analyze biodiversity value and species richness",
+          "action": "Query all species protected at the site and their conservation status",
+          "observation": "Results retrieved for: Query all species protected at the site and their conservation status"
+        },
+        {
+          "thought": "Evaluate current threats and encroachment patterns",
+          "action": "Review monitoring data for habitat loss indicators",
+          "observation": "Results retrieved for: Review monitoring data for habitat loss indicators"
+        },
+        {
+          "thought": "Assess political feasibility and community support",
+          "action": "Check stakeholder positions and community engagement history",
+          "observation": "Results retrieved for: Check stakeholder positions and community engagement history"
+        }
+      ],
+      "outcome": "Recommendation: {{recommendation}} with justification {{justification}}"
+    }
+  ]
+}

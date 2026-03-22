@@ -1,0 +1,1154 @@
+{
+  "domain": "financial-services",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Account": [
+      {
+        "name": "Account 1",
+        "account_id": "Sample account_id for Account 1",
+        "account_type": "savings",
+        "balance": 10.5,
+        "currency": "Sample currency for Account 1",
+        "status": "frozen"
+      },
+      {
+        "name": "Account 2",
+        "account_id": "Sample account_id for Account 2",
+        "account_type": "investment",
+        "balance": 21.0,
+        "currency": "Sample currency for Account 2",
+        "status": "closed"
+      },
+      {
+        "name": "Account 3",
+        "account_id": "Sample account_id for Account 3",
+        "account_type": "retirement",
+        "balance": 31.5,
+        "currency": "Sample currency for Account 3",
+        "status": "active"
+      },
+      {
+        "name": "Account 4",
+        "account_id": "Sample account_id for Account 4",
+        "account_type": "trust",
+        "balance": 42.0,
+        "currency": "Sample currency for Account 4",
+        "status": "frozen"
+      },
+      {
+        "name": "Account 5",
+        "account_id": "Sample account_id for Account 5",
+        "account_type": "checking",
+        "balance": 52.5,
+        "currency": "Sample currency for Account 5",
+        "status": "closed"
+      }
+    ],
+    "Transaction": [
+      {
+        "name": "Transaction 1",
+        "transaction_id": "Sample transaction_id for Transaction 1",
+        "amount": 10.5,
+        "currency": "Sample currency for Transaction 1",
+        "transaction_type": "sell",
+        "description": "Sample description for Transaction 1"
+      },
+      {
+        "name": "Transaction 2",
+        "transaction_id": "Sample transaction_id for Transaction 2",
+        "amount": 21.0,
+        "currency": "Sample currency for Transaction 2",
+        "transaction_type": "transfer",
+        "description": "Sample description for Transaction 2"
+      },
+      {
+        "name": "Transaction 3",
+        "transaction_id": "Sample transaction_id for Transaction 3",
+        "amount": 31.5,
+        "currency": "Sample currency for Transaction 3",
+        "transaction_type": "deposit",
+        "description": "Sample description for Transaction 3"
+      },
+      {
+        "name": "Transaction 4",
+        "transaction_id": "Sample transaction_id for Transaction 4",
+        "amount": 42.0,
+        "currency": "Sample currency for Transaction 4",
+        "transaction_type": "withdrawal",
+        "description": "Sample description for Transaction 4"
+      },
+      {
+        "name": "Transaction 5",
+        "transaction_id": "Sample transaction_id for Transaction 5",
+        "amount": 52.5,
+        "currency": "Sample currency for Transaction 5",
+        "transaction_type": "dividend",
+        "description": "Sample description for Transaction 5"
+      }
+    ],
+    "Decision": [
+      {
+        "name": "Decision 1",
+        "decision_id": "Sample decision_id for Decision 1",
+        "decision_type": "risk_assessment",
+        "outcome": "Sample outcome for Decision 1",
+        "confidence": 10.5
+      },
+      {
+        "name": "Decision 2",
+        "decision_id": "Sample decision_id for Decision 2",
+        "decision_type": "compliance_review",
+        "outcome": "Sample outcome for Decision 2",
+        "confidence": 21.0
+      },
+      {
+        "name": "Decision 3",
+        "decision_id": "Sample decision_id for Decision 3",
+        "decision_type": "portfolio_rebalance",
+        "outcome": "Sample outcome for Decision 3",
+        "confidence": 31.5
+      },
+      {
+        "name": "Decision 4",
+        "decision_id": "Sample decision_id for Decision 4",
+        "decision_type": "client_advisory",
+        "outcome": "Sample outcome for Decision 4",
+        "confidence": 42.0
+      },
+      {
+        "name": "Decision 5",
+        "decision_id": "Sample decision_id for Decision 5",
+        "decision_type": "trade",
+        "outcome": "Sample outcome for Decision 5",
+        "confidence": 52.5
+      }
+    ],
+    "Policy": [
+      {
+        "name": "Policy 1",
+        "policy_id": "Sample policy_id for Policy 1",
+        "category": "risk",
+        "description": "Sample description for Policy 1"
+      },
+      {
+        "name": "Policy 2",
+        "policy_id": "Sample policy_id for Policy 2",
+        "category": "trading",
+        "description": "Sample description for Policy 2"
+      },
+      {
+        "name": "Policy 3",
+        "policy_id": "Sample policy_id for Policy 3",
+        "category": "reporting",
+        "description": "Sample description for Policy 3"
+      },
+      {
+        "name": "Policy 4",
+        "policy_id": "Sample policy_id for Policy 4",
+        "category": "aml",
+        "description": "Sample description for Policy 4"
+      },
+      {
+        "name": "Policy 5",
+        "policy_id": "Sample policy_id for Policy 5",
+        "category": "compliance",
+        "description": "Sample description for Policy 5"
+      }
+    ],
+    "Security": [
+      {
+        "name": "Security 1",
+        "ticker": "Sample ticker for Security 1",
+        "security_type": "bond",
+        "sector": "Sample sector for Security 1"
+      },
+      {
+        "name": "Security 2",
+        "ticker": "Sample ticker for Security 2",
+        "security_type": "etf",
+        "sector": "Sample sector for Security 2"
+      },
+      {
+        "name": "Security 3",
+        "ticker": "Sample ticker for Security 3",
+        "security_type": "mutual_fund",
+        "sector": "Sample sector for Security 3"
+      },
+      {
+        "name": "Security 4",
+        "ticker": "Sample ticker for Security 4",
+        "security_type": "option",
+        "sector": "Sample sector for Security 4"
+      },
+      {
+        "name": "Security 5",
+        "ticker": "Sample ticker for Security 5",
+        "security_type": "futures",
+        "sector": "Sample sector for Security 5"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Account",
+      "target_name": "Account 4"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Account",
+      "target_name": "Account 1"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Account",
+      "target_name": "Account 3"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Account",
+      "target_name": "Account 3"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Account",
+      "target_name": "Account 5"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Account",
+      "target_name": "Account 5"
+    },
+    {
+      "type": "OWNS",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Account",
+      "target_name": "Account 5"
+    },
+    {
+      "type": "TRANSFERRED_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Account",
+      "target_name": "Account 4"
+    },
+    {
+      "type": "TRANSFERRED_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Account",
+      "target_name": "Account 1"
+    },
+    {
+      "type": "TRANSFERRED_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 2",
+      "target_label": "Account",
+      "target_name": "Account 4"
+    },
+    {
+      "type": "TRANSFERRED_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 3",
+      "target_label": "Account",
+      "target_name": "Account 4"
+    },
+    {
+      "type": "TRANSFERRED_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 4",
+      "target_label": "Account",
+      "target_name": "Account 1"
+    },
+    {
+      "type": "TRANSFERRED_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 5",
+      "target_label": "Account",
+      "target_name": "Account 3"
+    },
+    {
+      "type": "TRANSFERRED_TO",
+      "source_label": "Transaction",
+      "source_name": "Transaction 5",
+      "target_label": "Account",
+      "target_name": "Account 1"
+    },
+    {
+      "type": "TRANSFERRED_FROM",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Account",
+      "target_name": "Account 1"
+    },
+    {
+      "type": "TRANSFERRED_FROM",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Account",
+      "target_name": "Account 2"
+    },
+    {
+      "type": "TRANSFERRED_FROM",
+      "source_label": "Transaction",
+      "source_name": "Transaction 2",
+      "target_label": "Account",
+      "target_name": "Account 4"
+    },
+    {
+      "type": "TRANSFERRED_FROM",
+      "source_label": "Transaction",
+      "source_name": "Transaction 3",
+      "target_label": "Account",
+      "target_name": "Account 4"
+    },
+    {
+      "type": "TRANSFERRED_FROM",
+      "source_label": "Transaction",
+      "source_name": "Transaction 4",
+      "target_label": "Account",
+      "target_name": "Account 1"
+    },
+    {
+      "type": "TRANSFERRED_FROM",
+      "source_label": "Transaction",
+      "source_name": "Transaction 5",
+      "target_label": "Account",
+      "target_name": "Account 3"
+    },
+    {
+      "type": "TRANSFERRED_FROM",
+      "source_label": "Transaction",
+      "source_name": "Transaction 5",
+      "target_label": "Account",
+      "target_name": "Account 1"
+    },
+    {
+      "type": "INVOLVES",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Security",
+      "target_name": "Security 4"
+    },
+    {
+      "type": "INVOLVES",
+      "source_label": "Transaction",
+      "source_name": "Transaction 1",
+      "target_label": "Security",
+      "target_name": "Security 2"
+    },
+    {
+      "type": "INVOLVES",
+      "source_label": "Transaction",
+      "source_name": "Transaction 2",
+      "target_label": "Security",
+      "target_name": "Security 3"
+    },
+    {
+      "type": "INVOLVES",
+      "source_label": "Transaction",
+      "source_name": "Transaction 3",
+      "target_label": "Security",
+      "target_name": "Security 1"
+    },
+    {
+      "type": "INVOLVES",
+      "source_label": "Transaction",
+      "source_name": "Transaction 3",
+      "target_label": "Security",
+      "target_name": "Security 2"
+    },
+    {
+      "type": "INVOLVES",
+      "source_label": "Transaction",
+      "source_name": "Transaction 4",
+      "target_label": "Security",
+      "target_name": "Security 2"
+    },
+    {
+      "type": "INVOLVES",
+      "source_label": "Transaction",
+      "source_name": "Transaction 4",
+      "target_label": "Security",
+      "target_name": "Security 1"
+    },
+    {
+      "type": "INVOLVES",
+      "source_label": "Transaction",
+      "source_name": "Transaction 5",
+      "target_label": "Security",
+      "target_name": "Security 4"
+    },
+    {
+      "type": "CAUSED",
+      "source_label": "Decision",
+      "source_name": "Decision 1",
+      "target_label": "Transaction",
+      "target_name": "Transaction 3"
+    },
+    {
+      "type": "CAUSED",
+      "source_label": "Decision",
+      "source_name": "Decision 2",
+      "target_label": "Transaction",
+      "target_name": "Transaction 4"
+    },
+    {
+      "type": "CAUSED",
+      "source_label": "Decision",
+      "source_name": "Decision 3",
+      "target_label": "Transaction",
+      "target_name": "Transaction 1"
+    },
+    {
+      "type": "CAUSED",
+      "source_label": "Decision",
+      "source_name": "Decision 3",
+      "target_label": "Transaction",
+      "target_name": "Transaction 4"
+    },
+    {
+      "type": "CAUSED",
+      "source_label": "Decision",
+      "source_name": "Decision 4",
+      "target_label": "Transaction",
+      "target_name": "Transaction 3"
+    },
+    {
+      "type": "CAUSED",
+      "source_label": "Decision",
+      "source_name": "Decision 4",
+      "target_label": "Transaction",
+      "target_name": "Transaction 5"
+    },
+    {
+      "type": "CAUSED",
+      "source_label": "Decision",
+      "source_name": "Decision 5",
+      "target_label": "Transaction",
+      "target_name": "Transaction 5"
+    },
+    {
+      "type": "CAUSED",
+      "source_label": "Decision",
+      "source_name": "Decision 5",
+      "target_label": "Transaction",
+      "target_name": "Transaction 3"
+    },
+    {
+      "type": "APPLIED_POLICY",
+      "source_label": "Decision",
+      "source_name": "Decision 1",
+      "target_label": "Policy",
+      "target_name": "Policy 2"
+    },
+    {
+      "type": "APPLIED_POLICY",
+      "source_label": "Decision",
+      "source_name": "Decision 2",
+      "target_label": "Policy",
+      "target_name": "Policy 3"
+    },
+    {
+      "type": "APPLIED_POLICY",
+      "source_label": "Decision",
+      "source_name": "Decision 2",
+      "target_label": "Policy",
+      "target_name": "Policy 4"
+    },
+    {
+      "type": "APPLIED_POLICY",
+      "source_label": "Decision",
+      "source_name": "Decision 3",
+      "target_label": "Policy",
+      "target_name": "Policy 5"
+    },
+    {
+      "type": "APPLIED_POLICY",
+      "source_label": "Decision",
+      "source_name": "Decision 3",
+      "target_label": "Policy",
+      "target_name": "Policy 4"
+    },
+    {
+      "type": "APPLIED_POLICY",
+      "source_label": "Decision",
+      "source_name": "Decision 4",
+      "target_label": "Policy",
+      "target_name": "Policy 5"
+    },
+    {
+      "type": "APPLIED_POLICY",
+      "source_label": "Decision",
+      "source_name": "Decision 5",
+      "target_label": "Policy",
+      "target_name": "Policy 2"
+    },
+    {
+      "type": "ADVISED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 1",
+      "target_label": "Person",
+      "target_name": "Person 4"
+    },
+    {
+      "type": "ADVISED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 1",
+      "target_label": "Person",
+      "target_name": "Person 5"
+    },
+    {
+      "type": "ADVISED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 2",
+      "target_label": "Person",
+      "target_name": "Person 3"
+    },
+    {
+      "type": "ADVISED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 3",
+      "target_label": "Person",
+      "target_name": "Person 2"
+    },
+    {
+      "type": "ADVISED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 4",
+      "target_label": "Person",
+      "target_name": "Person 4"
+    },
+    {
+      "type": "ADVISED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 4",
+      "target_label": "Person",
+      "target_name": "Person 3"
+    },
+    {
+      "type": "ADVISED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 5",
+      "target_label": "Person",
+      "target_name": "Person 5"
+    },
+    {
+      "type": "ADVISED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 5",
+      "target_label": "Person",
+      "target_name": "Person 4"
+    },
+    {
+      "type": "MANAGES",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Account",
+      "target_name": "Account 2"
+    },
+    {
+      "type": "MANAGES",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Account",
+      "target_name": "Account 5"
+    },
+    {
+      "type": "MANAGES",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Account",
+      "target_name": "Account 3"
+    },
+    {
+      "type": "MANAGES",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Account",
+      "target_name": "Account 2"
+    },
+    {
+      "type": "MANAGES",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Account",
+      "target_name": "Account 1"
+    },
+    {
+      "type": "MANAGES",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Account",
+      "target_name": "Account 3"
+    },
+    {
+      "type": "PRECEDED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 1",
+      "target_label": "Decision",
+      "target_name": "Decision 4"
+    },
+    {
+      "type": "PRECEDED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 1",
+      "target_label": "Decision",
+      "target_name": "Decision 2"
+    },
+    {
+      "type": "PRECEDED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 2",
+      "target_label": "Decision",
+      "target_name": "Decision 1"
+    },
+    {
+      "type": "PRECEDED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 3",
+      "target_label": "Decision",
+      "target_name": "Decision 2"
+    },
+    {
+      "type": "PRECEDED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 3",
+      "target_label": "Decision",
+      "target_name": "Decision 1"
+    },
+    {
+      "type": "PRECEDED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 4",
+      "target_label": "Decision",
+      "target_name": "Decision 3"
+    },
+    {
+      "type": "PRECEDED_BY",
+      "source_label": "Decision",
+      "source_name": "Decision 5",
+      "target_label": "Decision",
+      "target_name": "Decision 1"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "trade_confirmation",
+      "template_name": "Trade Confirmation",
+      "title": "Trade Confirmation #1",
+      "content": "Sample Trade Confirmation #1\n\nThis is a sample confirmation of executed trades for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "trade_confirmation",
+      "template_name": "Trade Confirmation",
+      "title": "Trade Confirmation #2",
+      "content": "Sample Trade Confirmation #2\n\nThis is a sample confirmation of executed trades for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "trade_confirmation",
+      "template_name": "Trade Confirmation",
+      "title": "Trade Confirmation #3",
+      "content": "Sample Trade Confirmation #3\n\nThis is a sample confirmation of executed trades for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "trade_confirmation",
+      "template_name": "Trade Confirmation",
+      "title": "Trade Confirmation #4",
+      "content": "Sample Trade Confirmation #4\n\nThis is a sample confirmation of executed trades for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "trade_confirmation",
+      "template_name": "Trade Confirmation",
+      "title": "Trade Confirmation #5",
+      "content": "Sample Trade Confirmation #5\n\nThis is a sample confirmation of executed trades for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "compliance_memo",
+      "template_name": "Compliance Memo",
+      "title": "Compliance Memo #1",
+      "content": "Sample Compliance Memo #1\n\nThis is a sample internal compliance review memoranda for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "compliance_memo",
+      "template_name": "Compliance Memo",
+      "title": "Compliance Memo #2",
+      "content": "Sample Compliance Memo #2\n\nThis is a sample internal compliance review memoranda for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "compliance_memo",
+      "template_name": "Compliance Memo",
+      "title": "Compliance Memo #3",
+      "content": "Sample Compliance Memo #3\n\nThis is a sample internal compliance review memoranda for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "compliance_memo",
+      "template_name": "Compliance Memo",
+      "title": "Compliance Memo #4",
+      "content": "Sample Compliance Memo #4\n\nThis is a sample internal compliance review memoranda for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "compliance_memo",
+      "template_name": "Compliance Memo",
+      "title": "Compliance Memo #5",
+      "content": "Sample Compliance Memo #5\n\nThis is a sample internal compliance review memoranda for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "risk_assessment",
+      "template_name": "Risk Assessment Report",
+      "title": "Risk Assessment Report #1",
+      "content": "Sample Risk Assessment Report #1\n\nThis is a sample portfolio and transaction risk assessments for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "risk_assessment",
+      "template_name": "Risk Assessment Report",
+      "title": "Risk Assessment Report #2",
+      "content": "Sample Risk Assessment Report #2\n\nThis is a sample portfolio and transaction risk assessments for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "risk_assessment",
+      "template_name": "Risk Assessment Report",
+      "title": "Risk Assessment Report #3",
+      "content": "Sample Risk Assessment Report #3\n\nThis is a sample portfolio and transaction risk assessments for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "risk_assessment",
+      "template_name": "Risk Assessment Report",
+      "title": "Risk Assessment Report #4",
+      "content": "Sample Risk Assessment Report #4\n\nThis is a sample portfolio and transaction risk assessments for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "risk_assessment",
+      "template_name": "Risk Assessment Report",
+      "title": "Risk Assessment Report #5",
+      "content": "Sample Risk Assessment Report #5\n\nThis is a sample portfolio and transaction risk assessments for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Client Meeting Notes",
+      "title": "Client Meeting Notes #1",
+      "content": "Sample Client Meeting Notes #1\n\nThis is a sample notes from client advisory meetings for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Client Meeting Notes",
+      "title": "Client Meeting Notes #2",
+      "content": "Sample Client Meeting Notes #2\n\nThis is a sample notes from client advisory meetings for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Client Meeting Notes",
+      "title": "Client Meeting Notes #3",
+      "content": "Sample Client Meeting Notes #3\n\nThis is a sample notes from client advisory meetings for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Client Meeting Notes",
+      "title": "Client Meeting Notes #4",
+      "content": "Sample Client Meeting Notes #4\n\nThis is a sample notes from client advisory meetings for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "meeting_notes",
+      "template_name": "Client Meeting Notes",
+      "title": "Client Meeting Notes #5",
+      "content": "Sample Client Meeting Notes #5\n\nThis is a sample notes from client advisory meetings for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "email",
+      "template_name": "Internal Email",
+      "title": "Internal Email #1",
+      "content": "Sample Internal Email #1\n\nThis is a sample internal communications between team members for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "email",
+      "template_name": "Internal Email",
+      "title": "Internal Email #2",
+      "content": "Sample Internal Email #2\n\nThis is a sample internal communications between team members for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "email",
+      "template_name": "Internal Email",
+      "title": "Internal Email #3",
+      "content": "Sample Internal Email #3\n\nThis is a sample internal communications between team members for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "email",
+      "template_name": "Internal Email",
+      "title": "Internal Email #4",
+      "content": "Sample Internal Email #4\n\nThis is a sample internal communications between team members for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "email",
+      "template_name": "Internal Email",
+      "title": "Internal Email #5",
+      "content": "Sample Internal Email #5\n\nThis is a sample internal communications between team members for the Financial Services domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "trade_execution",
+      "task": "Evaluate whether to execute a large block trade of Security 1 for client Person 3",
+      "steps": [
+        {
+          "thought": "Assess current market conditions and security price trends",
+          "action": "Query recent transactions and price history for the security",
+          "observation": "Results retrieved for: Query recent transactions and price history for the security"
+        },
+        {
+          "thought": "Check compliance with trading policies and position limits",
+          "action": "Review applicable policies and current portfolio exposure",
+          "observation": "Results retrieved for: Review applicable policies and current portfolio exposure"
+        },
+        {
+          "thought": "Evaluate impact on portfolio risk metrics",
+          "action": "Calculate VaR and concentration risk after proposed trade",
+          "observation": "Results retrieved for: Calculate VaR and concentration risk after proposed trade"
+        },
+        {
+          "thought": "Consider timing and execution strategy",
+          "action": "Analyze market liquidity and optimal execution window",
+          "observation": "Results retrieved for: Analyze market liquidity and optimal execution window"
+        }
+      ],
+      "outcome": "Decision: {{decision}} the trade based on {{rationale}}"
+    },
+    {
+      "id": "compliance_review",
+      "task": "Review account {{account.account_id}} for AML compliance flag",
+      "steps": [
+        {
+          "thought": "Examine recent transaction patterns for suspicious activity",
+          "action": "Query transactions over the last 90 days, flag unusual patterns",
+          "observation": "Results retrieved for: Query transactions over the last 90 days, flag unusual patterns"
+        },
+        {
+          "thought": "Check against known compliance policies",
+          "action": "Match transaction patterns against AML policy criteria",
+          "observation": "Results retrieved for: Match transaction patterns against AML policy criteria"
+        },
+        {
+          "thought": "Review client profile and relationship history",
+          "action": "Pull client entity graph and relationship network",
+          "observation": "Results retrieved for: Pull client entity graph and relationship network"
+        }
+      ],
+      "outcome": "Finding: {{finding}}. Recommended action: {{action}}"
+    },
+    {
+      "id": "portfolio_rebalance",
+      "task": "Determine rebalancing strategy for Person 5's portfolio",
+      "steps": [
+        {
+          "thought": "Analyze current asset allocation vs target allocation",
+          "action": "Query portfolio holdings and calculate allocation percentages",
+          "observation": "Results retrieved for: Query portfolio holdings and calculate allocation percentages"
+        },
+        {
+          "thought": "Identify drift from target and prioritize adjustments",
+          "action": "Compare current vs target, rank by deviation magnitude",
+          "observation": "Results retrieved for: Compare current vs target, rank by deviation magnitude"
+        },
+        {
+          "thought": "Consider tax implications and transaction costs",
+          "action": "Estimate tax impact of proposed sells and buys",
+          "observation": "Results retrieved for: Estimate tax impact of proposed sells and buys"
+        }
+      ],
+      "outcome": "Rebalance plan: {{plan}} with estimated cost of {{cost}}"
+    }
+  ]
+}

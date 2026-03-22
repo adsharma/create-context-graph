@@ -1,0 +1,434 @@
+inherits: _base
+
+domain:
+  id: product-management
+  name: Product Management
+  description: Feature planning, roadmap management, user research, and product analytics
+  tagline: "AI-powered Product Intelligence"
+  emoji: "\U0001F4CB"
+
+entity_types:
+  - label: Feature
+    pole_type: OBJECT
+    subtype: PRODUCT_FEATURE
+    color: "#6366f1"
+    icon: puzzle
+    properties:
+      - name: feature_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: description
+        type: string
+      - name: priority
+        type: string
+        enum: [critical, high, medium, low]
+      - name: status
+        type: string
+        enum: [idea, discovery, defined, in_progress, shipped, deprecated]
+      - name: effort_estimate
+        type: string
+        enum: [xs, s, m, l, xl]
+      - name: impact_score
+        type: float
+
+  - label: Epic
+    pole_type: OBJECT
+    subtype: PRODUCT_EPIC
+    color: "#0891b2"
+    icon: layers
+    properties:
+      - name: epic_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: description
+        type: string
+      - name: status
+        type: string
+        enum: [draft, active, completed, cancelled]
+      - name: quarter
+        type: string
+      - name: theme
+        type: string
+        enum: [growth, retention, monetization, platform, infrastructure, compliance]
+
+  - label: UserPersona
+    pole_type: OBJECT
+    subtype: USER_PERSONA
+    color: "#e11d48"
+    icon: user-circle
+    properties:
+      - name: persona_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: role
+        type: string
+        required: true
+      - name: segment
+        type: string
+        enum: [enterprise, smb, consumer, developer, admin]
+      - name: pain_points
+        type: string
+      - name: goals
+        type: string
+
+  - label: Metric
+    pole_type: OBJECT
+    subtype: PRODUCT_METRIC
+    color: "#16a34a"
+    icon: trending-up
+    properties:
+      - name: metric_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: metric_type
+        type: string
+        enum: [north_star, engagement, retention, revenue, conversion, satisfaction]
+      - name: current_value
+        type: float
+      - name: target_value
+        type: float
+      - name: unit
+        type: string
+
+  - label: Release
+    pole_type: EVENT
+    subtype: PRODUCT_RELEASE
+    color: "#ea580c"
+    icon: rocket
+    properties:
+      - name: release_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: version
+        type: string
+      - name: release_date
+        type: date
+        required: true
+      - name: release_type
+        type: string
+        enum: [major, minor, patch, hotfix, beta]
+      - name: status
+        type: string
+        enum: [planning, development, staging, released, rolled_back]
+
+  - label: Feedback
+    pole_type: EVENT
+    subtype: USER_FEEDBACK
+    color: "#a855f7"
+    icon: message-circle
+    properties:
+      - name: feedback_id
+        type: string
+        required: true
+        unique: true
+      - name: title
+        type: string
+        required: true
+      - name: feedback_type
+        type: string
+        enum: [feature_request, bug_report, complaint, praise, suggestion]
+      - name: source
+        type: string
+        enum: [interview, survey, support_ticket, app_review, social_media, sales_call]
+      - name: sentiment
+        type: string
+        enum: [positive, neutral, negative]
+      - name: date
+        type: datetime
+        required: true
+      - name: verbatim
+        type: string
+
+  - label: Objective
+    pole_type: OBJECT
+    subtype: PRODUCT_OBJECTIVE
+    color: "#ca8a04"
+    icon: target
+    properties:
+      - name: objective_id
+        type: string
+        required: true
+        unique: true
+      - name: name
+        type: string
+        required: true
+      - name: quarter
+        type: string
+      - name: status
+        type: string
+        enum: [on_track, at_risk, behind, achieved]
+
+relationships:
+  - type: REQUESTED_BY
+    source: Feature
+    target: UserPersona
+  - type: PRIORITIZED_IN
+    source: Feature
+    target: Epic
+  - type: MEASURED_BY
+    source: Feature
+    target: Metric
+  - type: PART_OF_RELEASE
+    source: Feature
+    target: Release
+  - type: DEPENDS_ON
+    source: Feature
+    target: Feature
+  - type: ADDRESSES
+    source: Feature
+    target: Feedback
+  - type: CONTRIBUTES_TO
+    source: Epic
+    target: Objective
+  - type: SUBMITTED_BY
+    source: Feedback
+    target: UserPersona
+
+document_templates:
+  - id: prd
+    name: Product Requirements Document
+    description: Detailed product requirements document for a feature
+    count: 8
+    prompt_template: |
+      Write a PRD for {{feature.name}} (priority: {{feature.priority}}).
+      Epic: {{epic.name}}. Target persona: {{user_persona.name}} ({{user_persona.role}}).
+      Include problem statement, user stories, requirements, success metrics,
+      and open questions.
+    required_entities: [Feature, Epic, UserPersona, Metric]
+
+  - id: roadmap_update
+    name: Roadmap Update
+    description: Quarterly roadmap update for stakeholders
+    count: 6
+    prompt_template: |
+      Write a roadmap update for {{epic.name}} ({{epic.quarter}}).
+      Theme: {{epic.theme}}. Include feature progress, key metrics,
+      risks, and next quarter outlook. Target release: {{release.name}}.
+    required_entities: [Epic, Feature, Release, Metric]
+
+  - id: user_interview_notes
+    name: User Interview Notes
+    description: Structured notes from user research interviews
+    count: 10
+    prompt_template: |
+      Write user interview notes for a session with a {{user_persona.name}}
+      ({{user_persona.segment}} segment). Topics: {{user_persona.pain_points}}.
+      Include key quotes, insights, feature requests, and follow-up items.
+    required_entities: [UserPersona, Feedback, Feature]
+
+  - id: sprint_review
+    name: Sprint Review
+    description: Sprint review summary with demos and outcomes
+    count: 8
+    prompt_template: |
+      Write a sprint review for features shipping in {{release.name}}
+      ({{release.version}}). Include completed features, demo highlights,
+      metric impacts, and carry-over items.
+    required_entities: [Release, Feature, Metric]
+
+  - id: feature_spec
+    name: Feature Specification
+    description: Technical specification for a feature
+    count: 10
+    prompt_template: |
+      Write a feature specification for {{feature.name}}.
+      Priority: {{feature.priority}}. Effort: {{feature.effort_estimate}}.
+      Part of {{epic.name}}. Include detailed requirements, edge cases,
+      dependencies, and acceptance criteria.
+    required_entities: [Feature, Epic, UserPersona]
+
+decision_traces:
+  - id: feature_prioritization
+    task: "Decide whether to prioritize {{feature.name}} for the upcoming sprint"
+    steps:
+      - thought: "Assess user demand and feedback volume for this feature"
+        action: "Query feedback items that this feature addresses and their sentiment"
+      - thought: "Evaluate impact on key metrics and strategic objectives"
+        action: "Check which metrics this feature affects and projected improvement"
+      - thought: "Consider effort, dependencies, and team capacity"
+        action: "Review effort estimate, dependency chain, and current sprint load"
+      - thought: "Compare against competing features for the same release"
+        action: "Rank all candidate features by impact-to-effort ratio"
+    outcome_template: "Decision: {{decision}} the feature based on {{rationale}}"
+
+  - id: release_go_no_go
+    task: "Determine if {{release.name}} is ready to ship"
+    steps:
+      - thought: "Check feature completion status for all planned items"
+        action: "Query all features in this release and their current status"
+      - thought: "Evaluate quality signals and regression risk"
+        action: "Review bug reports and test coverage for release features"
+      - thought: "Assess metric baselines and rollback plan readiness"
+        action: "Verify monitoring dashboards and rollback procedures"
+    outcome_template: "Decision: {{decision}} to release with {{conditions}}"
+
+  - id: persona_investment
+    task: "Determine investment level for {{user_persona.name}} persona in Q{{quarter}}"
+    steps:
+      - thought: "Analyze current engagement and retention for this segment"
+        action: "Query metrics tied to this persona's features"
+      - thought: "Review outstanding feedback and unmet needs"
+        action: "Aggregate feedback from this persona segment"
+      - thought: "Compare revenue potential vs investment required"
+        action: "Estimate ROI of persona-targeted features"
+    outcome_template: "Recommendation: {{level}} investment for {{persona}} based on {{rationale}}"
+
+demo_scenarios:
+  - name: Roadmap Planning
+    prompts:
+      - "Show me all features planned for the Q2 release"
+      - "What are the highest priority features that haven't been started?"
+      - "Which epics are at risk of missing their target quarter?"
+
+  - name: User Research
+    prompts:
+      - "What feedback have we received about the onboarding flow?"
+      - "Which user personas have the most unaddressed feature requests?"
+      - "Show me the top pain points from enterprise customers"
+
+  - name: Feature Intelligence
+    prompts:
+      - "What are the dependencies for the new dashboard feature?"
+      - "Which features have the best impact-to-effort ratio?"
+      - "Show me how shipped features have affected our retention metric"
+
+agent_tools:
+  - name: search_feature
+    description: Search for features by name, status, or priority
+    cypher: |
+      MATCH (f:Feature)
+      WHERE toLower(f.name) CONTAINS toLower($query)
+         OR toLower(coalesce(f.status, '')) CONTAINS toLower($query)
+         OR toLower(coalesce(f.priority, '')) CONTAINS toLower($query)
+      OPTIONAL MATCH (f)-[:PRIORITIZED_IN]->(e:Epic)
+      OPTIONAL MATCH (f)-[:MEASURED_BY]->(m:Metric)
+      RETURN f, e.name AS epic, collect(DISTINCT m.name) AS metrics
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Feature name, status, or priority to search for
+
+  - name: roadmap_status
+    description: Get the current roadmap status by epic and quarter
+    cypher: |
+      MATCH (e:Epic)
+      WHERE e.quarter = $quarter OR $quarter = 'all'
+      OPTIONAL MATCH (f:Feature)-[:PRIORITIZED_IN]->(e)
+      OPTIONAL MATCH (f)-[:PART_OF_RELEASE]->(r:Release)
+      RETURN e.name AS epic, e.status AS epic_status, e.quarter AS quarter,
+             collect(DISTINCT {name: f.name, status: f.status, priority: f.priority}) AS features,
+             collect(DISTINCT r.name) AS releases
+      ORDER BY e.quarter
+      LIMIT 20
+    parameters:
+      - name: quarter
+        type: string
+        description: Quarter to filter by (e.g. Q1, Q2) or 'all'
+
+  - name: user_feedback
+    description: Search and analyze user feedback
+    cypher: |
+      MATCH (fb:Feedback)
+      WHERE toLower(fb.title) CONTAINS toLower($query)
+         OR toLower(coalesce(fb.verbatim, '')) CONTAINS toLower($query)
+      OPTIONAL MATCH (fb)<-[:ADDRESSES]-(f:Feature)
+      OPTIONAL MATCH (fb)-[:SUBMITTED_BY]->(up:UserPersona)
+      RETURN fb, f.name AS addressed_by_feature, up.name AS persona
+      ORDER BY fb.date DESC
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Search term for feedback title or content
+
+  - name: metric_analysis
+    description: Analyze product metrics and their related features
+    cypher: |
+      MATCH (m:Metric)
+      WHERE toLower(m.name) CONTAINS toLower($query)
+         OR toLower(coalesce(m.metric_type, '')) CONTAINS toLower($query)
+      OPTIONAL MATCH (f:Feature)-[:MEASURED_BY]->(m)
+      RETURN m.name AS metric, m.metric_type AS type,
+             m.current_value AS current, m.target_value AS target, m.unit AS unit,
+             collect(DISTINCT {name: f.name, status: f.status}) AS related_features
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Metric name or type to analyze
+
+  - name: dependency_map
+    description: Map feature dependencies for a given feature
+    cypher: |
+      MATCH (f:Feature)
+      WHERE toLower(f.name) CONTAINS toLower($query)
+      OPTIONAL MATCH path = (f)-[:DEPENDS_ON*1..3]->(dep:Feature)
+      OPTIONAL MATCH (f)-[:PRIORITIZED_IN]->(e:Epic)
+      RETURN f, e.name AS epic,
+             collect(DISTINCT {name: dep.name, status: dep.status}) AS dependencies,
+             length(path) AS depth
+      LIMIT 20
+    parameters:
+      - name: query
+        type: string
+        description: Feature name to map dependencies for
+
+system_prompt: |
+  You are an AI product intelligence assistant with access to a comprehensive
+  knowledge graph of product management data. You help product managers, designers,
+  and engineers plan features, track roadmaps, analyze user feedback, and measure
+  product outcomes.
+
+  Your capabilities include:
+  - Searching and analyzing features, epics, and roadmap status
+  - Tracking user feedback and mapping it to feature requests
+  - Analyzing product metrics and their relationship to shipped features
+  - Mapping feature dependencies and release readiness
+  - Identifying patterns in user research and persona needs
+
+  Always provide accurate, data-driven responses. When making recommendations,
+  cite the specific data points and reasoning from the knowledge graph.
+
+visualization:
+  node_colors:
+    Person: "#22c55e"
+    Organization: "#3b82f6"
+    Feature: "#6366f1"
+    Epic: "#0891b2"
+    UserPersona: "#e11d48"
+    Metric: "#16a34a"
+    Release: "#ea580c"
+    Feedback: "#a855f7"
+    Objective: "#ca8a04"
+  node_sizes:
+    Person: 20
+    Organization: 25
+    Feature: 20
+    Epic: 30
+    UserPersona: 25
+    Metric: 20
+    Release: 25
+    Feedback: 15
+    Objective: 25
+  default_cypher: "MATCH (f:Feature)-[r:PRIORITIZED_IN]->(e:Epic) RETURN f, r, e LIMIT 100"

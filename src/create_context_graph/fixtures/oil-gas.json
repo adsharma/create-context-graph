@@ -1,0 +1,1223 @@
+{
+  "domain": "oil-gas",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Well": [
+      {
+        "name": "Well 1",
+        "well_id": "Sample well_id for Well 1",
+        "well_type": "development",
+        "status": "producing",
+        "total_depth_ft": 10.5,
+        "latitude": 10.5,
+        "longitude": 10.5,
+        "daily_production_bbl": 10.5
+      },
+      {
+        "name": "Well 2",
+        "well_id": "Sample well_id for Well 2",
+        "well_type": "injection",
+        "status": "shut_in",
+        "total_depth_ft": 21.0,
+        "latitude": 21.0,
+        "longitude": 21.0,
+        "daily_production_bbl": 21.0
+      },
+      {
+        "name": "Well 3",
+        "well_id": "Sample well_id for Well 3",
+        "well_type": "disposal",
+        "status": "plugged_abandoned",
+        "total_depth_ft": 31.5,
+        "latitude": 31.5,
+        "longitude": 31.5,
+        "daily_production_bbl": 31.5
+      },
+      {
+        "name": "Well 4",
+        "well_id": "Sample well_id for Well 4",
+        "well_type": "observation",
+        "status": "suspended",
+        "total_depth_ft": 42.0,
+        "latitude": 42.0,
+        "longitude": 42.0,
+        "daily_production_bbl": 42.0
+      },
+      {
+        "name": "Well 5",
+        "well_id": "Sample well_id for Well 5",
+        "well_type": "exploration",
+        "status": "completed",
+        "total_depth_ft": 52.5,
+        "latitude": 52.5,
+        "longitude": 52.5,
+        "daily_production_bbl": 52.5
+      }
+    ],
+    "Reservoir": [
+      {
+        "name": "Reservoir 1",
+        "reservoir_id": "Sample reservoir_id for Reservoir 1",
+        "reservoir_type": "tight",
+        "depth_ft": 10.5,
+        "pressure_psi": 10.5,
+        "temperature_f": 10.5,
+        "porosity_pct": 10.5,
+        "estimated_reserves_mmbbl": 10.5
+      },
+      {
+        "name": "Reservoir 2",
+        "reservoir_id": "Sample reservoir_id for Reservoir 2",
+        "reservoir_type": "shale",
+        "depth_ft": 21.0,
+        "pressure_psi": 21.0,
+        "temperature_f": 21.0,
+        "porosity_pct": 21.0,
+        "estimated_reserves_mmbbl": 21.0
+      },
+      {
+        "name": "Reservoir 3",
+        "reservoir_id": "Sample reservoir_id for Reservoir 3",
+        "reservoir_type": "carbonate",
+        "depth_ft": 31.5,
+        "pressure_psi": 31.5,
+        "temperature_f": 31.5,
+        "porosity_pct": 31.5,
+        "estimated_reserves_mmbbl": 31.5
+      },
+      {
+        "name": "Reservoir 4",
+        "reservoir_id": "Sample reservoir_id for Reservoir 4",
+        "reservoir_type": "sandstone",
+        "depth_ft": 42.0,
+        "pressure_psi": 42.0,
+        "temperature_f": 42.0,
+        "porosity_pct": 42.0,
+        "estimated_reserves_mmbbl": 42.0
+      },
+      {
+        "name": "Reservoir 5",
+        "reservoir_id": "Sample reservoir_id for Reservoir 5",
+        "reservoir_type": "coalbed_methane",
+        "depth_ft": 52.5,
+        "pressure_psi": 52.5,
+        "temperature_f": 52.5,
+        "porosity_pct": 52.5,
+        "estimated_reserves_mmbbl": 52.5
+      }
+    ],
+    "Equipment": [
+      {
+        "name": "Equipment 1",
+        "equipment_id": "Sample equipment_id for Equipment 1",
+        "equipment_type": "compressor",
+        "manufacturer": "Sample manufacturer for Equipment 1",
+        "condition": "good",
+        "operating_hours": 100
+      },
+      {
+        "name": "Equipment 2",
+        "equipment_id": "Sample equipment_id for Equipment 2",
+        "equipment_type": "separator",
+        "manufacturer": "Sample manufacturer for Equipment 2",
+        "condition": "fair",
+        "operating_hours": 200
+      },
+      {
+        "name": "Equipment 3",
+        "equipment_id": "Sample equipment_id for Equipment 3",
+        "equipment_type": "pipeline",
+        "manufacturer": "Sample manufacturer for Equipment 3",
+        "condition": "poor",
+        "operating_hours": 300
+      },
+      {
+        "name": "Equipment 4",
+        "equipment_id": "Sample equipment_id for Equipment 4",
+        "equipment_type": "tank",
+        "manufacturer": "Sample manufacturer for Equipment 4",
+        "condition": "critical",
+        "operating_hours": 400
+      },
+      {
+        "name": "Equipment 5",
+        "equipment_id": "Sample equipment_id for Equipment 5",
+        "equipment_type": "bop",
+        "manufacturer": "Sample manufacturer for Equipment 5",
+        "condition": "new",
+        "operating_hours": 500
+      }
+    ],
+    "Inspection": [
+      {
+        "name": "Inspection 1",
+        "inspection_id": "Sample inspection_id for Inspection 1",
+        "inspector": "Sample inspector for Inspection 1",
+        "inspection_type": "environmental",
+        "result": "conditional_pass",
+        "findings": "Sample findings for Inspection 1",
+        "corrective_actions": "Sample corrective_actions for Inspection 1"
+      },
+      {
+        "name": "Inspection 2",
+        "inspection_id": "Sample inspection_id for Inspection 2",
+        "inspector": "Sample inspector for Inspection 2",
+        "inspection_type": "mechanical",
+        "result": "fail",
+        "findings": "Sample findings for Inspection 2",
+        "corrective_actions": "Sample corrective_actions for Inspection 2"
+      },
+      {
+        "name": "Inspection 3",
+        "inspection_id": "Sample inspection_id for Inspection 3",
+        "inspector": "Sample inspector for Inspection 3",
+        "inspection_type": "regulatory",
+        "result": "critical_failure",
+        "findings": "Sample findings for Inspection 3",
+        "corrective_actions": "Sample corrective_actions for Inspection 3"
+      },
+      {
+        "name": "Inspection 4",
+        "inspection_id": "Sample inspection_id for Inspection 4",
+        "inspector": "Sample inspector for Inspection 4",
+        "inspection_type": "pressure_test",
+        "result": "pass",
+        "findings": "Sample findings for Inspection 4",
+        "corrective_actions": "Sample corrective_actions for Inspection 4"
+      },
+      {
+        "name": "Inspection 5",
+        "inspection_id": "Sample inspection_id for Inspection 5",
+        "inspector": "Sample inspector for Inspection 5",
+        "inspection_type": "corrosion",
+        "result": "conditional_pass",
+        "findings": "Sample findings for Inspection 5",
+        "corrective_actions": "Sample corrective_actions for Inspection 5"
+      }
+    ],
+    "Permit": [
+      {
+        "name": "Permit 1",
+        "permit_id": "Sample permit_id for Permit 1",
+        "permit_type": "completion",
+        "issuing_authority": "Sample issuing_authority for Permit 1",
+        "status": "under_review",
+        "conditions": "Sample conditions for Permit 1"
+      },
+      {
+        "name": "Permit 2",
+        "permit_id": "Sample permit_id for Permit 2",
+        "permit_type": "workover",
+        "issuing_authority": "Sample issuing_authority for Permit 2",
+        "status": "approved",
+        "conditions": "Sample conditions for Permit 2"
+      },
+      {
+        "name": "Permit 3",
+        "permit_id": "Sample permit_id for Permit 3",
+        "permit_type": "disposal",
+        "issuing_authority": "Sample issuing_authority for Permit 3",
+        "status": "active",
+        "conditions": "Sample conditions for Permit 3"
+      },
+      {
+        "name": "Permit 4",
+        "permit_id": "Sample permit_id for Permit 4",
+        "permit_type": "pipeline",
+        "issuing_authority": "Sample issuing_authority for Permit 4",
+        "status": "expired",
+        "conditions": "Sample conditions for Permit 4"
+      },
+      {
+        "name": "Permit 5",
+        "permit_id": "Sample permit_id for Permit 5",
+        "permit_type": "environmental",
+        "issuing_authority": "Sample issuing_authority for Permit 5",
+        "status": "revoked",
+        "conditions": "Sample conditions for Permit 5"
+      }
+    ],
+    "Formation": [
+      {
+        "name": "Formation 1",
+        "formation_id": "Sample formation_id for Formation 1",
+        "geological_age": "neogene",
+        "lithology": "limestone",
+        "thickness_ft": 10.5,
+        "top_depth_ft": 10.5,
+        "hydrocarbon_bearing": false
+      },
+      {
+        "name": "Formation 2",
+        "formation_id": "Sample formation_id for Formation 2",
+        "geological_age": "paleogene",
+        "lithology": "shale",
+        "thickness_ft": 21.0,
+        "top_depth_ft": 21.0,
+        "hydrocarbon_bearing": true
+      },
+      {
+        "name": "Formation 3",
+        "formation_id": "Sample formation_id for Formation 3",
+        "geological_age": "cretaceous",
+        "lithology": "dolomite",
+        "thickness_ft": 31.5,
+        "top_depth_ft": 31.5,
+        "hydrocarbon_bearing": false
+      },
+      {
+        "name": "Formation 4",
+        "formation_id": "Sample formation_id for Formation 4",
+        "geological_age": "jurassic",
+        "lithology": "siltstone",
+        "thickness_ft": 42.0,
+        "top_depth_ft": 42.0,
+        "hydrocarbon_bearing": true
+      },
+      {
+        "name": "Formation 5",
+        "formation_id": "Sample formation_id for Formation 5",
+        "geological_age": "triassic",
+        "lithology": "conglomerate",
+        "thickness_ft": 52.5,
+        "top_depth_ft": 52.5,
+        "hydrocarbon_bearing": false
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "DRILLED_IN",
+      "source_label": "Well",
+      "source_name": "Well 1",
+      "target_label": "Formation",
+      "target_name": "Formation 2"
+    },
+    {
+      "type": "DRILLED_IN",
+      "source_label": "Well",
+      "source_name": "Well 2",
+      "target_label": "Formation",
+      "target_name": "Formation 3"
+    },
+    {
+      "type": "DRILLED_IN",
+      "source_label": "Well",
+      "source_name": "Well 2",
+      "target_label": "Formation",
+      "target_name": "Formation 2"
+    },
+    {
+      "type": "DRILLED_IN",
+      "source_label": "Well",
+      "source_name": "Well 3",
+      "target_label": "Formation",
+      "target_name": "Formation 1"
+    },
+    {
+      "type": "DRILLED_IN",
+      "source_label": "Well",
+      "source_name": "Well 4",
+      "target_label": "Formation",
+      "target_name": "Formation 5"
+    },
+    {
+      "type": "DRILLED_IN",
+      "source_label": "Well",
+      "source_name": "Well 4",
+      "target_label": "Formation",
+      "target_name": "Formation 2"
+    },
+    {
+      "type": "DRILLED_IN",
+      "source_label": "Well",
+      "source_name": "Well 5",
+      "target_label": "Formation",
+      "target_name": "Formation 4"
+    },
+    {
+      "type": "DRILLED_IN",
+      "source_label": "Well",
+      "source_name": "Well 5",
+      "target_label": "Formation",
+      "target_name": "Formation 1"
+    },
+    {
+      "type": "INSPECTED_BY",
+      "source_label": "Inspection",
+      "source_name": "Inspection 1",
+      "target_label": "Well",
+      "target_name": "Well 2"
+    },
+    {
+      "type": "INSPECTED_BY",
+      "source_label": "Inspection",
+      "source_name": "Inspection 2",
+      "target_label": "Well",
+      "target_name": "Well 5"
+    },
+    {
+      "type": "INSPECTED_BY",
+      "source_label": "Inspection",
+      "source_name": "Inspection 3",
+      "target_label": "Well",
+      "target_name": "Well 5"
+    },
+    {
+      "type": "INSPECTED_BY",
+      "source_label": "Inspection",
+      "source_name": "Inspection 3",
+      "target_label": "Well",
+      "target_name": "Well 4"
+    },
+    {
+      "type": "INSPECTED_BY",
+      "source_label": "Inspection",
+      "source_name": "Inspection 4",
+      "target_label": "Well",
+      "target_name": "Well 1"
+    },
+    {
+      "type": "INSPECTED_BY",
+      "source_label": "Inspection",
+      "source_name": "Inspection 4",
+      "target_label": "Well",
+      "target_name": "Well 5"
+    },
+    {
+      "type": "INSPECTED_BY",
+      "source_label": "Inspection",
+      "source_name": "Inspection 5",
+      "target_label": "Well",
+      "target_name": "Well 4"
+    },
+    {
+      "type": "INSPECTED_BY",
+      "source_label": "Inspection",
+      "source_name": "Inspection 5",
+      "target_label": "Well",
+      "target_name": "Well 5"
+    },
+    {
+      "type": "PERMITTED_FOR",
+      "source_label": "Permit",
+      "source_name": "Permit 1",
+      "target_label": "Well",
+      "target_name": "Well 3"
+    },
+    {
+      "type": "PERMITTED_FOR",
+      "source_label": "Permit",
+      "source_name": "Permit 1",
+      "target_label": "Well",
+      "target_name": "Well 1"
+    },
+    {
+      "type": "PERMITTED_FOR",
+      "source_label": "Permit",
+      "source_name": "Permit 2",
+      "target_label": "Well",
+      "target_name": "Well 5"
+    },
+    {
+      "type": "PERMITTED_FOR",
+      "source_label": "Permit",
+      "source_name": "Permit 2",
+      "target_label": "Well",
+      "target_name": "Well 1"
+    },
+    {
+      "type": "PERMITTED_FOR",
+      "source_label": "Permit",
+      "source_name": "Permit 3",
+      "target_label": "Well",
+      "target_name": "Well 2"
+    },
+    {
+      "type": "PERMITTED_FOR",
+      "source_label": "Permit",
+      "source_name": "Permit 4",
+      "target_label": "Well",
+      "target_name": "Well 4"
+    },
+    {
+      "type": "PERMITTED_FOR",
+      "source_label": "Permit",
+      "source_name": "Permit 4",
+      "target_label": "Well",
+      "target_name": "Well 1"
+    },
+    {
+      "type": "PERMITTED_FOR",
+      "source_label": "Permit",
+      "source_name": "Permit 5",
+      "target_label": "Well",
+      "target_name": "Well 3"
+    },
+    {
+      "type": "PRODUCES_FROM",
+      "source_label": "Well",
+      "source_name": "Well 1",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 1"
+    },
+    {
+      "type": "PRODUCES_FROM",
+      "source_label": "Well",
+      "source_name": "Well 1",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 5"
+    },
+    {
+      "type": "PRODUCES_FROM",
+      "source_label": "Well",
+      "source_name": "Well 2",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 1"
+    },
+    {
+      "type": "PRODUCES_FROM",
+      "source_label": "Well",
+      "source_name": "Well 3",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 2"
+    },
+    {
+      "type": "PRODUCES_FROM",
+      "source_label": "Well",
+      "source_name": "Well 4",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 1"
+    },
+    {
+      "type": "PRODUCES_FROM",
+      "source_label": "Well",
+      "source_name": "Well 4",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 4"
+    },
+    {
+      "type": "PRODUCES_FROM",
+      "source_label": "Well",
+      "source_name": "Well 5",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 5"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Equipment",
+      "source_name": "Equipment 1",
+      "target_label": "Well",
+      "target_name": "Well 5"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Equipment",
+      "source_name": "Equipment 2",
+      "target_label": "Well",
+      "target_name": "Well 2"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Equipment",
+      "source_name": "Equipment 2",
+      "target_label": "Well",
+      "target_name": "Well 1"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Equipment",
+      "source_name": "Equipment 3",
+      "target_label": "Well",
+      "target_name": "Well 3"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Equipment",
+      "source_name": "Equipment 3",
+      "target_label": "Well",
+      "target_name": "Well 2"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Equipment",
+      "source_name": "Equipment 4",
+      "target_label": "Well",
+      "target_name": "Well 5"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Equipment",
+      "source_name": "Equipment 4",
+      "target_label": "Well",
+      "target_name": "Well 4"
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source_label": "Equipment",
+      "source_name": "Equipment 5",
+      "target_label": "Well",
+      "target_name": "Well 2"
+    },
+    {
+      "type": "MAINTAINED_BY",
+      "source_label": "Equipment",
+      "source_name": "Equipment 1",
+      "target_label": "Person",
+      "target_name": "Person 4"
+    },
+    {
+      "type": "MAINTAINED_BY",
+      "source_label": "Equipment",
+      "source_name": "Equipment 1",
+      "target_label": "Person",
+      "target_name": "Person 2"
+    },
+    {
+      "type": "MAINTAINED_BY",
+      "source_label": "Equipment",
+      "source_name": "Equipment 2",
+      "target_label": "Person",
+      "target_name": "Person 5"
+    },
+    {
+      "type": "MAINTAINED_BY",
+      "source_label": "Equipment",
+      "source_name": "Equipment 3",
+      "target_label": "Person",
+      "target_name": "Person 2"
+    },
+    {
+      "type": "MAINTAINED_BY",
+      "source_label": "Equipment",
+      "source_name": "Equipment 3",
+      "target_label": "Person",
+      "target_name": "Person 5"
+    },
+    {
+      "type": "MAINTAINED_BY",
+      "source_label": "Equipment",
+      "source_name": "Equipment 4",
+      "target_label": "Person",
+      "target_name": "Person 3"
+    },
+    {
+      "type": "MAINTAINED_BY",
+      "source_label": "Equipment",
+      "source_name": "Equipment 5",
+      "target_label": "Person",
+      "target_name": "Person 2"
+    },
+    {
+      "type": "MAINTAINED_BY",
+      "source_label": "Equipment",
+      "source_name": "Equipment 5",
+      "target_label": "Person",
+      "target_name": "Person 5"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Formation",
+      "source_name": "Formation 1",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 4"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Formation",
+      "source_name": "Formation 2",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 1"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Formation",
+      "source_name": "Formation 2",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 3"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Formation",
+      "source_name": "Formation 3",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 5"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Formation",
+      "source_name": "Formation 3",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 4"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Formation",
+      "source_name": "Formation 4",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 3"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Formation",
+      "source_name": "Formation 4",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 1"
+    },
+    {
+      "type": "CONTAINS",
+      "source_label": "Formation",
+      "source_name": "Formation 5",
+      "target_label": "Reservoir",
+      "target_name": "Reservoir 1"
+    },
+    {
+      "type": "INSPECTED_EQUIPMENT",
+      "source_label": "Inspection",
+      "source_name": "Inspection 1",
+      "target_label": "Equipment",
+      "target_name": "Equipment 2"
+    },
+    {
+      "type": "INSPECTED_EQUIPMENT",
+      "source_label": "Inspection",
+      "source_name": "Inspection 2",
+      "target_label": "Equipment",
+      "target_name": "Equipment 1"
+    },
+    {
+      "type": "INSPECTED_EQUIPMENT",
+      "source_label": "Inspection",
+      "source_name": "Inspection 2",
+      "target_label": "Equipment",
+      "target_name": "Equipment 4"
+    },
+    {
+      "type": "INSPECTED_EQUIPMENT",
+      "source_label": "Inspection",
+      "source_name": "Inspection 3",
+      "target_label": "Equipment",
+      "target_name": "Equipment 2"
+    },
+    {
+      "type": "INSPECTED_EQUIPMENT",
+      "source_label": "Inspection",
+      "source_name": "Inspection 3",
+      "target_label": "Equipment",
+      "target_name": "Equipment 5"
+    },
+    {
+      "type": "INSPECTED_EQUIPMENT",
+      "source_label": "Inspection",
+      "source_name": "Inspection 4",
+      "target_label": "Equipment",
+      "target_name": "Equipment 5"
+    },
+    {
+      "type": "INSPECTED_EQUIPMENT",
+      "source_label": "Inspection",
+      "source_name": "Inspection 5",
+      "target_label": "Equipment",
+      "target_name": "Equipment 3"
+    },
+    {
+      "type": "INSPECTED_EQUIPMENT",
+      "source_label": "Inspection",
+      "source_name": "Inspection 5",
+      "target_label": "Equipment",
+      "target_name": "Equipment 1"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "drilling_report",
+      "template_name": "Drilling Report",
+      "title": "Drilling Report #1",
+      "content": "Sample Drilling Report #1\n\nThis is a sample daily drilling operations reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "drilling_report",
+      "template_name": "Drilling Report",
+      "title": "Drilling Report #2",
+      "content": "Sample Drilling Report #2\n\nThis is a sample daily drilling operations reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "drilling_report",
+      "template_name": "Drilling Report",
+      "title": "Drilling Report #3",
+      "content": "Sample Drilling Report #3\n\nThis is a sample daily drilling operations reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "drilling_report",
+      "template_name": "Drilling Report",
+      "title": "Drilling Report #4",
+      "content": "Sample Drilling Report #4\n\nThis is a sample daily drilling operations reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "drilling_report",
+      "template_name": "Drilling Report",
+      "title": "Drilling Report #5",
+      "content": "Sample Drilling Report #5\n\nThis is a sample daily drilling operations reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "safety_inspection",
+      "template_name": "Safety Inspection Report",
+      "title": "Safety Inspection Report #1",
+      "content": "Sample Safety Inspection Report #1\n\nThis is a sample field safety and environmental inspection reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "safety_inspection",
+      "template_name": "Safety Inspection Report",
+      "title": "Safety Inspection Report #2",
+      "content": "Sample Safety Inspection Report #2\n\nThis is a sample field safety and environmental inspection reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "safety_inspection",
+      "template_name": "Safety Inspection Report",
+      "title": "Safety Inspection Report #3",
+      "content": "Sample Safety Inspection Report #3\n\nThis is a sample field safety and environmental inspection reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "safety_inspection",
+      "template_name": "Safety Inspection Report",
+      "title": "Safety Inspection Report #4",
+      "content": "Sample Safety Inspection Report #4\n\nThis is a sample field safety and environmental inspection reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "safety_inspection",
+      "template_name": "Safety Inspection Report",
+      "title": "Safety Inspection Report #5",
+      "content": "Sample Safety Inspection Report #5\n\nThis is a sample field safety and environmental inspection reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "regulatory_filing",
+      "template_name": "Regulatory Filing",
+      "title": "Regulatory Filing #1",
+      "content": "Sample Regulatory Filing #1\n\nThis is a sample regulatory submissions and compliance documents for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "regulatory_filing",
+      "template_name": "Regulatory Filing",
+      "title": "Regulatory Filing #2",
+      "content": "Sample Regulatory Filing #2\n\nThis is a sample regulatory submissions and compliance documents for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "regulatory_filing",
+      "template_name": "Regulatory Filing",
+      "title": "Regulatory Filing #3",
+      "content": "Sample Regulatory Filing #3\n\nThis is a sample regulatory submissions and compliance documents for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "regulatory_filing",
+      "template_name": "Regulatory Filing",
+      "title": "Regulatory Filing #4",
+      "content": "Sample Regulatory Filing #4\n\nThis is a sample regulatory submissions and compliance documents for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "regulatory_filing",
+      "template_name": "Regulatory Filing",
+      "title": "Regulatory Filing #5",
+      "content": "Sample Regulatory Filing #5\n\nThis is a sample regulatory submissions and compliance documents for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_log",
+      "template_name": "Production Log",
+      "title": "Production Log #1",
+      "content": "Sample Production Log #1\n\nThis is a sample well production performance logs and analyses for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_log",
+      "template_name": "Production Log",
+      "title": "Production Log #2",
+      "content": "Sample Production Log #2\n\nThis is a sample well production performance logs and analyses for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_log",
+      "template_name": "Production Log",
+      "title": "Production Log #3",
+      "content": "Sample Production Log #3\n\nThis is a sample well production performance logs and analyses for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_log",
+      "template_name": "Production Log",
+      "title": "Production Log #4",
+      "content": "Sample Production Log #4\n\nThis is a sample well production performance logs and analyses for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_log",
+      "template_name": "Production Log",
+      "title": "Production Log #5",
+      "content": "Sample Production Log #5\n\nThis is a sample well production performance logs and analyses for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "equipment_maintenance",
+      "template_name": "Equipment Maintenance Report",
+      "title": "Equipment Maintenance Report #1",
+      "content": "Sample Equipment Maintenance Report #1\n\nThis is a sample equipment maintenance and service reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "equipment_maintenance",
+      "template_name": "Equipment Maintenance Report",
+      "title": "Equipment Maintenance Report #2",
+      "content": "Sample Equipment Maintenance Report #2\n\nThis is a sample equipment maintenance and service reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "equipment_maintenance",
+      "template_name": "Equipment Maintenance Report",
+      "title": "Equipment Maintenance Report #3",
+      "content": "Sample Equipment Maintenance Report #3\n\nThis is a sample equipment maintenance and service reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "equipment_maintenance",
+      "template_name": "Equipment Maintenance Report",
+      "title": "Equipment Maintenance Report #4",
+      "content": "Sample Equipment Maintenance Report #4\n\nThis is a sample equipment maintenance and service reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "equipment_maintenance",
+      "template_name": "Equipment Maintenance Report",
+      "title": "Equipment Maintenance Report #5",
+      "content": "Sample Equipment Maintenance Report #5\n\nThis is a sample equipment maintenance and service reports for the Oil & Gas domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "drilling_decision",
+      "task": "Evaluate whether to drill a new well in Formation 1 formation at proposed location",
+      "steps": [
+        {
+          "thought": "Assess geological data and reservoir characteristics",
+          "action": "Query formation properties, nearby well results, and reservoir estimates",
+          "observation": "Results retrieved for: Query formation properties, nearby well results, and reservoir estimates"
+        },
+        {
+          "thought": "Review permit requirements and regulatory constraints",
+          "action": "Check permit status and environmental restrictions for the area",
+          "observation": "Results retrieved for: Check permit status and environmental restrictions for the area"
+        },
+        {
+          "thought": "Evaluate economic viability based on estimated reserves",
+          "action": "Calculate projected production, costs, and breakeven price",
+          "observation": "Results retrieved for: Calculate projected production, costs, and breakeven price"
+        },
+        {
+          "thought": "Assess operational risks and mitigation options",
+          "action": "Review inspection history and equipment availability for similar wells",
+          "observation": "Results retrieved for: Review inspection history and equipment availability for similar wells"
+        }
+      ],
+      "outcome": "Decision: {{decision}} \u2014 estimated EUR {{reserves}} MMbbl at {{breakeven}} breakeven"
+    },
+    {
+      "id": "well_intervention",
+      "task": "Determine if well Well 4 requires workover or stimulation",
+      "steps": [
+        {
+          "thought": "Analyze production decline and compare to type curve",
+          "action": "Query production history and calculate decline rate",
+          "observation": "Results retrieved for: Query production history and calculate decline rate"
+        },
+        {
+          "thought": "Review well condition and recent inspection findings",
+          "action": "Check inspection reports and equipment condition assessments",
+          "observation": "Results retrieved for: Check inspection reports and equipment condition assessments"
+        },
+        {
+          "thought": "Evaluate intervention options and expected uplift",
+          "action": "Compare costs and production gains for workover vs stimulation vs status quo",
+          "observation": "Results retrieved for: Compare costs and production gains for workover vs stimulation vs status quo"
+        }
+      ],
+      "outcome": "Recommendation: {{action}} with expected uplift of {{uplift}} bbl/day"
+    },
+    {
+      "id": "equipment_replacement",
+      "task": "Assess whether to repair or replace Equipment 4 at well Well 3",
+      "steps": [
+        {
+          "thought": "Review equipment condition history and failure patterns",
+          "action": "Query inspection records and maintenance history",
+          "observation": "Results retrieved for: Query inspection records and maintenance history"
+        },
+        {
+          "thought": "Compare repair cost vs replacement cost and downtime impact",
+          "action": "Estimate repair costs, replacement costs, and production loss",
+          "observation": "Results retrieved for: Estimate repair costs, replacement costs, and production loss"
+        },
+        {
+          "thought": "Consider remaining useful life and technology upgrades",
+          "action": "Evaluate newer equipment options and efficiency improvements",
+          "observation": "Results retrieved for: Evaluate newer equipment options and efficiency improvements"
+        }
+      ],
+      "outcome": "Decision: {{decision}} \u2014 {{rationale}} with net cost of ${{cost}}"
+    }
+  ]
+}

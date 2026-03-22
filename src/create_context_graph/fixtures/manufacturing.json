@@ -1,0 +1,1175 @@
+{
+  "domain": "manufacturing",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Machine": [
+      {
+        "name": "Machine 1",
+        "machine_id": "Sample machine_id for Machine 1",
+        "machine_type": "press",
+        "manufacturer": "Sample manufacturer for Machine 1",
+        "status": "maintenance",
+        "operating_hours": 100
+      },
+      {
+        "name": "Machine 2",
+        "machine_id": "Sample machine_id for Machine 2",
+        "machine_type": "lathe",
+        "manufacturer": "Sample manufacturer for Machine 2",
+        "status": "offline",
+        "operating_hours": 200
+      },
+      {
+        "name": "Machine 3",
+        "machine_id": "Sample machine_id for Machine 3",
+        "machine_type": "welder",
+        "manufacturer": "Sample manufacturer for Machine 3",
+        "status": "decommissioned",
+        "operating_hours": 300
+      },
+      {
+        "name": "Machine 4",
+        "machine_id": "Sample machine_id for Machine 4",
+        "machine_type": "assembler",
+        "manufacturer": "Sample manufacturer for Machine 4",
+        "status": "operational",
+        "operating_hours": 400
+      },
+      {
+        "name": "Machine 5",
+        "machine_id": "Sample machine_id for Machine 5",
+        "machine_type": "conveyor",
+        "manufacturer": "Sample manufacturer for Machine 5",
+        "status": "maintenance",
+        "operating_hours": 500
+      }
+    ],
+    "Part": [
+      {
+        "name": "Part 1",
+        "part_number": "Sample part_number for Part 1",
+        "category": "component",
+        "unit_cost": 10.5,
+        "stock_quantity": 100,
+        "minimum_stock": 100,
+        "specification": "Sample specification for Part 1"
+      },
+      {
+        "name": "Part 2",
+        "part_number": "Sample part_number for Part 2",
+        "category": "subassembly",
+        "unit_cost": 21.0,
+        "stock_quantity": 200,
+        "minimum_stock": 200,
+        "specification": "Sample specification for Part 2"
+      },
+      {
+        "name": "Part 3",
+        "part_number": "Sample part_number for Part 3",
+        "category": "finished_good",
+        "unit_cost": 31.5,
+        "stock_quantity": 300,
+        "minimum_stock": 300,
+        "specification": "Sample specification for Part 3"
+      },
+      {
+        "name": "Part 4",
+        "part_number": "Sample part_number for Part 4",
+        "category": "raw_material",
+        "unit_cost": 42.0,
+        "stock_quantity": 400,
+        "minimum_stock": 400,
+        "specification": "Sample specification for Part 4"
+      },
+      {
+        "name": "Part 5",
+        "part_number": "Sample part_number for Part 5",
+        "category": "component",
+        "unit_cost": 52.5,
+        "stock_quantity": 500,
+        "minimum_stock": 500,
+        "specification": "Sample specification for Part 5"
+      }
+    ],
+    "WorkOrder": [
+      {
+        "name": "WorkOrder 1",
+        "work_order_id": "Sample work_order_id for WorkOrder 1",
+        "description": "Sample description for WorkOrder 1",
+        "priority": "medium",
+        "status": "in_progress",
+        "quantity": 100
+      },
+      {
+        "name": "WorkOrder 2",
+        "work_order_id": "Sample work_order_id for WorkOrder 2",
+        "description": "Sample description for WorkOrder 2",
+        "priority": "high",
+        "status": "completed",
+        "quantity": 200
+      },
+      {
+        "name": "WorkOrder 3",
+        "work_order_id": "Sample work_order_id for WorkOrder 3",
+        "description": "Sample description for WorkOrder 3",
+        "priority": "critical",
+        "status": "on_hold",
+        "quantity": 300
+      },
+      {
+        "name": "WorkOrder 4",
+        "work_order_id": "Sample work_order_id for WorkOrder 4",
+        "description": "Sample description for WorkOrder 4",
+        "priority": "low",
+        "status": "cancelled",
+        "quantity": 400
+      },
+      {
+        "name": "WorkOrder 5",
+        "work_order_id": "Sample work_order_id for WorkOrder 5",
+        "description": "Sample description for WorkOrder 5",
+        "priority": "medium",
+        "status": "planned",
+        "quantity": 500
+      }
+    ],
+    "Supplier": [
+      {
+        "name": "Supplier 1",
+        "supplier_id": "Sample supplier_id for Supplier 1",
+        "country": "Sample country for Supplier 1",
+        "lead_time_days": 100,
+        "quality_rating": 10.5,
+        "status": "probationary"
+      },
+      {
+        "name": "Supplier 2",
+        "supplier_id": "Sample supplier_id for Supplier 2",
+        "country": "Sample country for Supplier 2",
+        "lead_time_days": 200,
+        "quality_rating": 21.0,
+        "status": "suspended"
+      },
+      {
+        "name": "Supplier 3",
+        "supplier_id": "Sample supplier_id for Supplier 3",
+        "country": "Sample country for Supplier 3",
+        "lead_time_days": 300,
+        "quality_rating": 31.5,
+        "status": "blacklisted"
+      },
+      {
+        "name": "Supplier 4",
+        "supplier_id": "Sample supplier_id for Supplier 4",
+        "country": "Sample country for Supplier 4",
+        "lead_time_days": 400,
+        "quality_rating": 42.0,
+        "status": "approved"
+      },
+      {
+        "name": "Supplier 5",
+        "supplier_id": "Sample supplier_id for Supplier 5",
+        "country": "Sample country for Supplier 5",
+        "lead_time_days": 500,
+        "quality_rating": 52.5,
+        "status": "probationary"
+      }
+    ],
+    "QualityReport": [
+      {
+        "name": "QualityReport 1",
+        "report_id": "Sample report_id for QualityReport 1",
+        "inspector": "Sample inspector for QualityReport 1",
+        "result": "fail",
+        "defect_count": 100,
+        "defect_type": "Sample defect_type for QualityReport 1",
+        "notes": "Sample notes for QualityReport 1"
+      },
+      {
+        "name": "QualityReport 2",
+        "report_id": "Sample report_id for QualityReport 2",
+        "inspector": "Sample inspector for QualityReport 2",
+        "result": "conditional_pass",
+        "defect_count": 200,
+        "defect_type": "Sample defect_type for QualityReport 2",
+        "notes": "Sample notes for QualityReport 2"
+      },
+      {
+        "name": "QualityReport 3",
+        "report_id": "Sample report_id for QualityReport 3",
+        "inspector": "Sample inspector for QualityReport 3",
+        "result": "pass",
+        "defect_count": 300,
+        "defect_type": "Sample defect_type for QualityReport 3",
+        "notes": "Sample notes for QualityReport 3"
+      },
+      {
+        "name": "QualityReport 4",
+        "report_id": "Sample report_id for QualityReport 4",
+        "inspector": "Sample inspector for QualityReport 4",
+        "result": "fail",
+        "defect_count": 400,
+        "defect_type": "Sample defect_type for QualityReport 4",
+        "notes": "Sample notes for QualityReport 4"
+      },
+      {
+        "name": "QualityReport 5",
+        "report_id": "Sample report_id for QualityReport 5",
+        "inspector": "Sample inspector for QualityReport 5",
+        "result": "conditional_pass",
+        "defect_count": 500,
+        "defect_type": "Sample defect_type for QualityReport 5",
+        "notes": "Sample notes for QualityReport 5"
+      }
+    ],
+    "ProductionLine": [
+      {
+        "name": "ProductionLine 1",
+        "line_id": "Sample line_id for ProductionLine 1",
+        "capacity_per_hour": 100,
+        "efficiency_rating": 10.5,
+        "status": "idle",
+        "shift_pattern": "double"
+      },
+      {
+        "name": "ProductionLine 2",
+        "line_id": "Sample line_id for ProductionLine 2",
+        "capacity_per_hour": 200,
+        "efficiency_rating": 21.0,
+        "status": "maintenance",
+        "shift_pattern": "triple"
+      },
+      {
+        "name": "ProductionLine 3",
+        "line_id": "Sample line_id for ProductionLine 3",
+        "capacity_per_hour": 300,
+        "efficiency_rating": 31.5,
+        "status": "retooling",
+        "shift_pattern": "continuous"
+      },
+      {
+        "name": "ProductionLine 4",
+        "line_id": "Sample line_id for ProductionLine 4",
+        "capacity_per_hour": 400,
+        "efficiency_rating": 42.0,
+        "status": "active",
+        "shift_pattern": "single"
+      },
+      {
+        "name": "ProductionLine 5",
+        "line_id": "Sample line_id for ProductionLine 5",
+        "capacity_per_hour": 500,
+        "efficiency_rating": 52.5,
+        "status": "idle",
+        "shift_pattern": "double"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 3"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 3"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "ASSEMBLED_FROM",
+      "source_label": "Part",
+      "source_name": "Part 1",
+      "target_label": "Part",
+      "target_name": "Part 2"
+    },
+    {
+      "type": "ASSEMBLED_FROM",
+      "source_label": "Part",
+      "source_name": "Part 2",
+      "target_label": "Part",
+      "target_name": "Part 1"
+    },
+    {
+      "type": "ASSEMBLED_FROM",
+      "source_label": "Part",
+      "source_name": "Part 3",
+      "target_label": "Part",
+      "target_name": "Part 5"
+    },
+    {
+      "type": "ASSEMBLED_FROM",
+      "source_label": "Part",
+      "source_name": "Part 4",
+      "target_label": "Part",
+      "target_name": "Part 2"
+    },
+    {
+      "type": "ASSEMBLED_FROM",
+      "source_label": "Part",
+      "source_name": "Part 5",
+      "target_label": "Part",
+      "target_name": "Part 2"
+    },
+    {
+      "type": "SUPPLIED_BY",
+      "source_label": "Part",
+      "source_name": "Part 1",
+      "target_label": "Supplier",
+      "target_name": "Supplier 2"
+    },
+    {
+      "type": "SUPPLIED_BY",
+      "source_label": "Part",
+      "source_name": "Part 2",
+      "target_label": "Supplier",
+      "target_name": "Supplier 4"
+    },
+    {
+      "type": "SUPPLIED_BY",
+      "source_label": "Part",
+      "source_name": "Part 3",
+      "target_label": "Supplier",
+      "target_name": "Supplier 1"
+    },
+    {
+      "type": "SUPPLIED_BY",
+      "source_label": "Part",
+      "source_name": "Part 4",
+      "target_label": "Supplier",
+      "target_name": "Supplier 1"
+    },
+    {
+      "type": "SUPPLIED_BY",
+      "source_label": "Part",
+      "source_name": "Part 4",
+      "target_label": "Supplier",
+      "target_name": "Supplier 5"
+    },
+    {
+      "type": "SUPPLIED_BY",
+      "source_label": "Part",
+      "source_name": "Part 5",
+      "target_label": "Supplier",
+      "target_name": "Supplier 3"
+    },
+    {
+      "type": "SUPPLIED_BY",
+      "source_label": "Part",
+      "source_name": "Part 5",
+      "target_label": "Supplier",
+      "target_name": "Supplier 2"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 1",
+      "target_label": "Part",
+      "target_name": "Part 2"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 2",
+      "target_label": "Part",
+      "target_name": "Part 4"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 2",
+      "target_label": "Part",
+      "target_name": "Part 2"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 3",
+      "target_label": "Part",
+      "target_name": "Part 3"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 4",
+      "target_label": "Part",
+      "target_name": "Part 1"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 4",
+      "target_label": "Part",
+      "target_name": "Part 5"
+    },
+    {
+      "type": "INSPECTED",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 5",
+      "target_label": "Part",
+      "target_name": "Part 2"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 1",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 1"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 1",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 4"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 2",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 2"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 2",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 4"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 3",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 3"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 3",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 4"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 4",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 2"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 4",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 5"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 5",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 1"
+    },
+    {
+      "type": "PRODUCED_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 5",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 3"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 1",
+      "target_label": "Part",
+      "target_name": "Part 3"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 2",
+      "target_label": "Part",
+      "target_name": "Part 4"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 3",
+      "target_label": "Part",
+      "target_name": "Part 1"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 4",
+      "target_label": "Part",
+      "target_name": "Part 2"
+    },
+    {
+      "type": "DEPENDS_ON",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 5",
+      "target_label": "Part",
+      "target_name": "Part 1"
+    },
+    {
+      "type": "OPERATED_BY",
+      "source_label": "Machine",
+      "source_name": "Machine 1",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 4"
+    },
+    {
+      "type": "OPERATED_BY",
+      "source_label": "Machine",
+      "source_name": "Machine 2",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 4"
+    },
+    {
+      "type": "OPERATED_BY",
+      "source_label": "Machine",
+      "source_name": "Machine 2",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 2"
+    },
+    {
+      "type": "OPERATED_BY",
+      "source_label": "Machine",
+      "source_name": "Machine 3",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 4"
+    },
+    {
+      "type": "OPERATED_BY",
+      "source_label": "Machine",
+      "source_name": "Machine 3",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 5"
+    },
+    {
+      "type": "OPERATED_BY",
+      "source_label": "Machine",
+      "source_name": "Machine 4",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 3"
+    },
+    {
+      "type": "OPERATED_BY",
+      "source_label": "Machine",
+      "source_name": "Machine 5",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 4"
+    },
+    {
+      "type": "OPERATED_BY",
+      "source_label": "Machine",
+      "source_name": "Machine 5",
+      "target_label": "ProductionLine",
+      "target_name": "ProductionLine 3"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 1",
+      "target_label": "Machine",
+      "target_name": "Machine 4"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 2",
+      "target_label": "Machine",
+      "target_name": "Machine 4"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 2",
+      "target_label": "Machine",
+      "target_name": "Machine 1"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 3",
+      "target_label": "Machine",
+      "target_name": "Machine 5"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 4",
+      "target_label": "Machine",
+      "target_name": "Machine 3"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 5",
+      "target_label": "Machine",
+      "target_name": "Machine 5"
+    },
+    {
+      "type": "ASSIGNED_TO",
+      "source_label": "WorkOrder",
+      "source_name": "WorkOrder 5",
+      "target_label": "Machine",
+      "target_name": "Machine 4"
+    },
+    {
+      "type": "REPORTED_BY",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 1",
+      "target_label": "Person",
+      "target_name": "Person 4"
+    },
+    {
+      "type": "REPORTED_BY",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 2",
+      "target_label": "Person",
+      "target_name": "Person 1"
+    },
+    {
+      "type": "REPORTED_BY",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 3",
+      "target_label": "Person",
+      "target_name": "Person 5"
+    },
+    {
+      "type": "REPORTED_BY",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 3",
+      "target_label": "Person",
+      "target_name": "Person 3"
+    },
+    {
+      "type": "REPORTED_BY",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 4",
+      "target_label": "Person",
+      "target_name": "Person 3"
+    },
+    {
+      "type": "REPORTED_BY",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 4",
+      "target_label": "Person",
+      "target_name": "Person 4"
+    },
+    {
+      "type": "REPORTED_BY",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 5",
+      "target_label": "Person",
+      "target_name": "Person 1"
+    },
+    {
+      "type": "REPORTED_BY",
+      "source_label": "QualityReport",
+      "source_name": "QualityReport 5",
+      "target_label": "Person",
+      "target_name": "Person 2"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "work_order_doc",
+      "template_name": "Work Order",
+      "title": "Work Order #1",
+      "content": "Sample Work Order #1\n\nThis is a sample production work orders with specifications and requirements for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "work_order_doc",
+      "template_name": "Work Order",
+      "title": "Work Order #2",
+      "content": "Sample Work Order #2\n\nThis is a sample production work orders with specifications and requirements for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "work_order_doc",
+      "template_name": "Work Order",
+      "title": "Work Order #3",
+      "content": "Sample Work Order #3\n\nThis is a sample production work orders with specifications and requirements for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "work_order_doc",
+      "template_name": "Work Order",
+      "title": "Work Order #4",
+      "content": "Sample Work Order #4\n\nThis is a sample production work orders with specifications and requirements for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "work_order_doc",
+      "template_name": "Work Order",
+      "title": "Work Order #5",
+      "content": "Sample Work Order #5\n\nThis is a sample production work orders with specifications and requirements for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "quality_audit",
+      "template_name": "Quality Audit",
+      "title": "Quality Audit #1",
+      "content": "Sample Quality Audit #1\n\nThis is a sample quality inspection and audit reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "quality_audit",
+      "template_name": "Quality Audit",
+      "title": "Quality Audit #2",
+      "content": "Sample Quality Audit #2\n\nThis is a sample quality inspection and audit reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "quality_audit",
+      "template_name": "Quality Audit",
+      "title": "Quality Audit #3",
+      "content": "Sample Quality Audit #3\n\nThis is a sample quality inspection and audit reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "quality_audit",
+      "template_name": "Quality Audit",
+      "title": "Quality Audit #4",
+      "content": "Sample Quality Audit #4\n\nThis is a sample quality inspection and audit reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "quality_audit",
+      "template_name": "Quality Audit",
+      "title": "Quality Audit #5",
+      "content": "Sample Quality Audit #5\n\nThis is a sample quality inspection and audit reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "supplier_evaluation",
+      "template_name": "Supplier Evaluation",
+      "title": "Supplier Evaluation #1",
+      "content": "Sample Supplier Evaluation #1\n\nThis is a sample periodic supplier performance evaluations for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "supplier_evaluation",
+      "template_name": "Supplier Evaluation",
+      "title": "Supplier Evaluation #2",
+      "content": "Sample Supplier Evaluation #2\n\nThis is a sample periodic supplier performance evaluations for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "supplier_evaluation",
+      "template_name": "Supplier Evaluation",
+      "title": "Supplier Evaluation #3",
+      "content": "Sample Supplier Evaluation #3\n\nThis is a sample periodic supplier performance evaluations for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "supplier_evaluation",
+      "template_name": "Supplier Evaluation",
+      "title": "Supplier Evaluation #4",
+      "content": "Sample Supplier Evaluation #4\n\nThis is a sample periodic supplier performance evaluations for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "supplier_evaluation",
+      "template_name": "Supplier Evaluation",
+      "title": "Supplier Evaluation #5",
+      "content": "Sample Supplier Evaluation #5\n\nThis is a sample periodic supplier performance evaluations for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #1",
+      "content": "Sample Maintenance Log #1\n\nThis is a sample equipment maintenance and repair logs for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #2",
+      "content": "Sample Maintenance Log #2\n\nThis is a sample equipment maintenance and repair logs for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #3",
+      "content": "Sample Maintenance Log #3\n\nThis is a sample equipment maintenance and repair logs for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #4",
+      "content": "Sample Maintenance Log #4\n\nThis is a sample equipment maintenance and repair logs for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "maintenance_log",
+      "template_name": "Maintenance Log",
+      "title": "Maintenance Log #5",
+      "content": "Sample Maintenance Log #5\n\nThis is a sample equipment maintenance and repair logs for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_report",
+      "template_name": "Production Report",
+      "title": "Production Report #1",
+      "content": "Sample Production Report #1\n\nThis is a sample daily or weekly production summary reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_report",
+      "template_name": "Production Report",
+      "title": "Production Report #2",
+      "content": "Sample Production Report #2\n\nThis is a sample daily or weekly production summary reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_report",
+      "template_name": "Production Report",
+      "title": "Production Report #3",
+      "content": "Sample Production Report #3\n\nThis is a sample daily or weekly production summary reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_report",
+      "template_name": "Production Report",
+      "title": "Production Report #4",
+      "content": "Sample Production Report #4\n\nThis is a sample daily or weekly production summary reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "production_report",
+      "template_name": "Production Report",
+      "title": "Production Report #5",
+      "content": "Sample Production Report #5\n\nThis is a sample daily or weekly production summary reports for the Manufacturing domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "production_scheduling",
+      "task": "Determine optimal scheduling for work order {{work_order.work_order_id}} on available production lines",
+      "steps": [
+        {
+          "thought": "Assess current production line capacity and availability",
+          "action": "Query production lines, current workload, and maintenance schedules",
+          "observation": "Results retrieved for: Query production lines, current workload, and maintenance schedules"
+        },
+        {
+          "thought": "Check material availability for all required parts",
+          "action": "Verify stock levels against bill of materials requirements",
+          "observation": "Results retrieved for: Verify stock levels against bill of materials requirements"
+        },
+        {
+          "thought": "Evaluate machine assignments and tooling requirements",
+          "action": "Match work order specifications to capable machines",
+          "observation": "Results retrieved for: Match work order specifications to capable machines"
+        },
+        {
+          "thought": "Optimize for due date compliance and line efficiency",
+          "action": "Calculate scheduling options ranked by efficiency and on-time delivery",
+          "observation": "Results retrieved for: Calculate scheduling options ranked by efficiency and on-time delivery"
+        }
+      ],
+      "outcome": "Schedule: {{schedule}} on {{line}} with estimated completion {{date}}"
+    },
+    {
+      "id": "supplier_selection",
+      "task": "Select supplier for part {{part.part_number}} given quality and lead time requirements",
+      "steps": [
+        {
+          "thought": "Review available suppliers for this part category",
+          "action": "Query approved suppliers and their historical performance",
+          "observation": "Results retrieved for: Query approved suppliers and their historical performance"
+        },
+        {
+          "thought": "Compare quality ratings and defect rates",
+          "action": "Analyze quality reports linked to each supplier's parts",
+          "observation": "Results retrieved for: Analyze quality reports linked to each supplier's parts"
+        },
+        {
+          "thought": "Factor in lead time, cost, and risk diversification",
+          "action": "Rank suppliers by weighted score of quality, cost, and reliability",
+          "observation": "Results retrieved for: Rank suppliers by weighted score of quality, cost, and reliability"
+        }
+      ],
+      "outcome": "Selected supplier: {{supplier}} \u2014 {{rationale}}"
+    },
+    {
+      "id": "defect_investigation",
+      "task": "Investigate root cause of quality defects in Part 1 batch",
+      "steps": [
+        {
+          "thought": "Review defect details and patterns from quality reports",
+          "action": "Query recent quality reports for this part with fail results",
+          "observation": "Results retrieved for: Query recent quality reports for this part with fail results"
+        },
+        {
+          "thought": "Trace back through production process and materials",
+          "action": "Follow production chain: machine, line, supplier, raw materials",
+          "observation": "Results retrieved for: Follow production chain: machine, line, supplier, raw materials"
+        },
+        {
+          "thought": "Identify common factors across defective units",
+          "action": "Correlate defects with machine, shift, material batch, or operator",
+          "observation": "Results retrieved for: Correlate defects with machine, shift, material batch, or operator"
+        }
+      ],
+      "outcome": "Root cause: {{cause}}. Corrective action: {{action}}"
+    }
+  ]
+}

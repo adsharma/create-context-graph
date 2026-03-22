@@ -1,0 +1,94 @@
+"""{{ domain.name }} AI Agent — CrewAI implementation."""
+
+from __future__ import annotations
+
+import json
+import uuid
+
+from crewai import Agent, Crew, Task
+from crewai.tools import tool
+
+from app.config import settings
+from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+
+
+SYSTEM_PROMPT = """{{ system_prompt }}"""
+
+# ---------------------------------------------------------------------------
+# Agent tools — domain-specific for {{ domain.name }}
+# ---------------------------------------------------------------------------
+
+{% for tool in agent_tools %}
+@tool
+def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{ 'str' if param.type == 'string' else 'int' if param.type == 'integer' else 'float' if param.type == 'float' else 'str' }}{% if param.default is not none %} = {{ param.default if param.type != 'string' else '"' + param.default + '"' }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}) -> str:
+    """{{ tool.description }}"""
+    import asyncio
+    cypher = """{{ tool.cypher | indent(4) }}"""
+    params = {
+{% for param in tool.parameters %}
+        "{{ param.name }}": {{ param.name }},
+{% endfor %}
+    }
+    result = asyncio.run(execute_cypher(cypher, params))
+    return json.dumps(result, default=str)
+
+{% endfor %}
+
+{% raw %}
+@tool
+def run_cypher(query: str, parameters: str = "{}") -> str:
+    """Execute a read-only Cypher query against the knowledge graph."""
+    import asyncio
+    params = json.loads(parameters) if parameters else {}
+    result = asyncio.run(execute_cypher(query, params))
+    return json.dumps(result, default=str)
+
+
+@tool
+def get_graph_schema() -> str:
+    """Get the knowledge graph schema (node labels and relationship types)."""
+    import asyncio
+    result = asyncio.run(get_schema())
+    return json.dumps(result, default=str)
+{% endraw %}
+
+agent = Agent(
+    role="{{ domain.name }} Analyst",
+    goal="Help users analyze and explore the {{ domain.name | lower }} knowledge graph",
+    backstory=SYSTEM_PROMPT,
+    tools=[
+{% for tool in agent_tools %}
+        {{ tool.name }},
+{% endfor %}
+        run_cypher,
+        get_graph_schema,
+    ],
+    verbose=False,
+)
+
+{% raw %}
+# ---------------------------------------------------------------------------
+# Message handler
+# ---------------------------------------------------------------------------
+
+
+async def handle_message(message: str, session_id: str | None = None) -> dict:
+    """Handle an incoming chat message."""
+    if session_id is None:
+        session_id = str(uuid.uuid4())
+
+    task = Task(
+        description=message,
+        expected_output="A helpful response with relevant data from the knowledge graph",
+        agent=agent,
+    )
+
+    crew = Crew(agents=[agent], tasks=[task], verbose=False)
+    result = crew.kickoff()
+
+    return {
+        "response": str(result),
+        "session_id": session_id,
+        "graph_data": None,
+    }
+{% endraw %}

@@ -1,0 +1,42 @@
+{% raw %}"use client";
+
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { ChatInterface } from "@/components/ChatInterface";
+import { ContextGraphView } from "@/components/ContextGraphView";
+import { DecisionTracePanel } from "@/components/DecisionTracePanel";
+import { DOMAIN } from "@/lib/config";
+
+export default function Home() {
+  return (
+    <Flex direction="column" h="100vh">
+      {/* Header */}
+      <Box bg="gray.900" color="white" px={6} py={3}>
+        <Heading size="md">
+          {% endraw %}{{ domain.emoji }}{% raw %} {DOMAIN.name} Context Graph
+        </Heading>
+        <Text fontSize="sm" color="gray.400">
+          {DOMAIN.tagline}
+        </Text>
+      </Box>
+
+      {/* Main content - 3 panel layout */}
+      <Flex flex={1} overflow="hidden">
+        {/* Left panel: Chat */}
+        <Box w="400px" borderRight="1px solid" borderColor="gray.200" overflow="auto">
+          <ChatInterface />
+        </Box>
+
+        {/* Center panel: Graph visualization */}
+        <Box flex={1} bg="gray.50">
+          <ContextGraphView />
+        </Box>
+
+        {/* Right panel: Decision traces */}
+        <Box w="350px" borderLeft="1px solid" borderColor="gray.200" overflow="auto">
+          <DecisionTracePanel />
+        </Box>
+      </Flex>
+    </Flex>
+  );
+}
+{% endraw %}

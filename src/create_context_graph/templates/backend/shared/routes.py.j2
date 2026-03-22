@@ -1,0 +1,104 @@
+"""API routes for {{ domain.name }} Context Graph."""
+{% raw %}
+from __future__ import annotations
+
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+
+from app.agent import handle_message
+from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+from app.gds_client import check_gds_available, run_community_detection, run_pagerank
+
+router = APIRouter()
+
+
+class ChatRequest(BaseModel):
+    message: str
+    session_id: str | None = None
+
+
+class ChatResponse(BaseModel):
+    response: str
+    session_id: str
+    graph_data: dict | None = None
+
+
+class SearchRequest(BaseModel):
+    query: str
+    label: str | None = None
+    limit: int = 20
+
+
+class CypherRequest(BaseModel):
+    query: str
+    parameters: dict | None = None
+
+
+@router.post("/chat", response_model=ChatResponse)
+async def chat(request: ChatRequest):
+    """Send a message to the AI agent."""
+    try:
+        result = await handle_message(request.message, request.session_id)
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/search")
+async def search(request: SearchRequest):
+    """Search entities in the knowledge graph."""
+    results = await search_entities(request.query, request.label, request.limit)
+    return {"results": results}
+
+
+@router.get("/graph/{entity_name}")
+async def graph(entity_name: str, depth: int = 2):
+    """Get the subgraph around an entity."""
+    data = await get_entity_graph(entity_name, depth)
+    return data
+
+
+@router.get("/schema")
+async def schema():
+    """Get the graph database schema."""
+    return await get_schema()
+
+
+@router.post("/cypher")
+async def cypher(request: CypherRequest):
+    """Execute a Cypher query."""
+    try:
+        results = await execute_cypher(request.query, request.parameters)
+        return {"results": results}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.get("/gds/status")
+async def gds_status():
+    """Check if GDS is available."""
+    available = await check_gds_available()
+    return {"gds_available": available}
+
+
+@router.get("/gds/communities")
+async def communities():
+    """Run community detection."""
+    results = await run_community_detection()
+    return {"communities": results}
+
+
+@router.get("/gds/pagerank")
+async def pagerank():
+    """Run PageRank centrality."""
+    results = await run_pagerank()
+    return {"pagerank": results}
+{% endraw %}
+
+@router.get("/scenarios")
+async def scenarios():
+    """Get demo scenarios for the frontend."""
+    return {
+        "domain": "{{ domain.name }}",
+        "scenarios": {{ demo_scenarios | tojson }},
+    }

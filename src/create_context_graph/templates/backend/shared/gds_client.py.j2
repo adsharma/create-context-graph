@@ -1,0 +1,82 @@
+{% raw %}"""Graph Data Science client."""
+
+from __future__ import annotations
+
+from app.context_graph_client import execute_cypher
+
+
+async def check_gds_available() -> bool:
+    """Check if GDS plugin is available."""
+    try:
+        result = await execute_cypher("RETURN gds.version() AS version")
+        return bool(result)
+    except Exception:
+        return False
+
+
+async def run_community_detection(label: str = "Entity") -> list[dict]:
+    """Run Louvain community detection."""
+    try:
+        await execute_cypher(f"""
+            CALL gds.graph.project('community_graph', '{label}', '*')
+        """)
+        result = await execute_cypher("""
+            CALL gds.louvain.stream('community_graph')
+            YIELD nodeId, communityId
+            RETURN gds.util.asNode(nodeId).name AS name, communityId
+            ORDER BY communityId
+        """)
+        await execute_cypher("CALL gds.graph.drop('community_graph')")
+        return result
+    except Exception as e:
+        return [{"error": str(e)}]
+
+
+async def run_pagerank(label: str = "Entity") -> list[dict]:
+    """Run PageRank centrality."""
+    try:
+        await execute_cypher(f"""
+            CALL gds.graph.project('pagerank_graph', '{label}', '*')
+        """)
+        result = await execute_cypher("""
+            CALL gds.pageRank.stream('pagerank_graph')
+            YIELD nodeId, score
+            RETURN gds.util.asNode(nodeId).name AS name, score
+            ORDER BY score DESC
+            LIMIT 20
+        """)
+        await execute_cypher("CALL gds.graph.drop('pagerank_graph')")
+        return result
+    except Exception as e:
+        return [{"error": str(e)}]
+
+
+async def run_similarity(label: str = "Entity") -> list[dict]:
+    """Run KNN similarity using FastRP embeddings."""
+    try:
+        await execute_cypher(f"""
+            CALL gds.graph.project('similarity_graph', '{label}', '*')
+        """)
+        await execute_cypher("""
+            CALL gds.fastRP.mutate('similarity_graph', {
+                embeddingDimension: 128,
+                mutateProperty: 'fastrp_embedding'
+            })
+        """)
+        result = await execute_cypher("""
+            CALL gds.knn.stream('similarity_graph', {
+                topK: 5,
+                nodeProperties: ['fastrp_embedding']
+            })
+            YIELD node1, node2, similarity
+            RETURN gds.util.asNode(node1).name AS entity1,
+                   gds.util.asNode(node2).name AS entity2,
+                   similarity
+            ORDER BY similarity DESC
+            LIMIT 20
+        """)
+        await execute_cypher("CALL gds.graph.drop('similarity_graph')")
+        return result
+    except Exception as e:
+        return [{"error": str(e)}]
+{% endraw %}

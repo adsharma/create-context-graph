@@ -1,0 +1,1180 @@
+{
+  "domain": "scientific-research",
+  "entities": {
+    "Person": [
+      {
+        "name": "Person 1",
+        "email": "Sample email for Person 1",
+        "role": "Sample role for Person 1",
+        "description": "Sample description for Person 1"
+      },
+      {
+        "name": "Person 2",
+        "email": "Sample email for Person 2",
+        "role": "Sample role for Person 2",
+        "description": "Sample description for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "email": "Sample email for Person 3",
+        "role": "Sample role for Person 3",
+        "description": "Sample description for Person 3"
+      },
+      {
+        "name": "Person 4",
+        "email": "Sample email for Person 4",
+        "role": "Sample role for Person 4",
+        "description": "Sample description for Person 4"
+      },
+      {
+        "name": "Person 5",
+        "email": "Sample email for Person 5",
+        "role": "Sample role for Person 5",
+        "description": "Sample description for Person 5"
+      }
+    ],
+    "Organization": [
+      {
+        "name": "Organization 1",
+        "description": "Sample description for Organization 1",
+        "industry": "Sample industry for Organization 1"
+      },
+      {
+        "name": "Organization 2",
+        "description": "Sample description for Organization 2",
+        "industry": "Sample industry for Organization 2"
+      },
+      {
+        "name": "Organization 3",
+        "description": "Sample description for Organization 3",
+        "industry": "Sample industry for Organization 3"
+      },
+      {
+        "name": "Organization 4",
+        "description": "Sample description for Organization 4",
+        "industry": "Sample industry for Organization 4"
+      },
+      {
+        "name": "Organization 5",
+        "description": "Sample description for Organization 5",
+        "industry": "Sample industry for Organization 5"
+      }
+    ],
+    "Location": [
+      {
+        "name": "Location 1",
+        "address": "Sample address for Location 1",
+        "latitude": 10.5,
+        "longitude": 10.5
+      },
+      {
+        "name": "Location 2",
+        "address": "Sample address for Location 2",
+        "latitude": 21.0,
+        "longitude": 21.0
+      },
+      {
+        "name": "Location 3",
+        "address": "Sample address for Location 3",
+        "latitude": 31.5,
+        "longitude": 31.5
+      },
+      {
+        "name": "Location 4",
+        "address": "Sample address for Location 4",
+        "latitude": 42.0,
+        "longitude": 42.0
+      },
+      {
+        "name": "Location 5",
+        "address": "Sample address for Location 5",
+        "latitude": 52.5,
+        "longitude": 52.5
+      }
+    ],
+    "Event": [
+      {
+        "name": "Event 1",
+        "description": "Sample description for Event 1"
+      },
+      {
+        "name": "Event 2",
+        "description": "Sample description for Event 2"
+      },
+      {
+        "name": "Event 3",
+        "description": "Sample description for Event 3"
+      },
+      {
+        "name": "Event 4",
+        "description": "Sample description for Event 4"
+      },
+      {
+        "name": "Event 5",
+        "description": "Sample description for Event 5"
+      }
+    ],
+    "Object": [
+      {
+        "name": "Object 1",
+        "description": "Sample description for Object 1"
+      },
+      {
+        "name": "Object 2",
+        "description": "Sample description for Object 2"
+      },
+      {
+        "name": "Object 3",
+        "description": "Sample description for Object 3"
+      },
+      {
+        "name": "Object 4",
+        "description": "Sample description for Object 4"
+      },
+      {
+        "name": "Object 5",
+        "description": "Sample description for Object 5"
+      }
+    ],
+    "Researcher": [
+      {
+        "name": "Researcher 1",
+        "researcher_id": "Sample researcher_id for Researcher 1",
+        "orcid": "Sample orcid for Researcher 1",
+        "title": "associate_professor",
+        "h_index": 100,
+        "specialization": "Sample specialization for Researcher 1",
+        "email": "Sample email for Researcher 1"
+      },
+      {
+        "name": "Researcher 2",
+        "researcher_id": "Sample researcher_id for Researcher 2",
+        "orcid": "Sample orcid for Researcher 2",
+        "title": "assistant_professor",
+        "h_index": 200,
+        "specialization": "Sample specialization for Researcher 2",
+        "email": "Sample email for Researcher 2"
+      },
+      {
+        "name": "Researcher 3",
+        "researcher_id": "Sample researcher_id for Researcher 3",
+        "orcid": "Sample orcid for Researcher 3",
+        "title": "postdoc",
+        "h_index": 300,
+        "specialization": "Sample specialization for Researcher 3",
+        "email": "Sample email for Researcher 3"
+      },
+      {
+        "name": "Researcher 4",
+        "researcher_id": "Sample researcher_id for Researcher 4",
+        "orcid": "Sample orcid for Researcher 4",
+        "title": "phd_student",
+        "h_index": 400,
+        "specialization": "Sample specialization for Researcher 4",
+        "email": "Sample email for Researcher 4"
+      },
+      {
+        "name": "Researcher 5",
+        "researcher_id": "Sample researcher_id for Researcher 5",
+        "orcid": "Sample orcid for Researcher 5",
+        "title": "research_scientist",
+        "h_index": 500,
+        "specialization": "Sample specialization for Researcher 5",
+        "email": "Sample email for Researcher 5"
+      }
+    ],
+    "Paper": [
+      {
+        "name": "Paper 1",
+        "doi": "Sample doi for Paper 1",
+        "title": "Sample title for Paper 1",
+        "abstract": "Sample abstract for Paper 1",
+        "journal": "Sample journal for Paper 1",
+        "citation_count": 100,
+        "paper_type": "conference_paper"
+      },
+      {
+        "name": "Paper 2",
+        "doi": "Sample doi for Paper 2",
+        "title": "Sample title for Paper 2",
+        "abstract": "Sample abstract for Paper 2",
+        "journal": "Sample journal for Paper 2",
+        "citation_count": 200,
+        "paper_type": "preprint"
+      },
+      {
+        "name": "Paper 3",
+        "doi": "Sample doi for Paper 3",
+        "title": "Sample title for Paper 3",
+        "abstract": "Sample abstract for Paper 3",
+        "journal": "Sample journal for Paper 3",
+        "citation_count": 300,
+        "paper_type": "review"
+      },
+      {
+        "name": "Paper 4",
+        "doi": "Sample doi for Paper 4",
+        "title": "Sample title for Paper 4",
+        "abstract": "Sample abstract for Paper 4",
+        "journal": "Sample journal for Paper 4",
+        "citation_count": 400,
+        "paper_type": "meta_analysis"
+      },
+      {
+        "name": "Paper 5",
+        "doi": "Sample doi for Paper 5",
+        "title": "Sample title for Paper 5",
+        "abstract": "Sample abstract for Paper 5",
+        "journal": "Sample journal for Paper 5",
+        "citation_count": 500,
+        "paper_type": "journal_article"
+      }
+    ],
+    "Dataset": [
+      {
+        "name": "Dataset 1",
+        "dataset_id": "Sample dataset_id for Dataset 1",
+        "description": "Sample description for Dataset 1",
+        "format": "json",
+        "size_gb": 10.5,
+        "license": "cc_by_sa",
+        "access_url": "Sample access_url for Dataset 1"
+      },
+      {
+        "name": "Dataset 2",
+        "dataset_id": "Sample dataset_id for Dataset 2",
+        "description": "Sample description for Dataset 2",
+        "format": "hdf5",
+        "size_gb": 21.0,
+        "license": "cc0",
+        "access_url": "Sample access_url for Dataset 2"
+      },
+      {
+        "name": "Dataset 3",
+        "dataset_id": "Sample dataset_id for Dataset 3",
+        "description": "Sample description for Dataset 3",
+        "format": "netcdf",
+        "size_gb": 31.5,
+        "license": "mit",
+        "access_url": "Sample access_url for Dataset 3"
+      },
+      {
+        "name": "Dataset 4",
+        "dataset_id": "Sample dataset_id for Dataset 4",
+        "description": "Sample description for Dataset 4",
+        "format": "parquet",
+        "size_gb": 42.0,
+        "license": "gpl",
+        "access_url": "Sample access_url for Dataset 4"
+      },
+      {
+        "name": "Dataset 5",
+        "dataset_id": "Sample dataset_id for Dataset 5",
+        "description": "Sample description for Dataset 5",
+        "format": "sql",
+        "size_gb": 52.5,
+        "license": "proprietary",
+        "access_url": "Sample access_url for Dataset 5"
+      }
+    ],
+    "Experiment": [
+      {
+        "name": "Experiment 1",
+        "experiment_id": "Sample experiment_id for Experiment 1",
+        "methodology": "Sample methodology for Experiment 1",
+        "status": "in_progress",
+        "result_summary": "Sample result_summary for Experiment 1"
+      },
+      {
+        "name": "Experiment 2",
+        "experiment_id": "Sample experiment_id for Experiment 2",
+        "methodology": "Sample methodology for Experiment 2",
+        "status": "completed",
+        "result_summary": "Sample result_summary for Experiment 2"
+      },
+      {
+        "name": "Experiment 3",
+        "experiment_id": "Sample experiment_id for Experiment 3",
+        "methodology": "Sample methodology for Experiment 3",
+        "status": "failed",
+        "result_summary": "Sample result_summary for Experiment 3"
+      },
+      {
+        "name": "Experiment 4",
+        "experiment_id": "Sample experiment_id for Experiment 4",
+        "methodology": "Sample methodology for Experiment 4",
+        "status": "abandoned",
+        "result_summary": "Sample result_summary for Experiment 4"
+      },
+      {
+        "name": "Experiment 5",
+        "experiment_id": "Sample experiment_id for Experiment 5",
+        "methodology": "Sample methodology for Experiment 5",
+        "status": "planned",
+        "result_summary": "Sample result_summary for Experiment 5"
+      }
+    ],
+    "Grant": [
+      {
+        "name": "Grant 1",
+        "grant_id": "Sample grant_id for Grant 1",
+        "title": "Sample title for Grant 1",
+        "funding_agency": "Sample funding_agency for Grant 1",
+        "amount": 10.5,
+        "currency": "Sample currency for Grant 1",
+        "status": "under_review"
+      },
+      {
+        "name": "Grant 2",
+        "grant_id": "Sample grant_id for Grant 2",
+        "title": "Sample title for Grant 2",
+        "funding_agency": "Sample funding_agency for Grant 2",
+        "amount": 21.0,
+        "currency": "Sample currency for Grant 2",
+        "status": "awarded"
+      },
+      {
+        "name": "Grant 3",
+        "grant_id": "Sample grant_id for Grant 3",
+        "title": "Sample title for Grant 3",
+        "funding_agency": "Sample funding_agency for Grant 3",
+        "amount": 31.5,
+        "currency": "Sample currency for Grant 3",
+        "status": "active"
+      },
+      {
+        "name": "Grant 4",
+        "grant_id": "Sample grant_id for Grant 4",
+        "title": "Sample title for Grant 4",
+        "funding_agency": "Sample funding_agency for Grant 4",
+        "amount": 42.0,
+        "currency": "Sample currency for Grant 4",
+        "status": "completed"
+      },
+      {
+        "name": "Grant 5",
+        "grant_id": "Sample grant_id for Grant 5",
+        "title": "Sample title for Grant 5",
+        "funding_agency": "Sample funding_agency for Grant 5",
+        "amount": 52.5,
+        "currency": "Sample currency for Grant 5",
+        "status": "rejected"
+      }
+    ],
+    "Institution": [
+      {
+        "name": "Institution 1",
+        "institution_id": "Sample institution_id for Institution 1",
+        "institution_type": "research_institute",
+        "country": "Sample country for Institution 1",
+        "ranking": 100,
+        "department": "Sample department for Institution 1"
+      },
+      {
+        "name": "Institution 2",
+        "institution_id": "Sample institution_id for Institution 2",
+        "institution_type": "national_lab",
+        "country": "Sample country for Institution 2",
+        "ranking": 200,
+        "department": "Sample department for Institution 2"
+      },
+      {
+        "name": "Institution 3",
+        "institution_id": "Sample institution_id for Institution 3",
+        "institution_type": "hospital",
+        "country": "Sample country for Institution 3",
+        "ranking": 300,
+        "department": "Sample department for Institution 3"
+      },
+      {
+        "name": "Institution 4",
+        "institution_id": "Sample institution_id for Institution 4",
+        "institution_type": "industry_lab",
+        "country": "Sample country for Institution 4",
+        "ranking": 400,
+        "department": "Sample department for Institution 4"
+      },
+      {
+        "name": "Institution 5",
+        "institution_id": "Sample institution_id for Institution 5",
+        "institution_type": "university",
+        "country": "Sample country for Institution 5",
+        "ranking": 500,
+        "department": "Sample department for Institution 5"
+      }
+    ]
+  },
+  "relationships": [
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Organization",
+      "target_name": "Organization 2"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 4"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Organization",
+      "target_name": "Organization 1"
+    },
+    {
+      "type": "WORKS_FOR",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Organization",
+      "target_name": "Organization 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 1",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 2",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 2"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 3",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 1"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 4",
+      "target_label": "Location",
+      "target_name": "Location 3"
+    },
+    {
+      "type": "LOCATED_AT",
+      "source_label": "Organization",
+      "source_name": "Organization 5",
+      "target_label": "Location",
+      "target_name": "Location 5"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 1",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 2",
+      "target_label": "Event",
+      "target_name": "Event 1"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 3",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 4",
+      "target_label": "Event",
+      "target_name": "Event 4"
+    },
+    {
+      "type": "PARTICIPATED_IN",
+      "source_label": "Person",
+      "source_name": "Person 5",
+      "target_label": "Event",
+      "target_name": "Event 2"
+    },
+    {
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 1",
+      "target_label": "Paper",
+      "target_name": "Paper 2"
+    },
+    {
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 2",
+      "target_label": "Paper",
+      "target_name": "Paper 2"
+    },
+    {
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 2",
+      "target_label": "Paper",
+      "target_name": "Paper 1"
+    },
+    {
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 3",
+      "target_label": "Paper",
+      "target_name": "Paper 3"
+    },
+    {
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 4",
+      "target_label": "Paper",
+      "target_name": "Paper 2"
+    },
+    {
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 5",
+      "target_label": "Paper",
+      "target_name": "Paper 2"
+    },
+    {
+      "type": "AUTHORED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 5",
+      "target_label": "Paper",
+      "target_name": "Paper 4"
+    },
+    {
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Paper 1",
+      "target_label": "Paper",
+      "target_name": "Paper 3"
+    },
+    {
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Paper 1",
+      "target_label": "Paper",
+      "target_name": "Paper 5"
+    },
+    {
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Paper 3",
+      "target_label": "Paper",
+      "target_name": "Paper 2"
+    },
+    {
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Paper 3",
+      "target_label": "Paper",
+      "target_name": "Paper 5"
+    },
+    {
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Paper 5",
+      "target_label": "Paper",
+      "target_name": "Paper 3"
+    },
+    {
+      "type": "CITED",
+      "source_label": "Paper",
+      "source_name": "Paper 5",
+      "target_label": "Paper",
+      "target_name": "Paper 2"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Experiment 1",
+      "target_label": "Grant",
+      "target_name": "Grant 1"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Experiment 2",
+      "target_label": "Grant",
+      "target_name": "Grant 1"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Experiment 2",
+      "target_label": "Grant",
+      "target_name": "Grant 3"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Experiment 3",
+      "target_label": "Grant",
+      "target_name": "Grant 2"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Experiment 3",
+      "target_label": "Grant",
+      "target_name": "Grant 3"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Experiment 4",
+      "target_label": "Grant",
+      "target_name": "Grant 4"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Experiment 4",
+      "target_label": "Grant",
+      "target_name": "Grant 1"
+    },
+    {
+      "type": "FUNDED_BY",
+      "source_label": "Experiment",
+      "source_name": "Experiment 5",
+      "target_label": "Grant",
+      "target_name": "Grant 3"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Experiment 1",
+      "target_label": "Experiment",
+      "target_name": "Experiment 5"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Experiment 1",
+      "target_label": "Experiment",
+      "target_name": "Experiment 4"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Experiment 2",
+      "target_label": "Experiment",
+      "target_name": "Experiment 4"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Experiment 2",
+      "target_label": "Experiment",
+      "target_name": "Experiment 3"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Experiment 3",
+      "target_label": "Experiment",
+      "target_name": "Experiment 4"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Experiment 5",
+      "target_label": "Experiment",
+      "target_name": "Experiment 3"
+    },
+    {
+      "type": "REPLICATED",
+      "source_label": "Experiment",
+      "source_name": "Experiment 5",
+      "target_label": "Experiment",
+      "target_name": "Experiment 4"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Paper 1",
+      "target_label": "Dataset",
+      "target_name": "Dataset 4"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Paper 2",
+      "target_label": "Dataset",
+      "target_name": "Dataset 2"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Paper 3",
+      "target_label": "Dataset",
+      "target_name": "Dataset 3"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Paper 3",
+      "target_label": "Dataset",
+      "target_name": "Dataset 1"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Paper 4",
+      "target_label": "Dataset",
+      "target_name": "Dataset 4"
+    },
+    {
+      "type": "USED_DATASET",
+      "source_label": "Paper",
+      "source_name": "Paper 5",
+      "target_label": "Dataset",
+      "target_name": "Dataset 4"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Researcher 1",
+      "target_label": "Institution",
+      "target_name": "Institution 2"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Researcher 1",
+      "target_label": "Institution",
+      "target_name": "Institution 4"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Researcher 2",
+      "target_label": "Institution",
+      "target_name": "Institution 5"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Researcher 3",
+      "target_label": "Institution",
+      "target_name": "Institution 1"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Researcher 4",
+      "target_label": "Institution",
+      "target_name": "Institution 1"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Researcher 5",
+      "target_label": "Institution",
+      "target_name": "Institution 4"
+    },
+    {
+      "type": "AFFILIATED_WITH",
+      "source_label": "Researcher",
+      "source_name": "Researcher 5",
+      "target_label": "Institution",
+      "target_name": "Institution 5"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 1",
+      "target_label": "Experiment",
+      "target_name": "Experiment 3"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 1",
+      "target_label": "Experiment",
+      "target_name": "Experiment 5"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 2",
+      "target_label": "Experiment",
+      "target_name": "Experiment 3"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 3",
+      "target_label": "Experiment",
+      "target_name": "Experiment 5"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 3",
+      "target_label": "Experiment",
+      "target_name": "Experiment 2"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 4",
+      "target_label": "Experiment",
+      "target_name": "Experiment 2"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 4",
+      "target_label": "Experiment",
+      "target_name": "Experiment 5"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 5",
+      "target_label": "Experiment",
+      "target_name": "Experiment 3"
+    },
+    {
+      "type": "CONDUCTED",
+      "source_label": "Researcher",
+      "source_name": "Researcher 5",
+      "target_label": "Experiment",
+      "target_name": "Experiment 2"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Experiment 1",
+      "target_label": "Dataset",
+      "target_name": "Dataset 3"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Experiment 2",
+      "target_label": "Dataset",
+      "target_name": "Dataset 5"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Experiment 2",
+      "target_label": "Dataset",
+      "target_name": "Dataset 4"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Experiment 3",
+      "target_label": "Dataset",
+      "target_name": "Dataset 3"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Experiment 3",
+      "target_label": "Dataset",
+      "target_name": "Dataset 2"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Experiment 4",
+      "target_label": "Dataset",
+      "target_name": "Dataset 2"
+    },
+    {
+      "type": "PRODUCED_DATASET",
+      "source_label": "Experiment",
+      "source_name": "Experiment 5",
+      "target_label": "Dataset",
+      "target_name": "Dataset 1"
+    }
+  ],
+  "documents": [
+    {
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal #1",
+      "content": "Sample Grant Proposal #1\n\nThis is a sample research grant proposals and funding applications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal #2",
+      "content": "Sample Grant Proposal #2\n\nThis is a sample research grant proposals and funding applications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal #3",
+      "content": "Sample Grant Proposal #3\n\nThis is a sample research grant proposals and funding applications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal #4",
+      "content": "Sample Grant Proposal #4\n\nThis is a sample research grant proposals and funding applications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "grant_proposal",
+      "template_name": "Grant Proposal",
+      "title": "Grant Proposal #5",
+      "content": "Sample Grant Proposal #5\n\nThis is a sample research grant proposals and funding applications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review #1",
+      "content": "Sample Peer Review #1\n\nThis is a sample peer review reports for submitted manuscripts for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review #2",
+      "content": "Sample Peer Review #2\n\nThis is a sample peer review reports for submitted manuscripts for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review #3",
+      "content": "Sample Peer Review #3\n\nThis is a sample peer review reports for submitted manuscripts for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review #4",
+      "content": "Sample Peer Review #4\n\nThis is a sample peer review reports for submitted manuscripts for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "peer_review",
+      "template_name": "Peer Review",
+      "title": "Peer Review #5",
+      "content": "Sample Peer Review #5\n\nThis is a sample peer review reports for submitted manuscripts for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry #1",
+      "content": "Sample Lab Notebook Entry #1\n\nThis is a sample daily lab notebook entries documenting experimental work for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry #2",
+      "content": "Sample Lab Notebook Entry #2\n\nThis is a sample daily lab notebook entries documenting experimental work for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry #3",
+      "content": "Sample Lab Notebook Entry #3\n\nThis is a sample daily lab notebook entries documenting experimental work for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry #4",
+      "content": "Sample Lab Notebook Entry #4\n\nThis is a sample daily lab notebook entries documenting experimental work for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "lab_notebook",
+      "template_name": "Lab Notebook Entry",
+      "title": "Lab Notebook Entry #5",
+      "content": "Sample Lab Notebook Entry #5\n\nThis is a sample daily lab notebook entries documenting experimental work for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #1",
+      "content": "Sample Experiment Log #1\n\nThis is a sample formal experiment design and results documentation for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #2",
+      "content": "Sample Experiment Log #2\n\nThis is a sample formal experiment design and results documentation for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #3",
+      "content": "Sample Experiment Log #3\n\nThis is a sample formal experiment design and results documentation for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #4",
+      "content": "Sample Experiment Log #4\n\nThis is a sample formal experiment design and results documentation for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "experiment_log",
+      "template_name": "Experiment Log",
+      "title": "Experiment Log #5",
+      "content": "Sample Experiment Log #5\n\nThis is a sample formal experiment design and results documentation for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft #1",
+      "content": "Sample Publication Draft #1\n\nThis is a sample draft sections of academic publications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft #2",
+      "content": "Sample Publication Draft #2\n\nThis is a sample draft sections of academic publications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft #3",
+      "content": "Sample Publication Draft #3\n\nThis is a sample draft sections of academic publications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft #4",
+      "content": "Sample Publication Draft #4\n\nThis is a sample draft sections of academic publications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    },
+    {
+      "template_id": "publication_draft",
+      "template_name": "Publication Draft",
+      "title": "Publication Draft #5",
+      "content": "Sample Publication Draft #5\n\nThis is a sample draft sections of academic publications for the Scientific Research domain.\n\nGenerated by create-context-graph as demo data."
+    }
+  ],
+  "traces": [
+    {
+      "id": "research_direction",
+      "task": "Evaluate whether to pursue research direction based on {{paper.title}} findings",
+      "steps": [
+        {
+          "thought": "Assess the significance and reproducibility of the findings",
+          "action": "Query citation network and replication attempts for this paper",
+          "observation": "Results retrieved for: Query citation network and replication attempts for this paper"
+        },
+        {
+          "thought": "Identify gaps in the literature that this direction could fill",
+          "action": "Analyze citing papers and identify open questions",
+          "observation": "Results retrieved for: Analyze citing papers and identify open questions"
+        },
+        {
+          "thought": "Evaluate resource requirements and funding availability",
+          "action": "Check active grants, available datasets, and lab capacity",
+          "observation": "Results retrieved for: Check active grants, available datasets, and lab capacity"
+        },
+        {
+          "thought": "Consider collaboration opportunities and expertise gaps",
+          "action": "Find researchers with complementary expertise at partner institutions",
+          "observation": "Results retrieved for: Find researchers with complementary expertise at partner institutions"
+        }
+      ],
+      "outcome": "Decision: {{decision}} \u2014 {{rationale}}"
+    },
+    {
+      "id": "dataset_selection",
+      "task": "Select appropriate dataset for experiment Experiment 4",
+      "steps": [
+        {
+          "thought": "Identify datasets matching the experimental requirements",
+          "action": "Query datasets by domain, size, format, and availability",
+          "observation": "Results retrieved for: Query datasets by domain, size, format, and availability"
+        },
+        {
+          "thought": "Evaluate data quality and prior usage in published research",
+          "action": "Check which papers have used each candidate dataset",
+          "observation": "Results retrieved for: Check which papers have used each candidate dataset"
+        },
+        {
+          "thought": "Consider licensing, access restrictions, and computational requirements",
+          "action": "Review dataset metadata for compatibility constraints",
+          "observation": "Results retrieved for: Review dataset metadata for compatibility constraints"
+        }
+      ],
+      "outcome": "Selected dataset: {{dataset}} \u2014 {{rationale}}"
+    },
+    {
+      "id": "collaboration_assessment",
+      "task": "Assess potential research collaboration with Researcher 2 at Institution 2",
+      "steps": [
+        {
+          "thought": "Review the researcher's publication record and expertise",
+          "action": "Query papers authored and citation metrics",
+          "observation": "Results retrieved for: Query papers authored and citation metrics"
+        },
+        {
+          "thought": "Identify overlap and complementarity in research interests",
+          "action": "Compare specializations and shared citation networks",
+          "observation": "Results retrieved for: Compare specializations and shared citation networks"
+        },
+        {
+          "thought": "Evaluate institutional compatibility and funding synergies",
+          "action": "Check active grants and institutional agreements",
+          "observation": "Results retrieved for: Check active grants and institutional agreements"
+        }
+      ],
+      "outcome": "Collaboration assessment: {{assessment}} \u2014 {{rationale}}"
+    }
+  ]
+}
