@@ -11,6 +11,18 @@ from create_context_graph.config import ProjectConfig
 from create_context_graph.ontology import load_domain
 
 
+def pytest_addoption(parser):
+    parser.addoption("--slow", action="store_true", default=False, help="Run slow tests")
+
+
+def pytest_collection_modifyitems(config, items):
+    if not config.getoption("--slow"):
+        skip_slow = pytest.mark.skip(reason="Use --slow to run")
+        for item in items:
+            if "slow" in item.keywords:
+                item.add_marker(skip_slow)
+
+
 @pytest.fixture
 def tmp_output(tmp_path: Path) -> Path:
     """Provide a clean temporary output directory."""
