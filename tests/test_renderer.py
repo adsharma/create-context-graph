@@ -88,7 +88,7 @@ class TestProjectRenderer:
             project_name="Test",
             domain="financial-services",
             framework="pydanticai",
-            neo4j_type="aurads",
+            neo4j_type="existing",
         )
         ontology = load_domain(config.domain)
         renderer = ProjectRenderer(config, ontology)

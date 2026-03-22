@@ -172,13 +172,13 @@ class TestGeneratedDockerCompose:
 
     def test_no_docker_compose_for_aura(self, tmp_path):
         config = ProjectConfig(
-            project_name="Aura Test",
+            project_name="Existing Neo4j Test",
             domain="healthcare",
             framework="pydanticai",
-            neo4j_type="aurads",
+            neo4j_type="existing",
         )
         ontology = load_domain(config.domain)
-        out = tmp_path / "aura-project"
+        out = tmp_path / "existing-project"
         renderer = ProjectRenderer(config, ontology)
         renderer.render(out)
         assert not (out / "docker-compose.yml").exists()

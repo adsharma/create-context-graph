@@ -27,18 +27,18 @@ FRAMEWORK_DISPLAY_NAMES = {
     "openai-agents": "OpenAI Agents SDK",
     "langgraph": "LangGraph",
     "crewai": "CrewAI",
-    "maf": "MAF (Modular Agent Framework)",
+    "maf": "MAF (Microsoft Agent Framework)",
 }
 
 FRAMEWORK_DEPENDENCIES = {
     "pydanticai": ["pydantic-ai>=0.1"],
-    "claude-agent-sdk": ["claude-agent-sdk>=0.1"],
+    "claude-agent-sdk": ["claude-agent-sdk>=0.1", "anthropic>=0.30"],
     "strands": ["strands-agents>=0.1"],
     "google-adk": ["google-adk>=0.1"],
     "openai-agents": ["openai-agents>=0.1"],
-    "langgraph": ["langgraph>=0.1"],
+    "langgraph": ["langgraph>=0.1", "langchain-anthropic>=0.3"],
     "crewai": ["crewai>=0.1"],
-    "maf": ["maf>=0.1"],
+    "maf": [],
 }
 
 
@@ -52,9 +52,7 @@ class ProjectConfig(BaseModel):
     neo4j_uri: str = Field(default="neo4j://localhost:7687")
     neo4j_username: str = Field(default="neo4j")
     neo4j_password: str = Field(default="password")
-    neo4j_type: Literal["aurads", "aura-free", "docker", "existing"] = Field(
-        default="docker"
-    )
+    neo4j_type: Literal["docker", "existing"] = Field(default="docker")
     anthropic_api_key: str | None = Field(default=None)
     openai_api_key: str | None = Field(default=None)
     generate_data: bool = Field(default=False)

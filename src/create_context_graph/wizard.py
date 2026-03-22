@@ -84,10 +84,8 @@ def run_wizard() -> ProjectConfig:
     neo4j_type = questionary.select(
         "How would you like to connect to Neo4j?",
         choices=[
-            questionary.Choice("Neo4j AuraDS (recommended for GDS algorithms)", value="aurads"),
-            questionary.Choice("Neo4j Aura Free Tier", value="aura-free"),
-            questionary.Choice("Local Neo4j (Docker)", value="docker"),
             questionary.Choice("Existing Neo4j instance", value="existing"),
+            questionary.Choice("Local Neo4j via Docker", value="docker"),
         ],
     ).ask()
     if not neo4j_type:

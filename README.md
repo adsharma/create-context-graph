@@ -123,7 +123,7 @@ Select your preferred agent framework at project creation time:
 | **CrewAI** | Multi-agent crew with role-based tools |
 | **Strands (AWS)** | Tool-use agents with AWS Bedrock |
 | **Google ADK** | Gemini agents with `FunctionTool` calling |
-| **MAF** | Modular agent with pluggable tool registry |
+| **MAF** | Microsoft Agent Framework with pluggable tool registry |
 
 All frameworks share the same FastAPI HTTP layer, Neo4j client, and frontend. Only the agent implementation differs.
 
@@ -206,13 +206,76 @@ git clone https://github.com/neo4j-labs/create-context-graph.git
 cd create-context-graph
 uv venv && uv pip install -e ".[dev]"
 
-# Run tests (103 tests, no Neo4j or API keys required)
+# Run tests (318 tests, no Neo4j or API keys required)
 source .venv/bin/activate
-pytest tests/ -v
+pytest tests/ -v               # Fast: 142 tests
+pytest tests/ -v --slow        # Full: 318 tests (includes 176-combo domain x framework matrix)
 
 # Test a specific scaffold
 create-context-graph /tmp/test-app --domain software-engineering --framework pydanticai --demo-data
 ```
+
+## Publishing
+
+### PyPI (Python)
+
+```bash
+# Build
+uv build
+
+# Publish (requires PyPI account + API token)
+uv publish
+# Or: twine upload dist/*
+```
+
+After publishing, users can install with:
+```bash
+uvx create-context-graph       # Ephemeral (recommended)
+pip install create-context-graph   # Permanent install
+```
+
+### npm (Node.js wrapper)
+
+```bash
+cd npm-wrapper
+
+# Publish (requires npm account + auth)
+npm publish --access public
+```
+
+After publishing, users can run with:
+```bash
+npx create-context-graph
+```
+
+The npm package is a thin wrapper that delegates to the Python CLI via `uvx`, `pipx`, or `python3 -m`. It requires Python 3.11+ to be installed.
+
+### Automated Publishing (GitHub Actions)
+
+Both packages are published automatically when you push a version tag:
+
+```bash
+# 1. Update version in pyproject.toml and npm-wrapper/package.json
+# 2. Commit the version bump
+# 3. Tag and push
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+This triggers two GitHub Actions workflows:
+- **publish-pypi.yml** — Builds and publishes to PyPI (uses trusted publishing / OIDC)
+- **publish-npm.yml** — Publishes the npm wrapper to npmjs.com
+
+**Setup required:**
+- **PyPI:** Configure [trusted publishing](https://docs.pypi.org/trusted-publishers/) for this repo, or set a `PYPI_API_TOKEN` secret
+- **npm:** Set an `NPM_TOKEN` secret in the repository settings
+
+### Version Bumping
+
+Both packages must use the same version. Update in two places:
+
+1. `pyproject.toml` → `version = "X.Y.Z"`
+2. `npm-wrapper/package.json` → `"version": "X.Y.Z"`
 
 ## License
 

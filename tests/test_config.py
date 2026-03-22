@@ -83,13 +83,13 @@ class TestProjectConfig:
         for fw in SUPPORTED_FRAMEWORKS:
             assert fw in FRAMEWORK_DEPENDENCIES
 
-    def test_aura_config(self):
+    def test_existing_neo4j_config(self):
         config = ProjectConfig(
             project_name="Test",
             domain="healthcare",
             framework="pydanticai",
-            neo4j_type="aurads",
+            neo4j_type="existing",
             neo4j_uri="neo4j+s://abc.databases.neo4j.io",
         )
-        assert config.neo4j_type == "aurads"
+        assert config.neo4j_type == "existing"
         assert "neo4j+s" in config.neo4j_uri

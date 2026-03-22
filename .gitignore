@@ -27,5 +27,13 @@ Thumbs.db
 .env
 .env.local
 
+# Build artifacts
+*.whl
+*.tar.gz
+
+# npm
+npm-wrapper/node_modules/
+npm-wrapper/*.tgz
+
 # Generated test output
 /foobar/
