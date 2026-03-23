@@ -24,7 +24,10 @@ if not os.environ.get("ANTHROPIC_API_KEY"):
 
 from pydantic_ai import Agent, RunContext
 
-from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+from app.context_graph_client import (
+    execute_cypher, search_entities, get_entity_graph, get_schema,
+    get_conversation_history, store_message,
+)
 
 
 SYSTEM_PROMPT = """{{ system_prompt }}"""
@@ -58,7 +61,7 @@ async def {{ tool.name }}(ctx: RunContext[AgentDeps]{% for param in tool.paramet
         "{{ param.name }}": {{ param.name }},
 {% endfor %}
     }
-    return await execute_cypher(cypher, params)
+    return await execute_cypher(cypher, params, tool_name="{{ tool.name }}")
 
 {% endfor %}
 
@@ -67,7 +70,7 @@ async def {{ tool.name }}(ctx: RunContext[AgentDeps]{% for param in tool.paramet
 async def run_cypher(ctx: RunContext[AgentDeps], query: str, parameters: str = "{}") -> list[dict]:
     """Execute a read-only Cypher query against the knowledge graph."""
     params = json.loads(parameters) if parameters else {}
-    return await execute_cypher(query, params)
+    return await execute_cypher(query, params, tool_name="run_cypher")
 
 
 @agent.tool
@@ -86,11 +89,33 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
     if session_id is None:
         session_id = str(uuid.uuid4())
 
+    # Retrieve conversation history and store the new user message
+    history = await get_conversation_history(session_id)
+    await store_message(session_id, "user", message)
+
+    # Convert history to PydanticAI message format
+    from pydantic_ai.messages import ModelRequest, ModelResponse, UserPromptPart, TextPart
+    message_history = []
+    for msg in history:
+        if msg["role"] == "user":
+            message_history.append(
+                ModelRequest(parts=[UserPromptPart(content=msg["content"])])
+            )
+        elif msg["role"] == "assistant":
+            message_history.append(
+                ModelResponse(parts=[TextPart(content=msg["content"])])
+            )
+
     deps = AgentDeps(session_id=session_id)
-    result = await agent.run(message, deps=deps)
+    result = await agent.run(
+        message, deps=deps, message_history=message_history
+    )
+
+    response_text = result.output
+    await store_message(session_id, "assistant", response_text)
 
     return {
-        "response": result.output,
+        "response": response_text,
         "session_id": session_id,
         "graph_data": None,
     }

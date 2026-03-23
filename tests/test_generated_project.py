@@ -130,6 +130,27 @@ class TestGeneratedFrontendFiles:
         assert (out / "frontend" / "theme" / "index.ts").exists()
 
 
+class TestGeneratedEnvExample:
+    """The .env.example file must exist with placeholder values."""
+
+    def test_env_example_exists(self, generated_project):
+        out, _ = generated_project
+        assert (out / ".env.example").exists()
+
+    def test_env_example_has_placeholders(self, generated_project):
+        out, _ = generated_project
+        content = (out / ".env.example").read_text()
+        assert "your-password-here" in content
+        assert "your-anthropic-key-here" in content
+        assert "NEO4J_URI=" in content
+
+    def test_env_example_no_real_credentials(self, generated_project):
+        out, config = generated_project
+        content = (out / ".env.example").read_text()
+        assert config.neo4j_password not in content
+        assert "sk-ant-test-key" not in content
+
+
 class TestGeneratedEnvFile:
     """The .env file must contain all expected keys."""
 
@@ -184,7 +205,15 @@ class TestGeneratedDockerCompose:
         assert "services" in data
         assert "neo4j" in data["services"]
 
-    def test_no_docker_compose_for_aura(self, tmp_path):
+    def test_docker_compose_pinned_version(self, generated_project):
+        out, _ = generated_project
+        dc = (out / "docker-compose.yml").read_text()
+        # Should be pinned to specific patch version, not just major
+        assert "neo4j:5." in dc
+        # Must NOT be just "neo4j:5" without a patch version
+        assert "image: neo4j:5\n" not in dc
+
+    def test_no_docker_compose_for_existing(self, tmp_path):
         config = ProjectConfig(
             project_name="Existing Neo4j Test",
             domain="healthcare",
@@ -196,6 +225,71 @@ class TestGeneratedDockerCompose:
         renderer = ProjectRenderer(config, ontology)
         renderer.render(out)
         assert not (out / "docker-compose.yml").exists()
+
+    def test_no_docker_compose_for_aura(self, tmp_path):
+        config = ProjectConfig(
+            project_name="Aura Test",
+            domain="healthcare",
+            framework="pydanticai",
+            neo4j_type="aura",
+            neo4j_uri="neo4j+s://abc.databases.neo4j.io",
+        )
+        ontology = load_domain(config.domain)
+        out = tmp_path / "aura-project"
+        renderer = ProjectRenderer(config, ontology)
+        renderer.render(out)
+        assert not (out / "docker-compose.yml").exists()
+
+    def test_no_docker_compose_for_local(self, tmp_path):
+        config = ProjectConfig(
+            project_name="Local Test",
+            domain="healthcare",
+            framework="pydanticai",
+            neo4j_type="local",
+        )
+        ontology = load_domain(config.domain)
+        out = tmp_path / "local-project"
+        renderer = ProjectRenderer(config, ontology)
+        renderer.render(out)
+        assert not (out / "docker-compose.yml").exists()
+
+
+class TestGeneratedNeo4jLocalProject:
+    """Projects with neo4j_type=local must have neo4j-local Makefile targets."""
+
+    @pytest.fixture
+    def local_project(self, tmp_path):
+        config = ProjectConfig(
+            project_name="Local Neo4j App",
+            domain="financial-services",
+            framework="pydanticai",
+            neo4j_type="local",
+        )
+        ontology = load_domain(config.domain)
+        out = tmp_path / "local-project"
+        renderer = ProjectRenderer(config, ontology)
+        renderer.render(out)
+        return out, config
+
+    def test_makefile_has_neo4j_start(self, local_project):
+        out, _ = local_project
+        makefile = (out / "Makefile").read_text()
+        assert "neo4j-start:" in makefile
+
+    def test_makefile_has_neo4j_stop(self, local_project):
+        out, _ = local_project
+        makefile = (out / "Makefile").read_text()
+        assert "neo4j-stop:" in makefile
+
+    def test_makefile_uses_neo4j_local_package(self, local_project):
+        out, _ = local_project
+        makefile = (out / "Makefile").read_text()
+        assert "@johnymontana/neo4j-local" in makefile
+
+    def test_readme_mentions_neo4j_start(self, local_project):
+        out, _ = local_project
+        readme = (out / "README.md").read_text()
+        assert "neo4j-start" in readme
 
 
 class TestGeneratedCypher:
@@ -227,6 +321,64 @@ class TestGeneratedCypher:
         out, _ = generated_project
         gds = (out / "cypher" / "gds_projections.cypher").read_text()
         assert "gds.graph.project" in gds
+
+
+class TestGeneratedChatInterface:
+    """ChatInterface must have session management and markdown rendering."""
+
+    def test_chat_sends_session_id(self, generated_project):
+        out, _ = generated_project
+        chat = (out / "frontend" / "components" / "ChatInterface.tsx").read_text()
+        assert "session_id: sessionId" in chat or "session_id:" in chat
+
+    def test_chat_captures_session_id(self, generated_project):
+        out, _ = generated_project
+        chat = (out / "frontend" / "components" / "ChatInterface.tsx").read_text()
+        assert "setSessionId" in chat
+
+    def test_chat_has_new_conversation_button(self, generated_project):
+        out, _ = generated_project
+        chat = (out / "frontend" / "components" / "ChatInterface.tsx").read_text()
+        assert "startNewConversation" in chat or "New" in chat
+
+    def test_chat_uses_react_markdown(self, generated_project):
+        out, _ = generated_project
+        chat = (out / "frontend" / "components" / "ChatInterface.tsx").read_text()
+        assert "ReactMarkdown" in chat
+
+    def test_chat_shows_tool_calls(self, generated_project):
+        out, _ = generated_project
+        chat = (out / "frontend" / "components" / "ChatInterface.tsx").read_text()
+        assert "toolCalls" in chat or "tool_calls" in chat
+
+    def test_package_json_has_markdown_deps(self, generated_project):
+        out, _ = generated_project
+        pkg = json.loads((out / "frontend" / "package.json").read_text())
+        assert "react-markdown" in pkg["dependencies"]
+        assert "remark-gfm" in pkg["dependencies"]
+
+
+class TestGeneratedMemoryIntegration:
+    """Backend must integrate neo4j-agent-memory for conversation persistence."""
+
+    def test_context_graph_client_has_memory(self, generated_project):
+        out, _ = generated_project
+        client = (out / "backend" / "app" / "context_graph_client.py").read_text()
+        assert "MemoryClient" in client
+        assert "get_conversation_history" in client
+        assert "store_message" in client
+
+    def test_agent_uses_conversation_history(self, generated_project):
+        out, _ = generated_project
+        agent = (out / "backend" / "app" / "agent.py").read_text()
+        assert "get_conversation_history" in agent
+        assert "store_message" in agent
+
+    def test_routes_returns_tool_calls(self, generated_project):
+        out, _ = generated_project
+        routes = (out / "backend" / "app" / "routes.py").read_text()
+        assert "tool_calls" in routes
+        assert "drain_tool_calls" in routes
 
 
 class TestGeneratedFrontendSyntax:
@@ -263,6 +415,38 @@ class TestGeneratedFrontendSyntax:
         config = (out / "frontend" / "lib" / "config.ts").read_text()
         for name in ["DOMAIN", "NODE_COLORS", "NODE_SIZES", "DEMO_SCENARIOS", "API_BASE"]:
             assert name in config, f"config.ts missing {name}"
+
+
+class TestGeneratedTestScaffold:
+    """Backend must include a test scaffold."""
+
+    def test_test_file_exists(self, generated_project):
+        out, _ = generated_project
+        assert (out / "backend" / "tests" / "test_routes.py").exists()
+        assert (out / "backend" / "tests" / "__init__.py").exists()
+
+    def test_test_file_compiles(self, generated_project):
+        out, _ = generated_project
+        source = (out / "backend" / "tests" / "test_routes.py").read_text()
+        try:
+            compile(source, "test_routes.py", "exec")
+        except SyntaxError as e:
+            pytest.fail(f"test_routes.py syntax error: {e}")
+
+    def test_test_file_has_health_test(self, generated_project):
+        out, _ = generated_project
+        content = (out / "backend" / "tests" / "test_routes.py").read_text()
+        assert "def test_health" in content
+
+    def test_test_file_has_scenarios_test(self, generated_project):
+        out, _ = generated_project
+        content = (out / "backend" / "tests" / "test_routes.py").read_text()
+        assert "def test_scenarios" in content
+
+    def test_test_file_has_domain_assertion(self, generated_project):
+        out, _ = generated_project
+        content = (out / "backend" / "tests" / "test_routes.py").read_text()
+        assert "financial-services" in content
 
 
 class TestGeneratedBackendPyproject:

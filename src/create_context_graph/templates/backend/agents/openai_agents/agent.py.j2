@@ -8,7 +8,10 @@ import uuid
 from agents import Agent, Runner, function_tool
 
 from app.config import settings
-from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+from app.context_graph_client import (
+    execute_cypher, search_entities, get_entity_graph, get_schema,
+    get_conversation_history, store_message,
+)
 
 
 SYSTEM_PROMPT = """{{ system_prompt }}"""
@@ -27,7 +30,7 @@ async def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{
         "{{ param.name }}": {{ param.name }},
 {% endfor %}
     }
-    result = await execute_cypher(cypher, params)
+    result = await execute_cypher(cypher, params, tool_name="{{ tool.name }}")
     return json.dumps(result, default=str)
 
 {% endfor %}
@@ -37,7 +40,7 @@ async def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{
 async def run_cypher(query: str, parameters: str = "{}") -> str:
     """Execute a read-only Cypher query against the knowledge graph."""
     params = json.loads(parameters) if parameters else {}
-    result = await execute_cypher(query, params)
+    result = await execute_cypher(query, params, tool_name="run_cypher")
     return json.dumps(result, default=str)
 
 
@@ -71,10 +74,27 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
     if session_id is None:
         session_id = str(uuid.uuid4())
 
-    result = await Runner.run(agent, message)
+    # Retrieve conversation history and store the new user message
+    history = await get_conversation_history(session_id)
+    await store_message(session_id, "user", message)
+
+    # Build input with conversation history context
+    if history:
+        context = "\n".join(
+            f"{'User' if m['role'] == 'user' else 'Assistant'}: {m['content']}"
+            for m in history
+        )
+        input_message = f"Previous conversation:\n{context}\n\nUser: {message}"
+    else:
+        input_message = message
+
+    result = await Runner.run(agent, input_message)
+
+    response_text = result.final_output
+    await store_message(session_id, "assistant", response_text)
 
     return {
-        "response": result.final_output,
+        "response": response_text,
         "session_id": session_id,
         "graph_data": None,
     }

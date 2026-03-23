@@ -238,6 +238,193 @@ class TestProjectRenderer:
                 pytest.fail(f"{py_file} has syntax error: {e}")
 
 
+    def test_env_example_generated(self, financial_config, tmp_output):
+        """Verify .env.example is generated alongside .env."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        env_example = tmp_output / ".env.example"
+        assert env_example.exists()
+        content = env_example.read_text()
+        assert "NEO4J_URI=" in content
+        assert "your-password-here" in content
+        assert "ANTHROPIC_API_KEY=" in content
+        assert "BACKEND_PORT=" in content
+        # .env.example must differ from .env (placeholders vs real values)
+        env_content = (tmp_output / ".env").read_text()
+        assert content != env_content
+
+    def test_chat_interface_has_session_id(self, financial_config, tmp_output):
+        """Verify ChatInterface sends session_id to backend."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        chat = (tmp_output / "frontend" / "components" / "ChatInterface.tsx").read_text()
+        assert "session_id" in chat
+        assert "sessionId" in chat
+        assert "setSessionId" in chat
+
+    def test_chat_interface_has_markdown_rendering(self, financial_config, tmp_output):
+        """Verify ChatInterface uses ReactMarkdown for assistant messages."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        chat = (tmp_output / "frontend" / "components" / "ChatInterface.tsx").read_text()
+        assert "ReactMarkdown" in chat
+        assert "remarkGfm" in chat
+
+    def test_package_json_has_markdown_deps(self, financial_config, tmp_output):
+        """Verify package.json includes react-markdown and remark-gfm."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        pkg = json.loads((tmp_output / "frontend" / "package.json").read_text())
+        assert "react-markdown" in pkg["dependencies"]
+        assert "remark-gfm" in pkg["dependencies"]
+
+    def test_context_graph_client_has_memory_functions(self, financial_config, tmp_output):
+        """Verify context_graph_client.py has memory integration functions."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        client = (tmp_output / "backend" / "app" / "context_graph_client.py").read_text()
+        assert "get_conversation_history" in client
+        assert "store_message" in client
+        assert "MemoryClient" in client
+        assert "drain_tool_calls" in client
+
+    def test_gds_client_no_hardcoded_entity(self, financial_config, tmp_output):
+        """Verify GDS client doesn't use hardcoded 'Entity' label."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        gds = (tmp_output / "backend" / "app" / "gds_client.py").read_text()
+        assert 'label: str = "Entity"' not in gds
+        assert "ENTITY_LABELS" in gds
+
+    def test_agent_imports_memory_functions(self, financial_config, tmp_output):
+        """Verify generated agent imports conversation memory functions."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        agent = (tmp_output / "backend" / "app" / "agent.py").read_text()
+        assert "get_conversation_history" in agent
+        assert "store_message" in agent
+
+    def test_routes_has_tool_calls_in_response(self, financial_config, tmp_output):
+        """Verify routes.py includes tool_calls in ChatResponse."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        routes = (tmp_output / "backend" / "app" / "routes.py").read_text()
+        assert "tool_calls" in routes
+        assert "drain_tool_calls" in routes
+
+    def test_readme_has_entity_type_sections(self, financial_config, tmp_output):
+        """Verify README splits entity types into base and domain-specific."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        readme = (tmp_output / "README.md").read_text()
+        assert "Base POLE+O Entities" in readme
+        assert "Domain-Specific Entities" in readme
+
+    def test_main_py_cors_uses_settings(self, financial_config, tmp_output):
+        """Verify main.py reads CORS origin from settings instead of hardcoding."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        main = (tmp_output / "backend" / "app" / "main.py").read_text()
+        assert "settings.frontend_port" in main
+        assert '"http://localhost:3000"' not in main
+
+    def test_main_py_creates_vector_index(self, financial_config, tmp_output):
+        """Verify main.py creates vector index at startup."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        main = (tmp_output / "backend" / "app" / "main.py").read_text()
+        assert "create_vector_index" in main
+
+    def test_docker_compose_pinned_version(self, financial_config, tmp_output):
+        """Verify docker-compose.yml pins Neo4j to a specific version."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        dc = (tmp_output / "docker-compose.yml").read_text()
+        assert "neo4j:5." in dc
+        # Should be pinned to patch version, not just "neo4j:5"
+        assert "neo4j:5\n" not in dc
+
+    def test_makefile_has_trap_cleanup(self, financial_config, tmp_output):
+        """Verify Makefile uses trap for process cleanup."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        makefile = (tmp_output / "Makefile").read_text()
+        assert "trap" in makefile
+
+    def test_neo4j_local_makefile_targets(self, tmp_output):
+        """Verify neo4j-local type generates neo4j-start/stop targets."""
+        from create_context_graph.config import ProjectConfig
+        config = ProjectConfig(
+            project_name="Test Local",
+            domain="financial-services",
+            framework="pydanticai",
+            neo4j_type="local",
+        )
+        ontology = load_domain(config.domain)
+        renderer = ProjectRenderer(config, ontology)
+        renderer.render(tmp_output)
+
+        makefile = (tmp_output / "Makefile").read_text()
+        assert "neo4j-start:" in makefile
+        assert "neo4j-stop:" in makefile
+        assert "@johnymontana/neo4j-local" in makefile
+        assert not (tmp_output / "docker-compose.yml").exists()
+
+    def test_aura_no_docker_or_local_targets(self, tmp_output):
+        """Verify aura type has no docker or neo4j-local targets."""
+        from create_context_graph.config import ProjectConfig
+        config = ProjectConfig(
+            project_name="Test Aura",
+            domain="financial-services",
+            framework="pydanticai",
+            neo4j_type="aura",
+            neo4j_uri="neo4j+s://abc.databases.neo4j.io",
+        )
+        ontology = load_domain(config.domain)
+        renderer = ProjectRenderer(config, ontology)
+        renderer.render(tmp_output)
+
+        makefile = (tmp_output / "Makefile").read_text()
+        assert "docker-up" not in makefile
+        assert "neo4j-start" not in makefile
+        assert not (tmp_output / "docker-compose.yml").exists()
+
+    def test_globals_css_has_markdown_styles(self, financial_config, tmp_output):
+        """Verify globals.css includes markdown content styles."""
+        ontology = load_domain(financial_config.domain)
+        renderer = ProjectRenderer(financial_config, ontology)
+        renderer.render(tmp_output)
+
+        css = (tmp_output / "frontend" / "app" / "globals.css").read_text()
+        assert ".markdown-content" in css
+
+
 class TestAllFrameworksRender:
     """Verify every agent framework template renders and compiles."""
 
@@ -249,7 +436,7 @@ class TestAllFrameworksRender:
         "crewai": "crewai",
         "strands": "strands",
         "google-adk": "google.adk",
-        "maf": "TOOL_REGISTRY",
+        "anthropic-tools": "TOOL_REGISTRY",
     }
 
     @pytest.mark.parametrize("framework", [
@@ -260,7 +447,7 @@ class TestAllFrameworksRender:
         "crewai",
         "strands",
         "google-adk",
-        "maf",
+        "anthropic-tools",
     ])
     def test_framework_agent_compiles(self, framework, tmp_path):
         from create_context_graph.config import ProjectConfig
@@ -298,7 +485,7 @@ class TestAllFrameworksRender:
         "crewai",
         "strands",
         "google-adk",
-        "maf",
+        "anthropic-tools",
     ])
     def test_framework_pyproject_has_deps(self, framework, tmp_path):
         from create_context_graph.config import FRAMEWORK_DEPENDENCIES, ProjectConfig

@@ -94,11 +94,15 @@ If `neo4j-agent-memory` is not installed, the pipeline falls back to direct Neo4
 
 ## The Memory Architecture in the Generated App
 
-In the generated application, the three memory types work together during a chat session:
+In the generated application (v0.3.0+), the three memory types work together during a chat session:
 
-1. A user sends a message. It is stored in **short-term memory** along with the session history.
-2. The agent reasons about the message and calls tools that query the **long-term memory** (knowledge graph) via Cypher.
-3. The agent's reasoning process -- thoughts, tool calls, observations -- is recorded in **reasoning memory** as a decision trace.
-4. The response is returned to the user along with optional `graph_data` for visualization and the trace for the `DecisionTracePanel`.
+1. A user sends a message. The frontend includes the `session_id` from the current conversation.
+2. The backend calls `get_conversation_history(session_id)` to retrieve prior messages from **short-term memory** via `neo4j-agent-memory`'s `MemoryClient`.
+3. The new user message is stored via `store_message(session_id, "user", message)`.
+4. The agent reasons about the message (with full conversation context) and calls tools that query the **long-term memory** (knowledge graph) via Cypher. Tool call metadata (name, inputs, output preview) is captured by the `CypherResultCollector`.
+5. The agent's response is stored via `store_message(session_id, "assistant", response)`.
+6. The response is returned to the user along with `graph_data` for visualization, `tool_calls` for inline tool call cards, and the session ID for conversation continuity.
+
+The `context_graph_client.py` in every generated project initializes the `MemoryClient` at startup (with a graceful fallback if `neo4j-agent-memory` is not installed). All 8 supported agent frameworks call `get_conversation_history()` and `store_message()` — the memory integration is centralized in the shared client, not duplicated across framework templates.
 
 This architecture means every interaction enriches the system: the knowledge graph grows, the conversation history accumulates, and the reasoning traces provide an ever-expanding audit trail.

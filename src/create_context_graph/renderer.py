@@ -83,17 +83,25 @@ class ProjectRenderer:
 
     def _context(self) -> dict:
         """Build the template context dictionary."""
+        # Partition entity types into base POLE+O and domain-specific
+        base_labels = {"Person", "Organization", "Location", "Event", "Object"}
+        all_entity_types = [et.model_dump() for et in self.ontology.entity_types]
+        base_entity_types = [et for et in all_entity_types if et["label"] in base_labels]
+        domain_entity_types = [et for et in all_entity_types if et["label"] not in base_labels]
+
         return {
             "project": self.config.model_dump(),
             "project_name": self.config.project_name,
             "project_slug": self.config.project_slug,
             "domain": self.ontology.domain.model_dump(),
             "ontology": self.ontology.model_dump(),
-            "entity_types": [et.model_dump() for et in self.ontology.entity_types],
+            "entity_types": all_entity_types,
+            "base_entity_types": base_entity_types,
+            "domain_entity_types": domain_entity_types,
             "relationships": [r.model_dump() for r in self.ontology.relationships],
             "demo_scenarios": [s.model_dump() for s in self.ontology.demo_scenarios],
             "agent_tools": [t.model_dump() for t in self.ontology.agent_tools],
-            "framework": self.config.framework,
+            "framework": self.config.resolved_framework,
             "framework_display_name": self.config.framework_display_name,
             "framework_deps": self.config.framework_deps,
             "neo4j_uri": self.config.neo4j_uri,
@@ -131,6 +139,7 @@ class ProjectRenderer:
         """Render root-level project files."""
         base_templates = {
             "base/dot_env.j2": ".env",
+            "base/dot_env_example.j2": ".env.example",
             "base/Makefile.j2": "Makefile",
             "base/README.md.j2": "README.md",
             "base/gitignore.j2": ".gitignore",
@@ -166,7 +175,7 @@ class ProjectRenderer:
         (backend_dir / "app" / "__init__.py").write_text("")
 
         # Framework-specific agent template
-        fw_key = self.config.framework.replace("-", "_")
+        fw_key = self.config.resolved_framework.replace("-", "_")
         agent_template = f"backend/agents/{fw_key}/agent.py.j2"
         try:
             self._render_template(agent_template, backend_dir / "app" / "agent.py", ctx)
@@ -182,6 +191,16 @@ class ProjectRenderer:
         self._render_template(
             "backend/shared/generate_data.py.j2",
             backend_dir / "scripts" / "generate_data.py",
+            ctx,
+        )
+
+        # Test scaffold
+        tests_dir = backend_dir / "tests"
+        tests_dir.mkdir(parents=True, exist_ok=True)
+        (tests_dir / "__init__.py").write_text("")
+        self._render_template(
+            "backend/tests/test_routes.py.j2",
+            tests_dir / "test_routes.py",
             ctx,
         )
 

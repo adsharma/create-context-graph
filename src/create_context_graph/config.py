@@ -30,8 +30,13 @@ SUPPORTED_FRAMEWORKS = [
     "openai-agents",
     "langgraph",
     "crewai",
-    "maf",
+    "anthropic-tools",
 ]
+
+# Deprecated aliases — map old keys to current ones
+FRAMEWORK_ALIASES = {
+    "maf": "anthropic-tools",
+}
 
 FRAMEWORK_DISPLAY_NAMES = {
     "pydanticai": "PydanticAI",
@@ -41,18 +46,18 @@ FRAMEWORK_DISPLAY_NAMES = {
     "openai-agents": "OpenAI Agents SDK",
     "langgraph": "LangGraph",
     "crewai": "CrewAI",
-    "maf": "MAF (Microsoft Agent Framework)",
+    "anthropic-tools": "Anthropic Tools (Agentic Loop)",
 }
 
 FRAMEWORK_DEPENDENCIES = {
     "pydanticai": ["pydantic-ai>=0.1"],
     "claude-agent-sdk": ["claude-agent-sdk>=0.1", "anthropic>=0.30"],
-    "strands": ["strands-agents>=0.1"],
-    "google-adk": ["google-adk>=0.1"],
+    "strands": ["strands-agents>=0.1", "nest-asyncio>=1.5"],
+    "google-adk": ["google-adk>=0.1", "nest-asyncio>=1.5"],
     "openai-agents": ["openai-agents>=0.1"],
     "langgraph": ["langgraph>=0.1", "langchain-anthropic>=0.3"],
-    "crewai": ["crewai>=0.1"],
-    "maf": ["anthropic>=0.30"],
+    "crewai": ["crewai>=0.1", "nest-asyncio>=1.5"],
+    "anthropic-tools": ["anthropic>=0.30"],
 }
 
 
@@ -66,7 +71,7 @@ class ProjectConfig(BaseModel):
     neo4j_uri: str = Field(default="neo4j://localhost:7687")
     neo4j_username: str = Field(default="neo4j")
     neo4j_password: str = Field(default="password")
-    neo4j_type: Literal["docker", "existing"] = Field(default="docker")
+    neo4j_type: Literal["docker", "existing", "aura", "local"] = Field(default="docker")
     anthropic_api_key: str | None = Field(default=None)
     openai_api_key: str | None = Field(default=None)
     generate_data: bool = Field(default=False)
@@ -83,9 +88,14 @@ class ProjectConfig(BaseModel):
         return slug.strip("-")
 
     @property
+    def resolved_framework(self) -> str:
+        """Resolve deprecated framework aliases to current keys."""
+        return FRAMEWORK_ALIASES.get(self.framework, self.framework)
+
+    @property
     def framework_display_name(self) -> str:
-        return FRAMEWORK_DISPLAY_NAMES.get(self.framework, self.framework)
+        return FRAMEWORK_DISPLAY_NAMES.get(self.resolved_framework, self.framework)
 
     @property
     def framework_deps(self) -> list[str]:
-        return FRAMEWORK_DEPENDENCIES.get(self.framework, [])
+        return FRAMEWORK_DEPENDENCIES.get(self.resolved_framework, [])

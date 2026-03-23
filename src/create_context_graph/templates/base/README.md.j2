@@ -15,10 +15,18 @@ Built with [create-context-graph](https://github.com/neo4j-labs/create-context-g
 ```bash
 # Install dependencies
 make install
-
 {% if neo4j_type == 'docker' %}
+
 # Start Neo4j (Docker)
 make docker-up
+{% elif neo4j_type == 'local' %}
+
+# Start Neo4j (requires Node.js)
+make neo4j-start
+{% elif neo4j_type == 'aura' %}
+
+# Neo4j Aura is already running in the cloud
+# Credentials are in your .env file
 {% endif %}
 
 # Seed sample data
@@ -30,7 +38,11 @@ make start
 
 - **Backend:** http://localhost:8000
 - **Frontend:** http://localhost:3000
+{% if neo4j_type == 'docker' or neo4j_type == 'local' %}
 - **Neo4j Browser:** http://localhost:7474
+{% elif neo4j_type == 'aura' %}
+- **Neo4j Aura Console:** https://console.neo4j.io
+{% endif %}
 
 ## Architecture
 
@@ -40,14 +52,23 @@ make start
 ├── frontend/         Next.js + Chakra UI v3 + NVL
 ├── cypher/           Neo4j schema & GDS projections
 ├── data/             Domain ontology & generated documents
-├── .env              Configuration
+├── .env              Configuration (not tracked in git)
+├── .env.example      Configuration template
 └── Makefile          Development commands
 ```
 
 ## Domain: {{ domain.name }}
 
-### Entity Types
-{% for et in entity_types %}
+### Base POLE+O Entities
+
+These entity types are shared across all domains using the Person-Organization-Location-Event-Object model:
+
+{% for et in base_entity_types %}
+- **{{ et.label }}** — {{ et.pole_type }}
+{% endfor %}
+
+### Domain-Specific Entities
+{% for et in domain_entity_types %}
 - **{{ et.label }}** — {{ et.pole_type }}
 {% endfor %}
 
@@ -72,6 +93,12 @@ The AI agent has access to the following domain-specific tools:
 
 ## Environment Variables
 
+Copy `.env.example` to `.env` and fill in your values:
+
+```bash
+cp .env.example .env
+```
+
 | Variable | Description |
 |----------|-------------|
 | `NEO4J_URI` | Neo4j connection URI |
@@ -79,3 +106,5 @@ The AI agent has access to the following domain-specific tools:
 | `NEO4J_PASSWORD` | Neo4j password |
 | `ANTHROPIC_API_KEY` | Anthropic API key for the AI agent |
 | `OPENAI_API_KEY` | OpenAI API key (for embeddings) |
+| `BACKEND_PORT` | Backend port (default: 8000) |
+| `FRONTEND_PORT` | Frontend port (default: 3000) |

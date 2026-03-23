@@ -13,7 +13,7 @@ Before you begin, make sure you have:
 
 - **Python 3.11+** -- check with `python --version`
 - **Node.js 18+** -- check with `node --version`
-- **Docker** -- required for running Neo4j. Check with `docker --version`
+- **Docker** (optional) -- one option for running Neo4j locally. Alternatives: [Neo4j Aura](https://console.neo4j.io) (free cloud) or `@johnymontana/neo4j-local` (requires Node.js)
 - **uv** (recommended) -- install with `curl -LsSf https://astral.sh/uv/install.sh | sh`
 
 ## Step 1: Create the Project
@@ -27,12 +27,16 @@ uvx create-context-graph
 The wizard walks you through seven steps:
 
 1. **Project name** -- enter a name like `my-health-app`
-2. **Domain** -- select from 22 built-in domains (e.g., Healthcare)
-3. **Agent framework** -- choose your preferred framework (e.g., PydanticAI)
-4. **Data sources** -- optionally connect SaaS integrations (Gmail, Slack, etc.)
-5. **Demo data** -- select yes to include pre-generated fixture data
-6. **Neo4j connection** -- configure or use defaults (`bolt://localhost:7687`)
-7. **API keys** -- provide keys for your chosen agent framework
+2. **Data source** -- generate demo data or connect SaaS integrations
+3. **Domain** -- select from 22 built-in domains (e.g., Healthcare)
+4. **Agent framework** -- choose your preferred framework (e.g., PydanticAI)
+5. **Neo4j connection** -- choose from:
+   - **Neo4j Aura** (cloud) -- free tier, import your `.env` file from [console.neo4j.io](https://console.neo4j.io)
+   - **neo4j-local** -- lightweight local Neo4j, no Docker required
+   - **Docker** -- full Neo4j via Docker Compose
+   - **Existing** -- connect to any running instance
+6. **API keys** -- provide keys for your chosen agent framework
+7. **Confirmation** -- review and confirm
 
 The tool generates a complete project in your chosen directory.
 
@@ -61,13 +65,19 @@ cd my-health-app
 make install
 ```
 
-**Start Neo4j** using Docker:
+**Start Neo4j** (depends on the option you selected):
 
 ```bash
+# If using Docker:
 make docker-up
+
+# If using neo4j-local (no Docker required):
+make neo4j-start
+
+# If using Neo4j Aura or an existing instance: skip this step
 ```
 
-This launches a Neo4j container with the default credentials (`neo4j`/`password`). Wait a few seconds for it to become available.
+For Docker, this launches a Neo4j container with the default credentials (`neo4j`/`password`). Wait a few seconds for it to become available.
 
 **Seed the database** with your domain schema and demo data:
 
@@ -91,7 +101,7 @@ With everything running, you have three interfaces to explore:
 
 The Next.js frontend provides a three-panel layout:
 
-- **Chat interface** (left) -- talk to your AI agent using natural language. The agent uses domain-specific tools to query the knowledge graph and return answers. Clickable demo scenario buttons get you started.
+- **Chat interface** (left) -- talk to your AI agent using natural language. Conversations are multi-turn (the agent remembers what was discussed in the current session). Responses are rendered as markdown with formatted code, lists, and tables. Tool call cards show which graph queries the agent executed. Clickable demo scenario buttons get you started.
 - **Context graph view** (center) -- an interactive NVL graph visualization showing entities and relationships. Nodes are color-coded by type. **Click any node** to open an entity detail panel showing all properties, labels, and connections.
 - **Right panel with tabs:**
   - **Decision Traces** -- pre-seeded reasoning traces showing the agent's step-by-step thinking (thought, action, observation) with full outcomes.

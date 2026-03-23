@@ -20,7 +20,7 @@ create-context-graph [PROJECT_NAME] [OPTIONS]
 | Option | Type | Env Variable | Default | Description |
 |--------|------|-------------|---------|-------------|
 | `--domain` | `string` | -- | *(wizard prompt)* | Domain ID (e.g., `financial-services`, `healthcare`, `software-engineering`). Use `--list-domains` to see all available IDs. |
-| `--framework` | `choice` | -- | *(wizard prompt)* | Agent framework to use. One of: `pydanticai`, `claude-agent-sdk`, `strands`, `google-adk`, `openai-agents`, `langgraph`, `crewai`, `maf`. |
+| `--framework` | `choice` | -- | *(wizard prompt)* | Agent framework to use. One of: `pydanticai`, `claude-agent-sdk`, `strands`, `google-adk`, `openai-agents`, `langgraph`, `crewai`, `anthropic-tools`. |
 | `--demo-data` | `flag` | -- | `false` | Generate synthetic demo data and write it to `data/fixtures.json` in the output project. Uses static placeholder data by default; pass `--anthropic-api-key` for LLM-generated realistic data. |
 | `--custom-domain` | `string` | -- | -- | Natural language description of a custom domain (e.g., `"veterinary clinic management"`). Requires `--anthropic-api-key`. Generates a full ontology YAML from the description. |
 | `--connector` | `string` (repeatable) | -- | -- | SaaS connector to enable. Can be specified multiple times. Supported values: `github`, `slack`, `jira`, `notion`, `gmail`, `gcal`, `salesforce`. |
@@ -28,6 +28,8 @@ create-context-graph [PROJECT_NAME] [OPTIONS]
 | `--neo4j-uri` | `string` | `NEO4J_URI` | `neo4j://localhost:7687` | Neo4j Bolt connection URI. |
 | `--neo4j-username` | `string` | `NEO4J_USERNAME` | `neo4j` | Neo4j authentication username. |
 | `--neo4j-password` | `string` | `NEO4J_PASSWORD` | `password` | Neo4j authentication password. |
+| `--neo4j-aura-env` | `path` | -- | -- | Path to a Neo4j Aura `.env` file with `NEO4J_URI`, `NEO4J_USERNAME`, and `NEO4J_PASSWORD`. Automatically sets `neo4j_type` to `aura`. |
+| `--neo4j-local` | `flag` | -- | `false` | Use `@johnymontana/neo4j-local` for a lightweight local Neo4j instance (no Docker required, needs Node.js). Sets `neo4j_type` to `local`. |
 | `--anthropic-api-key` | `string` | `ANTHROPIC_API_KEY` | -- | Anthropic API key. Enables LLM-powered data generation (realistic entity names, documents, decision traces) and custom domain generation. |
 | `--output-dir` | `path` | -- | `./<project-slug>` | Directory where the generated project is written. Defaults to a kebab-case slug of the project name in the current working directory. |
 | `--list-domains` | `flag` | -- | -- | Print all available domain IDs and names, then exit. |

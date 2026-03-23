@@ -6,7 +6,7 @@ Interactive CLI scaffolding tool that generates domain-specific context graph ap
 
 Given a domain (e.g., "healthcare", "wildlife-management") and an agent framework (e.g., PydanticAI, Claude Agent SDK), it generates a complete full-stack application: FastAPI backend, Next.js + Chakra UI v3 + NVL frontend, Neo4j schema, synthetic data, and a configured AI agent with domain-specific tools.
 
-**Status:** Phase 5 complete (v0.2.0). 22 domains, 8 agent frameworks, interactive NVL graph visualization (schema view, double-click expand, drag/zoom, property panel, agent-driven graph updates), LLM-generated demo data (80-90 entities, 25+ documents, 3-5 decision traces per domain), document browser, entity detail panel, 7 SaaS connectors, custom domain generation, Docusaurus documentation site, 262 passing tests.
+**Status:** Phase 6 complete (v0.3.0). 22 domains, 8 agent frameworks, neo4j-agent-memory integration for multi-turn conversations, interactive NVL graph visualization (schema view, double-click expand, drag/zoom, property panel, agent-driven graph updates), LLM-generated demo data (80-90 entities, 25+ documents, 3-5 decision traces per domain), markdown rendering in chat, tool call visualization, document browser, entity detail panel, 7 SaaS connectors, custom domain generation, Neo4j Aura .env import + neo4j-local support, Docusaurus documentation site, 314 passing tests.
 
 ## Quick Reference
 
@@ -51,7 +51,7 @@ src/create_context_graph/
 ├── domains/            # 22 YAML ontology definitions + _base.yaml
 ├── fixtures/           # 22 pre-generated JSON fixture files
 └── templates/          # Jinja2 templates for generated projects
-    ├── base/           # .env, Makefile, docker-compose, README, .gitignore
+    ├── base/           # .env, .env.example, Makefile, docker-compose, README, .gitignore
     ├── backend/
     │   ├── shared/     # FastAPI main, config, neo4j client, GDS, vector, models, routes
     │   ├── agents/     # Per-framework agent.py (8 frameworks)
@@ -89,6 +89,9 @@ Templates that contain JSX curly braces or Python dict literals must use `{% raw
 ### Interactive graph visualization with agent integration
 The frontend `ContextGraphView` starts in **schema view** (calls `db.schema.visualization()` via `GET /schema/visualization`) showing entity types as nodes and relationship types as edges. When the user interacts with the agent chat, tool call results flow to the graph automatically via a `CypherResultCollector` in `context_graph_client.py` — the `/chat` endpoint drains collected Cypher results and attaches them as `graph_data` in the response, without modifying any agent template. The `ChatInterface` passes `graph_data` to the parent `page.tsx` via an `onGraphUpdate` callback, which flows down to `ContextGraphView` as `externalGraphData`. Double-clicking a schema node loads instances of that label; double-clicking a data node calls `POST /expand` to fetch neighbors (deduplicated merge). NVL uses d3Force layout with drag/zoom/pan, click for property details, and canvas click to deselect.
 
+### neo4j-agent-memory integration
+Generated projects use `MemoryClient` from `neo4j-agent-memory` for multi-turn conversation persistence. The `context_graph_client.py.j2` template initializes the MemoryClient alongside the Neo4j driver (with ImportError fallback) and exposes `get_conversation_history()` and `store_message()`. All 8 agent frameworks call these to retrieve history before each LLM call and store messages after. The frontend `ChatInterface` captures `session_id` from the first response and sends it in all subsequent requests.
+
 ### Neo4j driver serialization
 `context_graph_client.py.j2` uses a custom `_serialize()` function instead of the driver's `.data()` method. This preserves Neo4j Node metadata (`elementId`, `labels`), Relationship metadata (`elementId`, `type`, `startNodeElementId`, `endNodeElementId`), and Path expansion. Without this, the frontend graph visualization and agent tools receive flat property dicts with no type information.
 
@@ -125,6 +128,9 @@ my-app/
 │   │   ├── __init__.py
 │   │   └── {service}_connector.py  # One per selected service
 │   └── __init__.py
+├── backend/tests/
+│   ├── __init__.py
+│   └── test_routes.py    # Generated test scaffold (health, scenarios)
 ├── backend/scripts/
 │   ├── generate_data.py
 │   └── import_data.py    # Only if SaaS connectors selected
@@ -136,21 +142,21 @@ my-app/
 │   └── package.json, next.config.ts, tsconfig.json
 ├── cypher/ (schema.cypher, gds_projections.cypher)
 ├── data/ (ontology.yaml, _base.yaml, fixtures.json, documents/)
-├── .env, Makefile, docker-compose.yml, README.md, .gitignore
+├── .env, .env.example, Makefile, docker-compose.yml, README.md, .gitignore
 ```
 
 ## Testing
 
 ```bash
-pytest tests/ -v                    # All 262 tests (460 with slow matrix)
-pytest tests/test_config.py         # Config model tests (10)
+pytest tests/ -v                    # All 314 tests (512 with slow matrix)
+pytest tests/test_config.py         # Config model + framework alias tests (19)
 pytest tests/test_ontology.py       # Ontology loading + all 22 domains validate (20)
-pytest tests/test_renderer.py       # Template rendering + all 8 frameworks compile check (34)
+pytest tests/test_renderer.py       # Template rendering + all 8 frameworks + v0.3.0 features (52)
 pytest tests/test_generator.py      # Data generation pipeline (14)
-pytest tests/test_cli.py            # CLI integration + 8 domain/framework combos (15)
+pytest tests/test_cli.py            # CLI integration + 8 domain/framework combos + neo4j types (18)
 pytest tests/test_custom_domain.py  # Custom domain generation with mocked LLM (17)
 pytest tests/test_connectors.py     # SaaS connectors with mocked APIs (23)
-pytest tests/test_generated_project.py # Deep validation: Python/TS/Cypher syntax (27+)
+pytest tests/test_generated_project.py # Deep validation: Python/TS/Cypher syntax, memory, neo4j types (49+)
 pytest tests/test_performance.py    # Timed generation tests (slow, 22 domains)
 ```
 
@@ -168,8 +174,10 @@ Tests do NOT require Neo4j or any API keys. All tests use `tmp_path` fixtures fo
 1. Create `src/create_context_graph/templates/backend/agents/{framework_key}/agent.py.j2` (use underscores for directory name; hyphens in config key are auto-converted via `fw_key = framework.replace("-", "_")`)
 2. Add the framework key to `SUPPORTED_FRAMEWORKS`, `FRAMEWORK_DISPLAY_NAMES`, and `FRAMEWORK_DEPENDENCIES` in `config.py`
 3. Template must export `async def handle_message(message: str, session_id: str | None = None) -> dict` returning `{"response": str, "session_id": str, "graph_data": dict | None}`
-4. Use `{% raw %}...{% endraw %}` blocks for Python dict literals in the template
-5. Use `{% for tool in agent_tools %}` to generate domain-specific tools from ontology
+4. Import `get_conversation_history, store_message` from `context_graph_client` and call them in `handle_message()` for multi-turn conversation support
+5. Pass `tool_name=` kwarg to `execute_cypher()` calls for tool call visualization
+6. Use `{% raw %}...{% endraw %}` blocks for Python dict literals in the template
+7. Use `{% for tool in agent_tools %}` to generate domain-specific tools from ontology
 6. The template receives full ontology context: `domain`, `agent_tools`, `system_prompt`, `framework_display_name`, etc.
 7. Add tests to `TestAllFrameworksRender` in `test_renderer.py` and `TestMultipleDomainScaffolds` in `test_cli.py`
 
@@ -183,7 +191,7 @@ Tests do NOT require Neo4j or any API keys. All tests use `tmp_path` fixtures fo
 | CrewAI | `crewai/` | `Agent` + `Task` + `Crew` with `@tool` |
 | Strands | `strands/` | `Agent` with `@tool`, Bedrock model |
 | Google ADK | `google_adk/` | `Agent` + `FunctionTool`, Gemini model |
-| MAF | `maf/` | Modular `@register_tool` registry + Anthropic API agentic loop |
+| Anthropic Tools | `anthropic_tools/` | Modular `@register_tool` registry + Anthropic API agentic loop |
 
 ## Adding a New SaaS Connector
 

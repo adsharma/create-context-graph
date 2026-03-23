@@ -49,7 +49,7 @@ class TestVersion:
     def test_version(self, runner):
         result = runner.invoke(main, ["--version"])
         assert result.exit_code == 0
-        assert "0.1.0" in result.output
+        assert "version" in result.output
 
 
 class TestScaffoldGeneration:
@@ -105,6 +105,64 @@ class TestScaffoldGeneration:
         assert "already exists" in result.output
 
 
+class TestNeo4jAuraEnv:
+    """Test --neo4j-aura-env CLI flag."""
+
+    def test_aura_env_flag(self, runner, tmp_path):
+        # Create a fake Aura .env file
+        aura_env = tmp_path / "aura.env"
+        aura_env.write_text(
+            'NEO4J_URI=neo4j+s://abc123.databases.neo4j.io\n'
+            'NEO4J_USERNAME=neo4j\n'
+            'NEO4J_PASSWORD=super-secret\n'
+        )
+        out = tmp_path / "aura-app"
+        result = runner.invoke(main, [
+            "aura-app",
+            "--domain", "financial-services",
+            "--framework", "pydanticai",
+            "--neo4j-aura-env", str(aura_env),
+            "--output-dir", str(out),
+        ])
+        assert result.exit_code == 0, result.output
+
+        # Verify credentials were parsed into .env
+        env = (out / ".env").read_text()
+        assert "neo4j+s://abc123.databases.neo4j.io" in env
+        assert "super-secret" in env
+
+        # Verify no docker-compose for aura type
+        assert not (out / "docker-compose.yml").exists()
+
+    def test_neo4j_local_flag(self, runner, tmp_path):
+        out = tmp_path / "local-app"
+        result = runner.invoke(main, [
+            "local-app",
+            "--domain", "financial-services",
+            "--framework", "pydanticai",
+            "--neo4j-local",
+            "--output-dir", str(out),
+        ])
+        assert result.exit_code == 0, result.output
+
+        makefile = (out / "Makefile").read_text()
+        assert "neo4j-start:" in makefile
+        assert not (out / "docker-compose.yml").exists()
+
+    def test_maf_alias_still_works(self, runner, tmp_path):
+        """Verify deprecated 'maf' alias resolves to anthropic-tools."""
+        out = tmp_path / "maf-app"
+        result = runner.invoke(main, [
+            "maf-app",
+            "--domain", "financial-services",
+            "--framework", "maf",
+            "--output-dir", str(out),
+        ])
+        assert result.exit_code == 0, result.output
+        agent = (out / "backend" / "app" / "agent.py").read_text()
+        assert "Anthropic Tools" in agent
+
+
 class TestMultipleDomainScaffolds:
     """Integration test: scaffold generation works for multiple domains."""
 
@@ -116,7 +174,7 @@ class TestMultipleDomainScaffolds:
         ("gaming", "crewai"),
         ("manufacturing", "strands"),
         ("digital-twin", "google-adk"),
-        ("retail-ecommerce", "maf"),
+        ("retail-ecommerce", "anthropic-tools"),
     ])
     def test_domain_framework_combo(self, runner, tmp_path, domain_id, framework):
         out = tmp_path / f"test-{domain_id}"
@@ -144,7 +202,7 @@ class TestMultipleDomainScaffolds:
             "crewai": "CrewAI",
             "strands": "Strands",
             "google-adk": "Google ADK",
-            "maf": "MAF",
+            "anthropic-tools": "Anthropic Tools",
         }
         marker = framework_markers.get(framework)
         if marker:

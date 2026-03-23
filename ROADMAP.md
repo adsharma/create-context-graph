@@ -4,7 +4,7 @@
 
 ## Overview
 
-Create Context Graph is being built in 5 phases over ~12 weeks. The goal is to go from an empty repository to a published CLI tool that generates domain-specific context graph applications for 22 industry verticals with 8 agent framework options.
+Create Context Graph was built in 6 phases. The goal was to go from an empty repository to a published CLI tool that generates domain-specific context graph applications for 22 industry verticals with 8 agent framework options, powered by neo4j-agent-memory for multi-turn conversations.
 
 ---
 
@@ -296,14 +296,83 @@ Prepared for public release with Docusaurus documentation, Neo4j Labs compliance
 
 ---
 
+## Phase 6: Memory Integration, Multi-Turn & DX — COMPLETE
+
+**Status:** Done (v0.3.0)
+
+Addressed all critical and high-priority feedback from the v0.2.0 product review. Core theme: make the generated apps actually use neo4j-agent-memory and deliver a compelling multi-turn conversation experience.
+
+### Critical fixes
+
+- **neo4j-agent-memory integration** — Generated `context_graph_client.py` now initializes `MemoryClient` alongside the Neo4j driver (with ImportError fallback). Exposes `get_conversation_history()` and `store_message()` functions used by all 8 agent frameworks for multi-turn conversation persistence.
+- **Multi-turn conversations** — All 8 agent templates retrieve conversation history before each LLM call and store messages after. Frontend `ChatInterface` captures `session_id` from the first response and sends it in all subsequent requests. "New Conversation" button resets session state.
+- **CrewAI/Strands/Google ADK async fix** — Added `nest_asyncio` to prevent `asyncio.run()` deadlocks inside FastAPI's async event loop. Added to `FRAMEWORK_DEPENDENCIES` for all three frameworks.
+- **MAF → Anthropic Tools rebrand** — Renamed framework from `maf` to `anthropic-tools`. Template directory moved to `anthropic_tools/`. Old `maf` key supported as deprecated alias via `FRAMEWORK_ALIASES`. Updated all tests.
+
+### High-priority fixes
+
+- **GDS client** — Changed default label from hardcoded `"Entity"` to `"*"` (wildcard). Exposed `ENTITY_LABELS` list generated from domain ontology.
+- **Markdown rendering** — Added `react-markdown` + `remark-gfm` to frontend. Assistant messages render through ReactMarkdown with CSS styles for headings, lists, code blocks, tables, blockquotes.
+- **.env.example** — Generated alongside `.env` with placeholder values (`your-password-here`). Added to renderer and gitignore correctly.
+
+### Neo4j setup options (new)
+
+- **Neo4j Aura import** — New wizard option "Neo4j Aura (cloud — free tier available)" with signup instructions panel and `.env` file parser. CLI flag: `--neo4j-aura-env PATH`.
+- **neo4j-local** — New wizard option "Local Neo4j via neo4j-local (no Docker required)". Generates `make neo4j-start/stop/status` targets using `npx @johnymontana/neo4j-local`. CLI flag: `--neo4j-local`.
+- **`neo4j_type` expanded** — Config Literal from `"docker" | "existing"` to `"docker" | "existing" | "aura" | "local"`. Makefile, README, docker-compose all render conditionally based on type.
+
+### Medium-priority fixes
+
+- **Port configurability** — CORS reads from `settings.frontend_port`. Makefile uses `include .env` / `export` with `$${BACKEND_PORT:-8000}` and `$${FRONTEND_PORT:-3000}` defaults.
+- **Process management** — `make start` uses `trap 'kill 0' EXIT` to clean up child processes on Ctrl+C.
+- **Docker version pin** — `neo4j:5` → `neo4j:5.26.0` in docker-compose template.
+- **README entity types** — Split into "Base POLE+O Entities" and "Domain-Specific Entities" subsections.
+- **Vector index creation** — `create_vector_index()` called in app lifespan startup (try/except for Neo4j < 5.13).
+
+### Enhancements
+
+- **Tool call visualization** — `CypherResultCollector` extended with `tool_calls` tracking. `ChatResponse` includes `tool_calls` field. Frontend renders inline tool call cards (badge + abbreviated inputs) above assistant messages.
+- **Test scaffold** — Generated projects include `backend/tests/test_routes.py` with `test_health()` and `test_scenarios()` tests using mocked Neo4j.
+
+### Tests added (52 new tests → 314 total)
+
+- **test_renderer.py** (+18): .env.example, session_id, ReactMarkdown, memory functions, GDS labels, tool calls, README sections, CORS, vector index, docker pin, trap cleanup, neo4j-local/aura Makefile targets, markdown CSS
+- **test_generated_project.py** (+22): .env.example, ChatInterface features, memory integration, docker pin, neo4j type variations, test scaffold
+- **test_config.py** (+9): aura/local neo4j types, framework alias resolution (maf→anthropic-tools)
+- **test_cli.py** (+3): --neo4j-aura-env, --neo4j-local, maf alias backward compatibility
+
+### Files modified
+
+- `config.py` — SUPPORTED_FRAMEWORKS, FRAMEWORK_ALIASES, FRAMEWORK_DEPENDENCIES, neo4j_type Literal, resolved_framework property
+- `cli.py` — --neo4j-aura-env, --neo4j-local flags, alias resolution
+- `wizard.py` — 4 Neo4j options (Aura, local, Docker, existing), _parse_aura_env helper
+- `renderer.py` — .env.example rendering, base/domain entity type partition, test scaffold rendering, resolved_framework in context
+- `templates/backend/shared/context_graph_client.py.j2` — MemoryClient init, get_conversation_history(), store_message(), tool call collector
+- `templates/backend/shared/routes.py.j2` — tool_calls in ChatResponse
+- `templates/backend/shared/main.py.j2` — CORS from settings, vector index startup
+- `templates/backend/shared/gds_client.py.j2` — wildcard label, ENTITY_LABELS
+- `templates/backend/agents/*/agent.py.j2` — all 8 frameworks: multi-turn history, tool_name tracking
+- `templates/backend/agents/maf/` → `templates/backend/agents/anthropic_tools/` — renamed
+- `templates/frontend/components/ChatInterface.tsx.j2` — session_id, ReactMarkdown, tool call cards, new conversation button
+- `templates/frontend/package.json.j2` — react-markdown, remark-gfm
+- `templates/frontend/app/globals.css.j2` — .markdown-content styles
+- `templates/base/Makefile.j2` — env vars, trap cleanup, neo4j-local targets
+- `templates/base/docker-compose.yml.j2` — neo4j:5.26.0
+- `templates/base/dot_env_example.j2` — new file
+- `templates/base/README.md.j2` — entity sections, neo4j-type-aware instructions, .env.example docs
+- `templates/backend/tests/test_routes.py.j2` — new test scaffold template
+
+---
+
 ## Summary
 
 | Phase | Description | Status | Tests |
 |-------|-------------|--------|-------|
-| 1 | Core CLI & Template Engine | **Complete** | 262 passing |
+| 1 | Core CLI & Template Engine | **Complete** | 314 passing |
 | 2 | Domain Expansion & Data Generation | **Complete** | (included above) |
 | 3 | Framework Templates & Frontend | **Complete** | (included above) |
 | 4 | SaaS Import & Custom Domains | **Complete** | (included above) |
 | 5 | Polish, Testing & Launch | **Complete** | (included above) |
 | — | Data Quality & UI Enhancements | **Complete** | (included above) |
 | — | Graph Visualization & Agent Fixes | **Complete** | (included above) |
+| 6 | Memory Integration, Multi-Turn & DX | **Complete** | (included above) |

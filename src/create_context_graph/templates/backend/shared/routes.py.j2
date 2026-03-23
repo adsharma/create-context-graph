@@ -24,6 +24,7 @@ class ChatResponse(BaseModel):
     response: str
     session_id: str
     graph_data: dict | None = None
+    tool_calls: list[dict] | None = None
 
 
 class SearchRequest(BaseModel):
@@ -47,12 +48,17 @@ async def chat(request: ChatRequest):
     try:
         collector = get_collector()
         collector.drain()  # clear stale results
+        collector.drain_tool_calls()  # clear stale tool calls
         result = await handle_message(request.message, request.session_id)
         # Attach graph data from tool calls if agent didn't provide any
         if result.get("graph_data") is None:
             collected = collector.drain()
             if collected:
                 result["graph_data"] = {"results": collected}
+        # Attach tool call metadata for frontend visualization
+        tool_calls = collector.drain_tool_calls()
+        if tool_calls:
+            result["tool_calls"] = tool_calls
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

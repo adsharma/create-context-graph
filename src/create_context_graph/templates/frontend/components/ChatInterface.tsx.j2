@@ -1,14 +1,23 @@
 {% raw %}"use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Box, Flex, Heading, Text, Textarea, IconButton, VStack, HStack, Badge } from "@chakra-ui/react";
-import { Send } from "lucide-react";
+import { Box, Flex, Heading, Text, Textarea, IconButton, VStack, HStack, Badge, Button } from "@chakra-ui/react";
+import { Send, RotateCcw } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { API_BASE, DEMO_SCENARIOS } from "@/lib/config";
 import type { GraphData } from "@/lib/config";
+
+interface ToolCall {
+  name: string;
+  inputs: Record<string, unknown>;
+  output_preview: string;
+}
 
 interface Message {
   role: "user" | "assistant";
   content: string;
+  toolCalls?: ToolCall[];
 }
 
 interface ChatInterfaceProps {
@@ -19,11 +28,17 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [sessionId, setSessionId] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  function startNewConversation() {
+    setMessages([]);
+    setSessionId(null);
+  }
 
   async function sendMessage(text?: string) {
     const messageText = text || input.trim();
@@ -38,12 +53,25 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
       const res = await fetch(`${API_BASE}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: messageText }),
+        body: JSON.stringify({
+          message: messageText,
+          session_id: sessionId,
+        }),
       });
       const data = await res.json();
+
+      // Capture session_id from backend for multi-turn conversation
+      if (data.session_id) {
+        setSessionId(data.session_id);
+      }
+
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: data.response },
+        {
+          role: "assistant",
+          content: data.response,
+          toolCalls: data.tool_calls || undefined,
+        },
       ]);
       // Pass graph data from agent tool calls to the graph view
       if (data.graph_data && onGraphUpdate) {
@@ -68,9 +96,15 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
 
   return (
     <Flex direction="column" h="100%">
-      <Box px={4} py={3} borderBottom="1px solid" borderColor="gray.200">
+      <HStack px={4} py={3} borderBottom="1px solid" borderColor="gray.200" justifyContent="space-between">
         <Heading size="sm">Chat</Heading>
-      </Box>
+        {messages.length > 0 && (
+          <Button size="xs" variant="ghost" onClick={startNewConversation}>
+            <RotateCcw size={14} />
+            New
+          </Button>
+        )}
+      </HStack>
 
       {/* Demo scenario buttons */}
       {messages.length === 0 && (
@@ -106,18 +140,34 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
       {/* Messages */}
       <VStack flex={1} overflow="auto" px={4} py={2} gap={3} align="stretch">
         {messages.map((msg, i) => (
-          <Box
-            key={i}
-            bg={msg.role === "user" ? "blue.50" : "gray.100"}
-            px={3}
-            py={2}
-            borderRadius="md"
-            alignSelf={msg.role === "user" ? "flex-end" : "flex-start"}
-            maxW="90%"
-          >
-            <Text fontSize="sm" whiteSpace="pre-wrap">
-              {msg.content}
-            </Text>
+          <Box key={i}>
+            {/* Tool call cards */}
+            {msg.toolCalls?.map((tc, j) => (
+              <Box key={j} bg="purple.50" px={3} py={2} borderRadius="md" mb={1} fontSize="xs">
+                <HStack>
+                  <Badge colorPalette="purple" size="sm">{tc.name}</Badge>
+                  <Text color="gray.500" truncate>{JSON.stringify(tc.inputs).slice(0, 80)}</Text>
+                </HStack>
+              </Box>
+            ))}
+            <Box
+              bg={msg.role === "user" ? "blue.50" : "gray.100"}
+              px={3}
+              py={2}
+              borderRadius="md"
+              alignSelf={msg.role === "user" ? "flex-end" : "flex-start"}
+              maxW="90%"
+            >
+              {msg.role === "assistant" ? (
+                <Box fontSize="sm" className="markdown-content">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.content}</ReactMarkdown>
+                </Box>
+              ) : (
+                <Text fontSize="sm" whiteSpace="pre-wrap">
+                  {msg.content}
+                </Text>
+              )}
+            </Box>
           </Box>
         ))}
         {loading && (

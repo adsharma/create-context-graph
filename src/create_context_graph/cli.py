@@ -22,7 +22,7 @@ import click
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
-from create_context_graph.config import SUPPORTED_FRAMEWORKS, ProjectConfig
+from create_context_graph.config import SUPPORTED_FRAMEWORKS, FRAMEWORK_ALIASES, ProjectConfig
 from create_context_graph.ontology import list_available_domains, load_domain
 from create_context_graph.renderer import ProjectRenderer
 
@@ -38,7 +38,7 @@ console = Console()
 )
 @click.option(
     "--framework",
-    type=click.Choice(SUPPORTED_FRAMEWORKS, case_sensitive=False),
+    type=click.Choice(SUPPORTED_FRAMEWORKS + list(FRAMEWORK_ALIASES.keys()), case_sensitive=False),
     help="Agent framework to use",
 )
 @click.option("--demo-data", is_flag=True, help="Generate synthetic demo data")
@@ -46,6 +46,8 @@ console = Console()
 @click.option("--neo4j-uri", envvar="NEO4J_URI", help="Neo4j connection URI")
 @click.option("--neo4j-username", envvar="NEO4J_USERNAME", default="neo4j")
 @click.option("--neo4j-password", envvar="NEO4J_PASSWORD", default="password")
+@click.option("--neo4j-aura-env", type=click.Path(exists=True), help="Path to Neo4j Aura .env file with credentials")
+@click.option("--neo4j-local", is_flag=True, help="Use @johnymontana/neo4j-local for local Neo4j (no Docker)")
 @click.option("--anthropic-api-key", envvar="ANTHROPIC_API_KEY", help="Anthropic API key for LLM generation")
 @click.option("--custom-domain", type=str, help="Natural language description for custom domain generation (requires --anthropic-api-key)")
 @click.option("--connector", multiple=True, help="SaaS connector to enable (github, slack, jira, notion, gmail, gcal, salesforce)")
@@ -61,6 +63,8 @@ def main(
     neo4j_uri: str | None,
     neo4j_username: str,
     neo4j_password: str,
+    neo4j_aura_env: str | None,
+    neo4j_local: bool,
     anthropic_api_key: str | None,
     custom_domain: str | None,
     connector: tuple[str, ...],
@@ -106,6 +110,25 @@ def main(
         display_ontology_summary(custom_ontology, console)
         domain = custom_ontology.domain.id
 
+    # Resolve deprecated framework aliases
+    if framework:
+        framework = FRAMEWORK_ALIASES.get(framework, framework)
+
+    # Handle Neo4j Aura .env import
+    if neo4j_aura_env:
+        from create_context_graph.wizard import _parse_aura_env
+        neo4j_uri, neo4j_username, neo4j_password = _parse_aura_env(neo4j_aura_env)
+
+    # Determine neo4j_type from flags
+    if neo4j_aura_env:
+        neo4j_type_resolved = "aura"
+    elif neo4j_local:
+        neo4j_type_resolved = "local"
+    elif neo4j_uri and "aura" in (neo4j_uri or ""):
+        neo4j_type_resolved = "aura"
+    else:
+        neo4j_type_resolved = "docker"
+
     # If all required args are provided, skip wizard
     if project_name and (domain or custom_domain) and framework:
         config = ProjectConfig(
@@ -116,7 +139,7 @@ def main(
             neo4j_uri=neo4j_uri or "neo4j://localhost:7687",
             neo4j_username=neo4j_username,
             neo4j_password=neo4j_password,
-            neo4j_type="docker",
+            neo4j_type=neo4j_type_resolved,
             anthropic_api_key=anthropic_api_key,
             generate_data=demo_data,
             custom_domain_yaml=custom_domain_yaml,
@@ -227,6 +250,8 @@ def main(
     console.print(f"  [bold]make install[/bold]       # Install dependencies")
     if config.neo4j_type == "docker":
         console.print(f"  [bold]make docker-up[/bold]    # Start Neo4j")
+    elif config.neo4j_type == "local":
+        console.print(f"  [bold]make neo4j-start[/bold]  # Start Neo4j (requires Node.js)")
     console.print(f"  [bold]make seed[/bold]          # Seed sample data")
     if config.saas_connectors:
         console.print(f"  [bold]make import[/bold]         # Re-import from connected services")

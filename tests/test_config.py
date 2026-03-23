@@ -15,6 +15,7 @@
 """Unit tests for the config module."""
 
 from create_context_graph.config import (
+    FRAMEWORK_ALIASES,
     FRAMEWORK_DEPENDENCIES,
     FRAMEWORK_DISPLAY_NAMES,
     SUPPORTED_FRAMEWORKS,
@@ -107,3 +108,67 @@ class TestProjectConfig:
         )
         assert config.neo4j_type == "existing"
         assert "neo4j+s" in config.neo4j_uri
+
+    def test_aura_neo4j_config(self):
+        config = ProjectConfig(
+            project_name="Test",
+            domain="healthcare",
+            framework="pydanticai",
+            neo4j_type="aura",
+            neo4j_uri="neo4j+s://abc.databases.neo4j.io",
+        )
+        assert config.neo4j_type == "aura"
+
+    def test_local_neo4j_config(self):
+        config = ProjectConfig(
+            project_name="Test",
+            domain="healthcare",
+            framework="pydanticai",
+            neo4j_type="local",
+        )
+        assert config.neo4j_type == "local"
+
+
+class TestFrameworkAliases:
+    def test_maf_alias_exists(self):
+        assert "maf" in FRAMEWORK_ALIASES
+        assert FRAMEWORK_ALIASES["maf"] == "anthropic-tools"
+
+    def test_resolved_framework_with_alias(self):
+        config = ProjectConfig(
+            project_name="Test",
+            domain="healthcare",
+            framework="maf",
+        )
+        assert config.resolved_framework == "anthropic-tools"
+
+    def test_resolved_framework_without_alias(self):
+        config = ProjectConfig(
+            project_name="Test",
+            domain="healthcare",
+            framework="pydanticai",
+        )
+        assert config.resolved_framework == "pydanticai"
+
+    def test_alias_display_name(self):
+        config = ProjectConfig(
+            project_name="Test",
+            domain="healthcare",
+            framework="maf",
+        )
+        assert "Anthropic Tools" in config.framework_display_name
+
+    def test_alias_deps(self):
+        config = ProjectConfig(
+            project_name="Test",
+            domain="healthcare",
+            framework="maf",
+        )
+        assert len(config.framework_deps) > 0
+        assert any("anthropic" in dep for dep in config.framework_deps)
+
+    def test_anthropic_tools_in_supported(self):
+        assert "anthropic-tools" in SUPPORTED_FRAMEWORKS
+
+    def test_maf_not_in_supported(self):
+        assert "maf" not in SUPPORTED_FRAMEWORKS

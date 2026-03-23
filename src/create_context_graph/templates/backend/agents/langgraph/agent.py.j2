@@ -10,7 +10,10 @@ from langchain_core.tools import tool
 from langgraph.prebuilt import create_react_agent
 
 from app.config import settings
-from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+from app.context_graph_client import (
+    execute_cypher, search_entities, get_entity_graph, get_schema,
+    get_conversation_history, store_message,
+)
 
 
 SYSTEM_PROMPT = """{{ system_prompt }}"""
@@ -29,7 +32,7 @@ async def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{
         "{{ param.name }}": {{ param.name }},
 {% endfor %}
     }
-    result = await execute_cypher(cypher, params)
+    result = await execute_cypher(cypher, params, tool_name="{{ tool.name }}")
     return json.dumps(result, default=str)
 
 {% endfor %}
@@ -39,7 +42,7 @@ async def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{
 async def run_cypher(query: str, parameters: str = "{}") -> str:
     """Execute a read-only Cypher query against the knowledge graph."""
     params = json.loads(parameters) if parameters else {}
-    result = await execute_cypher(query, params)
+    result = await execute_cypher(query, params, tool_name="run_cypher")
     return json.dumps(result, default=str)
 
 
@@ -77,14 +80,29 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
     if session_id is None:
         session_id = str(uuid.uuid4())
 
+    # Retrieve conversation history and store the new user message
+    history = await get_conversation_history(session_id)
+    await store_message(session_id, "user", message)
+
+    # Build messages list with conversation history
+    from langchain_core.messages import HumanMessage, AIMessage
+    history_messages = []
+    for msg in history:
+        if msg["role"] == "user":
+            history_messages.append(HumanMessage(content=msg["content"]))
+        elif msg["role"] == "assistant":
+            history_messages.append(AIMessage(content=msg["content"]))
+
     result = await graph.ainvoke(
-        {"messages": [("user", message)]},
+        {"messages": history_messages + [HumanMessage(content=message)]},
         config={"configurable": {"thread_id": session_id}},
     )
 
     # Extract the last AI message
     ai_messages = [m for m in result["messages"] if hasattr(m, "content") and m.type == "ai"]
     response_text = ai_messages[-1].content if ai_messages else "No response generated."
+
+    await store_message(session_id, "assistant", response_text)
 
     return {
         "response": response_text,

@@ -11,10 +11,11 @@ When you run `create-context-graph`, it produces a complete full-stack applicati
 
 ```
 my-app/
-├── .env                              # Environment variables (Neo4j, API keys)
+├── .env                              # Environment variables (Neo4j, API keys) — gitignored
+├── .env.example                      # Configuration template with placeholder values
 ├── .gitignore                        # Git ignore rules
 ├── Makefile                          # Build, run, and seed commands
-├── docker-compose.yml                # Neo4j container definition
+├── docker-compose.yml                # Neo4j container definition (Docker mode only)
 ├── README.md                         # Auto-generated project documentation
 │
 ├── backend/
@@ -29,6 +30,9 @@ my-app/
 │   │   ├── context_graph_client.py   # Neo4j read/write client
 │   │   ├── gds_client.py            # Neo4j Graph Data Science client
 │   │   └── vector_client.py         # Vector search client
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   └── test_routes.py            # Generated test scaffold (health, scenarios)
 │   └── scripts/
 │       └── generate_data.py          # Standalone data generation script
 │
@@ -115,7 +119,9 @@ The agent is configured with:
 
 ### `app/context_graph_client.py`
 
-Neo4j client for reading and writing to the knowledge graph. Provides methods for entity CRUD, relationship traversal, arbitrary Cypher execution, schema visualization (`db.schema.visualization()`), and node expansion. Uses a custom `_serialize()` function to preserve Neo4j Node/Relationship metadata (labels, elementIds, types) instead of the driver's `.data()` method. Includes a `CypherResultCollector` that captures Cypher results from agent tool calls for automatic graph data flow to the frontend.
+Neo4j client for reading and writing to the knowledge graph. Provides methods for entity CRUD, relationship traversal, arbitrary Cypher execution, schema visualization (`db.schema.visualization()`), and node expansion. Uses a custom `_serialize()` function to preserve Neo4j Node/Relationship metadata (labels, elementIds, types) instead of the driver's `.data()` method. Includes a `CypherResultCollector` that captures Cypher results and tool call metadata from agent tool calls for automatic graph data and tool call visualization in the frontend.
+
+Also initializes the `neo4j-agent-memory` `MemoryClient` (with graceful fallback if not installed) and exposes `get_conversation_history()` and `store_message()` for multi-turn conversation persistence.
 
 ### `app/gds_client.py`
 
@@ -148,7 +154,7 @@ Main application page with a three-panel layout: chat interface on the left, gra
 
 ### `components/ChatInterface.tsx`
 
-Chat UI component with message history, input field, and response display. Includes clickable demo scenario buttons generated from the ontology's `demo_scenarios`. When the agent's response includes `graph_data` (captured from tool call Cypher results), passes it to the parent page via the `onGraphUpdate` callback to update the graph visualization.
+Chat UI component with multi-turn conversation support, markdown rendering (via `react-markdown`), inline tool call visualization, input field, and response display. Manages `session_id` state — captures it from the first backend response and sends it in all subsequent requests for conversation continuity. Includes a "New Conversation" button to reset session state. Clickable demo scenario buttons are generated from the ontology's `demo_scenarios`. When the agent's response includes `graph_data` (captured from tool call Cypher results), passes it to the parent page via the `onGraphUpdate` callback to update the graph visualization.
 
 ### `components/ContextGraphView.tsx`
 
@@ -242,12 +248,15 @@ Defines a Neo4j container with APOC and GDS plugins, mapped to ports 7474 (brows
 | Target | Description |
 |--------|-------------|
 | `make install` | Install backend and frontend dependencies |
-| `make docker-up` | Start Neo4j via Docker Compose |
-| `make docker-down` | Stop Neo4j container |
+| `make docker-up` | Start Neo4j via Docker Compose (Docker mode only) |
+| `make docker-down` | Stop Neo4j container (Docker mode only) |
+| `make neo4j-start` | Start Neo4j via `@johnymontana/neo4j-local` (local mode only) |
+| `make neo4j-stop` | Stop neo4j-local (local mode only) |
+| `make neo4j-status` | Check neo4j-local status (local mode only) |
 | `make seed` | Apply schema and load all fixture data (entities, relationships, documents, traces) into Neo4j |
-| `make start` | Start both backend (port 8000) and frontend (port 3000) |
-| `make backend` | Start only the FastAPI backend |
-| `make frontend` | Start only the Next.js frontend |
+| `make start` | Start both backend and frontend (uses `trap` for clean Ctrl+C shutdown) |
+| `make dev-backend` | Start only the FastAPI backend |
+| `make dev-frontend` | Start only the Next.js frontend |
 | `make import` | Re-import data from connected SaaS services (if connectors enabled) |
-| `make generate` | Regenerate synthetic demo data |
+| `make test` | Run backend and frontend tests |
 | `make clean` | Remove generated artifacts |

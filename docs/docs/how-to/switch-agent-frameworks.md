@@ -18,7 +18,7 @@ Create Context Graph supports 8 agent frameworks. The framework choice only affe
 | **CrewAI** | `crewai` | Multi-agent framework with `Agent`, `Task`, and `Crew` abstractions |
 | **Strands** | `strands` | AWS-native agent framework using Bedrock models with `@tool` decorators |
 | **Google ADK** | `google-adk` | Google's Agent Development Kit with `FunctionTool` and Gemini models |
-| **MAF** | `maf` | Modular agent framework with `@register_tool` registry and Anthropic API agentic loop |
+| **Anthropic Tools** | `anthropic-tools` | Modular agent framework with `@register_tool` registry and Anthropic API agentic loop |
 
 ## Choosing a Framework During Scaffolding
 

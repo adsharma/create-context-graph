@@ -8,7 +8,10 @@ import uuid
 import anthropic
 
 from app.config import settings
-from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+from app.context_graph_client import (
+    execute_cypher, search_entities, get_entity_graph, get_schema,
+    get_conversation_history, store_message,
+)
 
 
 SYSTEM_PROMPT = """{{ system_prompt }}"""
@@ -79,6 +82,7 @@ async def execute_tool(tool_name: str, tool_input: dict) -> str:
         result = await execute_cypher(
             tool_input["query"],
             tool_input.get("parameters", {}),
+            tool_name="execute_cypher",
         )
         return json.dumps(result, default=str)
 
@@ -87,7 +91,9 @@ async def execute_tool(tool_name: str, tool_input: dict) -> str:
         return json.dumps(result, default=str)
 
     if tool_name in TOOL_CYPHER:
-        result = await execute_cypher(TOOL_CYPHER[tool_name], tool_input)
+        result = await execute_cypher(
+            TOOL_CYPHER[tool_name], tool_input, tool_name=tool_name
+        )
         return json.dumps(result, default=str)
 
     return json.dumps({"error": f"Unknown tool: {tool_name}"})
@@ -103,7 +109,12 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
     if session_id is None:
         session_id = str(uuid.uuid4())
 
-    messages = [{"role": "user", "content": message}]
+    # Retrieve conversation history and store the new user message
+    history = await get_conversation_history(session_id)
+    await store_message(session_id, "user", message)
+
+    # Build messages list with conversation history
+    messages = history + [{"role": "user", "content": message}]
 
     while True:
         response = await client.messages.create(
@@ -134,6 +145,8 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
             ]
             response_text = "\n".join(text_parts)
             break
+
+    await store_message(session_id, "assistant", response_text)
 
     return {
         "response": response_text,

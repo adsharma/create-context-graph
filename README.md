@@ -22,8 +22,8 @@ uvx create-context-graph my-app --domain healthcare --framework pydanticai --dem
 
 Create Context Graph walks you through an interactive wizard and generates a complete project:
 
-- **FastAPI backend** with an AI agent configured for your domain
-- **Next.js + Chakra UI v3 frontend** with chat, interactive graph visualization (schema view, double-click expand, drag/zoom, property panel), entity detail panel, document browser, and decision trace viewer
+- **FastAPI backend** with an AI agent configured for your domain, powered by [neo4j-agent-memory](https://github.com/neo4j-labs/neo4j-agent-memory) for multi-turn conversations
+- **Next.js + Chakra UI v3 frontend** with markdown-rendered chat, tool call visualization, interactive graph visualization (schema view, double-click expand, drag/zoom, property panel), entity detail panel, document browser, and decision trace viewer
 - **Neo4j schema** with domain-specific constraints, indexes, and GDS projections
 - **Rich demo data** — LLM-generated entities, relationships, professional documents (discharge summaries, trade confirmations, lab reports), and multi-step decision traces
 - **SaaS data import** — connect GitHub, Slack, Gmail, Jira, Notion, Google Calendar, or Salesforce
@@ -92,10 +92,20 @@ uvx create-context-graph my-app \
 
 ### 2. Start the app
 
+The wizard offers four Neo4j connection options:
+
+| Option | Command | Description |
+|--------|---------|-------------|
+| **Neo4j Aura** (cloud) | *(no start needed)* | Free cloud database — import your `.env` from [console.neo4j.io](https://console.neo4j.io) |
+| **neo4j-local** | `make neo4j-start` | Lightweight local Neo4j, no Docker required (needs Node.js) |
+| **Docker** | `make docker-up` | Full Neo4j via Docker Compose |
+| **Existing** | *(no start needed)* | Connect to any running Neo4j instance |
+
 ```bash
 cd my-app
 make install       # Install backend + frontend dependencies
-make docker-up     # Start Neo4j (if using Docker)
+make neo4j-start   # Start Neo4j (if using neo4j-local)
+# OR: make docker-up  # Start Neo4j (if using Docker)
 make seed          # Seed sample data into Neo4j
 make start         # Start backend (port 8000) + frontend (port 3000)
 ```
@@ -166,7 +176,7 @@ Select your preferred agent framework at project creation time:
 | **CrewAI** | Multi-agent crew with role-based tools |
 | **Strands (AWS)** | Tool-use agents with AWS Bedrock |
 | **Google ADK** | Gemini agents with `FunctionTool` calling |
-| **MAF** | Microsoft Agent Framework with modular tool registry and Anthropic API agentic loop |
+| **Anthropic Tools** | Modular tool registry with Anthropic API agentic loop |
 
 All frameworks share the same FastAPI HTTP layer, Neo4j client, and frontend. Only the agent implementation differs.
 
@@ -207,7 +217,8 @@ my-app/
 │   ├── ontology.yaml              # Domain ontology definition
 │   └── fixtures.json              # Pre-generated sample data
 ├── .env                           # Neo4j + API key configuration
-├── docker-compose.yml             # Local Neo4j instance
+├── .env.example                   # Configuration template (tracked in git)
+├── docker-compose.yml             # Local Neo4j instance (Docker mode only)
 ├── Makefile                       # start, seed, reset, install, test, lint
 └── README.md                      # Domain-specific documentation
 ```
@@ -222,7 +233,7 @@ Arguments:
 
 Options:
   --domain TEXT             Domain ID (e.g., healthcare, gaming)
-  --framework TEXT          Agent framework (pydanticai, claude-agent-sdk, openai-agents, langgraph, crewai, strands, google-adk, maf)
+  --framework TEXT          Agent framework (pydanticai, claude-agent-sdk, openai-agents, langgraph, crewai, strands, google-adk, anthropic-tools)
   --demo-data               Generate synthetic demo data
   --custom-domain TEXT      Generate custom domain from description (requires --anthropic-api-key)
   --connector TEXT          SaaS connector to enable; repeatable (github, slack, jira, notion, gmail, gcal, salesforce)
@@ -230,6 +241,8 @@ Options:
   --neo4j-uri TEXT          Neo4j connection URI [env: NEO4J_URI]
   --neo4j-username TEXT     Neo4j username [env: NEO4J_USERNAME]
   --neo4j-password TEXT     Neo4j password [env: NEO4J_PASSWORD]
+  --neo4j-aura-env PATH    Path to Neo4j Aura .env file with credentials
+  --neo4j-local             Use @johnymontana/neo4j-local for local Neo4j (no Docker)
   --anthropic-api-key TEXT  Anthropic API key for LLM generation [env: ANTHROPIC_API_KEY]
   --output-dir PATH         Output directory (default: ./<project-name>)
   --list-domains            List available domains and exit
@@ -255,10 +268,10 @@ git clone https://github.com/neo4j-labs/create-context-graph.git
 cd create-context-graph
 uv venv && uv pip install -e ".[dev]"
 
-# Run tests (460 tests, no Neo4j or API keys required)
+# Run tests (512 tests, no Neo4j or API keys required)
 source .venv/bin/activate
-pytest tests/ -v               # Fast: 262 tests
-pytest tests/ -v --slow        # Full: 460 tests (includes 176-combo domain x framework matrix + 22 perf tests)
+pytest tests/ -v               # Fast: 314 tests
+pytest tests/ -v --slow        # Full: 512 tests (includes 176-combo domain x framework matrix + 22 perf tests)
 
 # Test a specific scaffold
 create-context-graph /tmp/test-app --domain software-engineering --framework pydanticai --demo-data

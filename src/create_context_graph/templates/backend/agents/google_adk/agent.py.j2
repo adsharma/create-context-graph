@@ -5,11 +5,17 @@ from __future__ import annotations
 import json
 import uuid
 
+import nest_asyncio
+nest_asyncio.apply()
+
 from google.adk.agents import Agent
 from google.adk.tools import FunctionTool
 
 from app.config import settings
-from app.context_graph_client import execute_cypher, search_entities, get_entity_graph, get_schema
+from app.context_graph_client import (
+    execute_cypher, search_entities, get_entity_graph, get_schema,
+    get_conversation_history, store_message,
+)
 
 
 SYSTEM_PROMPT = """{{ system_prompt }}"""
@@ -28,7 +34,7 @@ def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{ 'str'
         "{{ param.name }}": {{ param.name }},
 {% endfor %}
     }
-    result = asyncio.run(execute_cypher(cypher, params))
+    result = asyncio.run(execute_cypher(cypher, params, tool_name="{{ tool.name }}"))
     return json.dumps(result, default=str)
 
 {% endfor %}
@@ -38,7 +44,7 @@ def run_cypher(query: str, parameters: str = "{}") -> str:
     """Execute a read-only Cypher query against the knowledge graph."""
     import asyncio
     params = json.loads(parameters) if parameters else {}
-    result = asyncio.run(execute_cypher(query, params))
+    result = asyncio.run(execute_cypher(query, params, tool_name="run_cypher"))
     return json.dumps(result, default=str)
 
 
@@ -73,6 +79,10 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
     if session_id is None:
         session_id = str(uuid.uuid4())
 
+    # Retrieve conversation history and store the new user message
+    history = await get_conversation_history(session_id)
+    await store_message(session_id, "user", message)
+
     from google.adk.runners import Runner
     from google.adk.sessions import InMemorySessionService
 
@@ -83,9 +93,22 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
         app_name="context-graph", user_id=session_id
     )
 
+    # Build message with conversation context
+    if history:
+        context = "\n".join(
+            f"{'User' if m['role'] == 'user' else 'Assistant'}: {m['content']}"
+            for m in history
+        )
+        input_text = (
+            f"Previous conversation:\n{context}\n\n"
+            f"Current question: {message}"
+        )
+    else:
+        input_text = message
+
     from google.genai import types
     content = types.Content(
-        role="user", parts=[types.Part.from_text(message)]
+        role="user", parts=[types.Part.from_text(input_text)]
     )
 
     response_text = ""
@@ -95,8 +118,11 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
         if hasattr(event, "text") and event.text:
             response_text += event.text
 
+    response_text = response_text or "No response generated."
+    await store_message(session_id, "assistant", response_text)
+
     return {
-        "response": response_text or "No response generated.",
+        "response": response_text,
         "session_id": session_id,
         "graph_data": None,
     }

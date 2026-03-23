@@ -4,6 +4,10 @@ from __future__ import annotations
 
 from app.context_graph_client import execute_cypher
 
+{% endraw %}
+ENTITY_LABELS = [{% for et in entity_types %}"{{ et.label }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+{% raw %}
+
 
 async def check_gds_available() -> bool:
     """Check if GDS plugin is available."""
@@ -14,7 +18,7 @@ async def check_gds_available() -> bool:
         return False
 
 
-async def run_community_detection(label: str = "Entity") -> list[dict]:
+async def run_community_detection(label: str = "*") -> list[dict]:
     """Run Louvain community detection."""
     try:
         await execute_cypher(f"""
@@ -32,7 +36,7 @@ async def run_community_detection(label: str = "Entity") -> list[dict]:
         return [{"error": str(e)}]
 
 
-async def run_pagerank(label: str = "Entity") -> list[dict]:
+async def run_pagerank(label: str = "*") -> list[dict]:
     """Run PageRank centrality."""
     try:
         await execute_cypher(f"""
@@ -51,7 +55,7 @@ async def run_pagerank(label: str = "Entity") -> list[dict]:
         return [{"error": str(e)}]
 
 
-async def run_similarity(label: str = "Entity") -> list[dict]:
+async def run_similarity(label: str = "*") -> list[dict]:
     """Run KNN similarity using FastRP embeddings."""
     try:
         await execute_cypher(f"""

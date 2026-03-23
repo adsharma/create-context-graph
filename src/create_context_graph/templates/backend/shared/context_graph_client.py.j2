@@ -2,11 +2,16 @@
 
 from __future__ import annotations
 
+import logging
+
 from neo4j import AsyncGraphDatabase, AsyncDriver
 from neo4j.graph import Node, Relationship, Path
 
 
+logger = logging.getLogger(__name__)
+
 _driver: AsyncDriver | None = None
+_memory_client = None  # MemoryClient | None — lazy typed to avoid import errors
 
 
 # ---------------------------------------------------------------------------
@@ -19,14 +24,27 @@ class CypherResultCollector:
 
     def __init__(self):
         self.results: list[dict] = []
+        self.tool_calls: list[dict] = []
 
     def collect(self, records: list[dict]) -> None:
         self.results.extend(records)
+
+    def collect_tool_call(self, name: str, inputs: dict, output_preview: str = "") -> None:
+        self.tool_calls.append({
+            "name": name,
+            "inputs": inputs,
+            "output_preview": output_preview[:500],
+        })
 
     def drain(self) -> list[dict]:
         results = list(self.results)
         self.results.clear()
         return results
+
+    def drain_tool_calls(self) -> list[dict]:
+        calls = list(self.tool_calls)
+        self.tool_calls.clear()
+        return calls
 
 
 _collector = CypherResultCollector()
@@ -64,8 +82,8 @@ def _serialize(value):
 
 
 async def connect_neo4j() -> None:
-    """Connect to Neo4j."""
-    global _driver
+    """Connect to Neo4j and optionally initialize the memory client."""
+    global _driver, _memory_client
     from app.config import settings
     _driver = AsyncGraphDatabase.driver(
         settings.neo4j_uri,
@@ -73,13 +91,82 @@ async def connect_neo4j() -> None:
     )
     await _driver.verify_connectivity()
 
+    # Initialize neo4j-agent-memory MemoryClient for conversation persistence
+    try:
+        from pydantic import SecretStr
+        from neo4j_agent_memory import MemoryClient, MemorySettings
+
+        memory_settings = MemorySettings(
+            neo4j={
+                "uri": settings.neo4j_uri,
+                "username": settings.neo4j_username,
+                "password": SecretStr(settings.neo4j_password),
+            }
+        )
+        _memory_client = MemoryClient(memory_settings)
+        await _memory_client.__aenter__()
+        logger.info("neo4j-agent-memory MemoryClient initialized")
+    except ImportError:
+        logger.info("neo4j-agent-memory not installed — conversation memory disabled")
+        _memory_client = None
+    except Exception as e:
+        logger.warning("Failed to initialize MemoryClient: %s", e)
+        _memory_client = None
+
 
 async def close_neo4j() -> None:
-    """Close Neo4j connection."""
-    global _driver
+    """Close Neo4j connection and memory client."""
+    global _driver, _memory_client
+    if _memory_client:
+        try:
+            await _memory_client.__aexit__(None, None, None)
+        except Exception:
+            pass
+        _memory_client = None
     if _driver:
         await _driver.close()
         _driver = None
+
+
+# ---------------------------------------------------------------------------
+# Conversation memory — powered by neo4j-agent-memory short-term store
+# ---------------------------------------------------------------------------
+
+
+async def get_conversation_history(session_id: str, limit: int = 20) -> list[dict]:
+    """Retrieve conversation history for a session.
+
+    Returns a list of {"role": str, "content": str} dicts.
+    Falls back to an empty list if memory client is unavailable.
+    """
+    if _memory_client is None:
+        return []
+    try:
+        messages = await _memory_client.short_term.get_messages(
+            session_id=session_id,
+            limit=limit,
+        )
+        return [{"role": m.role, "content": m.content} for m in messages]
+    except Exception as e:
+        logger.warning("Failed to retrieve conversation history: %s", e)
+        return []
+
+
+async def store_message(session_id: str, role: str, content: str) -> None:
+    """Store a message in conversation history.
+
+    Silently no-ops if memory client is unavailable.
+    """
+    if _memory_client is None:
+        return
+    try:
+        await _memory_client.short_term.add_message(
+            session_id=session_id,
+            role=role,
+            content=content,
+        )
+    except Exception as e:
+        logger.warning("Failed to store message: %s", e)
 
 
 def get_driver() -> AsyncDriver:
@@ -89,7 +176,13 @@ def get_driver() -> AsyncDriver:
     return _driver
 
 
-async def execute_cypher(query: str, parameters: dict | None = None, *, collect: bool = True) -> list[dict]:
+async def execute_cypher(
+    query: str,
+    parameters: dict | None = None,
+    *,
+    collect: bool = True,
+    tool_name: str | None = None,
+) -> list[dict]:
     """Execute a Cypher query and return results as dicts with graph metadata."""
     driver = get_driver()
     async with driver.session() as session:
@@ -99,6 +192,10 @@ async def execute_cypher(query: str, parameters: dict | None = None, *, collect:
             records.append({k: _serialize(v) for k, v in record.items()})
         if collect:
             _collector.collect(records)
+            if tool_name:
+                _collector.collect_tool_call(
+                    tool_name, parameters or {}, str(records[:2])
+                )
         return records
 
 
