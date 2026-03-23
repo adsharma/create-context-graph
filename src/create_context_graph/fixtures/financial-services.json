@@ -1914,7 +1914,7 @@
     },
     {
       "id": "compliance_review",
-      "task": "Review account {{account.account_id}} for AML compliance flag",
+      "task": "Review account ACC-2024-002001 for AML compliance flag",
       "steps": [
         {
           "thought": "Examine recent transaction patterns for suspicious activity",

@@ -1910,7 +1910,7 @@
   "traces": [
     {
       "id": "production_scheduling",
-      "task": "Determine optimal scheduling for work order {{work_order.work_order_id}} on available production lines",
+      "task": "Determine optimal scheduling for work order WO-2024-005 on available production lines",
       "steps": [
         {
           "thought": "Assess current production line capacity and availability",
@@ -1937,7 +1937,7 @@
     },
     {
       "id": "supplier_selection",
-      "task": "Select supplier for part {{part.part_number}} given quality and lead time requirements",
+      "task": "Select supplier for part ALM-1357-S given quality and lead time requirements",
       "steps": [
         {
           "thought": "Review available suppliers for this part category",

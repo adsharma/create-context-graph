@@ -8,14 +8,15 @@ import uuid
 import asyncio
 
 import nest_asyncio
-nest_asyncio.apply()
+if not getattr(asyncio, "_nest_patched", False):
+    nest_asyncio.apply()
 
 from crewai import Agent, Crew, Task
 from crewai.tools import tool
 
 from app.config import settings
 from app.context_graph_client import (
-    execute_cypher, search_entities, get_entity_graph, get_schema,
+    execute_cypher, get_schema,
     get_conversation_history, store_message,
 )
 

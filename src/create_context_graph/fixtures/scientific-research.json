@@ -2071,7 +2071,7 @@
   "traces": [
     {
       "id": "research_direction",
-      "task": "Evaluate whether to pursue research direction based on {{paper.title}} findings",
+      "task": "Evaluate whether to pursue research direction based on Neural Plasticity in Adult Brain Networks findings",
       "steps": [
         {
           "thought": "Assess the significance and reproducibility of the findings",

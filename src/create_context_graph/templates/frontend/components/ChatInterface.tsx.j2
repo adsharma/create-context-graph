@@ -39,6 +39,7 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textBufferRef = useRef("");
   const flushTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const abortControllerRef = useRef<AbortController | null>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -57,11 +58,18 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
     }
   }, [flushTextBuffer]);
 
+  function cancelRequest() {
+    abortControllerRef.current?.abort();
+    abortControllerRef.current = null;
+  }
+
   function startNewConversation() {
+    cancelRequest();
     setMessages([]);
     setSessionId(null);
     setStreamingContent("");
     setStreamingToolCalls([]);
+    setLoading(false);
   }
 
   async function sendMessage(text?: string) {
@@ -76,6 +84,10 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
     setStreamingToolCalls([]);
     textBufferRef.current = "";
 
+    const controller = new AbortController();
+    abortControllerRef.current = controller;
+    const timeout = setTimeout(() => controller.abort(), 60000);
+
     try {
       const res = await fetch(`${API_BASE}/chat/stream`, {
         method: "POST",
@@ -84,6 +96,7 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
           message: messageText,
           session_id: sessionId,
         }),
+        signal: controller.signal,
       });
 
       if (!res.ok) {
@@ -201,10 +214,14 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
         clearTimeout(flushTimerRef.current);
         flushTimerRef.current = null;
       }
-      const errorMsg =
-        err instanceof Error && err.message
-          ? err.message
-          : "Cannot reach the backend. Is it running?";
+      let errorMsg: string;
+      if (err instanceof DOMException && err.name === "AbortError") {
+        errorMsg = "Request timed out or was cancelled. Please try again.";
+      } else if (err instanceof Error && err.message) {
+        errorMsg = err.message;
+      } else {
+        errorMsg = "Cannot reach the backend. Is it running?";
+      }
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: `**Error:** ${errorMsg}` },
@@ -213,6 +230,8 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
       setStreamingToolCalls([]);
       textBufferRef.current = "";
     } finally {
+      clearTimeout(timeout);
+      abortControllerRef.current = null;
       setLoading(false);
     }
   }
@@ -317,9 +336,12 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
               <Box bg="gray.100" px={3} py={2} borderRadius="md">
                 {streamingToolCalls.length === 0 ? (
                   <VStack align="stretch" gap={2}>
+                    <HStack gap={2}>
+                      <Spinner size="xs" />
+                      <Text fontSize="sm" color="gray.500">Thinking...</Text>
+                    </HStack>
                     <Skeleton height="4" width="80%" />
                     <Skeleton height="4" width="60%" />
-                    <Skeleton height="4" width="70%" />
                   </VStack>
                 ) : (
                   <HStack gap={2}>
@@ -329,6 +351,15 @@ export function ChatInterface({ onGraphUpdate }: ChatInterfaceProps) {
                     </Text>
                   </HStack>
                 )}
+                <Button
+                  size="xs"
+                  variant="ghost"
+                  mt={2}
+                  onClick={cancelRequest}
+                  color="gray.500"
+                >
+                  Cancel
+                </Button>
               </Box>
             )}
           </Box>

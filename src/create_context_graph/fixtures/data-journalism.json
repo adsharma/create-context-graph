@@ -2066,7 +2066,7 @@
   "traces": [
     {
       "id": "source_credibility",
-      "task": "Assess credibility of source Internal Audit Report 2023 for story {{story.headline}}",
+      "task": "Assess credibility of source Internal Audit Report 2023 for story Charter School Network Diverts Public Funds to Private Accounts",
       "steps": [
         {
           "thought": "Review source's track record and prior contributions",
@@ -2088,7 +2088,7 @@
     },
     {
       "id": "publication_readiness",
-      "task": "Determine if story {{story.headline}} is ready for publication",
+      "task": "Determine if story Police Misconduct Cases Systematically Dismissed by District Attorney is ready for publication",
       "steps": [
         {
           "thought": "Verify all key claims have been fact-checked",
@@ -2115,7 +2115,7 @@
     },
     {
       "id": "claim_verification",
-      "task": "Verify claim: '{{claim.statement}}' made by {{claim.made_by}}",
+      "task": "Verify claim: 'Renewable energy investments will create 100,000 new jobs' made by Energy Secretary",
       "steps": [
         {
           "thought": "Search for supporting or contradicting evidence in datasets",

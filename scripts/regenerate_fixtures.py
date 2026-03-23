@@ -157,19 +157,46 @@ Respond with ONLY the JSON array. No markdown fences."""
     return documents
 
 
+def _interpolate_template_vars(text: str, entities: dict[str, list[dict]]) -> str:
+    """Replace all {{entity_type.property}} patterns with actual entity values."""
+    import random as _rng
+
+    entity_lookup: dict[str, tuple[str, dict]] = {}
+    for label, ents in entities.items():
+        if ents:
+            entity = _rng.choice(ents)
+            entity_lookup[label.lower()] = (label, entity)
+            snake = re.sub(r"([a-z])([A-Z])", r"\1_\2", label).lower()
+            if snake != label.lower():
+                entity_lookup[snake] = (label, entity)
+
+    def _replace_match(match: re.Match) -> str:
+        var = match.group(1)
+        if "." in var:
+            entity_key, prop = var.split(".", 1)
+            if entity_key in entity_lookup:
+                _label, entity = entity_lookup[entity_key]
+                value = entity.get(prop, entity.get("name", entity_key))
+                return str(value)
+        else:
+            if var in entity_lookup:
+                _label, entity = entity_lookup[var]
+                return str(entity.get("name", var))
+        return match.group(0)
+
+    result = re.sub(r"\{\{([^}]+)\}\}", _replace_match, text)
+    result = re.sub(r"\{\{[^}]+\}\}", "the relevant criteria", result)
+    return result
+
+
 def generate_traces(client: anthropic.Anthropic, ontology, entities: dict) -> list[dict]:
     """Generate complete decision traces with realistic observations and outcomes."""
     traces = []
     import random
 
     for trace_def in ontology.decision_traces:
-        # Interpolate entity names into task
-        task = trace_def.task
-        for label, ents in entities.items():
-            if ents:
-                entity = random.choice(ents)
-                name = entity.get("name") or label
-                task = task.replace(f"{{{{{label.lower()}.name}}}}", str(name))
+        # Interpolate entity references into task
+        task = _interpolate_template_vars(trace_def.task, entities)
 
         steps_prompt = "\n".join(
             f"  Step {i+1}: Thought: {s.thought} | Action: {s.action}"
@@ -300,6 +327,8 @@ def validate_fixture(data: dict, ontology) -> list[str]:
 
     # Check traces for template variables
     for trace in data.get("traces", []):
+        if "{{" in trace.get("task", ""):
+            errors.append(f"Trace '{trace.get('id')}' has uninterpolated task: {trace['task'][:50]}")
         if "{{" in trace.get("outcome", ""):
             errors.append(f"Trace '{trace.get('id')}' has uninterpolated outcome: {trace['outcome'][:50]}")
         for step in trace.get("steps", []):

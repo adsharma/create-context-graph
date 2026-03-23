@@ -2016,7 +2016,7 @@
   "traces": [
     {
       "id": "species_intervention",
-      "task": "Evaluate whether to escalate conservation intervention for {{species.common_name}} at Maasai Mara National Reserve",
+      "task": "Evaluate whether to escalate conservation intervention for African Elephant at Maasai Mara National Reserve",
       "steps": [
         {
           "thought": "Review current population trends and monitoring data",

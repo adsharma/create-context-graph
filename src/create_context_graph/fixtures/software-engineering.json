@@ -2296,7 +2296,7 @@
   "traces": [
     {
       "id": "deploy_decision",
-      "task": "Decide whether to deploy {{pr.title}} to production on a Friday afternoon",
+      "task": "Decide whether to deploy the relevant criteria to production on a Friday afternoon",
       "steps": [
         {
           "thought": "Assess the risk of the changes",
@@ -2323,7 +2323,7 @@
     },
     {
       "id": "incident_response",
-      "task": "Respond to {{incident.severity}} incident affecting user-authentication",
+      "task": "Respond to sev3 incident affecting user-authentication",
       "steps": [
         {
           "thought": "Identify the scope and impact of the incident",

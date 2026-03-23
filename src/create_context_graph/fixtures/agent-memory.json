@@ -1951,7 +1951,7 @@
     },
     {
       "id": "tool_selection",
-      "task": "Determine which tool to invoke for user request in conversation {{conversation.conversation_id}}",
+      "task": "Determine which tool to invoke for user request in conversation conv-20240316-002",
       "steps": [
         {
           "thought": "Parse user intent and identify required information",

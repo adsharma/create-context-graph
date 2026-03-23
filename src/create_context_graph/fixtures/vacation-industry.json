@@ -1981,7 +1981,7 @@
     },
     {
       "id": "package_design",
-      "task": "Design a new vacation package for {{guest.travel_style}} travelers at Alpine Peaks Mountain Resort",
+      "task": "Design a new vacation package for wellness travelers at Alpine Peaks Mountain Resort",
       "steps": [
         {
           "thought": "Analyze guest preferences and popular activity combinations",

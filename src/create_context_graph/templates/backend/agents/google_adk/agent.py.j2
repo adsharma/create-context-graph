@@ -2,20 +2,32 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 import uuid
 
 import nest_asyncio
-nest_asyncio.apply()
+if not getattr(asyncio, "_nest_patched", False):
+    nest_asyncio.apply()
 
 from google.adk.agents import Agent
 from google.adk.tools import FunctionTool
 
 from app.config import settings
 from app.context_graph_client import (
-    execute_cypher, search_entities, get_entity_graph, get_schema,
+    execute_cypher, get_schema,
     get_conversation_history, store_message,
 )
+
+
+def _run_sync(coro):
+    """Run an async coroutine synchronously, compatible with nest_asyncio."""
+    try:
+        loop = asyncio.get_event_loop()
+    except RuntimeError:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+    return loop.run_until_complete(coro)
 
 
 SYSTEM_PROMPT = """{{ system_prompt }}"""
@@ -27,14 +39,13 @@ SYSTEM_PROMPT = """{{ system_prompt }}"""
 {% for tool in agent_tools %}
 def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{ 'str' if param.type == 'string' else 'int' if param.type == 'integer' else 'float' if param.type == 'float' else 'str' }}{% if param.default is not none %} = {{ param.default if param.type != 'string' else '"' + param.default + '"' }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}) -> str:
     """{{ tool.description }}"""
-    import asyncio
     cypher = """{{ tool.cypher | indent(4) }}"""
     params = {
 {% for param in tool.parameters %}
         "{{ param.name }}": {{ param.name }},
 {% endfor %}
     }
-    result = asyncio.run(execute_cypher(cypher, params, tool_name="{{ tool.name }}"))
+    result = _run_sync(execute_cypher(cypher, params, tool_name="{{ tool.name }}"))
     return json.dumps(result, default=str)
 
 {% endfor %}
@@ -42,19 +53,17 @@ def {{ tool.name }}({% for param in tool.parameters %}{{ param.name }}: {{ 'str'
 {% raw %}
 def run_cypher(query: str, parameters: str = "{}") -> str:
     """Execute a read-only Cypher query against the knowledge graph."""
-    import asyncio
     try:
         params = json.loads(parameters) if parameters else {}
     except json.JSONDecodeError:
         return json.dumps({"error": "Invalid JSON parameters"})
-    result = asyncio.run(execute_cypher(query, params, tool_name="run_cypher"))
+    result = _run_sync(execute_cypher(query, params, tool_name="run_cypher"))
     return json.dumps(result, default=str)
 
 
 def get_graph_schema() -> str:
     """Get the knowledge graph schema (node labels and relationship types)."""
-    import asyncio
-    result = asyncio.run(get_schema())
+    result = _run_sync(get_schema())
     return json.dumps(result, default=str)
 {% endraw %}
 
@@ -77,6 +86,22 @@ agent = Agent(
 # ---------------------------------------------------------------------------
 
 
+_session_service = None
+_runner = None
+_sessions: dict[str, str] = {}  # session_id → ADK session.id
+
+
+def _get_runner():
+    """Lazily initialize the ADK runner and session service."""
+    global _session_service, _runner
+    if _runner is None:
+        from google.adk.runners import Runner
+        from google.adk.sessions import InMemorySessionService
+        _session_service = InMemorySessionService()
+        _runner = Runner(agent=agent, app_name="context-graph", session_service=_session_service)
+    return _runner, _session_service
+
+
 async def handle_message(message: str, session_id: str | None = None) -> dict:
     """Handle an incoming chat message."""
     if session_id is None:
@@ -86,15 +111,17 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
     history = await get_conversation_history(session_id)
     await store_message(session_id, "user", message)
 
-    from google.adk.runners import Runner
-    from google.adk.sessions import InMemorySessionService
+    runner, session_service = _get_runner()
 
-    session_service = InMemorySessionService()
-    runner = Runner(agent=agent, app_name="context-graph", session_service=session_service)
-
-    session = await session_service.create_session(
-        app_name="context-graph", user_id=session_id
-    )
+    # Reuse ADK session for the same session_id
+    if session_id in _sessions:
+        adk_session_id = _sessions[session_id]
+    else:
+        session = await session_service.create_session(
+            app_name="context-graph", user_id=session_id
+        )
+        adk_session_id = session.id
+        _sessions[session_id] = adk_session_id
 
     # Build message with conversation context
     if history:
@@ -116,7 +143,7 @@ async def handle_message(message: str, session_id: str | None = None) -> dict:
 
     response_text = ""
     async for event in runner.run_async(
-        user_id=session_id, session_id=session.id, new_message=content
+        user_id=session_id, session_id=adk_session_id, new_message=content
     ):
         if hasattr(event, "text") and event.text:
             response_text += event.text

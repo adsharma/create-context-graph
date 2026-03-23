@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Flex direction="column" h="100vh">
+    <Flex direction="column" h="100dvh">
       {/* Header */}
       <Box bg="gray.900" color="white" px={6} py={3}>
         <Heading size="md">
@@ -35,26 +35,49 @@ export default function Home() {
       {/* Main content - 3 panel layout */}
       <Flex as="main" flex={1} overflow="hidden">
         {/* Left panel: Chat */}
-        <Box as="section" aria-label="Chat" w="400px" borderRight="1px solid" borderColor="gray.200" overflow="auto">
+        <Box
+          as="section"
+          aria-label="Chat"
+          w={{ base: "100%", lg: "400px" }}
+          minW={{ lg: "320px" }}
+          borderRight={{ lg: "1px solid" }}
+          borderColor="gray.200"
+          overflow="auto"
+        >
           <ChatInterface onGraphUpdate={handleGraphUpdate} />
         </Box>
 
         {/* Center panel: Graph visualization */}
-        <Box as="section" aria-label="Graph visualization" flex={1} bg="gray.50">
+        <Box
+          as="section"
+          aria-label="Graph visualization"
+          flex={1}
+          bg="gray.50"
+          display={{ base: "none", md: "block" }}
+        >
           <ContextGraphView externalGraphData={graphData} />
         </Box>
 
         {/* Right panel: Decision traces + Documents */}
-        <Box as="aside" aria-label="Details" w="350px" borderLeft="1px solid" borderColor="gray.200" overflow="hidden">
+        <Box
+          as="aside"
+          aria-label="Details"
+          w={{ base: "100%", lg: "350px" }}
+          minW={{ lg: "280px" }}
+          borderLeft={{ lg: "1px solid" }}
+          borderColor="gray.200"
+          overflow="hidden"
+          display={{ base: "none", lg: "block" }}
+        >
           <Tabs.Root defaultValue="traces" size="sm">
             <Tabs.List borderBottom="1px solid" borderColor="gray.200">
               <Tabs.Trigger value="traces">Traces</Tabs.Trigger>
               <Tabs.Trigger value="documents">Documents</Tabs.Trigger>
             </Tabs.List>
-            <Tabs.Content value="traces" p={0} h="calc(100vh - 110px)" overflow="auto">
+            <Tabs.Content value="traces" p={0} h="calc(100dvh - 110px)" overflow="auto">
               <DecisionTracePanel />
             </Tabs.Content>
-            <Tabs.Content value="documents" p={0} h="calc(100vh - 110px)" overflow="auto">
+            <Tabs.Content value="documents" p={0} h="calc(100dvh - 110px)" overflow="auto">
               <DocumentBrowser />
             </Tabs.Content>
           </Tabs.Root>

@@ -1917,7 +1917,7 @@
   "traces": [
     {
       "id": "pricing_strategy",
-      "task": "Determine optimal listing price for {{property.address}}",
+      "task": "Determine optimal listing price for 445 Oak Grove Lane, Austin, TX 78704",
       "steps": [
         {
           "thought": "Analyze comparable properties in the neighborhood",
@@ -1944,7 +1944,7 @@
     },
     {
       "id": "offer_evaluation",
-      "task": "Evaluate purchase offer of ${{amount}} for {{property.address}}",
+      "task": "Evaluate purchase offer of $the relevant criteria for 15677 County Road 42, Steamboat Springs, CO 80487",
       "steps": [
         {
           "thought": "Compare offer to list price and market value",
@@ -1966,7 +1966,7 @@
     },
     {
       "id": "investment_analysis",
-      "task": "Evaluate {{property.address}} as an investment property",
+      "task": "Evaluate 425 South Tryon Street #1204, Charlotte, NC 28202 as an investment property",
       "steps": [
         {
           "thought": "Calculate potential rental income and cap rate",

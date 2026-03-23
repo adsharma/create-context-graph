@@ -128,8 +128,14 @@ def _serialize(value):
 
 
 def is_connected() -> bool:
-    """Check if the Neo4j driver is connected."""
-    return _driver is not None
+    """Check if Neo4j is actually reachable."""
+    if _driver is None:
+        return False
+    try:
+        _driver.verify_connectivity()
+        return True
+    except Exception:
+        return False
 
 
 async def connect_neo4j() -> None:

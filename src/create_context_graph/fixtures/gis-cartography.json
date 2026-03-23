@@ -2176,7 +2176,7 @@
     },
     {
       "id": "projection_selection",
-      "task": "Determine the optimal map projection for {{map_project.name}}",
+      "task": "Determine the optimal map projection for Population Density Analysis",
       "steps": [
         {
           "thought": "Analyze the geographic extent of the project area",
@@ -2198,7 +2198,7 @@
     },
     {
       "id": "boundary_dispute",
-      "task": "Investigate boundary discrepancy between {{boundary_a}} and {{boundary_b}}",
+      "task": "Investigate boundary discrepancy between the relevant criteria and the relevant criteria",
       "steps": [
         {
           "thought": "Compare survey records for both boundaries",

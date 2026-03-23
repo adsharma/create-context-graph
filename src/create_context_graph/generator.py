@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import json
 import random
+import re
 from pathlib import Path
 from typing import Any
 
@@ -339,8 +340,50 @@ def _interpolate_outcome(template: str, task: str) -> str:
     for var, value in _TEMPLATE_SUBSTITUTIONS.items():
         result = result.replace(var, value)
     # If any {{ remain, replace with a generic value
-    import re
     result = re.sub(r"\{\{[^}]+\}\}", "the assessed criteria", result)
+    return result
+
+
+def _interpolate_template_vars(text: str, entities: dict[str, list[dict]]) -> str:
+    """Replace all {{entity_type.property}} patterns with actual entity values.
+
+    Matches entity types case-insensitively, handling both PascalCase labels
+    (e.g., MapProject) and snake_case template vars (e.g., map_project).
+    Falls back to entity name if the property doesn't exist, and to a
+    generic placeholder if the entity type isn't found.
+    """
+    # Build multiple lookup keys per label for flexible matching:
+    # "MapProject" → keys: "mapproject", "map_project"
+    entity_lookup: dict[str, tuple[str, dict]] = {}
+    for label, ents in entities.items():
+        if ents:
+            entity = random.choice(ents)
+            # Direct lowercase: "MapProject" → "mapproject"
+            entity_lookup[label.lower()] = (label, entity)
+            # Snake_case: "MapProject" → "map_project"
+            snake = re.sub(r"([a-z])([A-Z])", r"\1_\2", label).lower()
+            if snake != label.lower():
+                entity_lookup[snake] = (label, entity)
+
+    def _replace_match(match: re.Match) -> str:
+        var = match.group(1)  # e.g., "room.room_type" or "amount"
+        if "." in var:
+            entity_key, prop = var.split(".", 1)
+            if entity_key in entity_lookup:
+                _label, entity = entity_lookup[entity_key]
+                value = entity.get(prop, entity.get("name", entity_key))
+                return str(value)
+        else:
+            # Standalone variable like {{amount}}, {{date}} — check if it
+            # matches an entity type key (use name) or fall through
+            if var in entity_lookup:
+                _label, entity = entity_lookup[var]
+                return str(entity.get("name", var))
+        return match.group(0)  # leave unmatched
+
+    result = re.sub(r"\{\{([^}]+)\}\}", _replace_match, text)
+    # Final sweep: replace any remaining {{...}} with a sensible default
+    result = re.sub(r"\{\{[^}]+\}\}", "the relevant criteria", result)
     return result
 
 
@@ -355,11 +398,7 @@ def _generate_decision_traces(
 
     for trace_def in ontology.decision_traces:
         # Fill in entity references in task description
-        task = trace_def.task
-        for label, ents in entities.items():
-            if ents:
-                entity = random.choice(ents)
-                task = task.replace(f"{{{{{label.lower()}.name}}}}", entity.get("name", label))
+        task = _interpolate_template_vars(trace_def.task, entities)
 
         steps = []
         for step in trace_def.steps:

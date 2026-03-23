@@ -2091,7 +2091,7 @@
   "traces": [
     {
       "id": "species_intervention",
-      "task": "Evaluate whether to intervene for declining {{species.common_name}} population in Borneo Lowland Rainforest",
+      "task": "Evaluate whether to intervene for declining Gray Wolf population in Borneo Lowland Rainforest",
       "steps": [
         {
           "thought": "Assess current population trends and recent sighting data",
@@ -2140,7 +2140,7 @@
     },
     {
       "id": "camera_deployment",
-      "task": "Optimize camera trap placement in Borneo Lowland Rainforest for monitoring {{species.common_name}}",
+      "task": "Optimize camera trap placement in Borneo Lowland Rainforest for monitoring African Elephant",
       "steps": [
         {
           "thought": "Analyze historical sighting locations and movement corridors",

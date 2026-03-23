@@ -2068,7 +2068,7 @@
   "traces": [
     {
       "id": "room_upgrade",
-      "task": "Decide whether to upgrade Marcus Johnson to a {{room.room_type}} room",
+      "task": "Decide whether to upgrade Marcus Johnson to a deluxe room",
       "steps": [
         {
           "thought": "Check guest loyalty status and stay history",

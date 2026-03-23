@@ -79,11 +79,11 @@ function extractNodesAndRels(results: Record<string, unknown>[]): InternalGraphD
   const nodeMap = new Map<string, GraphNode>();
   const relMap = new Map<string, GraphRelationship>();
 
-  function processValue(value: unknown) {
-    if (!value || typeof value !== "object") return;
+  function processValue(value: unknown, depth = 0) {
+    if (!value || typeof value !== "object" || depth > 10) return;
 
     if (Array.isArray(value)) {
-      for (const item of value) processValue(item);
+      for (const item of value) processValue(item, depth + 1);
       return;
     }
 
@@ -121,14 +121,14 @@ function extractNodesAndRels(results: Record<string, unknown>[]): InternalGraphD
 
     // Path: has nodes + relationships arrays
     if (Array.isArray(v.nodes) && Array.isArray(v.relationships)) {
-      for (const n of v.nodes) processValue(n);
-      for (const r of v.relationships) processValue(r);
+      for (const n of v.nodes) processValue(n, depth + 1);
+      for (const r of v.relationships) processValue(r, depth + 1);
       return;
     }
 
     // Recurse into nested objects
     for (const val of Object.values(v)) {
-      processValue(val);
+      processValue(val, depth + 1);
     }
   }
 
@@ -197,7 +197,7 @@ export function ContextGraphView({ externalGraphData }: ContextGraphViewProps) {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API_BASE}/schema/visualization`);
+      const res = await fetch(`${API_BASE}/schema/visualization`, { signal: AbortSignal.timeout(10000) });
       const data = await res.json();
       if (data.nodes && data.relationships) {
         // db.schema.visualization() returns serialized Node/Relationship objects
@@ -239,6 +239,7 @@ export function ContextGraphView({ externalGraphData }: ContextGraphViewProps) {
             body: JSON.stringify({
               query: `MATCH (n:\`${label}\`)-[r]-(m) RETURN n, r, m LIMIT 50`,
             }),
+            signal: AbortSignal.timeout(10000),
           });
           const data = await res.json();
           const parsed = extractNodesAndRels(data.results || []);
@@ -264,6 +265,7 @@ export function ContextGraphView({ externalGraphData }: ContextGraphViewProps) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ element_id: node.id }),
+          signal: AbortSignal.timeout(10000),
         });
         const data = await res.json();
         const expanded = extractNodesAndRels([data]);

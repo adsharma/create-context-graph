@@ -803,7 +803,7 @@
     },
     {
       "id": "alert_triage",
-      "task": "Triage and prioritize alert {{alert.alert_id}} for asset Cooling Water Pump 4A",
+      "task": "Triage and prioritize alert ALT-2024-001530 for asset Cooling Water Pump 4A",
       "steps": [
         {
           "thought": "Assess alert severity and affected asset criticality",

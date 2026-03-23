@@ -2324,7 +2324,7 @@
     },
     {
       "id": "persona_investment",
-      "task": "Determine investment level for {{user_persona.name}} persona in Q{{quarter}}",
+      "task": "Determine investment level for Freelance Consultant persona in Qthe relevant criteria",
       "steps": [
         {
           "thought": "Analyze current engagement and retention for this segment",

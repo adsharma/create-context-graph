@@ -2020,7 +2020,7 @@
     },
     {
       "id": "prompt_optimization",
-      "task": "Optimize prompt Creative Writing Assistant for improved {{metric}} on MultiSentiment-CNN",
+      "task": "Optimize prompt Creative Writing Assistant for improved the relevant criteria on MultiSentiment-CNN",
       "steps": [
         {
           "thought": "Analyze current prompt failure modes",

@@ -180,6 +180,10 @@ class TestShippedFixtureQuality:
     def test_traces_no_template_variables(self, fixture_data):
         """No decision trace should have uninterpolated {{variable}} patterns."""
         for trace in fixture_data.get("traces", []):
+            task = trace.get("task", "")
+            assert "{{" not in task, (
+                f"Trace '{trace.get('id', '?')}' has uninterpolated task: {task[:80]}"
+            )
             outcome = trace.get("outcome", "")
             assert "{{" not in outcome, (
                 f"Trace '{trace.get('id', '?')}' has uninterpolated outcome: {outcome[:80]}"

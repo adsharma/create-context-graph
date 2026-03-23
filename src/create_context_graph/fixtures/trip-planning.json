@@ -2027,7 +2027,7 @@
   "traces": [
     {
       "id": "destination_selection",
-      "task": "Help choose the best destination for a {{review.travel_style}} trip in {{destination.best_season}}",
+      "task": "Help choose the best destination for a couple trip in spring",
       "steps": [
         {
           "thought": "Identify destinations matching travel style and season preferences",
@@ -2049,7 +2049,7 @@
     },
     {
       "id": "hotel_selection",
-      "task": "Select the best hotel in Kyoto for budget ${{budget}}/night",
+      "task": "Select the best hotel in Kyoto for budget $the relevant criteria/night",
       "steps": [
         {
           "thought": "Filter hotels by price range and destination",
