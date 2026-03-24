@@ -7,14 +7,14 @@ import json
 from pathlib import Path
 
 from app.config import settings
-from app.context_graph_client import connect_neo4j, close_neo4j, execute_cypher
+from app.context_graph_client import connect_db, close_db, execute_cypher
 
 
 DATA_DIR = Path(__file__).parent.parent.parent / "data"
 
 
 async def apply_schema():
-    """Apply the Cypher schema constraints and indexes."""
+    """Apply the Cypher schema (CREATE NODE TABLE / CREATE REL TABLE)."""
     schema_path = Path(__file__).parent.parent.parent / "cypher" / "schema.cypher"
     if schema_path.exists():
         schema = schema_path.read_text()
@@ -25,7 +25,8 @@ async def apply_schema():
                     await execute_cypher(stmt)
                     print(f"  Applied: {stmt[:60]}...")
                 except Exception as e:
-                    print(f"  Warning: {e}")
+                    if "already exists" not in str(e).lower():
+                        print(f"  Warning: {e}")
 
 
 async def load_fixture_data(data: dict):
@@ -35,7 +36,7 @@ async def load_fixture_data(data: dict):
     for label, items in entities.items():
         for item in items:
             props = ", ".join(f"{k}: ${k}" for k in item.keys())
-            cypher = f"MERGE (n:{label} {{{props}}})"
+            cypher = f"CREATE (n:{label} {{{props}}})"
             try:
                 await execute_cypher(cypher, item)
             except Exception as e:
@@ -45,11 +46,11 @@ async def load_fixture_data(data: dict):
     # Create relationships
     relationships = data.get("relationships", [])
     for rel in relationships:
-        cypher = f"""
-        MATCH (a:{rel['source_label']} {{name: $source_name}})
-        MATCH (b:{rel['target_label']} {{name: $target_name}})
-        MERGE (a)-[r:{rel['type']}]->(b)
-        """
+        cypher = (
+            f"MATCH (a:{rel['source_label']}), (b:{rel['target_label']}) "
+            f"WHERE a.name = $source_name AND b.name = $target_name "
+            f"CREATE (a)-[:{rel['type']}]->(b)"
+        )
         try:
             await execute_cypher(cypher, {
                 "source_name": rel["source_name"],
@@ -61,7 +62,7 @@ async def load_fixture_data(data: dict):
 
 
 async def load_documents(data: dict):
-    """Load documents and link them to mentioned entities."""
+    """Load documents into the graph."""
     documents = data.get("documents", [])
     if not documents:
         print("  No documents to load")
@@ -69,10 +70,12 @@ async def load_documents(data: dict):
 
     for doc in documents:
         cypher = """
-        MERGE (d:Document {title: $title})
-        SET d.content = $content,
-            d.template_id = $template_id,
-            d.template_name = $template_name
+        CREATE (d:Document {
+            title: $title,
+            content: $content,
+            template_id: $template_id,
+            template_name: $template_name
+        })
         """
         try:
             await execute_cypher(cypher, {
@@ -86,24 +89,6 @@ async def load_documents(data: dict):
 
     print(f"  Created {len(documents)} Document nodes")
 
-    # Link documents to mentioned entities
-    try:
-        link_cypher = """
-        MATCH (d:Document)
-        MATCH (e) WHERE e.name IS NOT NULL
-          AND NOT 'Document' IN labels(e)
-          AND NOT 'DecisionTrace' IN labels(e)
-          AND NOT 'TraceStep' IN labels(e)
-          AND d.content CONTAINS e.name
-        MERGE (d)-[:MENTIONS]->(e)
-        RETURN count(*) AS links_created
-        """
-        result = await execute_cypher(link_cypher)
-        link_count = result[0]["links_created"] if result else 0
-        print(f"  Created {link_count} MENTIONS relationships")
-    except Exception as e:
-        print(f"  Warning linking documents: {e}")
-
 
 async def load_decision_traces(data: dict):
     """Load decision traces with their reasoning steps."""
@@ -116,7 +101,7 @@ async def load_decision_traces(data: dict):
         # Create trace node
         try:
             await execute_cypher(
-                "MERGE (t:DecisionTrace {id: $id}) SET t.task = $task, t.outcome = $outcome",
+                "CREATE (t:DecisionTrace {id: $id, task: $task, outcome: $outcome})",
                 {
                     "id": trace.get("id", ""),
                     "task": trace.get("task", ""),
@@ -130,20 +115,28 @@ async def load_decision_traces(data: dict):
         # Create steps and link to trace
         for i, step in enumerate(trace.get("steps", [])):
             try:
+                trace_id = trace.get("id", "")
+                step_id = f"{trace_id}_step_{i+1}"
                 await execute_cypher(
-                    """
-                    MATCH (t:DecisionTrace {id: $trace_id})
-                    MERGE (s:TraceStep {trace_id: $trace_id, step_number: $step_number})
-                    SET s.thought = $thought, s.action = $action, s.observation = $observation
-                    MERGE (t)-[:HAS_STEP]->(s)
-                    """,
+                    "CREATE (s:TraceStep {"
+                    "trace_step_id: $step_id, trace_id: $trace_id, "
+                    "step_number: $step_number, thought: $thought, "
+                    "action: $action, observation: $observation})",
                     {
-                        "trace_id": trace.get("id", ""),
+                        "step_id": step_id,
+                        "trace_id": trace_id,
                         "step_number": i + 1,
                         "thought": step.get("thought", ""),
                         "action": step.get("action", ""),
                         "observation": step.get("observation", ""),
                     },
+                )
+                # Link step to trace
+                await execute_cypher(
+                    "MATCH (t:DecisionTrace), (s:TraceStep) "
+                    "WHERE t.id = $trace_id AND s.trace_step_id = $step_id "
+                    "CREATE (t)-[:HAS_STEP]->(s)",
+                    {"trace_id": trace_id, "step_id": step_id},
                 )
             except Exception as e:
                 print(f"  Warning creating trace step: {e}")
@@ -153,14 +146,14 @@ async def load_decision_traces(data: dict):
 
 async def main():
     print("Seeding {{ domain.name }} context graph...")
-    await connect_neo4j()
+    await connect_db()
 
 {% raw %}
     # Load fixture data
     fixture_path = DATA_DIR / "fixtures.json"
     if not fixture_path.exists():
         print("No fixture data found. Create data/fixtures.json to seed data.")
-        await close_neo4j()
+        await close_db()
         return
 
     data = json.loads(fixture_path.read_text())
@@ -183,7 +176,7 @@ async def main():
 {% raw %}
     await load_decision_traces(data)
 
-    await close_neo4j()
+    await close_db()
 {% endraw %}
     print("\nDone! Your {{ domain.name }} context graph is ready.")
 

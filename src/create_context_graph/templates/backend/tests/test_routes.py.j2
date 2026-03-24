@@ -8,11 +8,10 @@ from app.main import app
 
 
 @pytest.fixture(autouse=True)
-def mock_neo4j():
-    """Mock Neo4j connection for all tests."""
-    with patch("app.context_graph_client.connect_neo4j", new_callable=AsyncMock), \
-         patch("app.context_graph_client.close_neo4j", new_callable=AsyncMock), \
-         patch("app.vector_client.create_vector_index", new_callable=AsyncMock):
+def mock_ladybug():
+    """Mock LadybugDB connection for all tests."""
+    with patch("app.context_graph_client.connect_db", new_callable=AsyncMock), \
+         patch("app.context_graph_client.close_db", new_callable=AsyncMock):
         yield
 
 

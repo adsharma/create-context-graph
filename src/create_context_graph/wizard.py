@@ -31,39 +31,6 @@ from create_context_graph.ontology import list_available_domains
 console = Console()
 
 
-def _parse_aura_env(env_path: str) -> tuple[str, str, str]:
-    """Parse a Neo4j Aura .env file and return (uri, username, password)."""
-    from pathlib import Path
-
-    path = Path(env_path).expanduser()
-    if not path.exists():
-        console.print(f"[red]Error:[/red] File not found: {path}")
-        raise SystemExit(1)
-
-    values: dict[str, str] = {}
-    for line in path.read_text().splitlines():
-        line = line.strip()
-        if not line or line.startswith("#"):
-            continue
-        if "=" in line:
-            key, _, value = line.partition("=")
-            values[key.strip()] = value.strip().strip('"').strip("'")
-
-    uri = values.get("NEO4J_URI", "")
-    username = values.get("NEO4J_USERNAME", "neo4j")
-    password = values.get("NEO4J_PASSWORD", "")
-
-    if not uri:
-        console.print("[red]Error:[/red] NEO4J_URI not found in .env file")
-        raise SystemExit(1)
-    if not password:
-        console.print("[red]Error:[/red] NEO4J_PASSWORD not found in .env file")
-        raise SystemExit(1)
-
-    console.print(f"  [green]✓[/green] Loaded credentials for {uri}")
-    return uri, username, password
-
-
 def _banner() -> None:
     console.print(
         Panel(
@@ -250,59 +217,12 @@ def run_wizard() -> ProjectConfig:
     if not framework:
         raise SystemExit("Aborted.")
 
-    # Step 5: Neo4j connection
-    neo4j_type = questionary.select(
-        "How would you like to connect to Neo4j?",
-        choices=[
-            questionary.Choice("Neo4j Aura (cloud — free tier available)", value="aura"),
-            questionary.Choice("Local Neo4j via neo4j-local (no Docker required)", value="local"),
-            questionary.Choice("Local Neo4j via Docker", value="docker"),
-            questionary.Choice("Existing Neo4j instance", value="existing"),
-        ],
+    # Step 5: LadybugDB path
+    ladybug_db_path = questionary.text(
+        "LadybugDB database path:",
+        default="./data/ladybug.db",
     ).ask()
-    if not neo4j_type:
-        raise SystemExit("Aborted.")
-
-    if neo4j_type == "aura":
-        console.print(Panel(
-            "[bold]Neo4j Aura — Free Cloud Database[/bold]\n\n"
-            "1. Sign up at [cyan]https://console.neo4j.io[/cyan]\n"
-            "2. Create a free AuraDB instance\n"
-            "3. Download the [bold].env[/bold] file with your credentials\n"
-            "4. Provide the path to the downloaded file below",
-            border_style="cyan",
-            title="Setup",
-        ))
-        aura_env_path = questionary.path(
-            "Path to Neo4j Aura .env file:",
-        ).ask()
-        if not aura_env_path:
-            raise SystemExit("Aborted.")
-        neo4j_uri, neo4j_username, neo4j_password = _parse_aura_env(aura_env_path)
-    elif neo4j_type == "local":
-        neo4j_uri = "neo4j://localhost:7687"
-        neo4j_username = "neo4j"
-        neo4j_password = "password"
-        console.print(
-            "[dim]Will use [bold]@johnymontana/neo4j-local[/bold] — "
-            "run [bold]make neo4j-start[/bold] to launch Neo4j (requires Node.js)[/dim]"
-        )
-    elif neo4j_type == "docker":
-        neo4j_uri = "neo4j://localhost:7687"
-        neo4j_username = "neo4j"
-        neo4j_password = "password"
-    else:
-        neo4j_uri = questionary.text(
-            "Neo4j URI:",
-            default="neo4j+s://xxxx.databases.neo4j.io",
-        ).ask()
-        neo4j_username = questionary.text(
-            "Neo4j Username:",
-            default="neo4j",
-        ).ask()
-        neo4j_password = questionary.password("Neo4j Password:").ask()
-
-    if not neo4j_uri:
+    if not ladybug_db_path:
         raise SystemExit("Aborted.")
 
     # Step 6: API Keys (skip Anthropic if already collected for custom domain)
@@ -324,10 +244,7 @@ def run_wizard() -> ProjectConfig:
         domain=domain,
         framework=framework,
         data_source=data_source,
-        neo4j_uri=neo4j_uri,
-        neo4j_username=neo4j_username,
-        neo4j_password=neo4j_password or "password",
-        neo4j_type=neo4j_type,
+        ladybug_db_path=ladybug_db_path,
         anthropic_api_key=anthropic_api_key or None,
         openai_api_key=openai_api_key or None,
         generate_data=data_source == "demo",
@@ -357,7 +274,7 @@ def _show_summary(config: ProjectConfig) -> None:
     table.add_row("Data Source", config.data_source)
     if config.saas_connectors:
         table.add_row("Connectors", ", ".join(config.saas_connectors))
-    table.add_row("Neo4j", f"{config.neo4j_type} ({config.neo4j_uri})")
+    table.add_row("LadybugDB", config.ladybug_db_path)
     table.add_row("Anthropic Key", "***" if config.anthropic_api_key else "(not set)")
     table.add_row("OpenAI Key", "***" if config.openai_api_key else "(not set)")
 

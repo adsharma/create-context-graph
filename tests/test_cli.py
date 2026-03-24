@@ -102,52 +102,26 @@ class TestScaffoldGeneration:
             "--output-dir", str(out),
         ])
         assert result.exit_code == 1
-        assert "already exists" in result.output
+        assert "already" in result.output
 
 
-class TestNeo4jAuraEnv:
-    """Test --neo4j-aura-env CLI flag."""
+class TestLadybugDbPath:
+    """Test --ladybug-db-path CLI flag."""
 
-    def test_aura_env_flag(self, runner, tmp_path):
-        # Create a fake Aura .env file
-        aura_env = tmp_path / "aura.env"
-        aura_env.write_text(
-            'NEO4J_URI=neo4j+s://abc123.databases.neo4j.io\n'
-            'NEO4J_USERNAME=neo4j\n'
-            'NEO4J_PASSWORD=super-secret\n'
-        )
-        out = tmp_path / "aura-app"
+    def test_custom_db_path(self, runner, tmp_path):
+        out = tmp_path / "my-app"
         result = runner.invoke(main, [
-            "aura-app",
+            "my-app",
             "--domain", "financial-services",
             "--framework", "pydanticai",
-            "--neo4j-aura-env", str(aura_env),
+            "--ladybug-db-path", "/tmp/custom.db",
             "--output-dir", str(out),
         ])
         assert result.exit_code == 0, result.output
 
-        # Verify credentials were parsed into .env
+        # Verify db path in .env
         env = (out / ".env").read_text()
-        assert "neo4j+s://abc123.databases.neo4j.io" in env
-        assert "super-secret" in env
-
-        # Verify no docker-compose for aura type
-        assert not (out / "docker-compose.yml").exists()
-
-    def test_neo4j_local_flag(self, runner, tmp_path):
-        out = tmp_path / "local-app"
-        result = runner.invoke(main, [
-            "local-app",
-            "--domain", "financial-services",
-            "--framework", "pydanticai",
-            "--neo4j-local",
-            "--output-dir", str(out),
-        ])
-        assert result.exit_code == 0, result.output
-
-        makefile = (out / "Makefile").read_text()
-        assert "neo4j-start:" in makefile
-        assert not (out / "docker-compose.yml").exists()
+        assert "/tmp/custom.db" in env
 
     def test_maf_alias_still_works(self, runner, tmp_path):
         """Verify deprecated 'maf' alias resolves to anthropic-tools."""
@@ -210,7 +184,7 @@ class TestMultipleDomainScaffolds:
 
 
 class TestCLIValidation:
-    """Tests for v0.4.0 CLI improvements."""
+    """Tests for CLI improvements."""
 
     def test_dry_run_no_files_created(self, runner, tmp_path):
         out = tmp_path / "dry-run-test"

@@ -43,12 +43,8 @@ console = Console()
     help="Agent framework to use",
 )
 @click.option("--demo-data", is_flag=True, help="Generate synthetic demo data")
-@click.option("--ingest", is_flag=True, help="Ingest generated data into Neo4j")
-@click.option("--neo4j-uri", envvar="NEO4J_URI", help="Neo4j connection URI")
-@click.option("--neo4j-username", envvar="NEO4J_USERNAME", default="neo4j")
-@click.option("--neo4j-password", envvar="NEO4J_PASSWORD", default="password")
-@click.option("--neo4j-aura-env", type=click.Path(exists=True), help="Path to Neo4j Aura .env file with credentials")
-@click.option("--neo4j-local", is_flag=True, help="Use @johnymontana/neo4j-local for local Neo4j (no Docker)")
+@click.option("--ingest", is_flag=True, help="Ingest generated data into LadybugDB")
+@click.option("--ladybug-db-path", envvar="LADYBUG_DB_PATH", default="./data/ladybug.db", help="Path to LadybugDB database")
 @click.option("--anthropic-api-key", envvar="ANTHROPIC_API_KEY", help="Anthropic API key for LLM generation")
 @click.option("--custom-domain", type=str, help="Natural language description for custom domain generation (requires --anthropic-api-key)")
 @click.option("--connector", multiple=True, help="SaaS connector to enable (github, slack, jira, notion, gmail, gcal, salesforce)")
@@ -63,11 +59,7 @@ def main(
     framework: str | None,
     demo_data: bool,
     ingest: bool,
-    neo4j_uri: str | None,
-    neo4j_username: str,
-    neo4j_password: str,
-    neo4j_aura_env: str | None,
-    neo4j_local: bool,
+    ladybug_db_path: str,
     anthropic_api_key: str | None,
     custom_domain: str | None,
     connector: tuple[str, ...],
@@ -79,7 +71,7 @@ def main(
     """Create a domain-specific context graph application.
 
     Generates a full-stack application with a FastAPI backend,
-    Next.js frontend, Neo4j knowledge graph, and AI agent—
+    Next.js frontend, LadybugDB knowledge graph, and AI agent—
     all customized for your industry domain.
     """
     # Verbose logging
@@ -123,21 +115,6 @@ def main(
     if framework:
         framework = FRAMEWORK_ALIASES.get(framework, framework)
 
-    # Handle Neo4j Aura .env import
-    if neo4j_aura_env:
-        from create_context_graph.wizard import _parse_aura_env
-        neo4j_uri, neo4j_username, neo4j_password = _parse_aura_env(neo4j_aura_env)
-
-    # Determine neo4j_type from flags
-    if neo4j_aura_env:
-        neo4j_type_resolved = "aura"
-    elif neo4j_local:
-        neo4j_type_resolved = "local"
-    elif neo4j_uri and "aura" in (neo4j_uri or ""):
-        neo4j_type_resolved = "aura"
-    else:
-        neo4j_type_resolved = "docker"
-
     # Validate empty project name in non-interactive mode
     if project_name is not None and not project_name.strip():
         console.print("[red]Error:[/red] Project name cannot be empty.")
@@ -150,10 +127,7 @@ def main(
             domain=domain or "custom",
             framework=framework,
             data_source="saas" if connector else ("demo" if demo_data else "none"),
-            neo4j_uri=neo4j_uri or "neo4j://localhost:7687",
-            neo4j_username=neo4j_username,
-            neo4j_password=neo4j_password,
-            neo4j_type=neo4j_type_resolved,
+            ladybug_db_path=ladybug_db_path,
             anthropic_api_key=anthropic_api_key,
             generate_data=demo_data,
             custom_domain_yaml=custom_domain_yaml,
@@ -175,7 +149,7 @@ def main(
         console.print(f"  Slug:       {config.project_slug}")
         console.print(f"  Domain:     {config.domain}")
         console.print(f"  Framework:  {config.framework}")
-        console.print(f"  Neo4j:      {config.neo4j_type} ({config.neo4j_uri})")
+        console.print(f"  LadybugDB:  {config.ladybug_db_path}")
         console.print(f"  Data:       {config.data_source}")
         if config.saas_connectors:
             console.print(f"  Connectors: {', '.join(config.saas_connectors)}")
@@ -254,17 +228,15 @@ def main(
             fixture_path.write_text(json.dumps(merged.model_dump(), indent=2, default=str))
             console.print(f"\n[green]Imported data written to {fixture_path}[/green]")
 
-    # Ingest into Neo4j if requested
+    # Ingest into LadybugDB if requested
     if ingest and fixture_path.exists():
-        console.print("\n[bold]Ingesting data into Neo4j...[/bold]")
+        console.print("\n[bold]Ingesting data into LadybugDB...[/bold]")
         from create_context_graph.ingest import ingest_data
 
         ingest_data(
             fixture_path,
             ontology,
-            config.neo4j_uri,
-            config.neo4j_username,
-            config.neo4j_password,
+            config.ladybug_db_path,
         )
 
     # Success message
@@ -277,10 +249,6 @@ def main(
         display_path = out
     console.print(f"  [bold]cd {display_path}[/bold]")
     console.print(f"  [bold]make install[/bold]       # Install dependencies")
-    if config.neo4j_type == "docker":
-        console.print(f"  [bold]make docker-up[/bold]    # Start Neo4j")
-    elif config.neo4j_type == "local":
-        console.print(f"  [bold]make neo4j-start[/bold]  # Start Neo4j (requires Node.js)")
     console.print(f"  [bold]make seed[/bold]          # Seed sample data")
     if config.saas_connectors:
         console.print(f"  [bold]make import[/bold]         # Re-import from connected services")

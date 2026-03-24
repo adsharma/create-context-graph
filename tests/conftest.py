@@ -52,10 +52,7 @@ def financial_config() -> ProjectConfig:
         project_name="Test Financial App",
         domain="financial-services",
         framework="pydanticai",
-        neo4j_uri="neo4j://localhost:7687",
-        neo4j_username="neo4j",
-        neo4j_password="password",
-        neo4j_type="docker",
+        ladybug_db_path="./data/ladybug.db",
     )
 
 
@@ -66,10 +63,7 @@ def healthcare_config() -> ProjectConfig:
         project_name="Test Health App",
         domain="healthcare",
         framework="claude-agent-sdk",
-        neo4j_uri="neo4j://localhost:7687",
-        neo4j_username="neo4j",
-        neo4j_password="password",
-        neo4j_type="docker",
+        ladybug_db_path="./data/ladybug.db",
     )
 
 

@@ -94,21 +94,6 @@ class TestProjectRenderer:
         assert (tmp_output / ".gitignore").exists()
         assert (tmp_output / "Makefile").exists()
         assert (tmp_output / "README.md").exists()
-        assert (tmp_output / "docker-compose.yml").exists()  # docker type
-
-    def test_no_docker_compose_for_aura(self, tmp_output):
-        from create_context_graph.config import ProjectConfig
-        config = ProjectConfig(
-            project_name="Test",
-            domain="financial-services",
-            framework="pydanticai",
-            neo4j_type="existing",
-        )
-        ontology = load_domain(config.domain)
-        renderer = ProjectRenderer(config, ontology)
-        renderer.render(tmp_output)
-
-        assert not (tmp_output / "docker-compose.yml").exists()
 
     def test_render_creates_cypher(self, financial_config, tmp_output):
         ontology = load_domain(financial_config.domain)
@@ -138,14 +123,13 @@ class TestProjectRenderer:
         assert "entities" in data
         assert "relationships" in data
 
-    def test_env_contains_credentials(self, financial_config, tmp_output):
+    def test_env_contains_db_path(self, financial_config, tmp_output):
         ontology = load_domain(financial_config.domain)
         renderer = ProjectRenderer(financial_config, ontology)
         renderer.render(tmp_output)
 
         env_content = (tmp_output / ".env").read_text()
-        assert "NEO4J_URI" in env_content
-        assert financial_config.neo4j_uri in env_content
+        assert "LADYBUG_DB_PATH" in env_content
 
     def test_readme_contains_domain(self, financial_config, tmp_output):
         ontology = load_domain(financial_config.domain)
@@ -200,17 +184,17 @@ class TestProjectRenderer:
 
         content = (tmp_output / "backend" / "pyproject.toml").read_text()
         assert "fastapi" in content
-        assert "neo4j" in content
+        assert "real_ladybug" in content
         assert "pydantic-ai" in content  # framework dep
 
-    def test_cypher_schema_has_constraints(self, financial_config, tmp_output):
+    def test_cypher_schema_has_ddl(self, financial_config, tmp_output):
         ontology = load_domain(financial_config.domain)
         renderer = ProjectRenderer(financial_config, ontology)
         renderer.render(tmp_output)
 
         schema = (tmp_output / "cypher" / "schema.cypher").read_text()
-        assert "CREATE CONSTRAINT" in schema
-        assert "CREATE INDEX" in schema
+        assert "CREATE NODE TABLE" in schema
+        assert "PRIMARY KEY" in schema
 
     def test_generated_python_compiles(self, financial_config, tmp_output):
         """Verify key generated Python files are syntactically valid."""
@@ -237,7 +221,6 @@ class TestProjectRenderer:
             except SyntaxError as e:
                 pytest.fail(f"{py_file} has syntax error: {e}")
 
-
     def test_env_example_generated(self, financial_config, tmp_output):
         """Verify .env.example is generated alongside .env."""
         ontology = load_domain(financial_config.domain)
@@ -247,8 +230,7 @@ class TestProjectRenderer:
         env_example = tmp_output / ".env.example"
         assert env_example.exists()
         content = env_example.read_text()
-        assert "NEO4J_URI=" in content
-        assert "your-password-here" in content
+        assert "LADYBUG_DB_PATH=" in content
         assert "ANTHROPIC_API_KEY=" in content
         assert "BACKEND_PORT=" in content
         # .env.example must differ from .env (placeholders vs real values)
@@ -287,7 +269,7 @@ class TestProjectRenderer:
         assert "remark-gfm" in pkg["dependencies"]
 
     def test_context_graph_client_has_memory_functions(self, financial_config, tmp_output):
-        """Verify context_graph_client.py has memory integration functions."""
+        """Verify context_graph_client.py has conversation memory functions."""
         ontology = load_domain(financial_config.domain)
         renderer = ProjectRenderer(financial_config, ontology)
         renderer.render(tmp_output)
@@ -295,18 +277,7 @@ class TestProjectRenderer:
         client = (tmp_output / "backend" / "app" / "context_graph_client.py").read_text()
         assert "get_conversation_history" in client
         assert "store_message" in client
-        assert "MemoryClient" in client
         assert "drain_tool_calls" in client
-
-    def test_gds_client_no_hardcoded_entity(self, financial_config, tmp_output):
-        """Verify GDS client doesn't use hardcoded 'Entity' label."""
-        ontology = load_domain(financial_config.domain)
-        renderer = ProjectRenderer(financial_config, ontology)
-        renderer.render(tmp_output)
-
-        gds = (tmp_output / "backend" / "app" / "gds_client.py").read_text()
-        assert 'label: str = "Entity"' not in gds
-        assert "ENTITY_LABELS" in gds
 
     def test_agent_imports_memory_functions(self, financial_config, tmp_output):
         """Verify generated agent imports conversation memory functions."""
@@ -348,25 +319,14 @@ class TestProjectRenderer:
         assert "settings.frontend_port" in main
         assert '"http://localhost:3000"' not in main
 
-    def test_main_py_creates_vector_index(self, financial_config, tmp_output):
-        """Verify main.py creates vector index at startup."""
+    def test_main_py_has_db_status(self, financial_config, tmp_output):
+        """Verify main.py has LadybugDB status tracking."""
         ontology = load_domain(financial_config.domain)
         renderer = ProjectRenderer(financial_config, ontology)
         renderer.render(tmp_output)
 
         main = (tmp_output / "backend" / "app" / "main.py").read_text()
-        assert "create_vector_index" in main
-
-    def test_docker_compose_pinned_version(self, financial_config, tmp_output):
-        """Verify docker-compose.yml pins Neo4j to a specific version."""
-        ontology = load_domain(financial_config.domain)
-        renderer = ProjectRenderer(financial_config, ontology)
-        renderer.render(tmp_output)
-
-        dc = (tmp_output / "docker-compose.yml").read_text()
-        assert "neo4j:5." in dc
-        # Should be pinned to patch version, not just "neo4j:5"
-        assert "neo4j:5\n" not in dc
+        assert "get_db_status" in main or "_db_available" in main
 
     def test_makefile_has_trap_cleanup(self, financial_config, tmp_output):
         """Verify Makefile uses trap for process cleanup."""
@@ -376,44 +336,6 @@ class TestProjectRenderer:
 
         makefile = (tmp_output / "Makefile").read_text()
         assert "trap" in makefile
-
-    def test_neo4j_local_makefile_targets(self, tmp_output):
-        """Verify neo4j-local type generates neo4j-start/stop targets."""
-        from create_context_graph.config import ProjectConfig
-        config = ProjectConfig(
-            project_name="Test Local",
-            domain="financial-services",
-            framework="pydanticai",
-            neo4j_type="local",
-        )
-        ontology = load_domain(config.domain)
-        renderer = ProjectRenderer(config, ontology)
-        renderer.render(tmp_output)
-
-        makefile = (tmp_output / "Makefile").read_text()
-        assert "neo4j-start:" in makefile
-        assert "neo4j-stop:" in makefile
-        assert "@johnymontana/neo4j-local" in makefile
-        assert not (tmp_output / "docker-compose.yml").exists()
-
-    def test_aura_no_docker_or_local_targets(self, tmp_output):
-        """Verify aura type has no docker or neo4j-local targets."""
-        from create_context_graph.config import ProjectConfig
-        config = ProjectConfig(
-            project_name="Test Aura",
-            domain="financial-services",
-            framework="pydanticai",
-            neo4j_type="aura",
-            neo4j_uri="neo4j+s://abc.databases.neo4j.io",
-        )
-        ontology = load_domain(config.domain)
-        renderer = ProjectRenderer(config, ontology)
-        renderer.render(tmp_output)
-
-        makefile = (tmp_output / "Makefile").read_text()
-        assert "docker-up" not in makefile
-        assert "neo4j-start" not in makefile
-        assert not (tmp_output / "docker-compose.yml").exists()
 
     def test_globals_css_has_markdown_styles(self, financial_config, tmp_output):
         """Verify globals.css includes markdown content styles."""

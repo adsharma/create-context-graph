@@ -33,36 +33,13 @@ install-frontend:
 # Install everything
 install: install-backend install-frontend
 
-# Seed data into Neo4j
+# Seed data into LadybugDB
 seed:
 	cd backend && uv run python scripts/generate_data.py
 
-# Reset Neo4j data (drop and recreate)
+# Reset LadybugDB data
 reset:
 	cd backend && uv run python -c "from app.context_graph_client import reset_database; import asyncio; asyncio.run(reset_database())"
-
-{% if neo4j_type == 'docker' %}
-# Docker Neo4j
-docker-up:
-	docker compose up -d
-
-docker-down:
-	docker compose down
-{% endif %}
-
-{% if neo4j_type == 'local' %}
-# Local Neo4j (no Docker required)
-neo4j-start:
-	@echo "Starting Neo4j in background..."
-	@npx --yes @johnymontana/neo4j-local start > /tmp/neo4j-local.log 2>&1 & \
-		sleep 2 && npx --yes @johnymontana/neo4j-local status
-
-neo4j-stop:
-	npx --yes @johnymontana/neo4j-local stop
-
-neo4j-status:
-	npx --yes @johnymontana/neo4j-local status
-{% endif %}
 
 {% if saas_connectors %}
 # Data import from connected services

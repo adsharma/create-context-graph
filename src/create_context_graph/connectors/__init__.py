@@ -16,7 +16,7 @@
 
 Each connector fetches data from a SaaS service, normalizes it to the
 common fixture schema (entities, relationships, documents), and returns
-it for ingestion into Neo4j.
+it for ingestion into LadybugDB.
 """
 
 from __future__ import annotations

@@ -64,10 +64,7 @@ class TestProjectConfig:
             domain="healthcare",
             framework="pydanticai",
         )
-        assert config.neo4j_uri == "neo4j://localhost:7687"
-        assert config.neo4j_username == "neo4j"
-        assert config.neo4j_password == "password"
-        assert config.neo4j_type == "docker"
+        assert config.ladybug_db_path == "./data/ladybug.db"
         assert config.data_source == "demo"
         assert config.generate_data is False
         assert config.anthropic_api_key is None
@@ -98,35 +95,14 @@ class TestProjectConfig:
         for fw in SUPPORTED_FRAMEWORKS:
             assert fw in FRAMEWORK_DEPENDENCIES
 
-    def test_existing_neo4j_config(self):
+    def test_custom_db_path(self):
         config = ProjectConfig(
             project_name="Test",
             domain="healthcare",
             framework="pydanticai",
-            neo4j_type="existing",
-            neo4j_uri="neo4j+s://abc.databases.neo4j.io",
+            ladybug_db_path="/tmp/my-custom.db",
         )
-        assert config.neo4j_type == "existing"
-        assert "neo4j+s" in config.neo4j_uri
-
-    def test_aura_neo4j_config(self):
-        config = ProjectConfig(
-            project_name="Test",
-            domain="healthcare",
-            framework="pydanticai",
-            neo4j_type="aura",
-            neo4j_uri="neo4j+s://abc.databases.neo4j.io",
-        )
-        assert config.neo4j_type == "aura"
-
-    def test_local_neo4j_config(self):
-        config = ProjectConfig(
-            project_name="Test",
-            domain="healthcare",
-            framework="pydanticai",
-            neo4j_type="local",
-        )
-        assert config.neo4j_type == "local"
+        assert config.ladybug_db_path == "/tmp/my-custom.db"
 
 
 class TestFrameworkAliases:

@@ -159,15 +159,15 @@ class TestLoadAllDomains:
 
 
 class TestGenerateCypherSchema:
-    def test_generates_constraints(self, financial_ontology):
+    def test_generates_node_tables(self, financial_ontology):
         schema = generate_cypher_schema(financial_ontology)
-        assert "CREATE CONSTRAINT" in schema
+        assert "CREATE NODE TABLE" in schema
         assert "IF NOT EXISTS" in schema
-        assert "account_id" in schema.lower()
+        assert "PRIMARY KEY" in schema
 
-    def test_generates_indexes(self, financial_ontology):
+    def test_generates_rel_tables(self, financial_ontology):
         schema = generate_cypher_schema(financial_ontology)
-        assert "CREATE INDEX" in schema
+        assert "CREATE REL TABLE" in schema
 
     def test_has_header_comment(self, financial_ontology):
         schema = generate_cypher_schema(financial_ontology)
@@ -178,7 +178,8 @@ class TestGenerateCypherSchema:
         for line in schema.strip().split("\n"):
             line = line.strip()
             if line and not line.startswith("//"):
-                assert len(line) > 5  # meaningful statement
+                assert len(line) > 1  # meaningful content (allows ");")
+
 
 
 class TestGeneratePydanticModels:

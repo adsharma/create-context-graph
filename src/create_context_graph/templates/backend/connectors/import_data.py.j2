@@ -2,7 +2,7 @@
 
 Usage:
     python scripts/import_data.py
-    python scripts/import_data.py --ingest  # Also ingest into Neo4j
+    python scripts/import_data.py --ingest  # Also ingest into LadybugDB
 """
 
 from __future__ import annotations
@@ -111,8 +111,8 @@ def main():
     print(f"\nImported data written to {fixture_path}")
 
     if ingest:
-        print("\nIngesting into Neo4j...")
-        # Use the app's existing Neo4j client
+        print("\nIngesting into LadybugDB...")
+        # Use the app's existing LadybugDB client
         from app.context_graph_client import get_driver
 
         driver = get_driver()

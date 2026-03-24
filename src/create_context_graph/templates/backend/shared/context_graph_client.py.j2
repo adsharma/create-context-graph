@@ -1,19 +1,21 @@
-{% raw %}"""Neo4j context graph client."""
+{% raw %}"""LadybugDB context graph client."""
 
 from __future__ import annotations
 
 import asyncio
 import json as _json
 import logging
+import uuid as _uuid
+from datetime import datetime, timezone
+from pathlib import Path
 
-from neo4j import AsyncGraphDatabase, AsyncDriver
-from neo4j.graph import Node, Relationship, Path
+import real_ladybug as lb
 
 
 logger = logging.getLogger(__name__)
 
-_driver: AsyncDriver | None = None
-_memory_client = None  # MemoryClient | None — lazy typed to avoid import errors
+_db: lb.Database | None = None
+_conn: lb.Connection | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -101,136 +103,111 @@ def get_collector() -> CypherResultCollector:
     return _collector
 
 
-def _serialize(value):
-    """Serialize Neo4j graph types to JSON-friendly dicts."""
-    if isinstance(value, Node):
-        props = dict(value)
-        props["elementId"] = value.element_id
-        props["labels"] = list(value.labels)
-        return props
-    if isinstance(value, Relationship):
-        props = dict(value)
-        props["elementId"] = value.element_id
-        props["type"] = value.type
-        props["startNodeElementId"] = value.start_node.element_id
-        props["endNodeElementId"] = value.end_node.element_id
-        return props
-    if isinstance(value, Path):
-        return {
-            "nodes": [_serialize(n) for n in value.nodes],
-            "relationships": [_serialize(r) for r in value.relationships],
-        }
-    if isinstance(value, list):
-        return [_serialize(v) for v in value]
-    if isinstance(value, dict):
-        return {k: _serialize(v) for k, v in value.items()}
-    return value
+def _result_to_dicts(result) -> list[dict]:
+    """Convert a LadybugDB query result into a list of dicts."""
+    records = []
+    col_names = result.get_column_names()
+    while result.has_next():
+        row = result.get_next()
+        record = {}
+        for i, name in enumerate(col_names):
+            val = row[i]
+            # Convert LadybugDB node/rel objects to dicts if needed
+            if hasattr(val, "get_properties"):
+                props = val.get_properties()
+                if hasattr(val, "get_label"):
+                    props["_label"] = val.get_label()
+                record[name] = props
+            else:
+                record[name] = val
+        records.append(record)
+    return records
 
 
 def is_connected() -> bool:
-    """Check if Neo4j is actually reachable."""
-    if _driver is None:
+    """Check if LadybugDB is available."""
+    if _conn is None:
         return False
     try:
-        _driver.verify_connectivity()
+        result = _conn.execute("RETURN 1 AS n")
+        while result.has_next():
+            result.get_next()
         return True
     except Exception:
         return False
 
 
-async def connect_neo4j() -> None:
-    """Connect to Neo4j and optionally initialize the memory client."""
-    global _driver, _memory_client
+async def connect_db() -> None:
+    """Connect to LadybugDB (embedded)."""
+    global _db, _conn
     from app.config import settings
-    _driver = AsyncGraphDatabase.driver(
-        settings.neo4j_uri,
-        auth=(settings.neo4j_username, settings.neo4j_password),
-    )
-    await _driver.verify_connectivity()
 
-    # Initialize neo4j-agent-memory MemoryClient for conversation persistence
-    try:
-        from pydantic import SecretStr
-        from neo4j_agent_memory import MemoryClient, MemorySettings
+    db_path = settings.ladybug_db_path
+    Path(db_path).parent.mkdir(parents=True, exist_ok=True)
 
-        memory_settings = MemorySettings(
-            neo4j={
-                "uri": settings.neo4j_uri,
-                "username": settings.neo4j_username,
-                "password": SecretStr(settings.neo4j_password),
-            }
-        )
-        _memory_client = MemoryClient(memory_settings)
-        await _memory_client.__aenter__()
-        logger.info("neo4j-agent-memory MemoryClient initialized")
-    except ImportError:
-        logger.info("neo4j-agent-memory not installed — conversation memory disabled")
-        _memory_client = None
-    except Exception as e:
-        logger.warning("Failed to initialize MemoryClient: %s", e)
-        _memory_client = None
+    _db = lb.Database(db_path)
+    _conn = lb.Connection(_db)
+    logger.info("LadybugDB connected at %s", db_path)
 
 
-async def close_neo4j() -> None:
-    """Close Neo4j connection and memory client."""
-    global _driver, _memory_client
-    if _memory_client:
-        try:
-            await _memory_client.__aexit__(None, None, None)
-        except Exception:
-            pass
-        _memory_client = None
-    if _driver:
-        await _driver.close()
-        _driver = None
+async def close_db() -> None:
+    """Close LadybugDB connection."""
+    global _db, _conn
+    _conn = None
+    _db = None
 
 
 # ---------------------------------------------------------------------------
-# Conversation memory — powered by neo4j-agent-memory short-term store
+# Conversation memory — stored natively in LadybugDB
 # ---------------------------------------------------------------------------
 
 
 async def get_conversation_history(session_id: str, limit: int = 20) -> list[dict]:
-    """Retrieve conversation history for a session.
-
-    Returns a list of {"role": str, "content": str} dicts.
-    Falls back to an empty list if memory client is unavailable.
-    """
-    if _memory_client is None:
+    """Retrieve conversation history for a session."""
+    if _conn is None:
         return []
     try:
-        messages = await _memory_client.short_term.get_messages(
-            session_id=session_id,
-            limit=limit,
+        result = await asyncio.to_thread(
+            _conn.execute,
+            "MATCH (m:ConversationMessage) WHERE m.session_id = $sid "
+            "RETURN m.role AS role, m.content AS content "
+            "ORDER BY m.created_at LIMIT $lim",
+            {"sid": session_id, "lim": limit},
         )
-        return [{"role": m.role, "content": m.content} for m in messages]
+        return _result_to_dicts(result)
     except Exception as e:
         logger.warning("Failed to retrieve conversation history: %s", e)
         return []
 
 
 async def store_message(session_id: str, role: str, content: str) -> None:
-    """Store a message in conversation history.
-
-    Silently no-ops if memory client is unavailable.
-    """
-    if _memory_client is None:
+    """Store a message in conversation history."""
+    if _conn is None:
         return
     try:
-        await _memory_client.short_term.add_message(
-            session_id=session_id,
-            role=role,
-            content=content,
+        msg_id = str(_uuid.uuid4())
+        await asyncio.to_thread(
+            _conn.execute,
+            "CREATE (m:ConversationMessage {"
+            "msg_id: $mid, session_id: $sid, role: $role, "
+            "content: $content, created_at: $ts})",
+            {
+                "mid": msg_id,
+                "sid": session_id,
+                "role": role,
+                "content": content,
+                "ts": datetime.now(timezone.utc).isoformat(),
+            },
         )
     except Exception as e:
         logger.warning("Failed to store message: %s", e)
 
 
-def get_driver() -> AsyncDriver:
-    """Get the Neo4j driver instance."""
-    if _driver is None:
-        raise RuntimeError("Neo4j not connected. Call connect_neo4j() first.")
-    return _driver
+def get_connection() -> lb.Connection:
+    """Get the LadybugDB connection instance."""
+    if _conn is None:
+        raise RuntimeError("LadybugDB not connected. Call connect_db() first.")
+    return _conn
 
 
 async def execute_cypher(
@@ -241,46 +218,54 @@ async def execute_cypher(
     tool_name: str | None = None,
     timeout: float | None = 30.0,
 ) -> list[dict]:
-    """Execute a Cypher query and return results as dicts with graph metadata."""
-    driver = get_driver()
+    """Execute a Cypher query and return results as dicts."""
+    conn = get_connection()
     if tool_name and collect:
         _collector.emit_tool_start(tool_name, parameters or {})
-    async with driver.session() as session:
-        result = await session.run(query, parameters or {}, timeout=timeout)
-        records = []
-        async for record in result:
-            records.append({k: _serialize(v) for k, v in record.items()})
-        if collect:
-            _collector.collect(records)
-            if tool_name:
-                _collector.collect_tool_call(
-                    tool_name, parameters or {}, str(records[:2])
-                )
-        return records
+
+    def _run():
+        if parameters:
+            result = conn.execute(query, parameters)
+        else:
+            result = conn.execute(query)
+        return _result_to_dicts(result)
+
+    records = await asyncio.to_thread(_run)
+
+    if collect:
+        _collector.collect(records)
+        if tool_name:
+            _collector.collect_tool_call(
+                tool_name, parameters or {}, str(records[:2])
+            )
+    return records
 
 
 async def search_entities(query: str, label: str | None = None, limit: int = 20) -> list[dict]:
     """Full-text search across entities."""
+    # LadybugDB doesn't support dynamic labels in MATCH the same way,
+    # so we query all nodes with a name property and filter in Python if needed.
     cypher = """
     MATCH (n)
-    WHERE ($label IS NULL OR $label IN labels(n))
-      AND (toLower(n.name) CONTAINS toLower($query)
-           OR toLower(coalesce(n.description, '')) CONTAINS toLower($query))
-    OPTIONAL MATCH (n)-[r]-(related)
-    RETURN n, type(r) AS rel_type, labels(related) AS related_labels,
-           related.name AS related_name
+    WHERE n.name IS NOT NULL
+      AND (lower(n.name) CONTAINS lower($query)
+           OR lower(coalesce(n.description, '')) CONTAINS lower($query))
+    RETURN n
     LIMIT $limit
     """
-    return await execute_cypher(cypher, {"query": query, "label": label, "limit": limit})
+    results = await execute_cypher(cypher, {"query": query, "limit": limit})
+    if label:
+        results = [r for r in results if r.get("n", {}).get("_label") == label]
+    return results
 
 
 async def get_entity_graph(entity_name: str, depth: int = 2) -> dict:
     """Get the subgraph around an entity."""
     cypher = """
     MATCH (n)
-    WHERE toLower(n.name) = toLower($name)
-    OPTIONAL MATCH path = (n)-[*1..2]-(connected)
-    RETURN n, collect(DISTINCT connected) AS connected_nodes
+    WHERE lower(n.name) = lower($name)
+    OPTIONAL MATCH (n)-[r]-(connected)
+    RETURN n, connected
     """
     results = await execute_cypher(cypher, {"name": entity_name})
     if results:
@@ -289,49 +274,44 @@ async def get_entity_graph(entity_name: str, depth: int = 2) -> dict:
 
 
 async def get_schema() -> dict:
-    """Get the graph database schema."""
-    labels_result = await execute_cypher("CALL db.labels()")
-    rel_types_result = await execute_cypher("CALL db.relationshipTypes()")
-    return {
-        "labels": [r["label"] for r in labels_result],
-        "relationship_types": [r["relationshipType"] for r in rel_types_result],
-    }
+    """Get the graph database schema (table names)."""
+    try:
+        result = await execute_cypher("CALL show_tables() RETURN *")
+        labels = [r.get("name", "") for r in result if r.get("type") == "NODE"]
+        rel_types = [r.get("name", "") for r in result if r.get("type") == "REL"]
+        return {"labels": labels, "relationship_types": rel_types}
+    except Exception:
+        return {"labels": [], "relationship_types": []}
 
 
 async def get_schema_visualization() -> dict:
-    """Get the graph schema as nodes and relationships for visualization.
-
-    Uses db.schema.visualization() which returns label nodes and
-    relationship-type edges between them.
-    """
-    try:
-        results = await execute_cypher(
-            "CALL db.schema.visualization() YIELD nodes, relationships RETURN nodes, relationships",
-            collect=False,
-        )
-        if results:
-            return results[0]
-    except Exception:
-        pass
-    # Fallback: return basic label/rel lists
+    """Get the graph schema as nodes and relationships for visualization."""
     return await get_schema()
 
 
 async def expand_node(element_id: str) -> dict:
-    """Get immediate neighbors of a node for graph expansion."""
-    cypher = """
-    MATCH (n) WHERE elementId(n) = $elementId
-    OPTIONAL MATCH (n)-[r]-(m)
-    RETURN collect(DISTINCT n) + collect(DISTINCT m) AS nodes,
-           collect(DISTINCT r) AS relationships
+    """Get immediate neighbors of a node for graph expansion.
+
+    In LadybugDB, we use the node's name as identifier since there's no elementId().
     """
-    results = await execute_cypher(cypher, {"elementId": element_id}, collect=False)
-    if results:
-        return results[0]
-    return {"nodes": [], "relationships": []}
+    cypher = """
+    MATCH (n) WHERE n.name = $name
+    OPTIONAL MATCH (n)-[r]-(m)
+    RETURN n, m
+    """
+    results = await execute_cypher(cypher, {"name": element_id}, collect=False)
+    return {"results": results}
 
 
 async def reset_database() -> None:
-    """Drop all data and recreate schema."""
-    await execute_cypher("MATCH (n) DETACH DELETE n", collect=False)
+    """Drop all data from the database."""
+    if _conn is None:
+        return
+    # Get all node table names and delete data from each
+    try:
+        tables = await get_schema()
+        for label in tables.get("labels", []):
+            await execute_cypher(f"MATCH (n:{label}) DELETE n", collect=False)
+    except Exception as e:
+        logger.warning("Reset failed: %s", e)
 {% endraw %}

@@ -104,10 +104,7 @@ class ProjectRenderer:
             "framework": self.config.resolved_framework,
             "framework_display_name": self.config.framework_display_name,
             "framework_deps": self.config.framework_deps,
-            "neo4j_uri": self.config.neo4j_uri,
-            "neo4j_username": self.config.neo4j_username,
-            "neo4j_password": self.config.neo4j_password,
-            "neo4j_type": self.config.neo4j_type,
+            "ladybug_db_path": self.config.ladybug_db_path,
             "anthropic_api_key": self.config.anthropic_api_key or "",
             "openai_api_key": self.config.openai_api_key or "",
             "system_prompt": self.ontology.system_prompt,
@@ -146,14 +143,6 @@ class ProjectRenderer:
         }
         for template_name, output_name in base_templates.items():
             self._render_template(template_name, output_dir / output_name, ctx)
-
-        # Docker compose only if docker selected
-        if self.config.neo4j_type == "docker":
-            self._render_template(
-                "base/docker-compose.yml.j2",
-                output_dir / "docker-compose.yml",
-                ctx,
-            )
 
         # Deployment templates (always generated)
         self._render_template(

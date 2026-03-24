@@ -15,7 +15,6 @@ from app.context_graph_client import (
     execute_cypher, search_entities, get_entity_graph, get_schema,
     get_schema_visualization, expand_node, get_collector, is_connected,
 )
-from app.gds_client import check_gds_available, run_community_detection, run_pagerank
 
 # Try to import streaming handler (only available for some agent frameworks)
 try:
@@ -59,7 +58,7 @@ async def chat(request: ChatRequest):
     if not is_connected():
         raise HTTPException(
             status_code=503,
-            detail="Neo4j is unavailable. Check your database connection and restart the server.",
+            detail="LadybugDB is unavailable. Check your database path and restart the server.",
         )
     try:
         collector = get_collector()
@@ -95,7 +94,7 @@ async def chat_stream(request: ChatRequest):
     if not is_connected():
         raise HTTPException(
             status_code=503,
-            detail="Neo4j is unavailable. Check your database connection and restart the server.",
+            detail="LadybugDB is unavailable. Check your database path and restart the server.",
         )
 
     session_id = request.session_id or str(_uuid.uuid4())
@@ -193,38 +192,16 @@ async def cypher(request: CypherRequest):
         raise HTTPException(status_code=400, detail=str(e))
 
 
-@router.get("/gds/status")
-async def gds_status():
-    """Check if GDS is available."""
-    available = await check_gds_available()
-    return {"gds_available": available}
-
-
-@router.get("/gds/communities")
-async def communities():
-    """Run community detection."""
-    results = await run_community_detection()
-    return {"communities": results}
-
-
-@router.get("/gds/pagerank")
-async def pagerank():
-    """Run PageRank centrality."""
-    results = await run_pagerank()
-    return {"pagerank": results}
-
-
 @router.get("/documents")
 async def list_documents(template_id: str | None = None, skip: int = 0, limit: int = 50):
     """List documents, optionally filtered by template type."""
     if template_id:
         cypher = """
-        MATCH (d:Document {template_id: $template_id})
-        OPTIONAL MATCH (d)-[:MENTIONS]->(e)
+        MATCH (d:Document)
+        WHERE d.template_id = $template_id
         RETURN d.title AS title, d.template_id AS template_id,
                d.template_name AS template_name,
-               substring(d.content, 0, 200) AS preview,
-               collect(DISTINCT {name: e.name, labels: labels(e)}) AS mentioned_entities
+               substring(d.content, 0, 200) AS preview
         ORDER BY d.title
         SKIP $skip LIMIT $limit
         """
@@ -232,11 +209,9 @@ async def list_documents(template_id: str | None = None, skip: int = 0, limit: i
     else:
         cypher = """
         MATCH (d:Document)
-        OPTIONAL MATCH (d)-[:MENTIONS]->(e)
         RETURN d.title AS title, d.template_id AS template_id,
                d.template_name AS template_name,
-               substring(d.content, 0, 200) AS preview,
-               collect(DISTINCT {name: e.name, labels: labels(e)}) AS mentioned_entities
+               substring(d.content, 0, 200) AS preview
         ORDER BY d.title
         SKIP $skip LIMIT $limit
         """
@@ -248,10 +223,10 @@ async def list_documents(template_id: str | None = None, skip: int = 0, limit: i
 async def get_document(title: str):
     """Get full document content by title."""
     cypher = """
-    MATCH (d:Document {title: $title})
-    OPTIONAL MATCH (d)-[:MENTIONS]->(e)
-    RETURN d {.title, .content, .template_id, .template_name} AS document,
-           collect(DISTINCT {name: e.name, labels: labels(e)}) AS mentioned_entities
+    MATCH (d:Document)
+    WHERE d.title = $title
+    RETURN d.title AS title, d.content AS content,
+           d.template_id AS template_id, d.template_name AS template_name
     """
     results = await execute_cypher(cypher, {"title": title})
     if not results:
@@ -282,16 +257,11 @@ async def list_traces():
 async def get_entity_detail(name: str):
     """Get full entity detail with all properties and connections."""
     cypher = """
-    MATCH (n) WHERE toLower(n.name) = toLower($name)
+    MATCH (n) WHERE lower(n.name) = lower($name)
     OPTIONAL MATCH (n)-[r]-(connected)
     WHERE connected.name IS NOT NULL
-    RETURN n {.*, _labels: labels(n)} AS entity,
-           collect(DISTINCT {
-               name: connected.name,
-               labels: labels(connected),
-               relationship: type(r),
-               direction: CASE WHEN startNode(r) = n THEN 'outgoing' ELSE 'incoming' END
-           }) AS connections
+    RETURN n, label(n) AS node_label, connected.name AS conn_name,
+           label(connected) AS conn_label, label(r) AS rel_type
     """
     results = await execute_cypher(cypher, {"name": name})
     if not results:
